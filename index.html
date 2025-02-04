@@ -185,22 +185,20 @@ traumatológia: kötések, gipsz, ezeket kéne tudnom (+1st aid)
 		console.log("– – – Loading finished – – – " + diffTime+"s")
 	}
 </script>
-<script> // console.log
-const outputDiv = document.createElement('div');
-outputDiv.style.position = 'fixed';
-outputDiv.style.bottom = '0';
-outputDiv.style.left = '0';
-outputDiv.style.width = '100%';
-outputDiv.style.maxHeight = '100px';
-outputDiv.style.overflowY = 'scroll';
-outputDiv.style.backgroundColor = 'black';
-outputDiv.style.color = 'white';
-outputDiv.style.fontSize = '12px';
-document.getElementById("div_pageQTargy").appendChild(outputDiv);
-
-console.log = function(message) {
-	outputDiv.innerHTML += message + '<br>';
-};
+<script> // console.log --> itt kell, mert ha a js-ben van hiba, akkoris ki kell írja
+	function F_divConsoleLog() {
+		var div = document.createElement("div")
+		div.id = "div_consoleLog"
+		document.getElementById("div_body").appendChild(div)
+		//outputDiv.style.position = 'absolute';
+		div.style.maxHeight = '15%';
+		div.style.overflowY = 'scroll';
+		div.style.border = '5px solid black';
+		//div.style.color = 'white';
+		div.style.fontSize = '12px';
+		console.log = function(message) { div.innerHTML += message + '<br>' }
+	}
+	F_divConsoleLog()
 </script>
 <script> //javascript.js
 	function registerScript(scriptPath) {

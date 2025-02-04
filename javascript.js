@@ -1715,7 +1715,7 @@ function F_createQingElems() {
 		div.id = "div_QingMain"
 		div.style.display = "none"
 		div.style.position = "relative"
-		document.getElementById("div_body").appendChild(div)
+		document.getElementById("div_body").insertBefore(div,document.getElementById("div_consoleLog"))
 		/*var parent = document.body
 		parent.insertBefore(div,parent.firstChild)*/
 	}
@@ -2292,6 +2292,7 @@ function F_createQingElems() {
 		document.getElementById("btn_QingTetels").style.borderColor = "black"
 		document.getElementById("btn_QingQuests").style.borderColor = "black"
 	}
+		
 	
 	if ( isAndroid ) {
 		document.getElementById("div_QingBottomPart").appendChild(document.getElementById("span_QingSettings"))
@@ -2691,7 +2692,7 @@ function F_nextQ() {
 	F_checkNum()
 	
 	// kérdéseket kiírja
-	document.getElementById("div_QingLowerPart").innerHTML = parQ.outerHTML + "<br><br><br><br><br><br><br><br><br><br>"
+	document.getElementById("div_QingLowerPart").innerHTML = parQ.outerHTML + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>"
 	
 	var childs = document.getElementById("div_QingLowerPart").childNodes;
 	for ( var i=0; i<childs.length; i++ ) { if ( childs[i].className.indexOf("open") != -1 ) { childs[i].open = true } }
