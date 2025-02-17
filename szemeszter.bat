@@ -18,6 +18,8 @@ xcopy /y %source%\favicon.png %destination%\ /d
 
 
 REM 6.év
+xcopy /y %source%\REZIDENS\rezidens.html %destination%\REZIDENS\ /d
+
 xcopy /y %source%\English\english.html %destination%\English\ /d
 
 xcopy /y %source%\Allamvizsga\teszt.html %destination%\Allamvizsga\ /d
