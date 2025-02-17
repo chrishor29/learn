@@ -53,8 +53,9 @@ traumatológia: kötések, gipsz, ezeket kéne tudnom (+1st aid)
 		Nőgyógyászat</span>
 			<span style="font-size:80%" class="page" data-path="szul" data-src="Szuleszet/szuleszetAV.html">(AV)</span><br>
 			<span style="font-size:80%" class="page" data-src="Szuleszet/nogyogy.html">(regi)</span><br>
-		<hr><span class="page" data-path="zarov" data-src="Allamvizsga/zarov.html"><u><span style="color:brown">Á</span>llamVizsga</u></span>
-		<br><span class="page" data-src="Allamvizsga/teszt.html">AV - Teszt</span>
+		<hr><span class="page" data-path="rez" data-src="REZIDENS/rezidens.html"><strong><u><span style="color:red">R</span>ezidens</u></strong></span>
+		<br><span class="page" data-path="zarov" data-src="Allamvizsga/zarov.html"><u><span style="color:brown">Á</span>llamVizsga</u></span>, 
+			<span style="font-size:80%" class="page" data-src="Allamvizsga/teszt.html">TESZT</span>
 		<br><span class="page" style="font-size:80%" data-src="sajat/sajat.html">sajat</span>,
 		<span class="page" style="font-size:80%" data-src="English/english.html">English(B2,ecl)</span>
 	</td>
@@ -126,13 +127,15 @@ traumatológia: kötések, gipsz, ezeket kéne tudnom (+1st aid)
 		<a href="targyak.html"><img class="targy" src="targyak.bmp"></a>
 		<!-- <br><span class="page" data-src="szakdoga/szakdoga.html">SZAKDOLGOZAT</span> -->
 	</td>
-	<!-- tételek --> <td id="tetelek">
-		<button id="btn_toggleLoad" onclick="F_clickAutoLoadPagesBtn(this)"></button>
-	  <br><br><br><br>
+	<!-- tételek --> <td><div>
+		<button id="btn_toggleEditMode" onclick="F_toggleEditMode(this)">🔧</button></div>
+	  <br><br>
+		<button id="btn_downloadIDB" style="background-color:green; color:white; font-weight:bold;" onclick="F_downloadIDB()">IDB</button>
+	  <br><br><br>
 		<button id="btn_toggleNightMode" onclick="F_toggleNightMode()">&#x1F319;</button>
 	  <br><br><br><br>
 		<button id="btn_clearIDB" style="background-color:red; color:white; font-weight:bold;" onclick="clearFullIDB()">IDB</button>
-	</td>
+	</div></td>
 </tr></table></div></div>
 
 <input type="file" id="fileinput" style="display:none;"></input>
@@ -196,7 +199,12 @@ traumatológia: kötések, gipsz, ezeket kéne tudnom (+1st aid)
 		div.style.border = '5px solid black';
 		//div.style.color = 'white';
 		div.style.fontSize = '12px';
-		console.log = function(message) { div.innerHTML += message + '<br>' }
+		//console.log = function(message) { div.innerHTML += message + '<br>' }
+		console.error = function(message) { div.innerHTML += "<span style='color:red'>ERROR: " + message + '</span><br>'; };
+		window.onerror = function(message, source, lineno, colno, error) {
+			div.innerHTML += "<span style='color:red'>Uncaught " + message + " at " + source + ":" + lineno + "</span><br>";
+		//	return true; // A hiba kezelését jelezzük, hogy ne jelenjen meg a böngésző konzoljában
+		};
 	}
 	F_divConsoleLog()
 </script>
