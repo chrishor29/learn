@@ -236,10 +236,13 @@ function F_openHTML(path,type) { /* betölti page html, (clear és) elmenti IDB,
 		var edited = "html"
 		F_saveIDB(path,pageText,id,edited)
 		
-		if ( type == "click" ) {
+		if ( type == "click" || type == "toggle" ) {
 			document.getElementById("div_QingBg").style.display = "block"
 			pageLinks[id].style.backgroundColor = "yellow"
-			setTimeout(function() { F_writePage(pageText,id) }, 100);
+			setTimeout(function() {  // kell 100ms, mert a toggleF még nincs meg
+				F_writePage(pageText,id)
+				if ( type == "toggle" ) { document.getElementById("btn_toggleQing").click() }
+			}, 100);
 		} else if ( type == "search" ) { 
 			F_loadAllPages()
 		}
@@ -248,17 +251,43 @@ function F_openHTML(path,type) { /* betölti page html, (clear és) elmenti IDB,
 		<script> window.parent.postMessage(['varA', document.body.innerHTML], '*') </script>
 	*/
 }
+function F_pageClick(detElem,type) { // ezt csinálja mikor ráklikkelek page / elején autoToggle
+	for ( var i=0; i<pageLinks.length; i++ ) { pageLinks[i].style.backgroundColor = "" }
+	detElem.style.backgroundColor = "orange"
+
+	currPath = detElem.dataset.src
+	if ( detElem.style.color == "darkviolet" )  { // ha új IDB van ➜ azt beOlvassa és kiírja lentre
+		var id
+		for ( var i=0; i<pageLinks.length; i++ ) { if ( pageLinks[i].dataset.src == detElem.dataset.src ) { id = i } }
+		//console.log("id: "+id)
+		F_writePage(pageTexts[detElem.dataset.src],id) // (ez lefut az openHTML után is majd)
+		if ( type == "toggle" ) { setTimeout(function() { // kell 100ms, mert a toggleF még nincs meg
+			document.getElementById("btn_toggleQing").click()
+		}, 100) }
+	} else { // ha régi vagy nincs ➜ betölti html, (clear és) elmenti IDB, majd beolvassa és kiírja lentre
+		F_openHTML(detElem.dataset.src,type)
+	}
+}
+function F_setPageClick() { // végigmegy a pageken és onclick funkció
+	for ( var i=0; i<pageLinks.length; i++ ) { 
+		pageLinks[i].onclick = function() { F_pageClick(this,"click") }
+	}
+}
+F_setPageClick()
+
 function F_loadIDBs() { // végigmegy a pageken és betölti az idb-jét, ha van
 	function F_checkFinish(count) {
 		if ( count == pageLinks.length ) {
 			console.log("All pages Loaded!!")
 			if ( localStorage.getItem("hk.ToggleAll") != null ) { // átvált toggleQ nézetbe
-				var currPath = localStorage.getItem("hk.ToggleAll")
-				var pageText = pageTexts[currPath]
+			  // betölti az oldal szövegét
+				currPath = localStorage.getItem("hk.ToggleAll")
 				var id
 				for ( var i=0; i<pageLinks.length; i++ ) { if ( pageLinks[i].dataset.src == currPath ) { id = i } }
-				F_writePage(pageText,id)
-				document.getElementById("btn_toggleQing").click()
+				
+				F_pageClick(pageLinks[id],"toggle")
+				// ha kék --> megvárja míg betölti, majd toggleQ
+				// ha lila --> csak kiírja idb alapján, majd toggleQ
 			} else {
 				document.getElementById("div_QingBg").style.display = "none"
 			}
@@ -312,25 +341,6 @@ function F_loadIDBs() { // végigmegy a pageken és betölti az idb-jét, ha van
 	for ( var i=0; i<pageLinks.length; i++ ) { F_loadIDB(pageLinks[i]) }
 }
 F_loadIDBs()
-function F_setPageClick() { // végigmegy a pageken és onclick funkció
-	for ( var i=0; i<pageLinks.length; i++ ) { 
-		pageLinks[i].onclick = function() {
-			for ( var x=0; x<pageLinks.length; x++ ) { pageLinks[x].style.backgroundColor = "" }
-			this.style.backgroundColor = "orange"
-
-			currPath = this.dataset.src
-			if ( this.style.color == "darkviolet" )  { // ha új IDB van ➜ azt beOlvassa és kiírja lentre
-				var id
-				for ( var i=0; i<pageLinks.length; i++ ) { if ( pageLinks[i].dataset.src == this.dataset.src ) { id = i } }
-				//console.log("id: "+id)
-				F_writePage(pageTexts[this.dataset.src],id) // (ez lefut az openHTML után is majd)
-			} else { // ha régi vagy nincs ➜ betölti html, (clear és) elmenti IDB, majd beolvassa és kiírja lentre
-				F_openHTML(this.dataset.src,"click")
-			}
-		}
-	}
-}
-F_setPageClick()
 
 function F_downloadIDB() {
 	for ( var i=0; i<pageLinks.length; i++ ) { 
@@ -478,8 +488,10 @@ var loadAllPages = false // passz, valamit csinál search klikknél
 var pageImpQs = [] // path to impQs --> tárgyak {expQ}-jait lementi ide is
 
 function F_saveImpQs(path) {
-	pageImpQs[path] = {};
-	var pageText = pageTexts[path];
+	//console.log("F_saveImpQs - "+path)
+	pageImpQs[path] = {}
+	var pageText = pageTexts[path]
+	//console.log(pageText)
 
 	// Hozzunk létre egy ideiglenes divet és töltsük be a HTML-t
 	var tempDiv = document.createElement("div");
@@ -493,6 +505,7 @@ function F_saveImpQs(path) {
 		// Kimentjük az impQ adatait az objektumba
 		//pageImpQs[path][impID] = impQ.outerHTML
 		pageImpQs[path][impID] = '<details class="'+impQ.className+'">'+impQ.innerHTML+'</details>'
+		//console.log('<details class="'+impQ.className+'">'+impQ.innerHTML+'</details>')
 	}
 }
 function F_getQPath(detElem,impID) {
@@ -1161,6 +1174,7 @@ function F_toggleSearch() {
 		document.getElementById("table_weboldalak").parentElement.parentElement.style.display = "none"
 		document.getElementById("btn_toggleQing").style.display = "none"
 		document.getElementById("btn_toggleSearch").style.display = 'none'
+		document.getElementById("span_tTipParents").style.display = 'none'
 		// első kettő azért kell, hogy a fölös scrollbar eltűnjön bal oldalt (pl. megvan nyitva farmakológia, majd ráklikkelnék nagyítóra...)
 		document.getElementById("div_searchBg").style.display = "block"
 		document.getElementById("btn_toggleSearch").style.color = ""
@@ -1648,12 +1662,11 @@ function F_createToolbar() {
 		cancelButton.value = "Cancel";
 		buttonContainer.appendChild(cancelButton);
 		cancelButton.onclick = function() { 
+			var input = document.getElementById("input_imgVideo")
 			if ( input.varElem != "false" ) {
 				input.varElem.remove()
 				input.varElem = "false"
 			}
-			
-			var input = document.getElementById("input_imgVideo")
 			input.parentElement.parentElement.style.visibility = "hidden"
 			input.placeholder = "Írj be valamit..."
 			activeElement.focus() // editable újra az element
@@ -1982,7 +1995,7 @@ var activeElement // amelyiket épp szerkesztem, tehát focusban van (betűket a
 ✔ delete midQ/parentElem
 ✔ parentElem típusa (span/li/div) tulajdonságai (class, style, title) 
 */
-function F_tooltipEdit(){
+function F_tTipEdit(){
 	var tooltip = document.createElement("span")
 	tooltip.id = "span_tTipEdit"
 	document.getElementById("div_body").appendChild(tooltip)
@@ -1997,11 +2010,15 @@ function F_tooltipEdit(){
 	tooltip.style.transform = "translate(-50%, 0%)" //"translate(-50%, -10%)"
 	tooltip.style.width = "99%"
 	tooltip.style.maxHeight = "30%"
-	tooltip.style.overflow = "auto"
 	tooltip.style.padding = "2px 2px 2px 5px"
 	tooltip.style.zIndex = "4"
 	tooltip.onclick = function() { event.stopPropagation() /* ne tűnjön el, mert a document.body-ra is klikkelek közben! */ }
 	tooltip.varToggle = false
+	
+	var mDiv = document.createElement("div")
+	tooltip.appendChild(mDiv)
+	mDiv.style.overflowY = "auto"
+	mDiv.style.maxHeight = window.innerHeight * 0.3 +"px"
 	
 	function F_impQ(tooltip) {
 	  // ebbe van az impQ
@@ -2029,38 +2046,50 @@ function F_tooltipEdit(){
 			}
 		}
 		
-	  // 1.sor
-		var div = document.createElement("div")
-		impQ.appendChild(div)
-		div.style.display = "flex"
-		div.style.justifyContent = "space-between"
+	  // bal sarok
+		var span = document.createElement("span")
+		tooltip.appendChild(span)
+		span.style.position = "absolute"
+		span.style.left = "2px"
+		span.style.top = "-30px"
+		span.style.display = "flex"
+		span.style.gap = "5px"
+		span.style.backgroundColor = abbrBGcolor
+		span.style.borderRadius = "5px"
+		span.style.boxShadow = "0px 2px 5px rgba(0, 0, 0, 0.2)"
 		
 	  // checkbox -> true = átírhatom itt az adott tárgyban lévő impQt, tehát az IDB-jét a tárgynak
 		  // egyenlőre csak dísz!!
-		var checkbox = document.createElement("input");
-		div.appendChild(checkbox);
-		checkbox.type = "checkbox";
-		
-	  // id + title 
-		var span = document.createElement("span")
-		div.appendChild(span)
-		span.id = "span_tTipImpIdTitle"
-		span.style.backgroundColor = answerColor
-		// így külön sor, de nem tölti ki, mint a sima div!
-		 //span.style.display = "block"
-		 //span.style.width = "fit-content"
-		
+		var checkbox = document.createElement("input")
+		span.appendChild(checkbox)
+		checkbox.type = "checkbox"
+	  
 	  // delete
-		var span = document.createElement("span")
-		div.appendChild(span)
-		span.innerHTML = "✖"
-		span.style.color = "white"
-		span.style.color = "red"
-		span.style.cursor = "pointer"
-		span.onclick = function() { 
+		var spanDelete = document.createElement("span")
+		span.appendChild(spanDelete)
+		spanDelete.innerHTML = "✖"
+		spanDelete.style.color = "white"
+		spanDelete.style.color = "red"
+		spanDelete.style.cursor = "pointer"
+		spanDelete.onclick = function() { 
 			var result = window.confirm("biztos törlöd?")
 			if (result) { document.getElementById("span_tTipImpQ").customNode.remove() }
 		}
+		
+	  // id + title 
+		var span = document.createElement("span")
+		impQ.appendChild(span)
+		span.id = "span_tTipImpIdTitle"
+		// így külön sor, de nem tölti ki, mint a sima div!
+		 span.style.display = "block"
+		 span.style.width = "fit-content"
+		span.style.fontSize = "80%"
+		span.style.backgroundColor = answerColor
+		span.style.margin = "0 auto";  // Középre igazítás vízszintesen
+		span.style.textAlign = "center"; // A szöveg középen marad
+		// így külön sor, de nem tölti ki, mint a sima div!
+		 //span.style.display = "block"
+		 //span.style.width = "fit-content"
 		
 	  // 2.sor : path
 		var span = document.createElement("span")
@@ -2074,14 +2103,15 @@ function F_tooltipEdit(){
 		span.style.textAlign = "center"; // A szöveg középen marad
 		span.style.fontSize = "80%"
 	}
-	F_impQ(tooltip)
+	F_impQ(mDiv)
 	
 	function F_parent(tooltip) {
 	  // 1.sor
 		var div = document.createElement("div")
 		tooltip.appendChild(div)
-		div.style.display = "flex"
-		div.style.flexDirection = "space-between"
+		div.style.border = "2px solid black"
+		//div.style.display = "flex"
+		//div.style.flexDirection = "space-between"
 	  
 	  /* checkbox (edit)
 		var checkbox = document.createElement("input")
@@ -2117,6 +2147,8 @@ function F_tooltipEdit(){
 		*/
 		pre.contentEditable = true
 		pre.style.width = "100%"
+		div.style.overflowY = "auto"
+		pre.style.maxHeight = "100%"
 		pre.style.margin = "0"
 		pre.customNode = pre /* ez egy NAGYON JÓ ('global'~'local') variable!! 
 			+ egyrészt lehetne más is a neve -> végtelen fajta lehet
@@ -2153,57 +2185,67 @@ function F_tooltipEdit(){
 			F_setNotepadStyle()
 		});
 		
-	  // jobb sarok
+		// jobb sarok
 		var span = document.createElement("span")
-		div.appendChild(span)
-	  
-	  // delete
+		tooltip.appendChild(span)
+		span.style.position = "absolute"
+		span.style.right = "2px"
+		span.style.top = "-30px"
+		span.style.display = "flex"
+		span.style.gap = "5px"
+		span.style.backgroundColor = abbrBGcolor
+		span.style.borderRadius = "5px"
+		span.style.boxShadow = "0px 2px 5px rgba(0, 0, 0, 0.2)"
+
+		// save
+		var imgSave = document.createElement("img")
+		span.appendChild(imgSave)
+		imgSave.id = "img_saveParent"
+		imgSave.style.width = "20px"
+		imgSave.style.height = "20px"
+		imgSave.style.border = "2px solid transparent"
+		imgSave.style.display = "none"
+		imgSave.src = "images/toolbar/save.png"
+		imgSave.onclick = function() {
+			document.getElementById("pre_tTipParent").customNode.outerHTML = document.getElementById("pre_tTipParent").textContent
+			this.style.display = "none"
+		}
+		imgSave.onmouseover = function() { this.style.border = "2px solid blue" }
+		imgSave.onmouseout = function() { this.style.border = "2px solid transparent" }
+
+		// copy
+		var imgCopy = document.createElement("img")
+		span.appendChild(imgCopy)
+		imgCopy.id = "img_copyParent"
+		imgCopy.style.width = "20px"
+		imgCopy.style.height = "20px"
+		imgCopy.style.cursor = "pointer"
+		imgCopy.style.border = "2px solid transparent"
+		imgCopy.src = "images/toolbar/copy.png"
+		imgCopy.onclick = function() {
+			localStorage.setItem("copyText", document.getElementById("pre_tTipParent").textContent)
+			document.getElementById("btn_tBarPaste").style.display = "inline"
+		}
+		imgCopy.onmouseover = function() { this.style.border = "2px solid blue" }
+		imgCopy.onmouseout = function() { this.style.border = "2px solid transparent" }
+
+		// delete
 		var del = document.createElement("span")
 		span.appendChild(del)
 		del.innerHTML = "✖"
-		del.style.color = "white"
 		del.style.color = "red"
 		del.style.cursor = "pointer"
+		del.style.border = "2px solid transparent"
 		del.onclick = function() { 
 			var result = window.confirm("biztos törlöd?")
 			if (result) { document.getElementById("pre_tTipParent").customNode.remove() }
 		}
-		
-	  // copy
-		var img = document.createElement("img")
-		span.appendChild(img)
-		img.id = "img_copyParent"
-		img.style.width = "16px"
-		img.style.height = "16px"
-		img.style.border = "2px solid transparent"
-		img.src = "images/toolbar/copy.png"
-		img.onclick = function() {
-			localStorage.setItem("copyText",document.getElementById("pre_tTipParent").textContent)
-			document.getElementById("btn_tBarPaste").style.display = "inline"
-		}
-		img.onmouseover = function() { this.style.border = "2px solid blue" }
-		img.onmouseout = function() { this.style.border = "2px solid transparent" }
-
-	  // save
-		var img = document.createElement("img")
-		span.appendChild(img)
-		img.id = "img_saveParent"
-		img.style.width = "16px"
-		img.style.height = "16px"
-		img.style.border = "2px solid transparent"
-		img.style.display = "none"
-		img.src = "images/toolbar/save.png"
-		img.onclick = function() {
-			document.getElementById("pre_tTipParent").customNode.outerHTML = document.getElementById("pre_tTipParent").textContent
-			//document.getElementById("pre_tTipParent").customNode.outerHTML = document.getElementById("img_copyParent").varCopyText
-			this.style.display = "none"
-		}
-		img.onmouseover = function() { this.style.border = "2px solid blue" }
-		img.onmouseout = function() { this.style.border = "2px solid transparent" }
+		del.onmouseover = function() { this.style.border = "2px solid blue" }
+		del.onmouseout = function() { this.style.border = "2px solid transparent" }
 	}
-	F_parent(tooltip)
+	F_parent(mDiv)
 }
-F_tooltipEdit()
+F_tTipEdit()
 function F_resetHighlightColor(detElem) {
 	detElem.customNode.style.backgroundColor = detElem.originalBGColor
 	if ( detElem.customNode.style.backgroundColor == "" ) {
@@ -2271,7 +2313,7 @@ function F_setScript(detElem) {
 		//document.getElementById("span_toolbar").style.display = "block"
 	};
 	
-	// ctrl+q/e/r/d
+	// ctrl+q/e/r/t/d
 	detElem.addEventListener("keydown", function(event) {
 		if (event.ctrlKey && event.key === 'd') {// ctrl+d -> duplicate
 			event.preventDefault();
@@ -2308,9 +2350,10 @@ function F_setScript(detElem) {
 			var parent = F_getFirstBlockParent(node) // sort kitöltő elem
 
 			var details = document.createElement("details")
-			var summary = document.createElement("summary")
-			details.appendChild(summary)
-			summary.innerHTML = "a"
+			//var summary = document.createElement("summary")
+			//details.appendChild(summary)
+			//summary.innerHTML = "a"
+			details.innerHTML = "<summary>a</summary> "
 			parent.insertAdjacentElement('afterend', details) // parent után beszúrja
 		}
 		if (event.code === "F16") {  // ctrl+e (ahk) -> ul
@@ -2392,7 +2435,7 @@ function F_setScript(detElem) {
 		}
 	});
 	
-	// btn5, 
+	// btn5, ctrl+s
 	document.addEventListener("keydown", function(event) { 
 		if (event.code === "F14") {  // btn5 (ahk) -> btn érték váltása
 			event.preventDefault()
@@ -2525,24 +2568,88 @@ function F_setScript(detElem) {
 				document.getElementById("span_tTipParents").style.display = "block"
 				document.getElementById("span_tTipParents").varNum = num
 				
-				var div = document.createElement("div")
-				document.getElementById("span_tTipParents").appendChild(div)
-				div.id = "div_tTipTag"+num
-				div.customNode = parent
-				div.style.cursor = "pointer"
-				div.innerHTML = parent.tagName
-				div.onmouseover = function() {
+				var tr = document.createElement("tr")
+				document.getElementById("span_tTipParents").appendChild(tr)
+				tr.style.display = "flex"
+				tr.style.justifyContent = "flex-end"
+				
+				var styleElem = document.createElement("td")
+				tr.appendChild(styleElem)
+				styleElem.id = "div_tTipProp"+num
+				styleElem.customNode = parent
+				styleElem.style.fontSize = "60%"
+				styleElem.style.cursor = "pointer"
+				styleElem.style.backgroundColor = abbrBGcolor
+				styleElem.style.border = `1px solid ${abbrBorderColor}`
+				styleElem.innerHTML = parent.style.cssText
+				if ( styleElem.innerHTML == "" ) { styleElem.style.display = "none" }
+				
+				var classElem = document.createElement("td")
+				tr.appendChild(classElem)
+				classElem.id = "div_tTipProp"+num
+				classElem.customNode = parent
+				classElem.style.fontSize = "60%"
+				classElem.style.cursor = "pointer"
+				classElem.style.backgroundColor = abbrBGcolor
+				classElem.style.border = `1px solid ${abbrBorderColor}`
+				classElem.innerHTML = parent.className
+				if ( classElem.innerHTML == "" ) { classElem.style.display = "none" }
+				
+				var tagElem = document.createElement("td")
+				tr.appendChild(tagElem)
+				tagElem.id = "div_tTipTag"+num
+				tagElem.customNode = parent
+				tagElem.style.fontSize = "60%"
+				tagElem.style.cursor = "pointer"
+				tagElem.style.backgroundColor = abbrBGcolor
+				tagElem.style.border = `1px solid ${abbrBorderColor}`
+				tagElem.innerHTML = parent.tagName
+				tagElem.onmouseover = function() {
 					this.originalBGColor = this.customNode.style.backgroundColor
 					this.customNode.style.backgroundColor = "rgba(255, 255, 0, 0.2)"
 				}
-				div.onmouseout = function() { F_resetHighlightColor(this) }
-				div.onclick = function() {
+				tagElem.onmouseout = function() { F_resetHighlightColor(this) }
+				var timer
+				tagElem.addEventListener("mousedown", function () {
+					timer = setTimeout(() => {
+						//console.log("Hosszú kattintás történt!")
+						timer = null // Megakadályozza, hogy a click esemény is lefusson
+						this.contentEditable = true
+						//console.log(this.contentEditable)
+						this.focus() // Így már működni fog!
+					}, 1000) // 1 másodpercig tartott kattintás
+				})
+				tagElem.addEventListener("blur", function () { 
+					//console.log("blur")
+					this.contentEditable = false
+					console.log(this.customNode.tagName +" vs "+ this.innerHTML)
+
+
+					var newElement = document.createElement(this.innerHTML); // Új elem létrehozása
+					newElement.innerHTML = this.customNode.innerHTML; // Belső HTML átvétele
+
+					// Összes attribútum átmásolása
+					[...this.customNode.attributes].forEach(attr => {
+						 newElement.setAttribute(attr.name, attr.value);
+					});
+
+					this.customNode.replaceWith(newElement); // Csere az új elemmel
+					this.customNode = newElement; // Frissítjük a hivatkozást az új elemre
+					
+					console.log(this.customNode.outerHTML)
+				})
+				tagElem.addEventListener("mouseup", function () {
+					clearTimeout(timer) // Megakadályozza a hosszú kattintást, ha gyorsan felengedik
+				})
+				tagElem.addEventListener("click", function () {
+					if (!timer) return // Ha már hosszú kattintás történt, ne fusson le
+					//console.log("Rövid kattintás történt!")
 					document.getElementById("pre_tTipParent").customNode = this.customNode
 					F_resetHighlightColor(this)
 					document.getElementById("pre_tTipParent").textContent = this.customNode.outerHTML
 					F_setNotepadStyle()
-				}
-				
+				})
+
 				parent = parent.parentElement
 			} while ( parent.tagName != "BODY" )
 		}
@@ -2579,13 +2686,12 @@ function F_setScript(detElem) {
 F_setScript(document.getElementById("div_pageQTargy"))
 
 function F_tTipParents(){
-	var tooltip = document.createElement("span")
+	var tooltip = document.createElement("table")
 	document.getElementById("div_body").appendChild(tooltip)
 	tooltip.id = "span_tTipParents"
 	//document.body.appendChild(tooltip)
 	tooltip.style.display = "none"
-	tooltip.style.border = `2px solid ${abbrBorderColor}`
-	tooltip.style.backgroundColor = abbrBGcolor
+	//tooltip.style.backgroundColor = abbrBGcolor
 	tooltip.style.position = "fixed"
 	tooltip.style.top = "0%" //"10%"
 	tooltip.style.right = "0%"
@@ -2594,8 +2700,12 @@ function F_tTipParents(){
 	//tooltip.style.maxWidth = "30%"
 	//tooltip.style.overflow = "auto"
 	tooltip.style.padding = "2px 2px 2px 5px"
-	tooltip.style.zIndex = "4"
+	tooltip.style.zIndex = "2"
 	tooltip.onclick = function() { event.stopPropagation() /* ne tűnjön el, mert a document.body-ra is klikkelek közben! */ }
+	
+	//var table = document.createElement("table")
+	//tooltip.appendChild(table)
+	//table.id = "table_tTipParents"
 }
 F_tTipParents()
 // –––––––––––––––  editPage END  –––––––––––––––
@@ -2606,7 +2716,7 @@ var arrActTetels = [] // active tételek
 var arrQnev = [] // (i) -> qNev + tartalom
 var arrOldQs = [] // (i) -> LS-ben mentett Q-k
 var arrNewQs = [] // (i) -> LS-ben még nem mentett Q-k (nem osztályzott)
-var minTime = 259200 // (i) -> Q-nál mennyi idő, mire újra kidobhatja (secundum)
+var minTime = 600 // (i) -> Q-nál mennyi idő, mire újra kidobhatja (secundum)
 function F_getQinf(qNev) { // LS-ben mentett jegy,repeat,date
 	var date = localStorage.getItem(currPath+" | "+qNev)
 	var jegy = date.slice(0,date.indexOf(" , "))
@@ -3586,6 +3696,7 @@ function F_toggleQing() {
 		var diffTime = F_getTime() - lastClickTime
 		console.log("toggleON - "+ diffTime)
 	}
+	F_loadEditMode()
 }
 function F_calcOldQs(){
 	var currTime = F_getTime()
@@ -4353,9 +4464,6 @@ function F_loadSynos(detElem) {
 
 function F_unloadImpQsTitle(detElem) {
 	var parent = document.getElementById("impQs")
-	if ( !parent ) { return } // nincsenek impQ-k
-	if ( detElem != parent && !parent.contains(detElem) ) { return }
-		// betöltött impQ-k esetében (span imp) is ott a details-es impQ, amiknél nem kell átírnia!
 	var impQs = detElem.querySelectorAll('details[class*="["]')
 	  // details elemek, melyek class-ában szerepel [    (szögletes zárójel nyitása)
 	for (var i = 0; i < impQs.length; i++) {
@@ -4512,10 +4620,10 @@ function F_loadIMGs(detElem) {
 		imgs[i].src = "images/" + imgs[i].dataset.src
 		
 		imgs[i].style.border = "3px solid black"
-		if ( !imgs[i].dataset.maxWidth ) { 
-			imgs[i].style.maxWidth = "40%"
-		} else {
+		if ( imgs[i].dataset.maxWidth ) { 
 			imgs[i].style.maxWidth = imgs[i].dataset.maxWidth
+		} else {
+			imgs[i].style.maxWidth = "40%"
 		}
 		if ( !imgs[i].dataset.float ) { 
 			imgs[i].style.float = "right"
