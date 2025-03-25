@@ -4730,8 +4730,32 @@ function F_loadCentImg() {
 		overlay.scrollTop = dy;
 	});
 	overlayBG.addEventListener('mousedown', (e) => {
-		if ( keepImg != true ) { overlayBG.style.visibility = "hidden" }
-		keepImg = false
+		// akkor zárja be, ha nem img és nem scrollbar(overlay része) kattintottam
+		
+		// Az overlay szélessége és magassága
+		let overlayRect = overlay.getBoundingClientRect();
+
+		// Az egér pozíciója
+		let mouseX = e.clientX;
+		let mouseY = e.clientY;
+
+		// Scrollbar szélessége és magassága
+		let scrollbarThickness = 17; // Böngészőfüggő, de általában 17px
+
+		// Ha a kattintás a scrollbar területén történt
+		let clickedOnScrollbar =
+			(mouseX >= overlayRect.right - scrollbarThickness && mouseX <= overlayRect.right) ||
+			(mouseY >= overlayRect.bottom - scrollbarThickness && mouseY <= overlayRect.bottom);
+
+		if (clickedOnScrollbar) {
+			keepImg = true; // Ne zárja be, ha a scrollbarra kattintottunk
+		}
+
+		if (!keepImg) {
+			overlayBG.style.visibility = "hidden";
+		}
+
+		keepImg = false; // Reset, ha nem scrollbar volt
 	});
 	document.addEventListener('mouseup', () => {
 		isDragging = false;
