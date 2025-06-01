@@ -978,6 +978,7 @@ function F_loadTitles(detElem){
 /* how to - tutorial
 	mute: <video muted data-src...
 	max-width: alapból 60%; <video data-width="30%" data-src
+	sound: <video data-type="sound" data-src
 */
 function F_clickSeekBar(seekBarDiv,e){
 	var parentDiv = seekBarDiv.parentElement
@@ -1057,12 +1058,9 @@ function F_loadVideos(detElem){
 		if ( isElementVisible(videoElem) == false ) { continue }
 		if ( videoElem.src ) { continue } 
 		
-		function F_setSource(videoElem){
-			//var source = document.createElement('source')
-			F_setVideoSource(videoElem,videoElem.dataset.src)
-			//videoElem.appendChild(source)
-		}
-		F_setSource(videoElem)
+		F_setVideoSource(videoElem,videoElem.dataset.src)
+		
+		if ( videoElem.dataset.type == "sound" ) { videoElem.style.opacity = "0" }
 		
 		videoElem.style.borderColor = "black"
 		videoElem.style.cursor = "pointer"
@@ -1076,7 +1074,12 @@ function F_loadVideos(detElem){
 				var parent = videoElem.parentNode
 				parent.insertBefore(parentDiv,videoElem)
 				parentDiv.appendChild(videoElem)
-				parentDiv.style.maxWidth = "60%"
+				if ( videoElem.dataset.width ) {
+					//console.log("width: "+videoElem.dataset.width)
+					parentDiv.style.maxWidth = videoElem.dataset.width
+				} else {
+					parentDiv.style.maxWidth = "60%"
+				}
 				parentDiv.style.float = "right"
 				parentDiv.style.backgroundColor = "black"
 				parentDiv.style.padding = "6px"; 
@@ -4524,6 +4527,39 @@ function F_loadEditMode() {
 }
 F_loadEditMode()
 
+function F_loadTableExpand(detElem) { // for example ➜ kidney vascular circle regulation
+	var expandableRows = detElem.querySelectorAll('tr.expandable');
+	for ( var i=0; i<expandableRows.length; i++ ) {
+		var row = expandableRows[i]
+		
+		// 1. Kattintásra váltogatja a következő sor megjelenését
+		row.onclick = function () {
+			var nextRow = this.nextElementSibling;
+			if (nextRow.style.display === 'table-row') {
+				nextRow.style.display = 'none';
+			} else {
+				nextRow.style.display = 'table-row';
+			}
+		};
+
+		// 2. desktop
+		row.style.cursor = 'pointer';
+
+		// 3. desktop ➜ Hover hatás 
+		row.addEventListener('mouseenter', function () {
+			const cells = this.querySelectorAll('th, td');
+			for (const cell of cells) { cell.style.backgroundColor = '#eef' }
+		});
+		row.addEventListener('mouseleave', function () {
+			const cells = this.querySelectorAll('th, td');
+			for (const cell of cells) { cell.style.backgroundColor = '' }
+		});
+		
+		// 4. android
+		row.style.color = 'Green';
+	}
+}
+
 function F_loadAnswerQ(detElem) { 
 	var trueA = detElem.getElementsByClassName("trueA")
 	var tippA = detElem.getElementsByClassName("tippA")
@@ -4826,6 +4862,7 @@ function F_loadElem(detElem) { // detailsok megnyitásánál is ezt a funkciót 
 	F_loadAnswerQ(detElem)
 	F_loadAbbrQ(detElem)
 	F_loadImpQsTitle(detElem)
+	F_loadTableExpand(detElem)
 	//console.log("F_loadElem - end")
 	
 	var allDetails = detElem.getElementsByTagName("details")

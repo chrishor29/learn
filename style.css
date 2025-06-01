@@ -62,7 +62,7 @@ details[open] {
 }
 
 * {
-	font-family: Tahoma;
+	font-family: Tahoma, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
 	list-style-type: disc;
 }
 
