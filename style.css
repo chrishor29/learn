@@ -99,6 +99,8 @@ th, td {
 	/* border-collapse: collapse; */
 	padding: 3px;
 	/* padding-top: 3px; */
+	vertical-align: middle;
+	text-align: center;
 }
 th { background: Silver }
 
