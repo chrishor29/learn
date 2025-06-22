@@ -1210,7 +1210,7 @@ Orvosi dokumentáció helye és módja:
 		<td style="text-align:left">
 			<li>kiváltó ok megszűntetése</li>
 			<li>K<sup>+</sup> pótlása</li><ul>
-				<span class="minus">TILOS</span> <abbr title="iv. injektálva">bólusba</abbr>, mert szívleállást okoz
+				<span class="minus">TILOS</span> <abbr title="iv. injektálva">bólusba</abbr>, mert <span class="midQ [48.2] kerdes">szívleállás</span>t okoz
 			</ul>
 		</td>
 		<td style="text-align:left">
@@ -1247,7 +1247,7 @@ Orvosi dokumentáció helye és módja:
 				<li>közben K<sup>+</sup> pótlása a következőképpen:</li><ul>
 					<li>óránként max 2g adható ➜ kivéve diabeteses ketoacidózis</li>
 					<li><abbr title="perifériás vénás kanül">pvk</abbr>-be max 2g/500ml adható ➜ a fölött centrális vénába</li>
-					<span class="minus">TILOS</span> <abbr title="iv. injektálva">bólusba</abbr>, mert szívleállást okoz
+					<span class="minus">TILOS</span> <abbr title="iv. injektálva">bólusba</abbr>, mert <span class="midQ [48.2] kerdes">szívleállás</span>t okoz
 				</ul>
 			</td>
 			<td style="text-align:left"> <center>gyakori és életveszélyes!</center>
@@ -2432,14 +2432,19 @@ Orvosi dokumentáció helye és módja:
 	<details class="[12.5] kerdes"><summary>pozitív inotrópok</summary>
 		<li>lényeg ➜ <span class="bgYellow">szív kontrakciójának erőssége nő</span><abbr title="➜ kisebb frekvencia elég a keringés fenntartásához">'</abbr></li>
 		<li><span class="fsMini">kronotróp hatásuk is van ➜ szívglikozidok negatív, többi enyhén pozitív</span></li>
-		<li>indikáció:</li><ul>
-			<li><span data-src="bel" class="midQ [95]">krónikus SzE</span> ➜  szívglikozidok</li>
-			<li><span data-src="bel" class="midQ [97] bgYellow syno">akut SzE | kardiogén sokk</span>:</li><ul>
-				<li><span class="bgYellow">dobutamin</span> <abbr title="ha Psys = 90-110Hgmm">'</abbr></li>
-				<li><span class="bgYellow">nAdr</span> ➜ <span class="bgYellow">vazopresszor</span> (α<sub>1</sub>-agonista) főként ➜ ha alacsony vérnyomás ezt (vagy ezt is)</li>
-				<li><span class="fsMini">ha nem jók a hagyományosak (dobutamin,nAdr) ➜ PDE-gátló / Ca<sup>2+</sup>-érzékenyítők</span></li>
-			</ul>
-			<li><span class="bgYellow">Adr</span> ➜ szívleállás(reanimáció) / <span class="bgYellow">anaphylaxias sokk</span></li>
+		<div><span class="plus">ind</span> <span class="midQ [67.5.7] kerdes">krónikus SzE</span> ➜ <span class="midQ [13.11] kerdes">szívglikozidok</span>, ha..</div><ul>
+			<li>NYHA III/IV</li>
+			<li>supraventricularis tachyarrhytmia (pitvarlebegés, pitvarfibrilláció)-val társul</li>
+			<span class="fsMini"><abbr title="azért csak ezen indikációk vannak már">használatuk már visszaszorulóban van</abbr> (mh miatt + van jobb)</span>
+		</ul>
+		<div><span class="plus">ind</span> <span class="midQ [67.5.7] kerdes bgYellow syno">akut SzE | kardiogén sokk</span></div><ul>
+			<li><span class="bgYellow">dobutamin</span> <abbr title="ha Psys = 90-110Hgmm">'</abbr></li>
+			<li><span class="bgYellow">nAdr</span> ➜ <span class="bgYellow">vazopresszor</span> (α<sub>1</sub>-agonista) főként ➜ ha alacsony vérnyomás ezt (vagy ezt is)</li>
+			<li><span class="fsMini">ha nem jók a hagyományosak (dobutamin,nAdr) ➜ PDE-gátló / Ca<sup>2+</sup>-érzékenyítők</span></li>
+		</ul>
+		<div><span class="plus">ind</span> <span class="bgYellow">Adr</span></div><ul>
+			<li><span class="midQ [48.2] kerdes">szívleállás</span>(reanimáció)</li>
+			<li><span class="midQ [a1] bgYellow">anaphylaxias sokk</span></li>
 		</ul>
 	  <strong>gyógyszerek</strong>
 		<li>PDE-gátlók</li>
@@ -2450,9 +2455,7 @@ Orvosi dokumentáció helye és módja:
 			igazából csak a dobutamin (és dopamin) a pozitív inotróp, a nAdr inkább vazopresszor
 		</ul>
 		<li>Ca<sup>2+</sup>-érzékenyítők (levosimendan)</li>
-		<li>szívglikozidok ➜ pl. digoxin</li><ul>
-			<span class="ORANGE">mh</span> súlyosak + NEM javítja a túlélést (inkább még rontja is) ➜ mára már elavultak
-		</ul>
+		<li><span class="midQ [13.11] kerdes">szívglikozidok</span></li>
 	  <!-- egyéb --> <div>
 		<span data-src="farmak" class="midQ [217] fsMini WHITE">farmak</span>
 		<span data-src="done/Aneszt/aneszt.html" class="midQ [49] fsMini WHITE">aneszt</span>
@@ -2643,6 +2646,7 @@ Orvosi dokumentáció helye és módja:
 			<li>túladagolásuk <u>atropin</u>nal kezelhető</li>
 		  <strong>direkt kolinomimetikumok ➜ muszkarinergR-agonisták:</strong>
 			<li>ezek használata terápiában limitált</li>
+		  <div><span class="midQ [13.4] fsMini WHITE">muszkarin</span></div>
 		  <strong>indirekt kolinomimetikumok ➜ kolinészteráz-gátlók:</strong>
 			<li><u>edrophonium</u></li>
 			<div><span class="plus">ind</span> <span data-src="neuro" class="midQ [81]">Tensilon-teszt</span></div>
@@ -2653,8 +2657,8 @@ Orvosi dokumentáció helye és módja:
 			<li><u>physostigmin</u></li>
 			<div><span class="plus">ind</span> <u>atropin</u> túladagolás</div>
 			<div><span class="plus">ind</span> glaucoma</div>
-		  <span data-src="farmak" class="midQ [32] fsMini WHITE">farmak</span>
 		  <span class="midQ [13.7] fsMini WHITE">peszticidek</span>
+		  <span data-src="farmak" class="midQ [32] fsMini WHITE">farmak</span>
 		</td>
 		<td style="text-align:left">
 		  <div class="fsMini">muszkarinerg-antagonisták <abbr title="nem csak az M3-blokkolók a paraszimpatoltikumok, de bővel elég azt tudnom. vannak még a ggl-bénítók, lásd farmak, de az lényegtelen">=</abbr> paraszimpatholítikumok = antikolinergek</div>
@@ -3154,7 +3158,7 @@ Orvosi dokumentáció helye és módja:
 			<li>hepatomegalia, <span class="midQ [18.1] kerdes">icterus</span>, <span class="midQ [18.3] kerdes">akut hepatitis</span>, <span class="midQ [18.8] kerdes">májnecrosis</span></li>
 		</td>
 		<td rowspan="2" class="fsMini" style="text-align:left"> <!-- muszkarin -->
-			<li>muszkarinerg-agonista ➜ psy-izgató</li>
+			<li><span class="midQ [12.9]">muszkarinerg-agonista ➜ psy-izgató</span></li>
 			<li>tünetek hasonlóak <span class="midQ [13.7] kerdes">alkilfoszfát</span>..</li>
 			<li>..különbség ➜ itt nincs <abbr title="ez elsőre illogikusnak tűnik, hiszen a ott is (verejtékmirigy - symp - postggl.synapsis) mAChR van. azonban mégsincs, amire a magyarázat elvileg az, hogy a preggl.synapsis aktiválódása nem megy végbe, így ez magában kevés.(chatgpt)">verejtékmirigy</abbr>,<abbr title="ennek elvileg oka, hogy nem jut át vér-agy-gát (chatgpt). meg gondolom az is, hogy nikotinerg is van KIR-ben, nem csak muszkarinerg, tehát alapból különbözne az alkilfoszfáttól">KIR</abbr>,NMJ</li>
 		  <hr>
@@ -3415,7 +3419,7 @@ Orvosi dokumentáció helye és módja:
 					<li><span class="midQ [48.4] kerdes">myosis</span></li>
 					<li><span class="bgYellow">bronchokonstrikció</span></li>
 					<li>GI: motilitás↑ & relaxáció↑ ➜ hasmenés</li>
-					<li>hólyag: detrusor kontrakció↑ + sphincter relaxáció↑ ➜ inkontinencia</li>
+					<li>hólyag: detrusor kontrakció↑ + sphincter relaxáció↑ ➜ inkontinencia<abbr title="ez nem egyenlő diuresis/polyuria ... ugyanis a vizelet (GFR stb.) mennyisége nem nő">'</abbr></li>
 					<li>CV: bradycardia, hypotonia</li>
 					<li>nyáladzás, könnyezés, <span class="bgYellow">légúti váladék</span></li>
 					<span class="bgYellow"><span class="midQ [66]">fulladás</span> veszély ➜ légúti váladék + bronchokonstrikció</span>
@@ -3628,13 +3632,14 @@ Orvosi dokumentáció helye és módja:
 		<li><span class="midQ [48] bgYellow">ha eszméletlen..</span></li>
 		<li>égési sérülések ellátása (hideg víz, steril kötés)</li>
 	</details>
-	<details class="[13.11] kerdes"><summary>digitalis</summary>
+	<details class="[13.11] kerdes"><summary>szívglikozidok ~= digitalisok</summary>
 	  <strong>farmak</strong>
-		<li>gyógyszerek ➜ pl. <abbr title="ezt előnyös használni"><u>digoxin</u></abbr>, <u>digitoxin</u></li>
-		<li>hatása ➜ szívizom kontraktilitást fokozza</li>
+		<li>a szívglikozidok fő csoportja a digitalisok, ezek vannak még használva gyógyszerként (tehát alapvetően mindig ezt értjük alatta, ha nincs kiemelve, hogy más) <abbr title="többi: strophanthinok (pl. ouabain), bufadienolidok (pl. toad toxinok, kevésbé gyakori) ➜ ezekből az ouabaint főként kísérletre használják">'</abbr></li>
+		<li>gyógyszerek ➜ <abbr title="ezt előnyös használni"><u>digoxin</u></abbr>, <u>digitoxin</u></li>
+		<li>hatása ➜ <span class="midQ [12.5]">szívizom kontraktilitást fokozza = pozitív inotróp</span></li>
 		<li><details><summary style="color:blue">mechanizmusa</summary>
 		  gátolja az Na/K-ATPázt, így..
-			<li>gátlódik a Na<sup>+</sup>/Ca<sup>2+</sup>-antiporter <abbr title="működése az Na/K-hoz kötött">(szekunder)</abbr>, így..</li>
+			<li>gátlódik a Na<sup>+</sup>/Ca<sup>2+</sup>-antiporter <abbr title="mivel gátolja a Na⁺/K⁺-ATPázt, így Na⁺ intracellulárisan nő, így gátlódik az antiporter">(szekunder)</abbr>, így..</li>
 			<li>gátlódik a Ca<sup>2+</sup> visszajuttatés EC, így..</li>
 			➜ [Ca<sup>2+</sup>]<sub>IC</sub>↑ <abbr title="Ca<sup>2+</sup> kötődik troponin-hoz">➜</abbr> megnő a szívizom kontraktilitás
 			<img class="mini" data-src="oebshbmj.png">
@@ -3656,12 +3661,14 @@ Orvosi dokumentáció helye és módja:
 			<li><span class="bgBlue">AV-blokk</span></li>
 			<span class="fsMini">ha súlyos ➜ kamrafibrilláció!</span>
 		</ul>
-		<li>KIR ➜ zavartság, delírium, <span class="bgBlue">látászavar</span> (xanthopsia)</li>
+		<li>KIR ➜ zavartság, delírium, görcs, hallucináció <span class="bgBlue">látászavar</span> (xanthopsia)</li><ul>
+			<span class="fsMini">sárgán látás (pl. fehér lepedőt sárgának láthatják)</span>
+		</ul>
 	  <strong>dg</strong>
 		<li><span class="midQ [7] bgYellow">EKG</span> (PR megnyúlás, ST-depresszió, kamrai extraszisztolék, bigeminia, torsades de pointes)</li>
 		<li>labor:</li><ul>
 			<li><span class="midQ [1.2]">K<sup>+</sup></span></li><ul>
-				<li>ha akut ➜ hyperK<sup>+</sup></li>
+				<li>ha akut <abbr title="gátolja a Na⁺/K⁺-ATPázt, így K⁺ nem jut be a sejtbe → extracelluláris K⁺ emelkedhet">➜</abbr> hyperK<sup>+</sup></li>
 				<li>ha krónikus ➜ hypoK<sup>+</sup></li>
 			</ul>
 			<li>Se digoxin</li>
@@ -10027,7 +10034,8 @@ Orvosi dokumentáció helye és módja:
 <!-- 41 – 60 --><details><summary>41–60</summary>
 <details class="[41] kerdes"><summary>obliteráció<abbr title="nem mindig okklúzív">'</abbr> ellen<abbr title="néha profilaktikus (pl. gyógyszer - TAG)">'</abbr> (mvt,tüdőembolia,végtagischaemia,stroke)</summary>
 	<div>alábbiak kezelése hasonló ➜ <span class="midQ [26]">MVT</span>, <span class="midQ [22]">tüdőembólia</span>, <span data-src="neuro" class="midQ [371.4]">stroke</span>, <span class="midQ [26]">végtagischaemiak</span> ➜ egybe szedtem</div>
-	<li><span class="bgBlue">'gyógyszerek<abbr title="fibrinolysis is gyógyszeres, de nem tudok szebb nevet adni. alvadást befolyásoló gyógyszerek se jó szerintem, mert azok miért ne tartoznának ugyanúgy bele?">'</abbr> ➜ összes, kivéve stroke:</span></li><ul>
+  <strong>gyógyszeres</strong>
+	<li><span class="bgBlue">tartós</span> ➜ összes, kivéve stroke:</li><ul>
 		<li>antikoaguláns</li><ul>
 			<li><span class="bgBlue"><span class="midQ [12.13] kerdes">heparin</span> (LMWH / UFH) ➜ tüdőembólia, akut kritikus VI(infarktus)</span></li><ul>
 				<span class="fsMini">LMWH ➜ MVT ha terhes</span>
@@ -10044,10 +10052,11 @@ Orvosi dokumentáció helye és módja:
 		</ul>
 		<div><span class="minus">KI</span> ➜ alvadászavar, hipertónia, stb.</div>
 	</ul>
-	<li><span class="bgBlue"><span class="syno">thromb | embol</span>ectomia</span> (sebészi<abbr title="nyitott műtét">'</abbr> / <span class="syno">endovascularis | katéteres</span> <img class="mini" data-src="jokgpmor.png">) ➜ <span class="bgBlue">összes, kivéve krónikus VI</span></li>
-	<li><span class="bgBlue">bypass</span> (sebészi<abbr title="nyitott műtét">'</abbr>) ➜ <span class="bgBlue">VI</span> (főleg krónikus)</li>
+  <strong>sebészi</strong>
+	<li><span class="bgBlue"><span class="syno">thromb | embol</span>ectomia</span> (nyitott műtét / <span class="syno">endovascularis | katéteres</span> <img class="mini" data-src="jokgpmor.png">) ➜ <span class="bgBlue">összes, kivéve krónikus VI</span></li>
+	<li><span class="bgBlue">bypass</span> (nyitott műtét) ➜ <span class="bgBlue">VI</span> (főleg krónikus)</li>
   <strong>protokoll kb.</strong>
-	<li><span class="bgBlue">ha enyhe +/ profilaxis ➜ gyógyszeres</span></li>
+	<li><span class="bgBlue">ha enyhe +/ profilaxis ➜ tartós gyógyszeres</span></li>
 	<li><span class="bgBlue">ha nem elég ➜ thrombolysis / bypass / -ectomia</span></li>
 </details>
 <details class="[42] kerdes"><summary>koponya trauma</summary>
@@ -10954,7 +10963,25 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 	  <strong>eddigiek tachycardia és tachyarrhythmiak ➜ ez bradycardia és bradyarrhyhtmia</strong>
 		<li><span data-src="done/Kardio/kardio.html" class="midQ [42] kerdes">pacemaker</span> ➜ Mobitz II-től</li>
 	</details>
-	<details class="[48.2] kerdes"><summary>defibrilláció</summary>
+	<details class="[48.2] kerdes"><summary>szívleállás, defibrilláció</summary>
+	  <table><tr>
+		<th>szívleállás típusa</th>
+		<th>defibrilláció</th>
+		<th>Adr</th>
+	  </tr><tr><th>VF = <abbr title="kamrafibrillációt mutat a defibrillátor EKG">kamrafibrilláció</abbr> <img class="mini" data-src="cdlwasrq.png"> <img class="mini" data-src="suyzhldu.png"></th>
+		<td>✅ elsődleges</td>
+		<td>✅ 2. defibrilláció után (1mg,iv) 3-5 percenként</td>
+	  </tr><tr><th>pnVT = <abbr title="kamra tachycardiát mutat a defibrillátor EKG és pulzust nem tapinthatok">pulzus nélküli kamrai tachycardia</abbr> <img class="mini" data-src="euyjsans.png"></th>
+		<td>✅ elsődleges</td>
+		<td>✅ 2. defibrilláció után (1mg,iv) 3-5 percenként</td>
+	  </tr><tr><th><abbr title="pulzus nélküli elektromos aktivitás">PEA</abbr> = rendesen ver a szíve(EKG-n látszik), csak a pulzust nem tapinthatom</th>
+		<td>❌ nem defibrillálható</td>
+		<td>✅ azonnal</td>
+	  </tr><tr><th>ASY = 'EKG egy egyenes, már vége'</th>
+		<td>❌ nem defibrillálható</td>
+		<td>✅ azonnal</td>
+	  </tr></table>
+	  <div><strong>defibrillátor</strong></div>
 		<li>funkció ➜ <span class="bgYellow"><span class="midQ [48.1] kerdes">aszinkronizált kardioverziót</span> csinál</span></li>
 		<li>típusai:</li><ul>
 			<span class="fsMini">manuális ALS-nél, másik kettő BLS-nél!</span>
@@ -10963,12 +10990,6 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li>automata (=AED) ➜ miután detektálta szívritmust és meghatározta hogy kell-e, figyelmeztet, hogy sokkolni fog (ne érj hozzá), majd sokkol (nem kell gombnyomás)</li>
 			<span class="fsMini">implantálható kardioverter defibrillátor (ICD) ➜ pacemaker méretű és pacemaker(bradycardia) & defibrillátor funkciójú</span>
 		</ul>
-		<li>indikáció:</li><ul>
-			<div><span class="plus">✔</span> VF = <abbr title="kamrafibrillációt mutat a defibrillátor EKG">kamrafibrilláció</abbr> <img class="mini" data-src="cdlwasrq.png"> <img class="mini" data-src="suyzhldu.png"></div>
-			<div><span class="plus">✔</span> pnVT = <abbr title="kamra tachycardiát mutat a defibrillátor EKG és pulzust nem tapinthatok">pulzus nélküli kamrai tachycardia</abbr> <img class="mini" data-src="euyjsans.png"></div>
-			<div><span class="minus">✖</span> <abbr title="pulzus nélküli elektromos aktivitás">PEA</abbr> = rendesen ver a szíve(EKG-n látszik), csak a pulzust nem tapinthatom</div>
-			<div><span class="minus">✖</span> ASY = 'EKG egy egyenes, már vége'</div>
-		</ul>
 	  <strong>manuális használata</strong>
 		<li>először felhelyezem ➜ <abbr title="szemből balre fennt (egyébként jobb válla)">piros</abbr>, <abbr title="szemből jobbra fennt (egyébként bal válla) --> tehát óra mutató járásának megfelelően megyek és piros fehér zöld; csak fehér helyett sárga">sárga</abbr>, zöld, fekete</li>
 		<li>utána beállítom 200J</li>
@@ -10976,14 +10997,14 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		<li>utána szólok, hogy 'menjetek arrébb'</li>
 		<li>utána ráteszem: apex jobb kézben, másik balkézben, és felteszem őket így <img class="mini" data-src="cvsgyhse.png"></li>
 		<li>utána megnézem nem ér hozzá senki gyors, és utána a defibrillátor kijelzőjét nézem</li>
-		<li>utána mondom: 'sokkleadás most', majd megnyomom</li>
+		<li>utána mondom: <span class="bgYellow">'sokkleadás most'</span>, majd megnyomom</li>
 		<li>utána folytatja a 30x2</li>
 		<li>visszateszem, majd beállítom 300J és repeat</li>
 		<li>ha az se elég, akkor még1x növelem 360J és repeat</li>
 		<li>innentől csak 360J-al repeat, több már nem</li>
 	  <strong>manuális szabályok</strong>
-		<li>végig határozottan mondom a dolgokat, nem pedig: légyszi menj arébb, stb.</li>
-		<li>sosincs a sütő gomb közelében az ujjam (mintha pisztoly lenne, ottse tartom a ravaszon), hanem odateszem a többi ujjam mellé (képen pl. a hüvelykujj rajta van az elsütő gombon, ez csak akkor lesz, amikor elsütöm, addig nincs ott, hanem stabilan a többi mellett) <img class="mini" data-src="uaswjxfl.png"></li>
+		<li>végig <span class="bgYellow">határozottan mondom a dolgokat</span>, nem pedig: légyszi menj arébb, stb.</li>
+		<li><span class="bgBlue">sosincs a sütő gomb közelében az ujjam</span> (mintha pisztoly lenne, ottse tartom a ravaszon), hanem odateszem a többi ujjam mellé (képen pl. a hüvelykujj rajta van az elsütő gombon, ez csak akkor lesz, amikor elsütöm, addig nincs ott, hanem stabilan a többi mellett) <img class="mini" data-src="uaswjxfl.png"></li>
 	  <strong><abbr title="csak érdekelt, hogy lecserélik-e mindent manuálisra idővel vagy van-e előnye. mert azt írta ALS-nél ez van, gondolom nem véletlen akkor. (de aneszt jegyzetemben azt írtam, hogy egyre kevesebb manuális van szerencsére..)">(manuális előnye)</abbr> - chatgpt</strong>
 		<li>az AED csak sokkolható ritmusokat (VF, pVT) ismer fel és kezel, míg a manuális defibrillátorral egy tapasztalt egészségügyi személyzet minden ritmust pontosan elemezhet</li>
 		<li>pl.: PEA vagy aszisztólia esetén az AED nem segít, de a manuális defibrillátorral lehet más beavatkozásokat végezni (pl. pacemaker funkció).</li>
@@ -11340,7 +11361,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li><span class="bgBlue"><span class="syno" data-syno="vegetatív | dekortikált">vegetatív</span> állapot</span>:</li><ul>
 				<li><abbr title="a nyitott szemen kívül semmi figyelmi reakció illetve cselekvés képesség. (nem követi a szemével pl. ahogy mozgok előtte)">nincs tudati működése</abbr>, annak ellenére, hogy <abbr title="vegetatív működések (emésztés, keringés, légzés, hőszabályozás) stabil">éber</abbr></li>
 				<li><span class="midQ [87]" data-src="Neurologia/neuroAV.html">decorticatios tonus</span></li>
-				<li>oka pl. trauma, globális agyi ischaemia(szívleállás)</li>
+				<li>oka pl. trauma, globális agyi ischaemia(<span class="midQ [48.2] kerdes">szívleállás</span>)</li>
 			</ul>
 		</td>
 	  </tr><tr>
@@ -11633,10 +11654,10 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 	</details>
 </ul>
 <details class="[51] kerdes"><summary>boka-kar index (BKI)</summary>
-	<li>lényege ➜ (alsó) <span class="midQ [26]">VObV</span> dg</li>
+	<li>lényege ➜ (alsó) <span class="midQ [26] kerdes">VObV</span> dg</li>
 	<div><span class="plus">ind</span> 65 éves kor felett bárki</div>
 	<div><span class="plus">ind</span> 50-64 éves kor alatt..</div><ul>
-		<li>metabolikus sy</li>
+		<li><span class="midQ [68] kerdes">metabolikus sy</span></li>
 		<li>dohányzás</li>
 		<li>atherosclerosis más területen</li>
 	</ul>
@@ -11649,18 +11670,24 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 	<li>megmérem..</li>
 	<li>..karokon a vérnyomást a.brachialis felett (2mérés)</li>
 	<li>..lábakon a vérnyomást a.dorsalis pedis + a.tibilaris posterior felett (4mérés)</li>
-	<li>ezután a magasabb karvérnyomás-értékkel elosztva az egyik, majd másik oldali magasabb bokavérnyomás értéket, kapjuk meg a BKI értékét mindkét oldalon</li>
+	<li>ezután az egyik(, majd másik) oldali magasabb bokavérnyomás értéket elosztom a magasabb karvérnyomás-értékkel ➜ megkapjuk a BKI értékét mindkét oldalon</li>
   <strong>értékelés</strong>
-	<li>ha BKI: 0,9-1,1 ➜ fiziológiás</li>
-	<li>ha BKI &lt; 0,9 ➜ kóros, amely igazolja a perifériás érbetegséget</li><ul>
-		<li>ha BKI: 0,7-0,9 ➜ nagy része még tünetmentes</li>
-		<li>ha BKI &lt; 0,4 ➜ érszűkület súlyos</li>
+	<li>BKI: 0,9-1,1 ➜ fiziológiás</li>
+	<li>BKI &lt; 0,9 ➜ kóros, amely igazolja a <span class="midQ [26] kerdes">VObV</span>-et (oka: atherosclerosis)</li><ul>
+		<li>0,7-0,9 ➜ enyhe: gyakran tünetmentes</li>
+		<li>0,4-0,7 ➜ középsúlyos</li>
+		<li>&lt;0,4 ➜ súlyos: kritikus végtagischaemia gyanú</li>
 	</ul>
-	<li>ha BKI > 1,3 ➜ akkor nem értékelhető a mérés; oka: atherosclerosis miatt nem tudja összenyomni az eret, így hamis értéket mutat <span class="bgPink">(..check chatgpt..)</span></li><ul>
+	<li>BKI > 1,3 ➜ nem értékelhető (artefactum); oka: mediasclerosis<abbr title="artériák merevek, nem komprimálhatók, így álértéket ad">*</abbr></li><ul>
 		<li><span class="midQ [58.3]">DM</span></li>
 		<li>VE</li>
 		<li>időskor</li>
+		<span class="fsMini">(➜ Doppler-UH / angiographia kell ilyenkor)</span>
 	</ul>
+  <strong>patho</strong>
+	<li>ha BKI↓ ➜ atherosclerosis: érszűkület</li>
+	<li>ha BKI↑ (álérték) ➜  mediasclerosis: érfal merevség (tunica media meszesedés)</li>
+	<li>probléma ➜ DM esetében mindkettő felléphet</li>
 </details>
 <details class="[52] kerdes"><summary>sav-bázis</summary>
 	<li><span class="midQ [🩺9] kerdes">vérgáz normál értékek</span></li>
@@ -12249,7 +12276,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 					<li>15mmol/l glükóz alatt kell glükózt is adni már</li>
 				</ul>
 				<li><span class="bgBlue">K<sup>+</sup> folyamatos követése és pótlása!</span>, <span class="bgYellow">mert kezelés alatt lecsökken</span><abbr title="volumen megnő illetve az inzulin fokozza a felvételt a sejtekbe (lásd inzulinkezelés tétel)">*</abbr>: <span class="midQ [1.2] kerdes">hypoK<sup>+</sup></span></li><ul>
-					<span class="minus">TILOS</span> <abbr title="iv. injektálva">bólusba</abbr>, mert szívleállást okoz
+					<span class="minus">TILOS</span> <abbr title="iv. injektálva">bólusba</abbr>, mert <span class="midQ [48.2] kerdes">szívleállás</span>t okoz
 				</ul>
 				<li>bikarbonát(NaHCO<sub>3</sub>) ➜ ha a pH 7,15 vagy 7,1 alatti</li>
 				<div></div>
@@ -12923,7 +12950,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		  <table>
 			<tr><th style="width:14px"></th>  <th colspan="2">artériás thrombosis</th>  <th colspan="2">vénás thrombosis</th></tr>
 			<tr><th class="fsMini" style="writing-mode:sideways-lr;" rowspan="2">Virchow-triász</th>
-				<td rowspan="2" class="fsMini"> endothel sérülése (pl. atherosclerosis .. plakk ruptúra) ➜ thrombocyta-k így kitapadhatnak </td>
+				<td rowspan="2" class="fsMini"> endothel sérülése (pl. <span class="bgBlue">atherosclerosis</span> .. plakk ruptúra) ➜ thrombocyta-k így kitapadhatnak </td>
 				<td colspan="2" class="fsMini"> véráramlás megváltozása </td>
 				<td rowspan="2" class="fsMini"> <span class="midQ [115.2]" data-src="bel">hiperkoagulabilitás</span> </td>
 			  </tr><tr>
@@ -12952,7 +12979,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 					<span class="fsMini">v.cava superior sy, katéter-asszociált vénás thrombosis</span>
 				</td>
 			</tr>
-			<tr><th class="fsMini" style="writing-mode:sideways-lr;">lokalizáció</th>  
+			<tr><th class="fsMini" style="writing-mode:sideways-lr;">típus</th>  
 				<td colspan="2" class="fsMini"><table><tbody><tr><th>okklúzív</th>  <th>obliteratív</th></tr><tr>
 					<td> infarktus: <span class="midQ [67.3]">AMI</span>, <span data-src="neuro" class="midQ [371.4] kerdes">stroke</span>, <span class="midQ [26]">alsó végtagi</span>, <span class="bgPink">bél</span> </td>
 					<td> ischaemia, pl. <span class="midQ [26]">alsó végtagi</span> <span class="bgPink">..</span> </td>
@@ -13771,7 +13798,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		  </tr><tr><td style="writing-mode:sideways-lr;" rowspan="2"> <span class="bgYellow">afterload</span><abbr title="'nyomás, amely ellen a kamrának ki kell lökni a vért szisztolé alatt' ➜ bal kamráé főleg az aorta nyomásától (szisztolés vérnyomás) és az érrendszeri ellenállástól (SVR). jobbkamráé a pulmonalis nyomás/ellenállástól.">*</abbr> </td> <td> ↓ </td>
 			<td style="text-align:left">
 			  redisztributív sokk:
-				<li>anaphylaxias sokk</li>
+				<li><span class="midQ [a1]">anaphylaxias sokk</span></li>
 				<li>szeptikus sokk</li>
 			</td>
 			<td style="text-align:left"> 
@@ -13991,9 +14018,25 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		   <th style="writing-mode:sideways-lr; width:18px">akut</th>
 			<td colspan="3" style="text-align:left"><strong>protokoll</strong>
 				<img class="mini" data-src="kszvgth.jpg">
-				<div>1) <span class="bgYellow">ha kardiogén sokk</span> ➜ <span class="bgYellow"><span class="midQ [67.5.2]">hipoperfúzió +/ pangás</span> van-e</span> ➜ keringéstámogatás</div>
+				<details><summary>1) <span class="bgYellow">ha kardiogén sokk</span> ➜ <span class="bgYellow"><span class="midQ [67.5.2]">hipoperfúzió van-e</span></span> ...  ➜ keringéstámogatás</summary>
+					<li>hypoperfusio preload csökkenés esetében is van, így el kell különíteni a kardiogén sokktól továbbra is</li>
+					<li>kardiogén sokk:</li><ul>
+						<li>korábbi szívbetegség gyakori, fokozatos</li>
+						<li><span class="midQ [3]">mellkasi fájdalom ➜ angina</span></li>
+						<li>EKG,labor ➜ AMI</li>
+					</ul>
+					<li>obstruktív sokk:</li><ul>
+						<li>inkább hirtelen, trauma</li>
+						<li>VJE tágulat</li>
+						<li><span class="midQ [3]">mellkasi fájdalom..</span></li>
+						<li><span class="midQ [67.7]">echo</span> ➜ jobb kamra dilatáció, pericardialis folyadék</li>
+					</ul>
+				  </details><ul>
+					<li>gyógyszeres ➜ lásd: <span class="midQ [12.5] kerdes">pozitív inotróp</span></li>
+					<li>mechanikus - ha súlyos <img class="mini" data-src="jcqsrdqw.png"></li>
+				</ul>
 				<div>2) <span class="bgYellow">ha LE ➜ légzéstámogatás</span></div>
-				<li>ABCDE alapján a légzés lenne az első(B), de kardiogén esetében a keringés(C) van előbb.. (oké.. és hogy állapítom meg ezt előre fhaszom ?!)</li>
+				<li>ABCDE alapján a légzés lenne az első(B), de kardiogén esetében a keringés(C) van előbb.. <span class="bgPink">(oké.. és hogy állapítom meg ezt előre fhaszom ?!)</span></li>
 				<div>3) <span class="bgYellow">oki th ➜ CHAMP</span></div>
 			</td>
 			<td colspan="3" style="text-align:left"><center><strong><span class="bgYellow">FelMOND</span> ➜ szív terheltsége csökkenjen!</strong></center>
@@ -14035,7 +14078,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 				<li><span class="midQ [12.6] kerdes bgYellow"><u>furosemid</u></span> ➜ oedema ellen</li>
 				<li><span class="midQ [58.4] kerdes">SGLT-2 gátlók</span> <abbr title="is bizonyítottan hatnak ➜ diuretikus hatású, hisz glükóz távozik, de egyéb hatások is (remodellációt gátolják, endothel funkciót javítják)">'</abbr> </li>
 				<li><span class="midQ [12.8] kerdes"><u>hydralazin</u></span> (artéria dilatátor)</li>
-				<li><span class="midQ [12.5] kerdes">(digoxin)</span></li>
+				<li><span class="midQ [12.5] kerdes">szívglikozidok</span></li>
 			</td>
 			<td colspan="2" style="text-align:left"><strong>nem gyógyszeres (műszív, szívátültetés)</strong>
 				<li>ha billentyűbetegség:</li><ul>
@@ -14259,9 +14302,10 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 	<details class="[67.7] kerdes"><summary>echocardiographia = szív-UH</summary>
 		<li><span class="bgBlue">szív UH</span>-os vizsgálata</li>
 		<li>transthoracalis (kevésbé érzékeny) / transoesophagialis</li>
+		<li>leggyorsabb, leginformatívabb eszköz ágy mellett</li>
 	  <strong>indikáció</strong>
-		<li><span class="bgBlue">EF<abbr title="ejekciós frakció. EF = SV / EDV. Ez lényegében a VTF (verőtérfogat), csak %-ban. VTF = EDV - ESV (end diastolic/systolic volumen) = VTF = SV (stroke volume).">'</abbr> meghatározása</span> (bal kamra funkció) ➜ pl. <span class="midQ [67.5] kerdes">SZE</span>, <span class="midQ [67.2] kerdes">ischaemiás szívbetegség</span></li>
-		<li><span class="bgBlue">PTF<abbr title="perctérfogat = CO (cardiac output) = SV * pulzus">'</abbr> meghatározása</span> ➜ pl. <span class="midQ [67.5] kerdes">SZE</span></li>
+		<li><span class="bgBlue">EF<abbr title="ejekciós frakció. EF = SV / EDV. Ez lényegében a VTF (verőtérfogat), csak %-ban. VTF = EDV - ESV (end diastolic/systolic volumen) = VTF = SV (stroke volume).">'</abbr> meghatározása</span> (bal kamra funkció) ➜ pl. <span class="midQ [67.5] kerdes">SzE</span>, <span class="midQ [67.2] kerdes">ISzB</span></li>
+		<li><span class="bgBlue">PTF<abbr title="perctérfogat = CO (cardiac output) = SV * pulzus">'</abbr> meghatározása</span> <abbr title="CI = cardiac index ➜ testfelszínre normalizált CO. Ez pontosabb, valójában ezt kell.">*</abbr> ➜ pl. <span class="midQ [67.5] kerdes">SzE</span></li>
 		<li><span class="midQ [67.6] kerdes bgYellow">cardiomyopathiak</span>:</li><ul>
 			<li>HCM ➜ hipertrófia mértéke</li>
 			<li>RCM ➜ kamrák<abbr title="normális vagy megkisebbedett">↓</abbr> pitvar<abbr title="megnagyobbodott">↑</abbr></li>
@@ -14302,22 +14346,51 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li><span class="midQ [67.4] kerdes">myocarditis</span></li>
 			<li><span class="bgBlue">pericardialis folyadék! ➜ <span class="midQ [67.4] kerdes">pericarditis</span>, <span class="midQ [67.4] kerdes">szívtamponád</span></span></li>
 		</ul>
+		<li>CVP + PCWP becsülhető</li>
 		<li><span class="midQ [67.2]">ISZB</span>, <span class="midQ [67.3]">ACS</span></li>
 	</details>
 </details>
 <details class="[68] kerdes"><summary>metabolikus sy</summary>
 	<li>gyakori</li>
   <strong>tünetek</strong><span class="fsMini">('halálos 4es')</span> ➜ ha valaki obes, akor meg kell néznem rögtön a másik hármat is!
-	<li><span class="bgBlue">abdominalis obesitas</span> (NEM visceralis)</li>
+	<li><details class="kerdes"><summary><span class="bgBlue">visceralis obesitas</span></summary>
+		<img data-src="vkbhemvi.png">
+	  <table><tr><th>central = android = alma = visceralis</th>  <th>gynoid = körte = subcutan</th></tr><tr>
+		<td style="text-align:left">
+			<li>has, hasi szervek körül <span class="fsMini">(ffi-aknál gyakoribb)</span></li>
+			<li><abbr title="peritoneumon belül, a szervek között ➜ nem tapintható, „kemény has">visceralis zsír</abbr></li>
+			<li>alma alak</li>
+			<li>magas rizikó</li>
+		</td>
+		<td style="text-align:left">
+			<li>csípő, comb, fenék <span class="fsMini">(nőknél gyakoribb)</span></li>
+			<li><abbr title="bőr alatt, hasfalon kívül ➜ tapintható, „puha” zsír">subcutan zsír</abbr></li>
+			<li>körte alak</li>
+			<li>alacsony rizikó</li>
+		</td>
+	  </tr></table>
+	  <strong>dg</strong>
+		<li>derék / csípő</li><ul>
+			<li>ffi >0,90</li>
+			<li>nő >0,85</li>
+			➜ nagy valószínűséggel visceralis (android) típusú obesitas
+		</ul>
+		<li>derékbőség</li><ul>
+			<li>ffi >102cm</li>
+			<li>nő >88cm</li>
+			➜ <abbr title="ez annyit jelent, hogy a bőség nagyobb, mint ezen értékek">abdominalis obesitas</abbr> (ez jellemzően visceralis, de lehet subcutan is)
+		</ul>
+		<li>CT/MR ➜ visceralis vagy subcutan egyértelműen eldönthető</li>
+	</details></li>
 	<li><span class="midQ [8] kerdes bgBlue">hypertonia</span></li>
 	<li><span class="midQ [39] kerdes bgBlue">hypertrigliceridaemia</span> (TG↑ HDL↓)</li>
-	<li>szénhidrát háztartás zavara (<span class="midQ [58] kerdes bgBlue">diabetes mellitus</span>)</li>
+	<li><span class="midQ [58] kerdes bgBlue">DM</span> (szénhidrát háztartás zavara)</li>
 	<div>(5.) <span class="midQ [16] bgYellow">hyperuricaemia</span> is jellemzi</div>
   <div><strong>társbetegségek, szövődmények</strong></div>
-	<li>PCOS</li>
-	<li><span class="bgYellow">artériák károsodása(<span class="midQ [26]">végtag</span>, <span class="midQ [67.2] kerdes">ISZB</span>)</span></li>
+	<li><span class="bgYellow">PCOS</span></li>
+	<li><span class="midQ [61.5] kerdes bgBlue">artériás érbetegségek</span></li>
 	<li>mvk adenoma</li>
-	<li><span class="midQ [18.11]">epekő</span></li>
+	<li><span class="midQ [18.11] kerdes bgYellow">epekő</span></li>
 	<li>Alzheimer-kór</li>
   <!-- FORRÁSOK --> <div>
 	<abbr title="Endokrinológia (III)">§</abbr>
@@ -15175,7 +15248,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 	<li>profilaxis ➜ allergén kerülése (takarítás(poratka), gyógyszer/étel kerülés)</li>
 	<li>anti-hisztamin</li>
 	<li>szteroid (iv), ha súlyosabb</li>
-	<li>Adr, ha anafilaxiás sokk ➜ hordanak maguknál epipen-t(Adr injekció), amit a combizmukba kell adni ilyenkor <abbr title="bár egy sajnos nem szokott elég lenni, és 10-15perc múlva kéne még1">'</abbr> <abbr title="House-ost csak a megjegyzés miatt tettem oda, ott ugye rosszul adja be (legalábbis gondolom, mert összes videóban comb + gyakon is azt mondták + lábszár esetén a tibiaba szúrná, nem im.)">*</abbr>
+	<li><span class="midQ [12.5] kerdes">Adr</span>, ha anafilaxiás sokk ➜ hordanak maguknál epipen-t(Adr injekció), amit a combizmukba kell adni ilyenkor <abbr title="bár egy sajnos nem szokott elég lenni, és 10-15perc múlva kéne még1">'</abbr> <abbr title="House-ost csak a megjegyzés miatt tettem oda, ott ugye rosszul adja be (legalábbis gondolom, mert összes videóban comb + gyakon is azt mondták + lábszár esetén a tibiaba szúrná, nem im.)">*</abbr>
 		<button class="video" data-src="videos/epipen1.mp4">►</button>
 		<button class="video" data-src="videos/epipen2.mp4">►</button>
 	</li>
