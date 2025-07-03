@@ -4667,7 +4667,6 @@ function F_loadIMGs(detElem) {
 			imgs[i].style.float = imgs[i].dataset.float
 		}
 	
-		imgs[i].onclick = function() { F_imgClick(this) }
 		if ( imgs[i].classList.contains("mini") == true ) {
 			imgs[i].style.border = "2px solid DeepSkyBlue"
 			imgs[i].style.maxHeight = "16px"
@@ -4698,6 +4697,8 @@ function F_loadIMGs(detElem) {
 				}
 			}
 		}
+		
+		imgs[i].onclick = function() { F_imgClick(this) }
 	}
 }
 function F_loadCentImg() {
