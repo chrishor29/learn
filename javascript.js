@@ -4625,7 +4625,7 @@ function F_loadAbbrQ(detElem) {
 }
 
 // –––––––––––––––  img BEGIN  –––––––––––––––
-function F_imgClick(img) { // kinagyítás
+function F_imgZoom(img) { // kinagyítás
 	var centImg = document.getElementById("img_cent")
 	var overlay = centImg.parentElement.parentElement
 	var overlayBG = centImg.parentElement.parentElement.parentElement
@@ -4633,6 +4633,23 @@ function F_imgClick(img) { // kinagyítás
 	centImg.src = img.src;
 	overlay.scrollTo(0, 0); // Alaphelyzetbe állítjuk a scrollt
 	overlayBG.style.visibility = "visible"
+}
+function F_imgChangeSrc(img) { // IF (rightClick/longPress) ➜ change src
+	// toggle egy 'm' betűt betesz/kivesz a végén
+	let oldUrl = img.src;
+	let dotIndex = oldUrl.lastIndexOf('.');
+	let begin = oldUrl.slice(0, dotIndex);
+	let end = oldUrl.slice(dotIndex)
+	let newUrl
+	if ( img.style.borderColor == "black" ) {
+		begin = begin.slice(0,-1)
+		newUrl = begin + end
+		img.style.borderColor = "red"
+	} else {
+		newUrl = begin + "m" + end
+		img.style.borderColor = "black"
+	}
+	img.src = newUrl
 }
 function F_unloadIMGs(detElem) {
 	var imgs = detElem.getElementsByTagName("IMG")
@@ -4667,6 +4684,7 @@ function F_loadIMGs(detElem) {
 			imgs[i].style.float = imgs[i].dataset.float
 		}
 	
+		//imgs[i].onclick = function() { F_imgClick(this) }
 		if ( imgs[i].classList.contains("mini") == true ) {
 			imgs[i].style.border = "2px solid DeepSkyBlue"
 			imgs[i].style.maxHeight = "16px"
@@ -4697,8 +4715,40 @@ function F_loadIMGs(detElem) {
 				}
 			}
 		}
-		
-		imgs[i].onclick = function() { F_imgClick(this) }
+	
+		if ( imgs[i].classList.contains("if") == true ) {
+			imgs[i].style.borderColor = "red"
+			
+			let pressTimer = null;
+			const longPressThreshold = 600; // ms hosszú nyomásnak
+			imgs[i].addEventListener('mousedown', startPress);
+			imgs[i].addEventListener('touchstart', startPress);
+			imgs[i].addEventListener('mouseup', endPress);
+			imgs[i].addEventListener('touchend', endPress);
+			imgs[i].addEventListener('touchcancel', endPress);
+			function startPress(e) {
+				// prevent context menu on long press desktop
+				if(e.type === "mousedown" && e.button !== 0) return; // csak bal gomb
+				const img = e.currentTarget; // erre kattintottak
+				pressTimer = setTimeout(() => {
+					// hosszú nyomás után: kép csere
+					F_imgChangeSrc(img);
+					pressTimer = null;
+				}, longPressThreshold);
+			}
+			function endPress(e) {
+				const img = e.currentTarget; // erre kattintottak
+				if (pressTimer) {
+					// rövid nyomás - kinagyítás toggle
+					clearTimeout(pressTimer);
+					pressTimer = null;
+					F_imgZoom(img);
+				}
+			}
+		} else {
+			imgs[i].onclick = function() { F_imgZoom(this) }
+		}
+	
 	}
 }
 function F_loadCentImg() {
@@ -4801,14 +4851,14 @@ function F_loadCentImg() {
 	
 	if ( isAndroid == false ) {
 		document.getElementById("img_mini").onmouseout = function() { this.style.display = "none" }
-		document.getElementById("img_mini").onclick = function() {  F_imgClick(this) }
+		document.getElementById("img_mini").onclick = function() {  F_imgZoom(this) }
 	}
 }
 F_loadCentImg()
 function F_loadMiniImg() {
 	if ( isAndroid == false ) {
 		document.getElementById("img_mini").onmouseout = function() { this.style.display = "none" }
-		document.getElementById("img_mini").onclick = function() {  F_imgClick(this) }
+		document.getElementById("img_mini").onclick = function() {  F_imgZoom(this) }
 	}
 }
 F_loadMiniImg()
