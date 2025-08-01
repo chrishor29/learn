@@ -5141,7 +5141,7 @@ Orvosi dokumentáció helye és módja:
 		<details class="[18.2.1] kerdes"><summary>HAV-HEV</summary>
 		  <div><strong>infekció</strong></div>
 			<li><span class="bgYellow">HAV,HEV ➜ feco-orális</span> (higiénia mellőzése)</li>
-			<li><span class="bgYellow">HBV,HCV,HDV ➜ parenteralisan: perinatális, <span data-src="szul" class="midQ [61]">STD</span>, vér</span>(drog,trafo)</li>
+			<li><span class="bgYellow">HBV,HCV,HDV ➜ parenteralisan: perinatális, <span data-src="szul" class="midQ [61]">STD</span>, vér</span>(drog,<span class="midQ [35] kerdes">trafo</span>)</li>
 		  <div><strong>patho</strong></div>
 			<li>a <span class="bgYellow">vírusok nem károsítják a sejteket, a májsejtek károsodását az ImR aktiválása útján okozzák</span> </li>
 		  <div style="overflow-x: auto;"><table><tr> <!-- lefolyások -->
@@ -6267,30 +6267,32 @@ Orvosi dokumentáció helye és módja:
 				<li><span class="bgBlue">ha megszűnik, a VE is</span></li>
 				<li><span class="bgBlue">ha fennmarad, akkor ischaemiás károsodás és ATN-be megy át</span></li>
 			</ul>
-			<li>etio ➜ veseperfúzió csökken:</li><ul>
+			<li>etio ➜ <abbr title="oxigén(+/tápanyag) ellátása">veseperfúzió</abbr>↓</li><ul>
 				<li><span class="bgYellow">folyadékvesztés</span> ➜ vérzés, hasmenés, hányás</li>
 				<li><span class="midQ [oedema]">oedema</span> ➜ <span class="midQ [67.5] bgYellow kerdes">SzE</span>, <span class="bgYellow">máj</span></li>
 				<li>sepsis, anaphylaxia</li>
 				<details><summary class="fsMini" style="color:blue">részletesebb</summary>
-					<li>folyadékvesztés</li><ul>
+				  <strong>RBF↓</strong>
+					<li>folyadékvesztés (hypovolaemia)</li><ul>
 						<li>vérzés</li>
 						<li>hasmenés, hányás</li>
 						<li>égési sérülés</li>
 						<li><span class="midQ [16.11.5]">diuresis</span></li>
 					</ul>
-					<li>csökkent effektív keringő volumen:</li><ul>
+					<li><abbr title="szervezet folyadékot nem veszít, csak a keringés">effektív keringő volumen</abbr>↓:</li><ul>
 					  <abbr title="van amikor nem csökken (pl. Ca-csat blokkolók)">egyes</abbr> oedemas kórképek:
 						<li>SzE</li>
 						<li>máj (hypoalbuminaemia)</li>
 					  vasodilatáció
-						<li>sepsis</li>
+						<li><span class="midQ [54]">sepsis</span></li>
 						<li>anaphylaxia</li>
 					</ul>
-					<li>autoreguláció károsodása:</li><ul>
-					  afferens vazokontrikció:
-						<li><span class="midQ [51] kerdes" data-src="bel">hepatorenalis sy</span>, <span class="midQ [54]">sepsis</span></li>
-						<li>cyclosporin A, adrenalin, NSAID, hypercalcaemia</li>
-					  efferens vazodilatáció:
+					<li><abbr title="RBF csökkenést érzékelve a RAAS aktiválódik, így afferens vazodilatáció és efferens vazokontrikció megy végbe ➜ ez gátlódik">autoreguláció</abbr> (<span class="midQ [2] kerdes">RAAS</span>) károsodása:</li><ul>
+					  afferens vazokontrikció (<abbr title="prosztaglandinok végzik">dilatáció</abbr> helyett):
+						<li><span class="midQ [51] kerdes" data-src="bel">hepatorenalis sy</span><abbr title="erős szimpatikus túlsúly">'</abbr>, <span class="midQ [54]">sepsis</span><abbr title="paradox módon afferens tónuszavar (mikrocirkuláció károsodik)">'</abbr></li>
+						<li>cyclosporin A, Adr, hyperCa2+<abbr title="direkt vazokonstrikció">'</abbr></li>
+						<li>NSAID<abbr title="gátolják a prosztaglandinokat, amelyek normálisan tágítanák az afferenst">'</abbr></li>
+					  efferens vazodilatáció (<abbr title="angiotenzin II végzi">konstrikció</abbr> helyett):
 						<li>ACE-gátló / ARB</li>
 					</ul>
 				</details>
@@ -7312,8 +7314,12 @@ Orvosi dokumentáció helye és módja:
 			<span class="fsMini">tubulointerstitium a veseállomány 80%-a</span>
 		</ul>
 		<li>funkció:</li><ul>
-			<li>interstitium ➜ fontos hormonok szintézise: erythropoietin, D-Vitamin aktiválása, prosztaglandinok</li>
-			<li>tubulus ➜ vizelet koncentrálása</li>
+			<li>interstitium ➜ hormonok szintézise:</li><ul>
+				<li><span class="bgYellow">EPO</span><abbr title="erythropoetin">'</abbr>, TPO<abbr title="thrombopoetin">'</abbr></li>
+				<li><span class="bgYellow">kalcitriol</span></li>
+				<li><span class="bgYellow">prosztaglandinok</span></li>
+			</ul>
+			<li>tubulus ➜ <span class="midQ [20.8] bgYellow">vizelet koncentrálása</span></li>
 		</ul>
 		<li><details class="kerdes"><summary>LABOR - DD: GN vs TIN</summary>
 			<div class="imp [16.11.1]"></div>
@@ -7900,7 +7906,7 @@ Orvosi dokumentáció helye és módja:
 			<li>őssejt<abbr title="erythroid">'</abbr> defektus (aplasticus anaemia,<span class="midQ [103]" data-src="bel">MDS</span>) <abbr title="többi hematológiai kórkép? hiszen CLL &amp; PV-ET-OMF a kivételek itt, a többinél anaemia van">(?)</abbr></li>
 			<li>EPO-hiány (vesebetegség)</li>
 			<li>Hgb-szintézis zavar (<span class="midQ [24.4]">vashiány</span>,hemoglobinopátiák)</li>
-			<li>DNS-szintézis zavar (<span class="syno">B12/folsav-hiány | megaloblastos anaemiák</span>)</li>
+			<li>DNS-szintézis zavar (<span class="syno">B12-, folsavhiány | megaloblastos anaemiák</span>)</li>
 		</td>
 		<td style="text-align:left">
 			<li><span class="midQ [24.5] bgYellow">haemolysis</span></li>
@@ -7958,7 +7964,7 @@ Orvosi dokumentáció helye és módja:
 				<li>krónikus betegség</li>
 			</td>
 			<td style="text-align:left">
-				<li><span class="bgBlue">ha B12↓/<span class="syno">folsav | B9</span>↓ ➜ <span class="syno">B12/folsav-hiány | megaloblastos anaemiák</span></span></li>
+				<li><span class="bgBlue">ha B12↓/<span class="syno">folsav | B9</span>↓ ➜ <span class="syno">B12-, folsavhiány | megaloblastos anaemiák</span></span></li>
 				<li><span class="bgYellow">ha TSH↓ ➜ <span class="midQ [36.1]">hypothyreosis</span></span></li>
 				<span class="fsMini">megj.tipp ➜ <span data-src="neuro" class="midQ [94]">dementia</span> esetén is B12+folsav+pajzsmirigy</span>
 				<li><span class="bgYellow">ha bilirubin↑ ➜ <span class="midQ [18]"><span class="bgBlue">máj</span>betegség</span></span></li><ul>
@@ -8170,7 +8176,7 @@ Orvosi dokumentáció helye és módja:
 			<li><span class="bgBlue">Se: indirekt bilirubin↑</span></li>
 			<li><span class="bgBlue">U: UBG↑</span></li>
 		</ul>
-		<li><span class="bgBlue">Se: haptoglobin↓</span> ➜ intravascularis: ugyanis ez megköti a szabaddá Hgb-t, ezért csökkent</li>
+		<li><span class="bgBlue">Se: haptoglobin↓</span><abbr title="intravascularis">'</abbr> ➜ ugyanis ez megköti a szabaddá vált Hgb-t</li>
 		<li>Se: <span class="midQ [45]">sejtkárosodás</span></li>
 		<li><span class="bgBlue">direkt <span data-src="expqs.html" class="midQ [206] kerdes">Coombs-teszt</span></span> ➜ negatív / pozitív</li>
 		<li>U: Hgb(+) <span class="midQ [24.3]">haemosiderin</span>(+)</li>
@@ -8437,11 +8443,64 @@ Orvosi dokumentáció helye és módja:
 		</details></li>
 		<li>ha <span class="syno">gangréna | üszkösödés</span>(<abbr title="koagulációs">'</abbr>nekrózis) ➜ amputáció</li>
 	</td>
+  </tr><tr><th style="writing-mode:sideways-lr;"></th>
+	<th><span class="midQ [65]">varicositas</span> (alsó végtag felszínes vénái)</th>
+	<th>thrombophlebitis = felületes thrombosis</th>
+  </tr><tr><th style="writing-mode:sideways-lr;"></th>
+	<td style="text-align:left"> <!-- varicositas -->
+		<li><span class="midQ [65]">varicositas</span> <span class="fsMini">(alapvetően <abbr title="nem a portocaval anastomosisra, az külön említendő akkor">erre</abbr> gondolunk)</span></li>
+		<li>epid ➜ emberek 10-30%-ban alakul ki élete során (felnőttkorban)</li>
+	  <strong>patho,etio (RiFa)</strong> ➜ <span class="midQ [61.5]">vénás thrombosis</span> ➜ főként stasis:
+		<li><span class="bgYellow">billentyűk rosszak</span> ➜ nem jut vissza a vér ➜ idősekben nagyobb rizikó</li>
+		<li>hypertonia, pl. álló helyzet<abbr title="nő a vérnyomás a lábakban, hisz hρg(gravitáció)">'</abbr></li>
+		<li>immobilizáció ➜ izmok nem pumpálják vissza a vért</li>
+	  <strong>tünetek</strong> <abbr title="A kezdődő betegségnek eleinte csak annyi jele van, hogy este hazaérve jól esik lerúgni a cipőt a beledagadt lábról. Egy-egy fárasztó nap után a boka kicsit megvastagszik, a bőr viszket, a láb kissé fájdalmas. Azután mindez egyre erősebben jelentkezik, és a dagadás nem csak estére lesz zavaró, illetve már minimális megterhelés is előhozza. Később az éjszakai izomgörcsök, a bőr vöröses-barnás elszíneződése, a bőr hámlása, nedvezése sem marad el. A vénák egyre erőteljesebben látszanak a bőrön át is kisebb-nagyobb lila dudorok formájában. ">*</abbr>
+		<li><span class="bgYellow">tágult vénák</span></li>
+		<li><span class="bgYellow"><span class="midQ [FiVi.bőr]">haemosiderin pigmentáció</span> (boka tájékon)</span> <img class="mini" data-src="htfvoyvy.png"></li>
+		<li><span class="midQ [oedema] bgYellow">oedema</span></li>
+		<li>fájdalom</li>
+	  <strong>th</strong>
+		<li>kompressziós pólya = fásli = gyógy<span class="bgYellow">harisnya</span></li>
+		<li><span class="bgYellow">torna</span>, súlyfelesleg leadása, DM kezelése</li>
+		<li>gyógyszeres</li>
+		<li>sebészi ➜ varicectomia (radikális crossectioma, stripping / ép billentyűzet megtartása Schwarz-műtéttel mesterséges szűkületeket hozunk létre a v. saphena magnan)</li>
+	  <strong>szövődmény</strong>
+		<li><span class="bgYellow">thrombophlebitis</span></li>
+		<li>fekély</li>
+	</td>
+	<td style="text-align:left"> <!-- thrombophlebitis -->
+		<li>def ➜ felszíni vénák gyulladása +/ thrombosisa</li>
+	  <strong>etio,RiFa,epid</strong>
+		<li><span class="bgBlue">varicositas</span> ➜ jellemzően v.saphena magna/parva</li>
+		<li>iatriogén (<span class="bgYellow">elfertőződött vénakatéter</span>, hyperosmolaris injekció)</li>
+		<li>thrombophlebitis saltans:</li><ul>
+			<li>oka ➜ malignus<abbr title="paraneoplasia">'</abbr> / vasculitis<abbr title="thrombangitis obliterans">'</abbr></li>
+			<li>jellemzője ➜ változó lokalizációjú (nem varicosus vénák) + recidiváló</li>
+		</ul>
+	  <strong>dg</strong>
+		<li>FiVi</li><ul>
+			<li><span class="bgYellow">rubor (piros)</span></li>
+			<li>tumor (duzzanat ➜ a véna felett, maga a végtag nem dagadt, mert a vér elfolyik a mély vénákon át)</li>
+			<li><span class="bgYellow">dolor (fáj)</span></li>
+			<li><span class="bgYellow">calor (meleg)</span></li>
+		</ul>
+		<li><span class="bgYellow">Doppler-UH</span></li>
+	  <strong>th</strong>
+		<li>beteg végtag mozgatása (immobilizáció esetén megnőhet a thrombus)</li>
+		<li><span class="bgYellow">kanülök, katéterek eltávolítása</span>, fertőzés esetén: lokálisan antiszeptikum + AB</li>
+		<li>ha friss: incisio → thrombotikus anyag eltávolítása → kompressziós kötés</li>
+		<li>heparin (indikáció: ágyban fekvő beteg, felszálló thrombosis)</li>
+		<li>diclofenac (indikáció: erős fájdalom)</li>
+	  <strong>szövődmény</strong>
+		<li><span class="midQ [26] bgYellow">MVT</span> (➜ tüdőembolia)</li>
+		<li><span class="bgYellow">elfertőződés</span> (➜ sepsis)</li>
+	</td>
   </tr></table>
   <!-- FORRÁSOK --> <div>
 	<abbr title="Tetelek-ből lenne még mint">#</abbr>
 	<abbr title="Tetelek">§</abbr>
 	<abbr title="kardio (IV)">§</abbr>
+	<abbr title="https://www.hazipatika.com/betegsegek_a_z/visszerbetegseg">§</abbr>
   </div>
   </details><ul>
 	<details class="[26.1] kerdes"><summary>FiVi <!-- vovb --></summary>
@@ -8503,7 +8562,10 @@ Orvosi dokumentáció helye és módja:
 		<li>egyéb</li>
 	</ul>
 	<li>A klasszikus FUO-val szemben az utóbbi három kategória körülhatárolt klinikai helyzetben jelentkező lázat jelez: a nosocomialis FUO nem felderített nosocomialis fertőzést sejtet és a neutropeniás és AIDS-es betegekben is nehezen felismerhető fertőzésről van szó.</li>
-	<li>láz DD vs FUO ➜ <span class="bgYellow">láz esetén legtöbbször az infekció áll a háttérben</span>, endokrin okok is jelentősebbek</li>
+	<li>DD ➜ láz vs FUO:</li><ul>
+		<li><span class="bgYellow">láz ➜ legtöbbször infekció</span>, de endokrin okok is jelentősebbek</li>
+		<li>FUO ➜ infekciók, daganatok, autoimmun betegségek</li>
+	</ul>
 	<li><span class="bgPink">összekéne szedni az itteni tételekben lévő kórképeket, aminél tünet</span></li>
   <strong>dg</strong>
 	<li>anamnézis</li>
@@ -8600,6 +8662,7 @@ Orvosi dokumentáció helye és módja:
 			<li><span class="midQ [36.5]">thyreotoxikus krízis</span></li>
 			<li><span class="midQ [39]" data-src="bel">phaeochromocytomás krízis</span></li>
 		</ul>
+		<li><span class="midQ [35.3]">trafo szövődmények</span></li>
 	</td>
   </tr></table>
 	<details class="kerdes"><summary>(diag)</summary>
@@ -9073,7 +9136,7 @@ Orvosi dokumentáció helye és módja:
 		  <strong>A típusú</strong> = autoimmun (5%)
 			<li>patho ➜ autoantitestek a  +/ intrinsic faktor ellen</li><ul>
 				<li><img class="mini" data-src="psjqwxee.png"> <abbr title="fedő">parietális</abbr> sejtek(HCl-szekréció) ellen ➜ gastrin↑</li>
-				<li>intrinsic faktor ellen ➜ B12-hiány ➜ anaemia</li>
+				<li>intrinsic faktor ellen ➜ B12-hiány ➜ <span class="midQ [24]">anaemia</span></li>
 			</ul>
 			<li>szövődmény ➜ <span class="midQ [32] kerdes">adenocc</span></li>
 		  <strong>B típusú</strong> = <span class="midQ [29.6]">H.pylori</span> (85%)
@@ -9611,7 +9674,7 @@ Orvosi dokumentáció helye és módja:
 		</td>
 		<td style="text-align:left">
 			<li><span class="midQ [61.1] bgBlue kerdes">thrombocytopenia</span></li>
-			<li><span class="midQ [61.4] bgYellow kerdes">thrombocytopathia</span></li>
+			<li><span class="midQ [61.1] bgYellow kerdes">thrombocytopathia</span></li>
 			<li>invazív beavatkozások előkészítése <span class="fsMini">(pl. lumbálpunkció, műtét)</span></li>
 		</td>
 		<td style="text-align:left">
@@ -9628,11 +9691,11 @@ Orvosi dokumentáció helye és módja:
 		<th style="width:55%">akut</th>  <th>krónikus</th>
 	  </tr><tr>
 		<td style="text-align:left">
-		  <strong><span class="bgYellow"><span class="midQ [24.5] kerdes">haemolyticus</span> transzfúziós reakció</span> (HTR)</strong>
+		  <strong><span class="bgYellow"><span class="midQ [24.5]">haemolyticus</span> transzfúziós reakció</span> (HTR)</strong>
 			<li><span class="bgBlue">életet veszélyeztető!</span></li>
 			<li>patho ➜ <span class="bgBlue">ABO-inkompatibilitás</span></li>
 			<li>tünetek ➜ <span class="bgBlue">percek-órák</span></li><ul>
-				<li><span class="bgYellow">láz, hidegrázás</span></li>
+				<li><span class="bgYellow"><span class="midQ [27] kerdes">láz</span>, hidegrázás</span></li>
 				<li><span class="midQ [62] kerdes bgYellow">DIC</span></li><ul>
 					<li><span class="bgYellow">vérzések</span></li>
 					<li><span class="bgYellow">hypotensio, tachycardia</span> ➜ sokk</li>
@@ -9644,7 +9707,9 @@ Orvosi dokumentáció helye és módja:
 			</ul>
 			<li>labor:</li><ul>
 				<li>direkt <span data-src="expqs.html" class="midQ [206] kerdes bgBlue">Coombs-teszt</span></li>
-				<li><span class="midQ [24.5]">haemolyticus</span> <span class="midQ [24]">anaemia</span> ➜ RI>3   ... LDH↑ haptoglobin↓ bilirubin↑(Se:indirekt,vizelet:UBG)</li>
+				<li><span class="midQ [24.5] kerdes">haemolyticus anaemia</span> ➜ RI>3   ... LDH↑ haptoglobin↓ bilirubin↑(Se:indirekt,vizelet:UBG)</li><ul>
+					<span class="midQ [24] fsMini">anaemia</span>
+				</ul>
 			</ul>
 			<li>th</li><ul>
 				<li><span class="bgBlue">trafó azonnali leállítása</span></li>
@@ -9654,7 +9719,7 @@ Orvosi dokumentáció helye és módja:
 		  <strong>febrilis nem haemolyticus transzfúziós reakció</strong> (FNHTR)
 			<li><span class="bgYellow">leggyakoribb szövődmény</span>, <span class="bgYellow">enyhe</span></li>
 			<li>patho ➜ a donor fvs-ei által termelt citokinek</li>
-			<li>tünetek ➜ láz, hidegrázás (általában enyhe)</li>
+			<li>tünetek ➜ <span class="midQ [27] kerdes">láz</span>, hidegrázás (általában enyhe)</li>
 			<li>th ➜ lázcsillapítás</li>
 			<li>profilaxis ➜ szűrt vérkészítmény adása (minimális fvs legyen)</li>
 		  <strong><span class="bgYellow">allergia</span></strong>
@@ -9671,7 +9736,7 @@ Orvosi dokumentáció helye és módja:
 			<li>patho ➜ <span class="bgYellow">plazma/thrombocyta esetén</span> léphet fel, ha <span class="bgYellow">nagy mennyiségűt adunk gyorsan</span> <abbr title="vérkészítmények (különösen friss fagyasztott plazma és thrombocyta-koncentrátum) tartalmaznak citrátot, amely kelátképzőként megköti a kalciumot, és ez hypocalcaemiát okozhat">*</abbr></li>
 			<li>patho ➜ citrát <abbr title="alvadási faktor (IV)">Ca²⁺</abbr> köt meg, így..</li><ul>
 				<li>nem lesz véralvadás (ezért adjuk)</li>
-				<li><span class="midQ [50.4] bgYellow">hypoCa²⁺</span> (mh, gyakoribb-jelentősebb)</li>
+				<li><span class="midQ [50.4] bgYellow">hypoCa²⁺</span></li>
 				<span class="fsMini"><abbr title="citrát-ciklus során CO<sub>2</sub> keletkezik">májban bomlik le</abbr> és HCO<sub>3</sub><sup>-</sup> lesz belőle ➜ <span class="midQ [52]">met.alkalózis</span> (mh, ritkább-enyhébb)</span>
 			</ul>
 			<li>tünetek ➜ lásd <span class="midQ [50.4] bgYellow kerdes">hypoCa²⁺</span> <span class="fsMini">(<span class="midQ [52]">met.alkalózis</span>)</span></li>
@@ -9692,7 +9757,7 @@ Orvosi dokumentáció helye és módja:
 			<li><span class="bgYellow">lassabb mint az akut HTR, ez 3-14nap</span>alatt <abbr title="alapból alacsony az antitestek szintje, és újra kell termelnie">indul be</abbr></li>
 			<li>tünetek:</li><ul>
 				<li>fokozatosan kialakuló enyhe <span class="midQ [24.5] kerdes">haemolyticus anaemia</span>, icterus</li>
-				<li>enyhe láz</li>
+				<li>enyhe <span class="midQ [27] kerdes">láz</span></li>
 				<li>ritkán <span class="midQ [20.5]">haemoglobinuria</span></li>
 			</ul>
 			<li>ritkán súlyos <span class="fsMini">(főleg többször transzfundált betegeknél (pl. sarlósejtes anaemia, thalassaemia))</span></li>
@@ -10471,7 +10536,7 @@ Orvosi dokumentáció helye és módja:
 		<li><span class="bgYellow">CsV-elégtelenség</span> ➜ <span class="bgYellow"><span class="midQ [24]">aplasztikus anaemia</span>, <span class="midQ [38.2]">leukaemia, lymphoma, MDS</span></span> <abbr title="leukaemia esetén hiába nő a számuk, funkcióképtelenek!">'</abbr></li>
 		<li><span class="bgYellow">fertőzés</span>, pl. vírus ➜ <abbr title="hiába T-sejtet érinti legjobban, okozhat neutropeniat is">'</abbr>HIV, EBV, <span class="midQ [18.2]">hepatitisek</span></li>
 		<li><span class="bgYellow">autoimmun</span> ➜ pl. SLE, RA</li>
-		<li><span class="bgYellow">B12-, folsavhiány</span></li>
+		<li><span class="midQ [24] bgYellow">B12-, <span class="syno">folsavhiány | B9-hiány</span></span></li>
 	  <strong>tünetek</strong>
 		<li><span class="midQ [27] bgYellow">láz (FUO)</span></li>
 		<li><span class="bgYellow">fertőzés</span>:</li><ul>
@@ -13256,28 +13321,32 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 <!-- 41 – 60 --></details>
 <!-- 61 – 80 --><details><summary>61–80</summary>
 <details class="[61] kerdes"><summary>THROMBOCYTA</summary>
-	<li><span class="midQ [61.1] kerdes">thrombocytopenia</span>(mennyiség↓) ➜ thrombocytaszám &lt; 140e/µl</li>
-	<li><span class="midQ [61.1]">thrombocytosis</span>(mennyiség↑)</li>
-	<li><span class="midQ [61.4] kerdes">thrombocytopathia</span>(minőség↓)</li>
-	<li><span class="midQ [61.5]">thrombophilia</span> ➜ fokozott hajlam a vérrögösödésre</li>
-	<li><span class="midQ [61.5]">thrombosis</span> ➜ artériás, vénás</li>
+  <div><span class="midQ [61.1]">thrombocyta betegségek</span></div>
+	<li>thrombocytopathia(minőség↓)</li>
+	<li>thrombocytopenia(mennyiség↓) ➜ thrombocyta &lt; 140e/µl</li>
+	<li>thrombocytosis(mennyiség↑) ➜ thrombocyta &gt; 500e/µl</li>
+  <div><strong><span class="midQ [18]" data-src="bel">haemostasis</span> <span class="midQ [61.5]">betegségei</span></strong></div>
+	<li>thrombophilia ➜ fokozott hajlam a thrombosisra(=vérrögösödés)</li>
+	<li>haemorrhagias diathesis ➜ fokozott hajlam a haemorrhagiara(=vérzés)</li>
+  <div><strong>egyéb thrombo..</strong></div>
+	<li><span class="midQ [65]">thrombophlebitis</span></li>
  </details><ul>
-	<details class="[61.1] kerdes"><summary>thrombocytopenia, thrombocytosis</summary><table>
+	<details class="[61.1] kerdes"><summary>thrombocyta betegségek</summary><table>
 		<tr><th style="width:20px"></th>
+			<th>thrombocytopathia</th>
 			<th colspan="2">thrombocytopenia</th>
 			<th>thrombocytosis</th>
 		</tr>
 		<tr><th rowspan="2"></th>  
-			<td colspan="3" style="text-align:left">
-				<li><span class="midQ [61.5] kerdes">haemostasis betegsége</span></li>
-				<li>csv-ben a megakaryocytákból lesz ➜ <abbr title="CSF, csakúgy mint EPO, G-CSF">thrombopoetin</abbr> fokozza a <abbr title="megakaryocyta-két">termelődését</abbr>, melyet vese+máj termel</li>
+			<td colspan="4" style="text-align:left">
+				<li><span class="midQ [61.5] kerdes">haemostasis betegsége</span> ➜ (lásd: <span class="midQ [61]">thrombocyta betegségek</span>)</li>
+				<li>csv-ben a megakaryocytákból lesz ➜ <abbr title="CSF, csakúgy mint EPO, G-CSF">thrombopoetin</abbr> fokozza a <abbr title="megakaryocyta-k">termelődését</abbr>, melyet máj <span class="fsMini">(+<span class="midQ [20.15]">vese</span>)</span> termel</li>
 			</td>
 		  </tr><tr>
-			<td colspan="2">
-				<span class="midQ [61]">def</span> ➜ <span class="bgYellow">thrombocytaszám &lt; 140e/µl</span>
-			</td>
+			<td> minőség↓ </td>
+			<td colspan="2"> mennyiség↓ ➜ <span class="bgYellow">thrombocyta &lt; 140e/µl</span> </td>
 			<td style="text-align:left">
-				<li><span class="midQ [61]">def</span> ➜ <span class="bgYellow">thrombocytaszám &gt; 500e/µl</span></li>
+				<li>mennyiség↑ ➜ <span class="bgYellow">thrombocyta &gt; 500e/µl</span></li>
 				<li><span class="bgYellow">thromboembolia veszély, ha &gt; 1000e/µl</span></li><ul>
 					<span class="fsMini">egyébként nem feltétlen kóros</span>
 				</ul>
@@ -13285,11 +13354,21 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		</tr>
 		<tr><th style="writing-mode:sideways-lr;">etio</th> 
 			<td style="text-align:left">
+			  <strong>congenitalis</strong> <abbr title="veleszületett, örökletes">'</abbr>
+				<li><span class="midQ [61.2] kerdes bgYellow">vWF - kór</span></li>
+				<li><span class="fsMini">Glanzmann-thrombasthenia<abbr title="(GPIIb/IIIa receptor defektus ➜ aggregációzavar; AR (autoszomális recesszív))">'</abbr></span></li>
+				<li><span class="fsMini">Bernard-Soulier sy<abbr title="(GPIb defektus ➜ adhéziózavar; AR (autoszomális recesszív))">'</abbr></span></li>
+				<li><span class="fsMini">Scott-sy<abbr title="(prokoaguláns aktivitás zavara)">'</abbr></span></li>
+			  <strong>szerzett</strong>
+				<li><span class="bgYellow">gyógyszerek</span> ➜ <span class="syno">acetil-szalicilsav | aszpirin</span></li>
+				<li><span class="bgYellow">uraemia</span>, vesebetegségek</li>
+			</td>
+			<td style="text-align:left">
 			  <strong>csökkent termelődés</strong>
 				<li><span data-src="szul" class="midQ [108.1]">terhesség alatti</span><abbr title="gestatios etiológiája nem egyértelmű, annál lehet csökkent termelődés / fokozott psuztulás is">'</abbr> (gesztációs,preeclampsia)</li>
-				<li><span class="midQ [109] bgYellow" data-src="bel">B12- +// folsav-hiány</span></li>
+				<li><span class="midQ [24] bgYellow">B12-, folsavhiány</span></li>
 				<li><span class="bgYellow">csontvelő</span><abbr title="elégtelenség, térfoglaló folyamat, ineffektív hematopoesis">'</abbr></li><ul>
-					<li><span data-src="bel" class="midQ [104] bgYellow">daganat (leukaemia, lymphoma, metasztázis)</span> <abbr title="összes kivéve MM + CLL + PV-ET-OMF">*</abbr></li>
+					<li><span class="midQ [38.2] bgYellow">daganat (leukaemia, lymphoma, metasztázis)</span> <abbr title="összes kivéve MM + CLL + PV-ET-OMF">*</abbr></li>
 					<li><span class="bgYellow">szuppressziós kezelés</span></li>
 					<li>aplasztikus anaemia <abbr title="MDS-hez hasonló: itt azonban egyszerűen kevés sejt termelődik. MDS-ben nincs valódi sejthiány, hanem csak érett sejthiány van. Ott ugyanis hemopoetikus őssejt betegsége következtében selejtekből lesz sok. AA esetében viszont ténylegesen kevés lesz a csv betegsége következtében">*</abbr></li>
 					<li>granulomatosus betegség</li>
@@ -13317,7 +13396,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 				<li>anaemia ➜ vashiányos jellemzően</li><ul>
 					pl. <span class="midQ [27]" data-src="bel">IBD</span>, <span class="midQ [67]" data-src="bel">allergiás eosinophil colitis</span>
 				</ul>
-				<li><span class="midQ [104] bgYellow" data-src="bel">myeloproliferatív neoplázia</span>:</li><ul>
+				<li><span class="midQ [38.2] bgYellow">myeloproliferatív neoplázia</span>:</li><ul>
 					<li>polcythemia vera(PV)</li>
 					<li>esszenciális thrombocytaemia(ET)</li>
 					<li>osteomyelofibrosis(OMF)</li>
@@ -13326,43 +13405,62 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			</td>
 		</tr>
 		<tr><th style="writing-mode:sideways-lr;">dg</th>
-			<td colspan="2" style="text-align:left">
-				<li>anamnézis:</li><ul>
+			<td colspan="3" style="text-align:left">
+				<li>anamnézis,FiVi:</li><ul>
 					<li>lefolyása ➜ akut / krónikus</li>
-					<li><span class="bgYellow">vérzéstípus lényege</span></li>
+					<li><span class="midQ [61.5] bgYellow">vérzés típusa</span></li>
 					<li>családi</li>
 					<li>gyógyszer</li>
 					<li>előzetes fertőzés</li>
 				</ul>
 				<li>labor</li><ul>
-					<li><span class="bgYellow">B12 / folsav</span></li>
+					<li><span class="[24] bgYellow">B12, folsav</span></li>
 					<li>vvt, fvs:</li><ul>
 						<li>aplasztikus anaemia</li>
-						<li><span class="midQ [104] bgYellow" data-src="bel">csv daganatok</span></li>
+						<li><span class="midQ [38.2] bgYellow">csv daganatok</span></li>
 					</ul>
 				</ul>
 				<li>ha autoimmun gyanú ➜ autoantitest kimutatás</li>
-				<li>csontvelő vizsgálata ➜ <span class="bgYellow">megakaryocyták száma</span></li><ul>
+				<li>csv-biopszia ➜ <span class="bgYellow">megakaryocyták száma</span></li><ul>
 					<li><span class="bgYellow">csökkent ➜ termelődési zavar</span></li>
 					<li>nőtt <abbr title="B12-t ideírta Herold, de ott szerintem a termelődés, képzés, érést külön kategóriákba sorolja, de őszintén leszrom egyenlőre">'</abbr></li>
 				</ul>
 			</td>
-			<td rowspan="2" style="text-align:left">
+			<td style="text-align:left">
 				<li><span class="bgYellow">tünet nincs</span></li>
 				<li>dg ➜ <span class="bgYellow">labor (véletlen)</span></li>
 				<li>szövődmény ➜ thromboembolia</li><ul>
 				  kockázata fokozott, ha:
 					<li>&gt;1000e/µl</li>
-					<li><span class="midQ [91]" data-src="bel">myeloproliferatív neoplázia</span></li>
-				</ul>
-				<li>th:</li><ul>
-					<li><span class="syno bgYellow">acetil-szalicilsav | aspirin</span></li>
-					<li>ha súlyos ➜ LMWH</li>
+					<li><span class="midQ [38.2]">myeloproliferatív neoplázia</span></li>
 				</ul>
 			</td>
 		</tr>
+		<tr><th rowspan="2" style="writing-mode:sideways-lr;">th</th>
+			<td colspan="3" style="text-align:left"> <!-- thrombocytopathia & thromboythopenia -->
+				<li>profilaxis ➜ sebészeti / fogászati beavatkozások előtt hematológiai konzílium</li>
+				<li>oki <span class="fsMini">(kiváltótól függően ➜ pl. uraemia - dialysis, gyógyszer - elhagyás)</span></li>
+				<li><span class="midQ [61.2]">antifibrinolitikum</span> (pl. tranexámsav)<abbr title="(kiegészítő szer, főleg mucocutan vérzések, foghúzás stb. esetén)">'</abbr></li>
+			</td>
+			<td rowspan="3" style="text-align:left"> <!-- thrombocytosis -->
+				<li><span class="syno bgYellow">acetil-szalicilsav | aspirin</span></li>
+				<li>ha súlyos ➜ LMWH</li>
+			</td>
+		  </tr><tr>
+			<td style="text-align:left"> <!-- thrombocytopathia -->
+				<li><span class="bgYellow">ha enyhe ➜ <u>dezmopresszin</u></span> (fokozza vWF + VIII felszabadulását)</li>
+				<li><span class="bgYellow">ha súlyos</span></li><ul>
+					<li><span class="midQ [35] bgYellow kerdes">trafo</span> (thrombocyta)</li>
+					<li><span class="fsMini">rekombináns faktor (pl. VIIa)</span></li>
+				</ul>
+				
+			</td>
+			<td colspan="2"> <!-- thromboythopenia -->
+				<span class="midQ [35] bgYellow kerdes">trafo</span> (thrombocyta) - alapvető
+			</td>
+		</tr>
 		<tr><th style="writing-mode:sideways-lr;">egyéb</th>
-			<td colspan="2" style="text-align:left">
+			<td colspan="3" style="text-align:left">
 				<span class="bgYellow lasd">etiológiáról az alapokat tudjam csak</span>
 				<details><summary>(lehet más is)</summary>
 					<li>szekvesztráció ➜ hypersplenia(splenomegalia)</li>
@@ -13389,56 +13487,50 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 				<li><span style="color:red">von Willebrand kór</span></li>
 			</td>
 			<td style="text-align:left">
-			  <font style="font-size:80%">(endogén: antitest NEM termelődik ellene)</font>
-				<li>fiziológiás: <abbr title="tissue plasminogen activator"><span style="color:red">tPA</span></abbr></li>
-				<li>gyógyszerek: <span style="color:red">altepláz, retepláz</span></li>
-			  <font style="font-size:80%">(exogén: antitest termelődik ellene)</font>
-				<li>gyógyszerek: <span style="color:red">sztreptokináz</span></li>
+			  <span class="fsMini">nem immunogén</span><abbr title="immun szempontból endogén">'</abbr>
+				<li><abbr title="farmak/élettan szempontból endogén">'</abbr>fiziológiás: <abbr title="tissue plasminogen activator"><span style="color:red">tPA</span></abbr></li>
+				<li><abbr title="farmak/élettan szempontból exogén">'</abbr>gyógyszerek: <span style="color:red">altepláz, retepláz</span><abbr title="AT azért nem termelődik, mert hasonlít tPA-ra">'</abbr></li>
+			  <span class="fsMini">immunogén</span><abbr title="immun szempontból exogén">'</abbr>
+				<li><abbr title="farmak/élettan szempontból exogén">'</abbr>gyógyszerek: <span style="color:red">sztreptokináz</span></li>
 			</td>
 			<th rowspan="2" style="writing-mode:sideways-lr; color:red">fibrinolízis</th>
 		  </tr><tr>
 			<td style="text-align:left">
+			  <strong>fiziológiás</strong> 
 				<li>protein C<abbr title="K-vitamin függő (nem tudom miért fontos, de meghagytam.. hiszen akkor alvadási faktorok miatt lesz coagulopathia úgyis)">'</abbr> ➜ <span style="color:cornflowerblue"> -hiány</span></li>
 				<li>protein S<abbr title="K-vitamin függő (nem tudom miért fontos, de meghagytam.. hiszen akkor alvadási faktorok miatt lesz coagulopathia úgyis)">'</abbr> ➜ <span style="color:cornflowerblue"> -hiány</span></li>
 				<li><span class="syno">antithrombin | AT-III</span> ➜ <span style="color:cornflowerblue">-hiány</span></li>
-				<li>gyógyszerek ➜ <span class="midQ [12.13] kerdes bgYellow">antikoagulánsok</span> (heparin-ok, KVA-k, DOAC-ok)</li>
+			  <strong>gyógyszer</strong>
+				<li><span class="midQ [12.13] kerdes bgYellow">antikoagulánsok</span> (heparin-ok, KVA-k, DOAC-ok)</li>
 			</td>
 			<td style="text-align:left">
+			  <strong>fiziológiás, <span class="fsMini">nem immunogén</span></strong> <abbr title="full endogén">'</abbr>
 				<li><span style="color:cornflowerblue">α<sub>2</sub>-antiplazmin</span></li>
 				<li><span style="color:cornflowerblue">plazminogén aktivátor inhibitor</span></li>
+			  <strong>gyógyszer, <span class="fsMini">immunogén</span></strong> <abbr title="full exogén">'</abbr>
+				<li><span style="color:cornflowerblue">antifibrinolítikumok</span> (<u>tranexámsav</u> (TXA), <u>epsilon-aminokapronsav</u>)</li>
 			</td>
 		</tr>
 		<tr><th></th>  <th colspan="2">inhibitor</th>  <th></th></tr>
 	  </table>
-	</details>
-	<details class="[61.4] kerdes"><summary>thrombocytopathia</summary>
-		<li><span class="bgYellow">thrombocytopathia ➜ minőség↓</span> (lásd: <span class="midQ [61]">thrombocyta betegségek</span>)</li>
-	  <strong>etiológia</strong>
-		<li>congenitalis <abbr title="veleszületett, örökletes">'</abbr></li><ul>
-			<li><span class="midQ [61.2] kerdes bgYellow">vWF - kór</span></li>
-			<li>Glanzmann-thrombasthenia (GPIIb/IIIa receptor defektus ➜ aggregációzavar; <abbr title="autoszomális recesszív">AR</abbr>)</li>
-			<li>Bernard-Soulier sy (GPIb defektus ➜ adhéziózavar; AR)</li>
-			<li>Scott-sy (prokoaguláns aktivitás zavara)</li>
-		</ul>
-		<li>szerzett:</li><ul>
-			<li><span class="bgYellow">gyógyszerek</span> ➜ <span class="syno">acetil-szalicilsav | aszpirin</span></li>
-			<li><span class="bgYellow">uraemia</span>, vesebetegségek</li>
-		</ul>
-	  <strong>tünetek</strong>
-		<li><span class="midQ [61.5] kerdes bgYellow">vérzés típusa</span></li>
-	  <strong>th</strong>
-		<li><span class="bgYellow">ha enyhe ➜ <u>dezmopresszin</u></span> (fokozza vWF + VIII felszabadulását)</li>
-		<li><span class="bgYellow">ha súlyos ➜ trafo</span> <span class="fsMini">+/ rekombináns faktor (pl. VIIa) +/antifibrinolitikum</span></li>
-		<li>kiváltó tényező ➜ pl. uraemia - dialízis, gyógyszer - elhagyás</li>
-		<li>profilaxis ➜ sebészeti / fogászati beavatkozások előtt hematológiai konzílium</li>
+		<details class="kerdes"><summary>immunogenitás</summary>
+			<li>immunogén, ha antitest termelődik/termelődhet ellene<abbr title="immunológiai szempontból tehát exogén (ha nem termelődhet ellene, akkor meg endogén)">'</abbr></li>
+		  <strong>jelentősége</strong>
+			<li>gyógyszerallergia, túlérzékenység</li>
+			<li>gyógyszer hatását csökkenti (pl. sztreptokináz)</li>
+			<li>kizáró ok újraalkalmazáskor (pl. sztreptokináz) ➜ 2. alkalommal súlyos immunreakció lehet</li><ul>
+				➜ pl. STEMI-ben inkább alteplázt vagy más kevésbé immunogén készítményt adnak ismétlés esetén
+			</ul>
+		</details>
 	</details>
 	<details class="[61.5] kerdes"><summary>haemostasis betegségei</summary><table><tr>
 		<th colspan="2"><span class="midQ [18]" data-src="bel">haemostasis</span> betegségei
 	  </th></tr><tr>
-		<th><abbr title="belső vérzés">haemorrhagias</abbr> <abbr title="hajlam">diathesisek</abbr></th>  <th>thrombophilia-k</th>
+		<th><abbr title="vérzés">haemorrhagias</abbr> <abbr title="hajlam">diathesisek</abbr></th>
+		<th>thrombophilia-k</th>
 	  </tr><tr>
-		<td><span class="bgYellow">def ➜ fokozott hajlam a vérzésre</span></td>
-		<td><span class="bgBlue"><span class="midQ [115]" data-src="bel">def</span> ➜ fokozott hajlam a thrombosisra</span><abbr title="vérrögösödésre">'</abbr></td>
+		<td><span class="bgYellow">def ➜ fokozott hajlam a haemorrhagiara</span><abbr title="vérzésre">'</abbr></td>
+		<td><span class="bgBlue"><span class="midQ [61]">def</span> ➜ fokozott hajlam a thrombosisra</span><abbr title="vérrögösödésre">'</abbr></td>
 	  </tr><tr>
 		<td colspan="2"><span class="midQ [62]"><u>DIC</u></span></td>
 	  </tr><tr>
@@ -13481,7 +13573,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<tr><th class="fsMini" style="writing-mode:sideways-lr;">etio</th> 
 				<td class="fsMini" style="text-align:left">
 					<li><span class="midQ [61.1] kerdes bgYellow">thrombocyto<abbr title="mennyiség↓">penia</abbr></span></li>
-					<li><span class="midQ [61.4] kerdes bgYellow">thrombocyto<abbr title="minőség↓">pathia</abbr></span></li>
+					<li><span class="midQ [61.1] kerdes bgYellow">thrombocyto<abbr title="minőség↓">pathia</abbr></span></li>
 				</td>
 				<td class="fsMini" style="text-align:left">
 					<li>fertőzéses vasculitis (pl. kanyaró<abbr title="rickettsia, meningococcus, Dengue('dengi')-láz">'</abbr>)</li>
@@ -13560,9 +13652,10 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 				<td colspan="2" class="fsMini" style="text-align:left">
 				  <center><strong>vénás érbetegségek</strong></center>
 					<li><span data-src="neuro" class="midQ [37] bgYellow">agyi</span> (<abbr title="cerebrovascular">CV</abbr>D)</li>
-					<li><span class="midQ [26] bgYellow">MVT</span>, <span class="midQ [26] bgYellow">postthromboticus sy</span></li>
-					<li><span class="midQ [93.1]">thrombophlebitis</span></li>
-					<li><span class="midQ [65]">varicositas</span>, <span class="midQ [93.1]" data-src="bel">thrombophlebitis</span></li>
+					<li><span class="midQ [26]">alsó végtag</span></li><ul>
+						<li><span class="midQ [26] kerdes bgYellow">MVT</span>, <span class="midQ [26] bgYellow">postthromboticus sy</span></li>
+						<li><span class="midQ [65]">varicositas</span>, <span class="midQ [26]">thrombophlebitis</span></li>
+					</ul>
 					<span class="fsMini">v.cava superior sy, katéter-asszociált vénás thrombosis</span>
 				</td>
 			</tr>
@@ -13625,7 +13718,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 					<li>nephrosis sy ➜ <span class="midQ [56.4] bgYellow" data-src="bel">membranosus nephropathia</span></li>
 					<li><span class="midQ [11]" data-src="bel">IBD</span>-k</li>
 					<li>korábbi MVT</li>
-					<li><span class="midQ [21]" data-src="bel">varicositas</span></li>
+					<li><span class="midQ [65] kerdes">varicositas</span></li>
 					<li><span class="midQ [95]" data-src="bel">krónikus SzE</span></li>
 					<li><span class="midQ [104]" data-src="bel">MPD</span>-k</li>
 				</td>
@@ -13650,9 +13743,8 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 				<li><span class="bgYellow">dohányzik?</span></li>
 				<li>műtét?</li>
 			  <strong>FiVi</strong>
-				<li><span class="bgYellow">láb</span></li><ul>
-					<li><details class="kerdes"><summary>PAD</summary> <div class="imp [26.1]"></div> </details></li>
-					<li>MVT ➜ <span class="midQ [93.2] kerdes" data-src="bel">lasd</span></li>
+				<li><span class="bgYellow">láb</span> ➜ <span class="midQ [26]">lasd..</span></li><ul>
+					<span class="fsMini">PAD vs MVT vs thrombophlebitis</span>
 				</ul>
 				<li><span class="bgYellow">livedo reticularis</span> <img class="mini" data-src="gpgwddsf.png"> ➜ <span data-src="Belgyogy/hiirlm.html" class="midQ [22]">APS</span></li>
 				<li><span class="bgYellow">splenomegalia</span> ➜ <span class="midQ [104]" data-src="bel">MPD</span>-k</li>
@@ -13779,7 +13871,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
   <strong>th</strong>
 	<li>alapbetegség kezelendő</li>
 	<li>ha nem vérző ➜ hypoxia, acidosis, szervi elégtelenség kezelése</li>
-	<li>ha vérző ➜ trafo (vvt-, thr-koncentrátumok, plazma)</li>
+	<li>ha vérző ➜ <span class="midQ [35] kerdes">trafo</span> (vvt-, thr-koncentrátumok, plazma)</li>
 	<li>szülésnél <span data-src="szul" class="midQ [92]">vacuumextractio</span></li>
   <strong>szövődmény</strong>
 	<li><span class="midQ [20.4] kerdes">AVE</span></li>
@@ -13812,62 +13904,38 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
   <strong>(th:)</strong>
 	<div style="font-size:80%">kórokozók kijutnak mellkasba, mediastinitist okoznak, AB th kell</div>
 </details>
-<details class="[65] kerdes"><summary>varicositas = visszérbetegség</summary>
+<details class="[65] kerdes"><summary>varicositas & </summary>
+<details class="[65] kerdes"><summary>varicositas & </summary>
 	<img data-src="avhkfquc.png">
   <div><span style="font-size:80%">varicositas = visszérbetegség</span></div>
 	<li>lényege ➜ <span class="bgYellow">vénák kóros tágulata</span></li>
 	<li>lokalizáció:</li><ul>
 		<li>portocaval anastomosisok</li>
-		<li>alsó végtag felszínes vénái</li>
+		<li><span class="midQ [26]">alsó végtag felszínes vénái</span></li>
 	</ul>
-  <strong>portocaval anastomosisok</strong>
-	<li>etio ➜ <span class="bgBlue">portalis hipertenzió</span> ➜ oka lehet:</li><ul>
-		<li><span class="bgYellow">pre-hepatikus ➜ v.portae elzáródása</span> (thrombosis,daganat)</li>
-		<li><span class="bgYellow">hepaticus ➜ cirrhosis, hepatitis</span></li>
-		<li><span class="bgYellow">post-hepatikus ➜ v.hepatica elzáródása</span> (thrombosis,daganat) - <span class="midQ [25.4]" data-src="bel">Budd–Chiari-sy</span></li>
-		<span style="font-size:80%">fő RiFa: <span class="midQ [63] kerdes bgGreen">alkoholizmus</span>!</span>
+  <center><strong>portocaval anastomosisok</strong></center>
+	<li><span class="midQ [65]">varicositas</span></li>
+  <div><strong>etio,RiFa</strong> ➜ <span class="bgBlue">portalis hipertenzió</span> ➜ oka lehet:</div>
+	<li><span class="bgYellow">pre-hepatikus ➜ v.portae elzáródása</span> (thrombosis,daganat)</li>
+	<li><span class="bgYellow">hepaticus ➜ cirrhosis, hepatitis</span></li>
+	<li><span class="bgYellow">post-hepatikus ➜ v.hepatica elzáródása</span> (thrombosis,daganat) - <span class="midQ [25.4]" data-src="bel">Budd–Chiari-sy</span></li>
+	<span style="font-size:80%">fő RiFa: <span class="midQ [63] kerdes bgGreen">alkoholizmus</span>!</span>
+  <div><strong>tünetek</strong></div> ➜ ennek következtében a <abbr title="portalis vénák és a szisztémás vénák közötti anastomosisok, melyek megkerülik a májat">portocaval anastomosis</abbr>-ok túlterhelődnek, kitágulnak: <img class="mini" data-src="jzlreeag.png">
+	<li><span class="bgYellow">oesophagus varices</span> (oesophagus alsó harmadában lévő vénák) <abbr title=",kitágulás utáni neve'">➜</abbr> <span class="bgYellow">varicositas</span></li><ul>
+		<li><span class="bgGreen"><span class="midQ [64]">ruptúra</span> kockázat! (<span class="midQ [47] kerdes">életveszélyes GI-vérzés</span>)</span> ➜ vérhányás, melaena ➜ endoszkópos ligatúra (lekötés)</li>
 	</ul>
-	<li>ennek következtében a <abbr title="portalis vénák és a szisztémás vénák közötti anastomosisok, melyek megkerülik a májat">portocaval anastomosis</abbr>-ok túlterhelődnek, kitágulnak: <img class="mini" data-src="jzlreeag.png"></li><ul>
-		<li><span class="bgYellow">oesophagus varices</span> (oesophagus alsó harmadában lévő vénák) <abbr title=",kitágulás utáni neve'">➜</abbr> <span class="bgYellow">varicositas</span></li><ul>
-			<li><span class="bgGreen"><span class="midQ [64]">ruptúra</span> kockázat! (<span class="midQ [47] kerdes">életveszélyes GI-vérzés</span>)</span> ➜ vérhányás, melaena ➜ endoszkópos ligatúra (lekötés)</li>
-		</ul>
-		<li><span class="bgYellow">v.epigastrica superficialis</span> ➜ <span class="bgYellow">caput medusae</span></li>
-		<li><span data-src="seb" class="midQ [53] bgYellow">rectum (aranyér)</span></li>
-		<li>retroperitonealis vénák</li>
-	</ul>
-	<li>th:</li><ul>
-		<li>ballontamponálás ➜ gyomorba levezetve, majd felfújva a vénák elzáródnak (lásd sebészet)</li>
-		<li>endoszkópos (varixligatio ➜ gumigyűrűk rápattintása a varixokra) (lásd sebészet)</li>
-		<li>gyógyszeres ➜ ADH(terlipresszin) + szomatosztatin</li>
-		<li>TIPS = transjugular intrahepatic shunt <img class="mini" data-src="cqqmveae.png"></li>
-	</ul>
-	<li>portális hipertenzió másik fontos tünete ➜ <span class="bgYellow">ascites</span></li>
-  <strong>alsó végtag felszínes vénái</strong> <abbr title="https://www.hazipatika.com/betegsegek_a_z/visszerbetegseg">§</abbr>
-	<li>alapvetően ezt értjük varicositas alatt (holott előbbi is az!)</li>
-	<li>epidem ➜ emberek 10-30%-ban alakul ki élete során (felnőttkorban)</li>
-	<li>patho,etio (RiFa) ➜ <span class="midQ [61.5]">vénás thrombosis</span> ()</li><ul>
-	  főként stasis:
-		<li><span class="bgYellow">billentyűk rosszak</span> ➜ nem jut vissza a vér ➜ idősekben nagyobb rizikó</li>
-		<li>hypertonia, pl. álló helyzet<abbr title="nő a vérnyomás a lábakban, hisz hρg(gravitáció)">'</abbr></li>
-		<li>immobilizáció ➜ izmok nem pumpálják vissza a vért</li>
-	</ul>
-	<li>tünetek:<abbr title="A kezdődő betegségnek eleinte csak annyi jele van, hogy este hazaérve jól esik lerúgni a cipőt a beledagadt lábról. Egy-egy fárasztó nap után a boka kicsit megvastagszik, a bőr viszket, a láb kissé fájdalmas. Azután mindez egyre erősebben jelentkezik, és a dagadás nem csak estére lesz zavaró, illetve már minimális megterhelés is előhozza. Később az éjszakai izomgörcsök, a bőr vöröses-barnás elszíneződése, a bőr hámlása, nedvezése sem marad el. A vénák egyre erőteljesebben látszanak a bőrön át is kisebb-nagyobb lila dudorok formájában. ">*</abbr></li><ul>
-		<li><span class="bgYellow">tágult vénák</span></li>
-		<li><span class="bgYellow"><span class="midQ [FiVi.bőr]">haemosiderin pigmentáció</span> (boka tájékon)</span> <img class="mini" data-src="htfvoyvy.png"></li>
-		<li><span class="midQ [oedema] bgYellow">oedema</span></li>
-		<li>fájdalom</li>
-	</ul>
-	<li>Th</li><ul>
-		<li>kompressziós pólya = fásli = gyógy<span class="bgYellow">harisnya</span></li>
-		<li><span class="bgYellow">torna</span>, súlyfelesleg leadása, DM kezelése</li>
-		<li>gyógyszeres</li>
-		<li>sebészi ➜ varicectomia (radikális crossectioma, stripping / ép billentyűzet megtartása Schwarz-műtéttel mesterséges szűkületeket hozunk létre a v. saphena magnan)</li>
-	</ul>
-	<li>szövődmény</li><ul>
-		<li><span class="midQ [93.1]" data-src="bel">thrombosis (felületes vénás)</span></li>
-		<li>fekély</li>
-	</ul>
-  <abbr title="Robbins-Pato">§</abbr>
+	<li><span class="bgYellow">v.epigastrica superficialis</span> ➜ <span class="bgYellow">caput medusae</span></li>
+	<li><span data-src="seb" class="midQ [53] bgYellow">rectum (aranyér)</span></li>
+	<li>retroperitonealis vénák</li>
+	<div>portális hipertenzió másik fontos tünete ➜ <span class="bgYellow">ascites</span></div>
+  <strong>th</strong>
+	<li>ballontamponálás ➜ gyomorba levezetve, majd felfújva a vénák elzáródnak (lásd sebészet)</li>
+	<li>endoszkópos (varixligatio ➜ gumigyűrűk rápattintása a varixokra) (lásd sebészet)</li>
+	<li>gyógyszeres ➜ ADH(terlipresszin) + szomatosztatin</li>
+	<li>TIPS = transjugular intrahepatic shunt <img class="mini" data-src="cqqmveae.png"></li>
+  <div> <!-- SOURCE -->
+	<abbr title="Robbins-Pato">§</abbr>
+  </div>
 </details>
 <details class="[66] kerdes"><summary>dyspnoe = nehézlégzés & asphyxia = fulladás</summary>
   <div><strong>lényege</strong></div>
@@ -15618,7 +15686,7 @@ szélső vénája)
 	  <strong>felhasználás</strong>
 		<div><span class="plus">ind</span> iv. gyógyszer</div>
 		<div><span class="plus">ind</span> iv. folyadékpótlás <span class="bgPink"><abbr title="sóoldat/ringer/glükóz..">(link)</abbr></span> <span class="bgPink">(infúzió / bólus)</span></div>
-		<div><span class="plus">ind</span> trafo</div>
+		<div><span class="plus">ind</span> <span class="midQ [35] kerdes">trafo</span></div>
 		<div><span class="minus">KI</span> gyulladt / sérült / égett bőrterület</div>
 		<div><span class="minus">KI</span> <span class="midQ [oedema]">oedema</span>s végtag</div>
 		<div><span class="minus">KI</span> thrombotizált véna</div>
@@ -16342,7 +16410,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 </details>
 <!-- a1 – a10 --></details>
 </details>
-
+<span class="bgPink">hepatorenalis sy</span>
 
 <details><summary class="mainTitle">Anamnézis, gyógyszerek, labor</summary>
 	<details class="open"><summary class="status">anamnézis</summary>
@@ -17831,7 +17899,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 		<div class="imp [61.1]"></div>
 	</details>
 	<details class="kerdes"><summary>Thrombocytopenia, <strong>thrombocytopathia</strong>, DIC</summary>
-		<div class="imp [61.4]"></div>
+		<div class="imp [61.1]"></div>
 	</details>
 	<details class="kerdes"><summary>Thrombocytopenia, thrombocytopathia, <strong>DIC</strong></summary>
 		<div class="imp [62]"></div>
@@ -18583,7 +18651,7 @@ urolithiasis
 	<li>IgOr ➜ 1. tétel ('hatóság értesítés')</li>
 </ul>
 <li>radiológia alapok ➜ pl. belgyógy mappa: diagn. zsebkönyv - 165o</li>
-<li>trafo ➜ alapokat onnan .. coombs tesztek pontosan hogy vannak ?! (.. előadásokra lenne időm átrágni)</li>
+<li><span class="midQ [35] kerdes">trafo</span> ➜ alapokat onnan .. coombs tesztek pontosan hogy vannak ?! (.. előadásokra lenne időm átrágni)</li>
 <details class="kerdes"><summary>primer hemosztázis zavara</summary>
 	<div class="imp [61.5]"></div> <!-- haemostasis betegségei -->
 </details>
