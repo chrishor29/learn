@@ -3041,7 +3041,7 @@ Orvosi dokumentáció helye és módja:
 			<li><span data-src="done/Aneszt/aneszt.html" class="midQ [6.3]">hypovolaemias shock</span></li>
 			<li><span data-src="neuro" class="midQ [371.1]">intracerebralis vérzés</span></li>
 			<li><span data-src="bel" class="midQ [36.3]">Waterhouse–Friderichsen-sy</span></li>
-			<li><span class="midQ [62]">DIC</span></li>
+			<li><span class="midQ [24.6]">DIC</span></li>
 			<li><span class="midQ [20.4]">akut VE - prerenalis</span></li>
 		</td>
 	  </tr><tr>
@@ -4495,13 +4495,13 @@ Orvosi dokumentáció helye és módja:
 		</details></li>
 		<li><abbr title="protrombin idő"><span class="syno">PI | PT</span></abbr>(INR) ➜ 10-13s ➜ az extrinsic út hossza (beleértve közös utat)</li><ul>
 			<li>normál ➜ prehepatikus</li>
-			<li>ha↑, de K-vitamin adása után változatlan ➜ <span class="bgYellow">hepatikus</span>, DIC</li>
+			<li>ha↑, de K-vitamin adása után változatlan ➜ <span class="bgYellow">hepatikus</span>, <span class="midQ [24.6]">DIC</span></li>
 			<li>ha↑, de K-vitamin adása után visszaáll ➜ post-hepatikus</li>
 		</ul>
 		<li><abbr title="thrombin idő"><span class="syno">TI | TT</span></abbr></li><ul>
 			<li>fibrinogén mennyisége következtethető ki belőle</li>
 			<li>ha megnő<abbr title="a TI">'</abbr>:</li><ul>
-				<li>vagy fibrinogén↓ ➜ DIC</li>
+				<li>vagy fibrinogén↓ ➜ <span class="midQ [24.6]">DIC</span></li>
 				<li>vagy UFH van (thrombint gátolja)</li>
 			</ul>
 		</ul>
@@ -4577,7 +4577,7 @@ Orvosi dokumentáció helye és módja:
 				<td style="text-align:left">
 					<li>heparin</li>
 					<li>lupus antikoaguláns</li>
-					<li><span class="midQ [62] kerdes">DIC</span></li>
+					<li><span class="midQ [24.6] kerdes">DIC</span></li>
 				</td>
 			</tr>
 		</tbody></table>
@@ -6501,7 +6501,7 @@ Orvosi dokumentáció helye és módja:
 		</ul>
 	  <table><tr><th>urológiai</th>  <th>nephrológiai</th>  <th>szisztémás</th></tr><tr>
 		<td style="text-align:left">
-			<li><span data-src="bel" class="midQ [59.1] bgBlue">UTI</span></li>
+			<li><span class="midQ [20.14] bgBlue">UTI</span></li>
 			<li><span data-src="gyerek" class="midQ [16] bgYellow">urolithiasis</span></li>
 			<li><span class="bgYellow">tumor</span> (hólyag,prosztata), BPH</li>
 			<li>trauma</li>
@@ -6511,11 +6511,11 @@ Orvosi dokumentáció helye és módja:
 		  <strong><span class="bgBlue">glomerularis</span></strong>
 			<li><span class="midQ [20.12.2] bgYellow">nephritis sy-val járó GN-ek</span></li>
 			<li><span class="midQ [20.12.3] bgYellow">RPGN sy-val járó GN-ek</span></li>
-			<li><span class="midQ [24.6]">TTP/HUS</span><abbr title="ez nem GN (chatgpt,wiki) .. habár glomerularis(és az jelent elvileg GN-t), de ha megnézem anno nem szerepelt a táblázatban nephritis/rpgn/nephrosis és ők se oda sorolják, szóval logikát ne keressek">'</abbr></li>
 		  <strong>extraglomerularis</strong>
 			<li><span class="bgYellow">tumor</span></li>
 			<li><span class="midQ [20.16]">polycystás vesebetegség</span></li>
 			<li><span data-src="gyerek" class="midQ [16] bgYellow">urolithiasis</span></li>
+			<li><span class="midQ [24.6]">TTP/HUS</span><abbr title="ez alapvetően vascularis (lásd akut VE) .. patho alapján glomerularis károsodás is történhet a thrombusok miatt, ezért lehet hematuria is">'</abbr></li>
 			<li>papilla necrosis (sarlósejtes anaemia, diabeteszes nephropathia)</li>
 			<li>a.renalis embolia, v.renalis thrombosis</li>
 			<li>trauma</li>
@@ -7277,13 +7277,12 @@ Orvosi dokumentáció helye és módja:
 			</td>
 		</tr>
 	  </table>
-		<li>etio ➜ <span class="bgYellow">E.coli</span>(95%)</li>
 		<li>RiFa ➜ DM, immundeff állapot</li>
-		<li><abbr title="jellemzően">'</abbr>felszálló(ascendáló) módon történik</li>
-		<li>csoportosítás:</li><ul>
-			<li>közösségben szerzett ➜ pl. szexuális kontaktus</li>
-			<li><span class="midQ [79]" data-src="bel">nozokomiális</span> ➜ katéter asszociált</li>
+		<li>etio ➜ <span class="bgBlue">E.coli</span> (leggyakoribb)</li><ul>
+			<li><span class="bgYellow">közösségben szerzett</span> ➜ pl. szexuális kontaktus ➜ 90% E.coli, egyéb (pl. Enteroccocus faecalis)</li>
+			<li><span class="midQ [79] bgYellow" data-src="bel">nozokomiális</span> ➜ katéter asszociált ➜ 50% E.coli, többi (Klebsiella, Enterobacter, Pseudomonas, Candida)</li>
 		</ul>
+		<li><abbr title="jellemzően">'</abbr>felszálló(ascendáló) módon történik</li>
 	  <strong>tünetek</strong><table><tr>
 		<th>alsó UTI</th>  <th><span class="syno">felső UTI | akut PN</span></th></tr><tr>
 		<td style="text-align:left">
@@ -8220,29 +8219,66 @@ Orvosi dokumentáció helye és módja:
 		<span class="midQ [24] WHITE fsMini">ANAEMIA</span>
 	  </div>
 	</details>
-	<details class="[24.6] kerdes"><summary>TTP & HUS</summary><table><tr>
+	<details class="[24.6] kerdes"><summary>TTP & HUS & DIC</summary><table><tr>
 		<th style="width:15px"></th>
 		<th>thromboticus thrombocytopenias purpura (TTP)</th>
 		<th>hemolítikus urémiás sy (HUS)</th>
-	  </tr><tr><th style="writing-mode:sideways-lr;" rowspan="2">patho</th>
-		<td colspan="2" style="text-align:left"> <span class="bgYellow">/TRIÁD!/</span>
-			<li><abbr title="thromboticus microangiopathia:">'</abbr> <abbr title="pl. shigatoxin / autoimmun következtében">..</abbr>endothel sérülés lesz az arteriolákban és kapillárisokban, ami beindítja thrombosist <span data-src="bel" class="midQ [116] fsMini">(Virchow-triász)</span> ➜ <span class="midQ [61.1] syno bgBlue">thrombocytopenia | thrombocyta↓</span></li>
-			<li><abbr title="intravasalis haemolysis:">'</abbr> a <span class="syno">véralvadás | koaguláció</span> során keletkezű fibrinszálakban a vvt-k elakadnak ➜ <span class="midQ [24.5] bgBlue">haemolyticus anaemia</span> <abbr title="vvt-k 'szétesnek', számuk lecsökken">(vvt↓)</abbr></li>
-			<li>a haemolysis következtében <span class="bgBlue"><span class="midQ [20.4]">akut VE</span> (uraemia)</span></li>
-		  <hr>
-			<li>főként <span class="bgYellow">vese és agy</span> értintett</li>
+		<th>disszeminált intravaszkuláris koaguláció (DIC)</th>
+	  </tr><tr><th style="writing-mode:sideways-lr;">patho</th>
+		<td colspan="2" style="text-align:left"> /TRIÁD!/
+			<li><abbr title="thromboticus microangiopathia:">'</abbr> <span class="bgBlue">kiserekben(arteriolák+kapillárisok) <span class="midQ [61.2]">FEHÉR</span> thrombusok</span> keletkeznek ➜ <span class="midQ [61.1] syno bgYellow">thrombocytopenia | thrombocyta↓</span></li><ul>
+				<span class="fsMini"><abbr title="pl. shigatoxin / autoimmun következtében">..</abbr>endothel sérülés váltja ki <span class="midQ [61.5] fsMini">(Virchow-triász)</span></span>
+			</ul>
+			<li><abbr title="intravasalis haemolysis:">'</abbr> thrombusokban a vvt-k elakadnak ➜ <span class="midQ [24.5] bgBlue">haemolyticus anaemia</span> <abbr title="vvt-k roncsolódnak (fragmentálódnak)">(vvt↓ + schistiocytak)</abbr></li>
+			<li>végül</li><ul>
+				<li>ha TTP ➜ főként <span class="bgBlue">CNS</span></li>
+				<li>ha HUS ➜ főként glomerulosokban: <span class="midQ [20.4] bgBlue">akut VE</span></li>
+			</ul>
+		</td>
+		<td style="text-align:left"><span class="bgYellow">nem betegség, hanem tünet ➜ betegséget keresni</span>
+			<li><abbr title="szisztémás koaguláció:">'</abbr> <span class="bgBlue">kiserekben(arteriolák+kapillárisok) <span class="midQ [61.2]">VÖRÖS</span> thrombusok</span> keletkeznek ➜ <span class="midQ [61.1] syno bgYellow">thrombocytopenia | thrombocyta↓</span> + <span class="bgYellow">faktorok↓</span></li><ul>
+				<span class="fsMini">oka: lásd etiológia (baktériumtoxin / TF<abbr title="endothel károsodik, így TF jut vérbe ➜ pl. placenta, decidua, magzatvíz -ből">'</abbr> / citokin stb.)</span>
+			</ul>
+			<li>előbbi következtében<abbr title="mivel fibrin keletkezett, fibrinolysist aktiváló anyagok (méh és decidua ezekből szokatlanul sokat tart.) szabadulnak fel a vérkeringésbe">'</abbr> <span class="bgBlue">szisztémás fibrinolysis</span> beindul  ➜ D-dimer↑ + fibrinogén↓</li><ul>
+				<span class="fsMini">továbbá itt is lehet haemolyticus anaemia, de nem <abbr title="mint TTP/HUS">olyan</abbr> domináns</span>
+			</ul>
+			<li>előbbi kettő (faktorok↓ + fibrinolysis<abbr title="plasmin túlzott aktivitása akadályozza a koagulációs rendszert és fokozza a vérzékenységet (fibrint (és fibrinogént is) bontja)">'</abbr>) következménye ➜ <span class="midQ [61.5] bgBlue">hemorrhagias diathesis</span></li>
+			<span class="bgYellow">koagulációs paraméterek ➜ </span>
+		</td>
+	  </tr><tr><th rowspan="3" style="writing-mode:sideways-lr;">labor</th>
+		<td style="text-align:left" colspan="3"><center><span class="midQ [24.5] bgYellow">haemolyticus anaemia</span></center>
+			<li>schistocyták (vérkenet)</li>
+			<li>LDH↑</li>
+			<li>haptoglobin↓</li>
+			<li>Hgb↓</li>
+		</td>
+	  </tr><tr>
+		<td colspan="2"> <span class="bgYellow">koagulációs paraméterek ➜ normál</span> </td>
+		<td style="text-align:left">
+			<li><span class="midQ [16.3] bgBlue">alvadási idő↑</span> ➜ aPTI↑ PI(INR)↑</li>
+			<li><span class="bgBlue">fibrinogén↓</span> (➜TI↑)</li>
+			<li><span class="bgBlue">D-dimer↑</span></li>
 		</td>
 	  </tr><tr>
 		<td style="text-align:left">
 			<li><span class="bgYellow"><span class="midQ [61.1]">thrombocytopenia</span> - súlyos</span></li>
-			<li><span class="bgYellow">Se kreatinin ↑</span></li>
+			<li><span class="midQ [20.5]">haemoglobinuria</span> (<div class="mirror">&#10140;</div> haemolysis)</li>
+			<li><span class="bgYellow">Se kreatinin <abbr title="normál">–</abbr></span></li>
+			<li><span class="bgBlue">ADAMTS13</span> (aktivitás↓)</li>
 		</td>
 		<td style="text-align:left">
 			<li><span class="bgYellow"><span class="midQ [61.1]">thrombocytopenia</span> - enyhe</span></li>
-			<li><span class="bgYellow">Se kreatinin <abbr title="normál">–</abbr></span></li>
+			<li><span class="midQ [20.5]">haemoglobinuria</span> (<div class="mirror">&#10140;</div> haemolysis)</li>
+			<li><span class="bgYellow">Se kreatinin ↑↑</span> (<div class="mirror">&#10140;</div> akut VE)</li>
+			<li><span class="midQ [20.5]">hematuria</span> (<div class="mirror">&#10140;</div> akut VE)</li>
+			<li><span class="bgBlue">shigatoxin</span> (kimutatás)</li>
+		</td>
+		<td style="text-align:left">
+			<li><span class="midQ [61.1] bgYellow">thrombocytopenia</span><abbr title="változó">'</abbr> + <span class="bgYellow">faktorok↓</span></li>
+			<li><span class="midQ [20.5]">hematuria</span> lehet (<div class="mirror">&#10140;</div> akut VE)</li>
 		</td>
 	  </tr><tr><th style="writing-mode:sideways-lr;">etio</th>
-		<td style="text-align:left">
+		<td style="text-align:left"> <!-- TTP -->
 			<span class="bgYellow"><span class="syno">vWF-cleaving proteáz | ADAMTS13</span> csökkent működése</span>
 			<li>herediter ➜ mutációja</li>
 			<li>szerzett ➜ antitest termelődik ellene ➜ oka pl.</li><ul>
@@ -8250,28 +8286,68 @@ Orvosi dokumentáció helye és módja:
 				<li>gyógyszer</li>
 			</ul>
 		</td>
-		<td style="text-align:left">
+		<td style="text-align:left"> <!-- HUS -->
 			<li>típusos ➜ <span class="bgYellow">enterohaemorrhagiás E.coli (EHEC)</span> fertőzés</li><ul>
 				<li><span class="fsMini">gyerekeknél 90%-ban ez</span></li>
 				<li><span class="fsMini">leggyakoribb gyermekkori <span class="midQ [20.4]">akut VE</span>-t okozó kórkép</span></li>
 			</ul>
 			<li>atípusos ➜ veleszületett / szerzett</li>
 		</td>
-	  </tr><tr><th style="writing-mode:sideways-lr;">dg</th>
+		<td style="text-align:left"> <!-- DIC -->
+			<li><details><summary><span class="bgYellow">nőgyógyászati kórképek</span> ➜ pl. vetélés, preeclampsia/HELLP</summary>
+			  <u>akut coagulopathia:</u>
+				<li>magzatvíz embólia</li>
+				<li><span data-src="szul" class="midQ [64]">praeeclampsia, HELLP-sy</span></li>
+				<li><span data-src="szul" class="midQ [66.1]">korai lepényleválás</span> (thromboplasticus anyagok keringésbe jutnak)</li>
+				<li>méhet ért traumák</li>
+			  <u>krónikus coagulopathia:</u>
+				<li><span data-src="szul" class="midQ [67]">vetélés:</span></li><ul>
+					<li>abbamaradt vetélés (missed abortus) ➜ <span class="bgYellow">a lepényből felszabaduló thromboplasticus(thrombin,fibrinogén) anyagok DIC kialakulását idézhetik elő, főleg a II. trimeszterben!!</span> (véralvadást okoznak, de gyorsan, így utána nem lesznek és vérzés lesz)</li>
+					<li>lázas vetélés (abortus febrilis/ septicus) ➜ baktériumtoxinok károsítják az endothelt</li>
+				</ul>
+				<li>halott magzat sy:</li><ul>
+					<li>ha a magzat elhalása(>24.hét / >500g / >30cm) nem lepényleválás miatt jött létre, akkor nem veszélyezteti közvetlenül az anyát, azonban az esetek 10-20%-ban létrejön ilyenkor kb.4hét múlva DIC</li>
+					<li>ilyenkor beszélünk "halott magzat szindrómáról"</li>
+					https://www.mfkh.hu/pdf/tajekoztatok/120_tajekoztato.pdf
+				</ul>
+			</details></li>
+			<li><span class="midQ [54] kerdes bgYellow">szepszis</span> ➜ pl.</li><ul>
+				<li><span class="bgYellow">Gram– baktériumok</span></li>
+				<li><span data-src="bel" class="midQ [36.3] bgYellow">Waterhouse–Friderichsen-sy</span></li>
+			</ul>
+			<li><span class="bgYellow">trauma</span></li>
+			<li><span class="bgYellow">daganatok</span> (pl. akut leukaemia)</li>
+			<li><span class="bgYellow">kígyómérgek</span></li>
+			<li><span class="midQ [35] kerdes bgYellow">akut HTR</span></li>
+			<li><span class="midQ [34] kerdes fsMini">akut pancreatitis</span></li>
+			<li><span class="fsMini">meningococcus</span>, <span class="fsMini">PNH</span></li>
+		</td>
+	  </tr><tr><th style="writing-mode:sideways-lr;">tünetek</th>
 		<td colspan="2" style="text-align:left">
-		  <strong>tünetek</strong>
 			<li>láz</li>
 			<li><span class="midQ [29.4] kerdes bgYellow syno">véres hasmenés | dysenteria</span>, <span data-src="gyerek" class="midQ [36] fsMini">hányás</span></li>
-			<li><span class="midQ [61.5] kerdes bgBlue">petechia/purpura</span></li>
-			<li>vese ➜ lásd <span class="midQ [20.4] bgYellow kerdes">akut VE</span></li>
-			<li>görcs, IR tünetek</li>
-		  <strong>labor</strong>
-			<li><span class="bgYellow">shigatoxin</span> kimutatás</li>
-			<li><span class="bgYellow">ADAMTS13</span> aktivitás ↓</li>
-			<li><span class="midQ [24.5] bgYellow">haemolyticus anaemia</span> ➜ Hgb↓ & fragmentocyták a vérkenetben</li>
-			<li><span class="bgYellow"><span class="midQ [61.1]">thrombocytopenia</span> enyhe/súlyos</span></li>
-			<li><span class="bgYellow">kreatinin ↑ / –</span></li>
-			<li><span class="midQ [20.5]">hematuria</span></li>
+			<li><span class="bgYellow">vérzés</span> ➜ <span class="midQ [61.5] kerdes bgYellow">petechia/purpura</span></li>
+			<li>HUS ➜ lásd <span class="midQ [20.4] bgYellow kerdes">akut VE</span></li>
+			<li>TTP ➜ <span class="bgYellow">neurológiai tünetek (fejfájás,zavartság,stroke)</span></li>
+		</td>
+		<td style="text-align:left"> <span class="bgBlue">vérzés</span> – súlyosabb
+			<li>mucocutan ➜ <span class="midQ [61.5]">petechia .. purpura .. ecchymosis</span></li><ul>
+				<span class="fsMini">ugyan szekunder haemorrhagias diathesis közé soroljuk, <abbr title="ugye az alvadási faktorok szintje csökken, így coagulopathia, így hematoma lenne az elsőre elvárt. azonban az súlyosabb esetben lesz csak (thrombocytopenia dominánsabb kezdetben)">de...</abbr></span>
+				<li>bőr</li>
+				<li>nyh:</li><ul>
+					<li>orrvérzés (epistaxis) - <span data-src="done/FOG/FOG.html" class="midQ [4]">elsősegély</span>, <span data-src="done/FOG/FOG.html" class="midQ [5]">(FOG ellátás)</span></li>
+					<li>ínyvérzés</li>
+					<li><span class="midQ [47]">GI-vérzés</span></li>
+				</ul>
+			</ul>
+			<li>sebek, punkció(injekció) elhúzódó</li>
+			<li>multiszervi károsodás pl.</li><ul>
+				<li>intracranialis ➜ tudatzavar stb.</li>
+				<li>pulmonalis ➜ hemoptoe</li>
+				<li>máj, <span class="midQ [20.4] kerdes">AVE</span></li>
+			</ul>
+			<li><span class="bgYellow">shock</span> ➜ hypotonia, tachycardia</li>
+			<li>fájdalom</li>
 		</td>
 	  </tr><tr><th style="writing-mode:sideways-lr;">th</th>
 		<td style="text-align:left">
@@ -8280,10 +8356,21 @@ Orvosi dokumentáció helye és módja:
 			<div><span class="minus">KI</span> <span class="midQ [35]">thrombocyta-trafo</span><abbr title="mikrothrombusok ebből keletkeznek ➜ még több lenne">'</abbr></div>
 		</td>
 		<td style="text-align:left">
-			<li>támogató kezelés ➜ folyadék, dialízis</li>
+			<li>támogató kezelés ➜ folyadék, <span class="midQ [10]">dialysis</span></li>
 		  ha EHEC
 			<div><span class="minus">KI</span> AB<abbr title="fokozná a baktérium toxin termelését!">'</abbr></div>
 			<div><span class="minus">KI</span> motilitásgátló<abbr title="fokozná a baktérium toxin felszívódását a bélből!">'</abbr></div>
+		</td>
+		<td style="text-align:left">
+		  <strong>alapbetegség kezelése</strong>
+			<li><span class="fsMini">pl. szülésnél <span data-src="szul" class="midQ [92]">vacuumextractio</span></span></li>
+		  <strong>tüneti</strong>
+			<li>ha nem vérző ➜ szervi elégtelenség kezelése</li><ul>
+				<li>hypoxia (oxigén, gépi lélegeztetés)</li>
+				<li>acidosis</li>
+				<li>keringéstámogatás (folyadékpótlás, presszorok)</li>
+			</ul>
+			<li>ha vérző ➜ <span class="midQ [35] kerdes">trafo</span> (vvt-, thr-koncentrátumok, plazma)</li>
 		</td>
 	  </tr></table>
 	</details>
@@ -8770,7 +8857,7 @@ Orvosi dokumentáció helye és módja:
 	</td>
 	<td style="text-align:left"> <!-- egyéb -->
 		<li><span class="bgYellow">idiopathias</span></li>
-		<li><span class="midQ [61.2] kerdes">coagulopathia</span> (<span class="midQ [62] kerdes">DIC</span>,vWD)</li>
+		<li><span class="midQ [61.2] kerdes">coagulopathia</span> (<span class="midQ [24.6] kerdes">DIC</span>,vWD)</li>
 		<li>trauma</li>
 		<li><span class="midQ [13.3]">kábítószer ➜ kokain</span></li>
 		<li>elektromos cigaretta</li>
@@ -9695,7 +9782,7 @@ Orvosi dokumentáció helye és módja:
 		<th>thrombocyta-koncentrátum</th>
 		<th>plazma = <abbr title="friss fagyasztott plazma">FFP</abbr></th>
 	  </tr><tr>
-		<td style="text-align:left">
+		<td style="text-align:left"> <!-- vvt -->
 		  <strong><span class="midQ [24] bgBlue">anaemia</span></strong>
 			<li><span class="bgYellow">vérvesztés</span></li><ul>
 				<li><span class="bgYellow">akut</span> <span class="fsMini">(≥30% vértérfogat-veszteség, hypovolaemias sokk)</span></li>
@@ -9707,15 +9794,19 @@ Orvosi dokumentáció helye és módja:
 				<li><span class="midQ [20.4]">krónikus vesebetegség</span></li>
 			</ul>
 		</td>
-		<td style="text-align:left">
-			<li><span class="midQ [61.1] bgBlue kerdes">thrombocytopenia</span></li>
+		<td style="text-align:left"> <!-- thrombocyta -->
+			<li><span class="midQ [61.1] bgBlue kerdes">thrombocytopenia</span></li><ul>
+				<div><span class="minus">KI</span> - <span class="midQ [24.6]">TTP</span></div>
+			</ul>
 			<li><span class="midQ [61.1] bgYellow kerdes">thrombocytopathia</span></li>
 			<li>invazív beavatkozások előkészítése <span class="fsMini">(pl. lumbálpunkció, műtét)</span></li>
 		</td>
-		<td style="text-align:left">
+		<td style="text-align:left"> <!-- plazma -->
 			<li><span class="midQ [61.2] kerdes">coagulopathia</span></li>
 			<li><span class="midQ [24.6] kerdes">TTP</span></li>
 		</td>
+	  </tr><tr>
+		<td colspan="3"> <span class="midQ [24.6]">DIC</span> </td>
 	  </tr></table>
 		<li>granulocyta-transzfúzió is van (4.), de ritkán ➜ súlyos neutropénia (&lt;0,5 G/l) és életveszélyes bakteriális/gombás fertőzés</li>
 	  <!-- kapcs --> <div>
@@ -9731,7 +9822,7 @@ Orvosi dokumentáció helye és módja:
 			<li>patho ➜ <span class="bgBlue">ABO-inkompatibilitás</span></li>
 			<li>tünetek ➜ <span class="bgBlue">percek-órák</span></li><ul>
 				<li><span class="bgYellow"><span class="midQ [27] kerdes">láz</span>, hidegrázás</span></li>
-				<li><span class="midQ [62] kerdes bgYellow">DIC</span></li><ul>
+				<li><span class="midQ [24.6] kerdes bgYellow">DIC</span></li><ul>
 					<li><span class="bgYellow">vérzések</span></li>
 					<li><span class="bgYellow">hypotensio, tachycardia</span> ➜ sokk</li>
 					<li>fájdalom (hát,derék,mellkas)</li>
@@ -11492,7 +11583,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li><span class="midQ [32] kerdes">daganat</span></li>
 		</td>
 	  </tr><tr>
-		<td colspan="2"> RiFa ➜ <span class="midQ [62] fsMini">DIC</span> </td>
+		<td colspan="2"> RiFa ➜ <span class="midQ [24.6] fsMini">DIC</span> </td>
 	</tr>
 	<tr><th style="writing-mode:sideways-lr;">dg</th>
 		<td colspan="2" style="text-align:left">
@@ -12571,7 +12662,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 	<li><span class="midQ [34] kerdes">akut pancreatitis</span></li>
 	<li></li>
   <strong>szövődmények</strong>
-	<li>ha Gram– ➜ <span class="midQ [62] kerdes">DIC</span></li>
+	<li>ha Gram– ➜ <span class="midQ [24.6] kerdes">DIC</span></li>
 	<li><span class="midQ [48] kerdes">eszméletlen beteg</span></li>
 	<li><span class="midQ [20.4] kerdes">akut VE</span></li>
 </details>
@@ -13409,7 +13500,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<td style="text-align:left">
 			  <strong>csökkent túlélés / fokozott pusztulás</strong>
 				<li><span data-src="szul" class="midQ [108.1]">terhesség alatti</span><abbr title="gestatios etiológiája nem egyértelmű, annál lehet csökkent termelődés / fokozott pusztulás is">'</abbr> (gesztációs,preeclampsia)</li>
-				<li><span class="midQ [62] kerdes bgGreen">DIC</span></li>
+				<li><span class="midQ [24.6] kerdes bgGreen">DIC</span></li>
 				<li><span class="midQ [63] kerdes">👶 DD: ITP vs HUS/TTP vs SHP vs meningococcus</span></li>
 				<li>autoimmun</li><ul>
 					<li><span class="midQ [117]" data-src="bel">SLE</span></li>
@@ -13486,6 +13577,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			</td>
 			<td colspan="2"> <!-- thromboythopenia -->
 				<span class="midQ [35] bgYellow kerdes">trafo</span> (thrombocyta) - alapvető
+				<div><span class="minus">KI</span> - <span class="midQ [24.6]">TTP</span></div>
 			</td>
 		</tr>
 		<tr><th style="writing-mode:sideways-lr;">egyéb</th>
@@ -13584,7 +13676,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		<td><span class="bgYellow">def ➜ fokozott hajlam a haemorrhagiara</span><abbr title="vérzésre">'</abbr></td>
 		<td><span class="bgBlue"><span class="midQ [61]">def</span> ➜ fokozott hajlam a thrombosisra</span><abbr title="vérrögösödésre">'</abbr></td>
 	  </tr><tr>
-		<td colspan="2"><span class="midQ [62]"><u>DIC</u></span></td>
+		<td colspan="2"><span class="midQ [24.6]"><u>DIC</u></span></td>
 	  </tr><tr>
 		<td style="text-align:left"><table> <!-- haemorrhagias diathesisek -->
 			<tr><th rowspan="2" style="width:14px"></th>
@@ -13665,7 +13757,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 					<li>INR<abbr title="normál">–</abbr> aPTI– ➜ <span class="midQ [61.2]">von Willebrand betegség</span></li>
 					<li>INR– aPTI↑ ➜ <span class="midQ [61.6]">haemophilia-A</span></li>
 					<li>INR↑ aPTI↑ ➜ súlyos állapot</li><ul>
-						<li><span class="midQ [62]">DIC</span></li>
+						<li><span class="midQ [24.6]">DIC</span></li>
 						<li><span style="font-size:80%">hepatocelluláris elégtelenség</span></li>
 						<li><span style="font-size:80%">K-vitamin-hiány</span></li>
 						<li><span style="font-size:80%">warfarin- vagy rágcsálóirtó (K-vitamin-antagonista) mérgezés</span></li>
@@ -13674,7 +13766,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 					<li><span class="midQ [61.2]">thr↓, akkor lásd ott</span></li> 
 					<li><span class="midQ [38.2]">hematológiai malignitás</span> (<abbr title="táblázatban lévő">összes</abbr> kivéve <abbr title="ez thrombophilia">MPD</abbr>, <abbr title="ezek egyik se">MM,CLL</abbr>') gyanú ➜ <abbr title="vvt↓ fvs↓ thrombocyta↓">pancytopenia</abbr>, blastok vérkenetben, <span data-src="gyerek" class="midQ [81]">hepatomegalia</span>, <span data-src="gyerek" class="midQ [80]">splenomegalia</span></li>
 					<li><span class="midQ [63] kerdes">👶: ITP vs HUS/TTP vs SHP vs meningococcus</span></li>
-					<li><span class="midQ [62] kerdes">DIC</span></li>
+					<li><span class="midQ [24.6] kerdes">DIC</span></li>
 				</td>
 			</tr>
 		</table></td>
@@ -13779,7 +13871,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 					<li><span class="bgBlue">metabolikus sy</span></li>
 					<li><span class="bgBlue">idős kor</span></li>
 					<li><span data-src="Belgyogy/hiirlm.html" class="midQ [22] bgYellow">APS</span> (➜<span class="midQ [117]" data-src="bel">SLE</span>)</li>
-					<li><span class="midQ [62] bgYellow">DIC</span></li>
+					<li><span class="midQ [24.6] bgYellow">DIC</span></li>
 					<details><summary>stb.</summary>
 						<li><span data-src="Belgyogy/hiirlm.html" class="midQ [45] bgYellow">PNH</span></li>
 						<li><span data-src="Belgyogy/hiirlm.html" class="midQ [46] bgYellow">HIT</span></li>
@@ -13856,77 +13948,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		</td>
 	</tr></table></details>
 </ul>
-<details class="[62] kerdes"><summary>DIC</summary>
-	<li><span class="bgBlue">nem betegség, hanem tünet ➜ betegséget keresni</span></li>
-	<li><span class="bgYellow">lényege</span> ➜ szisztémás thrombohaemorrhagiás kórkép: valamely kiváltó betegség hatására a végartériákban koagulációt váltanak ki, így ott microthrombusok keletkeznek; ➜ azonban a thrombocyta-k + faktorok szintje lecsökken a vérben, így <span class="midQ [61.5]">hemorrhagias diathesis</span> is bekövetkezik</li>
-	<li><details class="kerdes"><summary>patho ➜ koaguláció és/vagy fibrinolysis</summary>
-		<li>koagulációt beindítja ➜ baktériumtoxin / TF<abbr title="endothel károsodik, így TF jut vérbe ➜ pl. placenta, decidua, magzatvíz -ből">'</abbr> / citokin stb.</li>
-		<li>következménye ➜ <u>thrombocyta-k + faktorok szintje lecsökken</u></li>
-		<span class="fsMini">prothrombinból thrombin lesz ➜ trombin hatására fibrinogénből fibrin lesz</span>
-		<li>mivel fibrin keletkezett / fibrinolysist aktiváló anyagok<abbr title="(méh és decidua ezekből szokatlanul sokat tart.)">'</abbr> szabadulnak fel a vérkeringésbe ➜ beindul a fibrinolysis (is) szisztémásan</li>
-		<li>következménye ➜ <u>plasmin túlzott aktivitása</u> akadályozza a koagulációs rendszert és fokozza a vérzékenységet</li><ul>
-			<span class="fsMini">fibrint (és fibrinogént is) bontja</span>
-		</ul>
-	</details></li><ul>
-		<span class="bgYellow">➜ mindkettő következménye a vérzékenység</span><abbr title="hiszen thrombocytopenia és alvadási faktorok szintje lecsökken és ráadásul a fibrinolysis is magasan üzemel egyszerre">'</abbr>
-	</ul>
-  <strong>etiológia</strong> pl.
-	<li><details><summary><span class="bgYellow">nőgyógyászati kórképek</span> ➜ pl. vetélés, preeclampsia/HELLP</summary>
-	  <u>akut coagulopathia:</u>
-		<li>magzatvíz embólia</li>
-		<li><span data-src="szul" class="midQ [64]">praeeclampsia, HELLP-sy</span></li>
-		<li><span data-src="szul" class="midQ [66.1]">korai lepényleválás</span> (thromboplasticus anyagok keringésbe jutnak)</li>
-		<li>méhet ért traumák</li>
-	  <u>krónikus coagulopathia:</u>
-		<li><span data-src="szul" class="midQ [67]">vetélés:</span></li><ul>
-			<li>abbamaradt vetélés (missed abortus) ➜ <span class="bgYellow">a lepényből felszabaduló thromboplasticus(thrombin,fibrinogén) anyagok DIC kialakulását idézhetik elő, főleg a II. trimeszterben!!</span> (véralvadást okoznak, de gyorsan, így utána nem lesznek és vérzés lesz)</li>
-			<li>lázas vetélés (abortus febrilis/ septicus) ➜ baktériumtoxinok károsítják az endothelt</li>
-		</ul>
-		<li>halott magzat sy:</li><ul>
-			<li>ha a magzat elhalása(>24.hét / >500g / >30cm) nem lepényleválás miatt jött létre, akkor nem veszélyezteti közvetlenül az anyát, azonban az esetek 10-20%-ban létrejön ilyenkor kb.4hét múlva DIC</li>
-			<li>ilyenkor beszélünk "halott magzat szindrómáról"</li>
-			https://www.mfkh.hu/pdf/tajekoztatok/120_tajekoztato.pdf
-		</ul>
-	</details></li>
-	<li><span class="midQ [54] kerdes bgYellow">szepszis</span> ➜ pl.</li><ul>
-		<li><span class="bgYellow">Gram– baktériumok</span></li>
-		<li><span data-src="bel" class="midQ [36.3] bgYellow">Waterhouse–Friderichsen-sy</span></li>
-	</ul>
-	<li><span class="bgYellow">trauma</span></li>
-	<li><span class="bgYellow">daganatok</span> (pl. akut leukaemia)</li>
-	<li><span class="bgYellow">kígyómérgek</span></li>
-	<li><span class="midQ [35] kerdes bgYellow">akut HTR</span></li>
-	<li><span class="midQ [34] kerdes fsMini">akut pancreatitis</span></li>
-	<li><span class="fsMini">meningococcus</span>, <span class="fsMini">PNH</span></li>
-  <strong>tünetek</strong> ➜ <span class="bgBlue">vérzések</span> <abbr title="chatGPT">§</abbr>
-	<li>mucocutan ➜ <span class="midQ [61.5]">petechia .. purpura .. ecchymosis</span></li><ul>
-		<li>bőr</li>
-		<li>nyh:</li><ul>
-			<li>orrvérzés (epistaxis) - <span data-src="done/FOG/FOG.html" class="midQ [4]">elsősegély</span>, <span data-src="done/FOG/FOG.html" class="midQ [5]">(FOG ellátás)</span></li>
-			<li>ínyvérzés</li>
-			<li><span class="midQ [47]">GI-vérzés</span></li>
-		</ul>
-	</ul>
-	<li>sebek, punkció(injekció) elhúzódó</li>
-	<li>szerv</li><ul>
-		<li>intracranialis ➜ tudatzavar stb.</li>
-		<li>pulmonalis ➜ hemoptoe</li>
-		<li>mellkasi / hasi</li>
-	</ul>
-	<li>shock ➜ hypotonia, tachycardia</li>
-	<li>fájdalom</li>
-  <strong><span data-src="bel" class="midQ [16]">labor</span></strong>
-	<li><span data-src="bel" class="midQ [16.3] bgBlue">alvadási idő↑</span> ➜ aPTI↑ PI(INR)↑</li>
-	<li><span class="bgBlue">fibrinogén↓</span> (➜TI↑)</li>
-	<li><span class="bgBlue">D-dimer↑</span></li>
-	<li><span class="midQ [61.1] kerdes bgBlue">thrombocytopenia</span></li>
-  <strong>th</strong>
-	<li>alapbetegség kezelendő</li>
-	<li>ha nem vérző ➜ hypoxia, acidosis, szervi elégtelenség kezelése</li>
-	<li>ha vérző ➜ <span class="midQ [35] kerdes">trafo</span> (vvt-, thr-koncentrátumok, plazma)</li>
-	<li>szülésnél <span data-src="szul" class="midQ [92]">vacuumextractio</span></li>
-  <strong>szövődmény</strong>
-	<li><span class="midQ [20.4] kerdes">AVE</span></li>
+<details class="[62] kerdes"><summary></summary>
 </details>
 <details class="[63] kerdes"><summary>👶 DD: ITP vs HUS/TTP vs SHP vs meningococcus</summary>
 	<li><span class="midQ [61.5]">petechia/purpura</span> ➜ mindegyiknél van (ITP a leggyakoribb oka)</li>
@@ -17953,7 +17975,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 		<div class="imp [61.1]"></div>
 	</details>
 	<details class="kerdes"><summary>Thrombocytopenia, thrombocytopathia, <strong>DIC</strong></summary>
-		<div class="imp [62]"></div>
+		<div class="imp [24.6]"></div>
 	</details>
 </details>
 <details class="open"><summary class="status">Mélyvénás thrombosis, korszerű véralvadásgátló kezelés, fibrinolysis indikácói</summary>
