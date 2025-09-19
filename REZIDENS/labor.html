@@ -1,0 +1,1732 @@
+<!doctype html> <!-- ₁₂₃²⁺⁻ ● û õ õ ≥ ↑ ↓ × ± ✖ ✔ „” ♀ ♂ -->
+<details class="impQs"><summary></summary>
+ <div> <!-- 1 – 20 -->
+	<details class="[1] kerdes"><summary>referenciatartomány</summary>
+	  <div><strong>def</strong></div>
+		<li>nagyszámú, adott feltétel szerint válogatott referenciaegyén laboreredményei alapján számolt intervallum</li>
+		<li>2,5–97,5 percentilis (alsó + felső határ ➜ 95 percentilis a tartomány)</li>
+		<li>normál félreverezető (laboronként más), így..</li><ul>
+			<li>ezt mondjam ➜ <abbr title="a referensegyének mérési eredményeiből meghatározott értéktartomány.">referenciatartomány</abbr>, <abbr title="a referensegyének mérési eredményei">referenciaérték</abbr> (<abbr title=" az a személy, akit meghatározott kritériumok alapján válogatnak ki a vizsgálni kívánt laboratóriumi paraméternek megfelelően">referensegyén</abbr>)</li>
+			<li>NE ezt mondjam ➜ normáltartomány, normálérték</li>
+		</ul>
+	  <strong>meghatározása</strong>
+		<li>referencia populáció kiválasztása ➜ egészséges, életkor, nem, etnikum, életmód szerint reprezentatív</li>
+		<li>mintaszám ➜ min. 120 egyén ajánlott (CLSI C28-A3 guideline)</li>
+		<li>statisztikai feldolgozás ➜ <span class="bgPink">nem-paraméteres módszer, 2,5–97,5 percentilis</span></li>
+		<details class="kerdes"><summary>normál eloszlás = Gauss-görbe</summary>
+			<img data-src="axmbeonf.png">
+			<li>alsó határa ➜ Xátlag – 1,96SD</li>
+			<li>felső határa ➜ Xátlag + 1,96SD</li>
+			<li>SD = átlag körüli szórás, standard deviáció</li>
+		</details>
+		<details class="kerdes"><summary>asszimetrikus eloszlás</summary>
+			<img data-src="huasybdn.png">
+			<li>két paramétert nézünk ➜ módusz és medián</li><ul>
+				<li>módusz ➜ 'leggyakrabban van'</li>
+				<li>medián ➜ mért értékek fele alatta és fele fölötte</li>
+			</ul>
+			<li>ezután meghatározzuk (...) az értékhatárokat (2.5% ... 97.5%)</li>
+		</details>
+	  <strong><span class="midQ [7]">befolyásoló tényezők</span></strong>
+		<li><span class="midQ [5] kerdes">preanalitikai tényezők</span></li>
+		<li>analitikai módszer: különböző laborokban eltérhet (módszerspecifikus).</li><ul>
+			<li><span class="bgPink">pl.</span></li>
+		</ul>
+	  <!-- egyéb --> <div>
+		<span class="midQ [7] fsMini WHITE">mérést befolyásoló tényezők</span>
+		<span class="midQ [16] fsMini WHITE">posztanalitikai szakasz</span>
+	  </div>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed ➜ 11.3</span>
+		<span class="WHITE">§ChatGPT</span>
+	  </div>
+	</details>
+	<details class="[2] kerdes"><summary>terápiás tartomány</summary>
+		<li><span class="bgYellow">gyógyszer hatásos, de nem toxikus koncentrációja</span></li><ul>
+			def ➜ gyógyszer plazmakoncentrációjának az a tartománya, ahol a kívánt hatás biztosított, de toxikus mellékhatás még nem lép fel
+		</ul>
+	  <strong>TDM = therapeutic drug monitoring = terápiás gyógyszerszint monitorozás</strong> 
+		<li>indikáció:</li><ul>
+			<li>szív ➜ amiodarone, digoxin, lidocaine, procainamide</li>
+			<li>immunszupresszív szerek (ciklosporin, tacrolimus, sirolimus, everolimus)</li>
+			<li>antiepileptikumok (valproát), lítium</li>
+			<li>antibiotikumok ➜ aminoglikozid, vancomycin</li>
+		</ul>
+		<li></li>
+		Digoxin: 0,8–2,0 ng/mL
+		Theophyllin: 10–20 µg/mL
+		Valproát: 50–100 µg/mL
+		INR: kumarin terápia során általában 2–3 (ez nem koncentráció, hanem funkcionális marker).
+	  <hr>
+		<span class="bgPink">warfarint is kell ugye nézni, de az nem TDM elvileg (ugye albumin stb. befolyásolja, amiatt) ➜ majd ezt pontosítsam később</span>
+	  <!-- source --> <div>
+		<span class="bgPink">§BevLabMed ➜ 11.3</span>
+		<span class="bgPink">§szakdoga</span>
+		<span class="WHITE">§ChatGPT</span>
+		§<abbr title="https://medlineplus.gov/lab-tests/therapeutic-drug-monitoring/">link</abbr>
+		<span class="bgPink">§</span><abbr title="https://semmelweis.hu/laboratorium/files/2014/04/LMI-El%C5%91ad%C3%A1s-7-TDM.pdf">link</abbr>
+	  </div>
+	</details>
+	<details class="[3] kerdes"><summary>cut-off érték</summary>
+	  <div><strong>lényeg</strong></div>
+		<li>dg eldöntéséhez használt küszöb</li><ul>
+			def ➜ értékhatár, amely felett/alatt a vizsgálatot pozitívnak vagy negatívnak értékeljük (egy adott betegség szempontjából)
+		</ul>
+		<li>nem az egészséges populáció alapján határozzuk meg, hanem a diagnosztikai teljesítmény (szenzitivitás/specificitás) optimalizálása alapján</li>
+	  <div><strong>példák</strong></div>
+		<li>troponin ➜ 99. percentilis a döntési cut-off <abbr title="acut coronary sy">ACS</abbr> diagnózisban</li>
+		<li>HbA1c: ≥ 6,5% ➜ DM</li>
+		<li>D-dimer > 500 ng/mL FEU ➜ kóros <span class="fsMini">(de age-adjusted cut-off is van)</span></li>
+		<li>LDL > 1,8 mmol/L <span class="fsMini">(másodprevenciós célérték)</span></li>
+	  <div><strong>meghatározása</strong></div>
+		<li>ROC (Receiver Operating Characteristic) görbével ➜ az optimális cut-off az a pont, ahol a legjobb kompromisszum van a szenzitivitás és specificitás között</li>
+		<li></li>
+	  <!-- egyéb --> <div>
+		<span class="midQ [16] fsMini WHITE">posztanalitikai szakasz</span>
+	  </div>
+	  <!-- source --> <div>
+		<span class="bgPink">§BevLabMed ➜ 11.3</span>
+		<span class="WHITE">§ChatGPT</span>
+	  </div>
+	</details>
+	<details class="[4] kerdes"><summary>szenzitivitás, specificitás, prediktív érték, ROC analízis</summary>
+	  <table><tr><th>szenzitivitás = érzékenység</th>  <th>specificitás = fajlagosság</th></tr><tr>
+		<td style="text-align:left">
+			<span class="bgYellow">esély ➜ ha beteg, akkor pozitív lesz a teszt</span>
+			<li>ez akkor alacsony, ha nem feltétlen jár a betegséggel a tünet, pl. SLE 95%-ban van ANA, ellenben SLE ~50%-ban van csak anti-dsDNS</li>
+		</td>
+		<td style="text-align:left">
+			<span class="bgYellow">esély ➜ ha nem beteg, akkor negatív lesz a teszt</span>
+			<li>ez akkor alacsony, ha más betegségek is pozitív eredményt váltanak ki, pl. ANA pozitiv rheumatoid arthritis és SLE-ben is, így hiába nincs lupusa, simán lehet pozitív, mert rheumatoid arthritis-e viszont van </li>
+		</td>
+	  </tr><tr>
+		<th>pozitív prediktív érték (PPV)</th>
+		<th>negatív prediktív érték (NPV)</th>
+	  </tr><tr>
+		<td>esély ➜ ha pozitív a teszt, akkor beteg</td>
+		<td>esély ➜ ha negatív a teszt, akkor nem beteg</td>
+	  </tr><tr>
+		<td colspan="2">  <img data-src="pswrgcaw.png">  </td>
+	  </tr></table>
+	  <strong>egyszerű pl.</strong>
+		<li>D-dimer + mvt(tüdőembólia)</li><ul>
+			<li>szenz nagy ➜ tehát ha mvt van, akkor D-dimer biztos megnő</li>
+			<li>spec kicsi ➜ ha D-dimer megnőtt annak ezer más oka is lehet</li>
+		</ul>
+		<li>troponin ➜ spec nagy AMI</li>
+	  <strong>bonyolítsuk</strong>
+		<li>mi a különbség a PPV és a spec között, tehát pl. troponin</li><ul>
+			<li>specificitása nagy ➜ vagyis azt várom, hogy ha pozitív, akkor nyílván nem más betegség, hanem erre spec, igaz?</li>
+			<li>de nem... ugyanis az a PPV... mi a különbség? ➜ prevelancia, ugyanis..</li>
+			<li>tegyük fel ➜ spec 95%, szenz 95%; betegség prevelancia 1%</li>
+			<li>ha van 10ezer ember ➜ 100 beteg <abbr title="mivel szenz=95%">➜</abbr> 95TP</li>
+			<li>9900 nem beteg <abbr title="mivel spec=95%">➜</abbr> 495FP</li>
+			<li>tehát ha 10ezer embernél megnézem ➜ 590 pozitív, lesz, de abból csak 95TP, tehát valójában csak 16% az esélye, hogy pozitív esetén valóban beteg!</li>
+		</ul>
+	  <strong>ROC-analízis</strong> (Receiver Operating Characteristic)
+		<li>lényeg ➜ grafikon a diagnosztikai teszt teljesítményének értékelésére</li><ul>
+			<li>x = 1-specificitás (álpozitív arány)</li>
+			<li>y = szenzitivitás (igaz pozitív arány)</li>
+		</ul>
+		<li><details class="kerdes"><summary>ROC görbe: Minden küszöbértékhez (cut-off) egy pontot rajzolunk</summary>
+			<img data-src="jkdiugbf.png">
+			<li><span class="midQ [2]">cut-off</span> pl. pozitív a teszt, ha a vércukor..</li><ul>
+				<li>>7mmol ➜ ezután kapok egy specificitás és szenzitivitás értéket is (DM-re)</li>
+				<li>>6mmol ➜ szenzitivitás így nő, de specificitás csökken</li>
+			</ul>
+			<li>a görbe elkészítése</li><ul>
+				<li>Fogjuk a teszt összes lehetséges cut-off értékét.</li>
+				<li>Mindegyikhez kiszámítjuk a szenzitivitást és a 1 - specificitást</li>
+				<li>Minden cut-off → 1 pont a grafikonon.</li>
+				<li>Ezeket a pontokat összekötjük → ez adja a ROC görbét.</li>
+			</ul>
+			<li>pl. kép ➜ egy tumormarker</li><ul>
+				<li>Cut-off (U/L)	Szenzitivitás	Specificitás	ROC pont (x=1-Spec, y=Sens)</li>
+				<li>5	95%	40%	(0,60 ; 0,95)</li>
+				<li>10	85%	70%	(0,30 ; 0,85)</li>
+				<li>15	70%	90%	(0,10 ; 0,70)</li>
+				<li>20	55%	95%	(0,05 ; 0,55)</li>
+			</ul>
+		</details></li>
+		<li>Ideális teszt: A görbe minél közelebb van a bal felső sarokhoz (szenzitivitás 100%, álpozitív 0%).</li>
+	  <div><strong>AUC (Area Under Curve)</strong></div>
+		<li>görbe alatti terület</li>
+		<li>érték: 0,5–1,0</li><ul>
+			<li>0,5 → nincs diagnosztikai érték (véletlenszerű)</li>
+			<li>1,0 → tökéletes teszt</li>
+			minél nagyobb az AUC, annál jobb a teszt
+		</ul>
+	  <!-- source --> <div>
+		<span class="bgPink">§hemato</span>
+		<span class="WHITE">§népeg</span>
+		<span class="bgPink">§labmed</span>
+		<span class="bgPink">§BevLabMed</span>
+		<span class="WHITE">§ChatGPT</span>
+	  </div>
+	</details>
+	<details class="[5] kerdes"><summary>preanalitikai szakasz (részei,hibák)</summary>
+		<li><span class="bgYellow">hibák 75%a itt</span> történik</li>
+		<li><span class="bgYellow">később nem korrigálhatók</span> (laborban már)</li>
+	  <strong>szakaszai</strong>
+		<li><details class="kerdes"><summary><span class="bgBlue">labor vizsgálatkérés</span></summary>
+			<li>klinikailag megalapozott legyen az indok</li><ul>
+				<li>Miért szükséges, vagy célszerű a vizsgálatot rendelni?</li>
+				<li>Mennyire hatékony az adott teszt az adott betegségben?</li>
+				<li>Miként kell értelmezni a vizsgálat eredményét?</li>
+				<li>Miként befolyásolja a laboratóriumi lelet a beteg kezelését, szolgálni fogja-e a beteg javát?</li>
+				<span class="fsMini">indokolatlan vizsgálatok aránya 25-50%-ra becsülhető</span>
+			</ul>
+			<li>típusai:</li><ul>
+				<li>általános tájékozódó</li>
+				<li>szűrő jellegű</li>
+				<li>szelektív, célzott</li>
+			</ul>
+		</details></li>
+		<li><details class="kerdes"><summary><span class="bgBlue">mintavétel</span></summary>
+			<li>részei ➜ vizsgálati anyag..</li><ul>
+				<li>levétele, azonosítása</li>
+				<li>szállítása</li>
+			</ul>
+			<li><span class="bgBlue">minden labor minta potenciálisan fertőző</span><abbr title="tehát úgy kell bánni vele">'</abbr></li>
+			<li>minta</li><ul>
+				<li>vér (vénás/artáriás)</li>
+				<li>vizelet</li>
+				<li>liquor cerebrospinalis</li>
+				<li>egyéb ➜ transszudátum, exszudátum, széklet, ízületi nedv, verejték, amnionfolyadék, gyomor- és duodénumnedv, szűrőpapírra szárított vér, húgykő, epekő<abbr title="ciszta?">'</abbr></li>
+			</ul>
+		  <strong>vérvétellel kapcsolatos szabályok</strong>
+			<li><details class="kerdes"><summary>vénás (perif)</summary>
+				<li>típusos helye ➜ <span class="bgPink">lásd perif. vénás vérvétel</span></li>
+				<li>bőrfelület tisztítása:</li><ul>
+					<li>70% százalékos izopropil-alkoholos törlőkendő</li>
+					<li>meg kell várni, míg a terület megszárad, különben:</li><ul>
+						<li>kontaminálódhat a vér</li>
+						<li>hemolízis(vvt)</li>
+					</ul>
+					hemokultúra vételnél különösen fontos a bőr sterilitása
+				</ul>
+				<li>mandzsetta ➜ leszorítás: max 1 percig, 3-4 cm-re a vérvételi helytől</li><ul>
+					ha túl sokáig van:
+					<li>hemolízis</li>
+					<li>izmok anaerob glikolízise ➜ laktát↑ piruvát↑</li>
+					<li>fokozott intravaszkuláris nyomás miatt a plazmából a kis molekulatömegű komponensek az EC térbe is átjutnak ➜ hemokoncentráció és a vér összetételének a változása</li>
+				</ul>
+				<li>mellőzni kanül / infúziós szerelék / attól proximálisan lévő érszakaszból ➜ ha mégis...</li><ul>
+					<li>ne az éppen befolyt infúziót stb. „vegyük le” vérrel keverve</li>
+					<li>labor felé jelezni, hogy a vér nem vérvétel kapcsán került levételre</li>
+				</ul>
+			</details></li>
+			<li><details class="kerdes"><summary>artériás ➜ vérgáz, sav-bázis</summary>
+				<li>típusos helye ➜ a.radialis, esetenként a.brachialis / a.femoralis <span class="bgPink">(lásd artériás vérvétel)</span></li><ul>
+					<li>ha artériákhoz nehéz hozzáférni, a kapilláris vérminta vétele a legalkalmasabb hiperemizált (pár percig 38°C víz alá tartott) 3. vagy 4. ujj disztális ujjbegyéből, vagy fülcimpából</li>
+				</ul>
+				<li></li>
+			</details></li>
+			<li>mintavételi időpontokat a funkcionális vizsgálatok során szigorúan be kell tartani, pl.</li><ul>
+				<li>glükóztolerancia-teszt</li>
+				<li>clearance vizsgálatok</li>
+				<li>terápiás gyógyszerszint ellenőrzés</li>
+			</ul>
+			<li><details class="kerdes"><summary>mintavételi csövek</summary>
+			  <img data-src="uajnytiq.png">
+				<li>egyetlen vérvételi csőből nem végezhető el a teljes vizsgálati paletta</li><ul>
+					<li>hematológiai elemzés / véralvadási vizsgálat / klinikai kémiai / hormon meghatározáshoz más-más típusú mintára és mintavételi eszközre van szükség</li>
+					<span class="fsMini">adott laboratóriumnak kell a vizsgálati körének megfelelő mintavételeket meghatároznia, a kérő orvosnak kell eldöntenie, hogy az ezekhez szükséges minta az adott betegtől nyerhető-e</span>
+				</ul>
+				<li>bármelyik ➜ jelig kell tölteni, hogy alvadásgátló aránya megfelelő legyen</li><ul>
+					 <span class="fsMini">pl. trinátrium-citrát gyakran folyadék formában van a csőben és alvadási vizsgálatok végzéséhez elengedhetetlen az 1 rész trinátrium-citrát és 9 rész vér arány</span>
+				</ul>
+				<li>vérvételt követően, a vérvételi csöveket óvatosan, többször át kell forgatni, hogy a csőben lévő adalékanyag (EDTA, nátrium-citrát, nátrium-fluorid, heparin), vagy a cső falán az alvadásgyorsító oldódjék és tökéletesen keveredjék a vérmintával</li><ul>
+					ha az alvadásgátló nem oszlik el, részleges alvadás lesz, ami torzult mérési eredményt okoz
+				</ul>
+			  <table><tr><th>ZÁRÓKUPAK SZÍNE</th>  <th>ALKALMAZÁSA</th>  <th>ADALÉKANYAG</th>
+			  </tr><tr><td> fehér </td>
+				<td style="text-align:left">tárolás:
+					<li><span class="bgPink">szérum/plazma</span></li>
+					<li>liquor</li>
+					<li>vizelet</li>
+				</td>
+				<td> nincs </td>
+			  <tr></tr><td> piros </td>
+				<td style="text-align:left">
+					<li>kémiai (pl. májenzimek, ionok, glükóz)</li>
+					<li>immunológiai (pl. autoantitestek, hormonok, szerológiai tesztek)</li>
+				</td>
+				<td style="text-align:left">
+				  <abbr title="nincs benne alvadásgátló. régen semmi sem volt, de hogy ne kelljen annyit várni az alvadásra, alvadásgyorsító van benne">natív cső</abbr>
+					<li>vagy alvadásgyorsító és gél</li>
+					<li>vagy granulátum</li>
+				</td>
+			  <tr></tr><td> lila/rózsaszín </td>
+				<td style="text-align:left">
+					<li>vérkép</li>
+					<li>hematológia</li>
+					<li>genetika</li>
+					<li>HbA1c</li>
+					<li>vércsoport</li>
+				</td>
+				<td> K₂-EDTA </td>
+			  <tr></tr><td> fekete </td>
+				<td> vérsejtsüllyedés </td>
+				<td rowspan="3"> Na₃-citrát <abbr title="citrát:vér ➜ süllyedés">(1:4)</abbr> <abbr title="alvadás">(1:9)</abbr> </td>
+			  <tr></tr><td> világoskék </td>
+				<td> véralvadás </td>
+			  <tr></tr><td> zöld </td>
+				<td style="text-align:left">
+					<li>endokrin</li>
+					<li>sürgősségi</li>
+				</td>
+				<td> Li-heparin </td>
+			  <tr></tr><td> szürke </td>
+				<td style="text-align:left">
+					<li>glükóz</li>
+					<li>laktát</li>
+				</td>
+				<td> NaF és EDTA </td>
+			  <tr></tr><td> sárga </td>
+				<td> vércsoport </td>
+				<td> citrát és dextróz </td>
+			  <tr></tr><td> sötétkék </td>
+				<td style="text-align:left">
+					<li>nyomelemek</li>
+					<li>gyógyszerszintek</li>
+				</td>
+				<td> tisztított Na-heparin  </td>
+			  </tr></table>
+			  <img data-src="hwhdwhyy.png">
+				<li><span class="abbr kerdes">EDTA és citrát ►</span> kalciumion stabilis komplexben történő kötésével gátolja a véralvadást</li>
+				<li><span class="abbr kerdes">heparin ►</span> antitrombin-III aktiválásán keresztül gátolja a véralvadást</li>
+				<li><span class="abbr kerdes">fluoridion ►</span> glikolízis enzimeket gátolja</li>
+				<details class="kerdes"><summary>„géles-cső”</summary>
+					Az úgynevezett „géles-cső” sajátos szilikon polimert, szilikon gélt tartalmaz, amelynek a térfogata 1-2 ml. Vérvétel után ez a gél még a cső alján marad, de centrifugálást
+követően az alakos elemek és a szérum között helyezkedik el, tökéletesen elszigetelve
+azokat. Ezt azzal a megoldással érték el, hogy a szilikon gél sűrűségét/fajsúlyát az
+alakos elemek és a szérum közé állították be. Ezzel a technikával megakadályozható,
+hogy az alakos elemekből a centrifugálás után intracelluláris komponensek, így például
+káliumion, vagy LDH kerüljön a vizsgálandó szérumba, valamint változatlan marad a
+glükóz- és a laktátkoncentráció, mert a glikolízis-lánc enzimei csak a sejtekben találhatók. A centrifugált mintát több napig 4 oC-on is lehet tárolni, a legtöbb analit stabilitása megmarad. A géles cső használata gyógyszerszintek, illetve szerológiai vizsgálatok
+végzésére nem optimális
+				</details>
+			  <strong>mintavételi sorrend</strong>
+				<img class="mini" data-src="oukahxzw.png">
+			</details></li>
+			<li><details class="kerdes"><summary>hemolizált minta</summary>
+				<li>vérminták 2-3%-ban sajnos ilyen, oka</li><ul>
+					<li>vér erőteljes szívása</li>
+					<li>vér szakszerűtlen kinyomása a vérvételi csövekbe</li>
+					<li>minták erőteljes rázása</li>
+					<li>fertőtlenítő nem szárad</li>
+					<li>mandzsetta sokáig van</li>
+				</ul>
+				<li>következménye vvt-ből kijutva..</li><ul>
+					<li><span class="midQ [14]">K⁺↑</span></li>
+					<li>LDH↑</li>
+					<li>vasion↑</li>
+					<li>folsav↑</li>
+					<li>homocisztein↑</li>
+					<li>szabad hemoglobin ➜ fotometriás méréseket + számos analitikai reakcióval interferál</li>
+					➜ gyakran vizsgálatra alkalmatlan
+				</ul>
+				<li>detektálása ➜ klinikai kémiai automaták fotometriás színkép alapján detektálják a hemolízist</li>
+			</details></li>
+			<li><details class="kerdes"><summary>mintavételi sorrend</summary>
+				<div>1. hemokultúra (nincs képen,táblázat) ➜ nem, mindig kell, ha igen..</div><ul>
+					<li>ez az első</li>
+					<li>mindig kettőt!</li>
+				</ul>
+				<div>2. világoskék</div>
+				<div>3. piros</div>
+				<div>4. fekete</div>
+				<div>5. lila</div>
+				<div>6. szürke</div>
+			</details></li>
+			<li><details class="kerdes"><summary>azonosítás</summary>
+				<li>mintavétel előtt ➜ karszalag + nyitott kérdés (✔ mi a neve? Mikor született? ❌ Horváth István a neve?)</li>
+				<li>mintavétel után ➜ név, időpont, azonosítószám közül legalább 2 adat szerepeljen a csövön<abbr title="még a vonalkóddal gyárilag ellátott csövek esetén is">*</abbr></li>
+			</details></li>
+			<li><details class="kerdes"><summary><span class="bgPink">vizsgálandó minta lehet</span></summary>
+				<li>„Natív, teljes vér” például otthoni vércukorszint mérés, perifériás vérkenet
+készítése, vérgázanalízis, vagy vércsoport szerológia céljára.</li>
+				<li>Alvadásgátolt teljes vért használunk a mennyiségi és minőségi vérkép, vérgáz vizsgálatokhoz, vagy a glikált hemoglobin-koncentráció, ammóniaszint,
+hemoglobin elektroforézis meghatározásakor</li>
+				<li>Plazma: azaz alvadásgátolt-vér centrifugálás utáni homogén felülúszója. Például a citrátos vér plazmájából történik a legtöbb alvadási vizsgálat, de számos
+egyéb biológiai alkotó is mérhető plazmából.</li>
+				<li>A klinikai kémiai vizsgálatokhoz a leggyakrabban szérumot (savót), azaz a
+megalvadt vér felülúszóját, használják, amely fibrint és alakos elemeket nem
+tartalmaz. A plazmában az alvadási fehérjék a savótól eltérően jelen vannak.
+Számos laboratóriumi vizsgálat elvégezhető plazmából és szérumból is. Egyes
+hormonokat csak plazmából javasolt mérni, ilyen például a PTH, ACTH, renin,
+aldoszteron.</li>
+			</details></li>
+			<li><details class="kerdes"><summary>vércukormérés</summary>
+				<li>hely ➜ ujjbegy</li>
+				<li>fertőtlenítjük, majd steril sebző lándzsával beszúrunk</li>
+				<li>először megjelenő vércseppet letöröljük</li>
+				<li>ezután a spontán kibuggyanó vércseppet használjuk a vizsgálatra</li>
+				<li>nem szabad az ujjat nyomkodni, vagy préselni, mert a vér szöveti folyadékkal hígulhat</li>
+			</details></li>
+		  <strong>egyéb</strong>
+			<li><details class="kerdes"><summary><span class="bgPink">liquor cerebrospinalis</span></summary>
+				A liquor vétele aszeptikus körülmények között történjék, legtöbbször a gerinc
+lumbaris szakaszából, ritkábban ciszternából, vagy az agykamrából. Rutinszerűen az
+oldalfekvő betegnél a 3–4. vagy a 4–5. lumbalis csigolyák között a liquortérbe kell tűt
+szúrni. A vizsgálatok céljára néhány milliliter liquort kell levenni, lehetőleg 2-3 steril
+csőbe elosztva. Az első 5–6 csepp liquort különítsék el, mivel a beavatkozás során
+jelentkező vérzés ezt kontaminálja a leginkább. A levett mintát sürgőséggel, szobahő-
+mérsékleten kell a laboratóriumba juttatni. A hűtött mintában a sejtek deformálódnak,
+szakszerűtlen tárolás esetén befertőződhet, egyes analitok, mint a glükóz-, laktátszint
+megváltozhat, illetve a patogének vizsgálata (tenyésztés) sem lehetséges. Felhívjuk a
+figyelmet arra, hogy a liquor glükózszint (esetenként albumin és immunglobulin-koncentráció) csak a szérumban mért szintekhez viszonyítva értékelhető megbízhatóan.
+Mindig szükség van a liquor vétellel együtt vérminta vizsgálatra is
+			</details></li>
+			<li><details class="kerdes"><summary><span class="bgPink">vizelet</span></summary>
+				A középsugárból nyert reggeli első vizelet szemikvantitatív, mikrobiológiai és morfológiai vizsgálatra egyaránt alkalmas. Egyes klinikai kémiai vizsgálatokhoz, mint az
+ion-, fehérje, hormonürítések, többnyire 24 órán keresztül gyűjtött vizeletet haszná-
+lunk. Ennek kapcsán pontosan ismerni kell az ürített vizeletmennyiséget is. A vizelet
+megbízható gyűjtése általában nehezen megvalósítható feladat és a minta konzervá-
+lására is gondolni kell, például vizsgálattól függően kis mennyiségű timol, formalin,
+toluol, vagy benzoesav szükséges a gyűjtő edénybe.Fontos a beteg együttműködése!
+Amikor nem gyűjtött vizeletből történik a mérés, akkor a vizelet kreatinin szintre vonatkoztatjuk a vizsgált alkotó ürítését. A keringő kreatinból az általános anyagcsere-állapottól függetlenül folyamatosan kreatinin keletkezik, ezért a vizelet töménységének
+a jellemzésére vonatkoztatási analitként használható a kreatininkoncentráció. Számos
+vizeletkomponens analíziséhez, mint a kalciumion, porfirinek, katekolaminok, vanillin-mandulasav, aminosavak, a mintát speciális körülmények között kell gyűjteni: savra,
+tartósítószerre, sötét üvegben stb. Az eljárásra az adott laboratórium szakmai ajánlása,
+illetve a személyzete ad útmutatót.
+			</details></li>
+			<li><details class="kerdes"><summary><span class="bgPink">egyéb</span></summary>
+A punktátum elemzésnél eldöntendő, hogy transzszudátum, vagy exszudátum
+eredetű-e a minta. A transzszudátum világossárga, tiszta, átlátszó, fehérje tartalma
+20 g/l alatt van, LDH-aktivitása a szérumban mért értéknél kisebb, alacsony a fehérvérsejtszám és a koleszterinszint. Az exszudátum szérumszerű, gyakran fibrines, véres,
+gennyes lehet, fehérjekoncentrációja 30–40 g/l feletti, az LDH aktivitása közel megegyezik a szérumban mért értékkel, fehérvérsejtszám 1 G/L feletti. Széklet, ízületi
+nedv, verejték, amnionfolyadék, gyomor- és duodénumnedv, szűrőpapírra szárított vér,
+húgykő, epekő vizsgálata egyedi mintavételt és gyűjtőedényt igényel.
+			</details></li>
+		</details></li>
+		<li><details class="kerdes"><summary><span class="bgPink">szállítás</span></summary>
+Fontos tudni, hogy a még élő sejteket tartalmazó biológiai mintáknál a szállí-
+tás módja is befolyásol bizonyos laboratóriumi vizsgálatokat, eredményeket. Néhány
+szempont:
+ A biológiai mintákat szállítani és tárolni csak zárt edényben, illetve dugóval /
+kupakkal ellátott mintavételi csövekben szabad.
+ A mintavételi edényeket, csöveket álló helyzetben szállítsák. Erre a célra különböző méretű kémcsőállványokat használnak.
+ Erős fénytől védeni szükséges a mintákat. A fényre különösen érzékenyek a
+bilirubin és a porfirin vegyületek.
+ A minták a lehető legrövidebb időn (legfeljebb egy-két órán) belül jussanak el
+a laboratóriumba. Amennyiben ez nem lehetséges, a levétel helyén gondoskodni kell a szakszerű tárolásról, illetve centrifugálásról és így a szérum, vagy a
+plazma különválasztásának lehetőségéről.
+ A szállítás hűtőtáskában történjék, de kerülni kell a fagyasztást. 20 ºC felett környezeti hőmérséklet esetében jég-akku használata javasolt. A jégakku azonban
+ne érintkezzen közvetlenül a vérvételi csővel, mert a fagyás jelentős hemolízist
+okoz a mintában. A teljes vér csak 6 órán át tárolható ilyen körülmények között
+minőségromlás nélkül.
+ Mikrobiológiai vizsgálatokhoz a hemokultúra palackot, transzport közegbe
+levett mintákat szobahőmérsékleten hagyjuk a szállítás alatt
+		</details></li>
+	  <strong>mérési eredményt befolyásoló tényezők</strong>
+		<li>labor vizsgálatkérés ➜ <span class="midQ [7] bgYellow">biológiai variabilitás</span></li>
+		<li>mintavételnél ➜ lásd ott</li>
+		<li>szállítás ➜ lásd ott</li>
+	  <!-- source --> <div>
+		<span>§BevLabMed ➜ 11.1</span>
+		<span class="bgPink">§ChatGPT</span>
+	  </div>
+	  <strong>kérdések</strong>
+		<li><details class="kerdes"><summary>vérgáz</summary>
+			<li>vérvételt követően 15-20 percen belül mérni szüksége</li>
+		</details></li>
+	</details>
+	<details class="[6] kerdes"><summary>analitikai szakasz</summary>
+		<li>lényege ➜ biológiai minta kémiai alkotórészeinek azonosítása, szerkezete, mennyiségi viszonyai</li>
+		<li>módszerek</li><ul>
+			<li>fotometria</li>
+			<li>fluorimetria</li>
+			<li>turbidimetria</li>
+			<li>nefelometria</li>
+			<li>elektrokémia</li>
+			<li>kromatográfia</li>
+			<li>áramlásos citometria</li>
+			<li>immunanalitika</li>
+			<li>tömegspektrometria</li>
+			<span class="bgPink">➜ ezek lényege az adott fejezetekben vázolva</span>
+		</ul>
+	</details>
+	<details class="[7] kerdes"><summary>mérést befolyásoló tényezők</summary>
+		<li>biológiai variabilitás</li><ul>
+			<li><span class="midQ [7.1]">fiziológiás hatások</span></li>
+			<li><span class="midQ [7.2]">gyógyszerek</span></li>
+		</ul>
+		<li><span class="midQ [5] kerdes">preanalitikai tényezők</span></li>
+		<li>analitikai módszer: különböző laborokban eltérhet (módszerspecifikus)</li>
+	 </details><div>
+		<details class="[7.1] kerdes"><summary>fiziológiás hatások</summary>
+			<li><span class="bgYellow">életkor</span> (alkalikus foszfatáz)</li>
+			<li><span class="bgYellow">nem</span> (szteroid)</li>
+			<li><details class="kerdes"><summary><span class="bgYellow">napszak</span></summary>
+				<li>reggel max ➜ ACTH,<span class="bgYellow">kortizol</span>,renin,nAdr,prolaktin,tesztoszteron,hematokrit,Hgb</li>
+				<li>délben max ➜ <span class="bgBlue">vas</span>, K+, eosinophil granulocytaszám (ennél a legjelentősebb az ingadozás)</li>
+				<li>éjjel max ➜ <span class="bgPink">savas foszfatáz</span>,<abbr title="kreatinkináz">CK</abbr>,húgysav,TSH,<abbr title="növekedési hormon">GH</abbr></li>
+			</details></li>
+			<li>terhesség (tiroxin)</li>
+			<li><span class="bgBlue">étkezés óta eltelt idő</span> (szénhidrátok, lipidek)</li><ul>
+				<li>ha zsírdús étkezés ➜ lipaemiás savó (kilomikron↑), ez zavarja a mérést</li>
+				<li>ezért felnőtteknél éhhomi ➜ 10-12 órás éhezés után</li>
+				külön fontos ➜ glükóz, koleszterin, triglicerid, karbamid, szervetlen foszfát, húgysav, vas, K⁺, inzulin, TSH, CRH-stimulációs teszt
+			</ul>
+			<li><details class="kerdes"><summary>egyéb</summary>
+				<li>sport, fizikai munka (CK)</li>
+				<li>évszak (D-vitamin)</li>
+				<li>hormonális ciklus ➜ <span class="bgPink">pl.</span></li>
+			</details></li>
+		</details>
+		<details class="[7.2] kerdes"><summary>gyógyszerek</summary>
+			<li>hatás lehet</li><ul>
+				<li><span class="bgYellow">valódi (biológiai) ➜ valóban megváltoztatja az adott paramétert</span> (pl. májenzimek emelkedése hepatotoxikus szer hatására)</li>
+				<li><span class="bgYellow">interferencia ➜ a laboratóriumi módszert zavarja</span>: álpozitív / álnegatív eredmények</li>
+			</ul>
+			<li>jelentősége:</li><ul>
+				<li>félrevezető diagnózis</li>
+				<li>felesleges vizsgálat</li>
+				<li>toxicitás felismerése</li>
+			</ul>
+		  <table><tr>
+			<th>máj</th>  <th>vese</th>  <th>vérkép</th></tr><tr>
+			<td style="text-align:left">
+			  <strong>enzimszint ↑ (AST, ALT, GGT, ALP)</strong>
+				<li>hepatotoxikus szerek ➜ paracetamol, antituberkulotikumok (INH, rifampicin, pyrazinamid), MTX, azolok, statinok</li>
+			  <strong>bilirubin ↑</strong>
+				<li>hemolízis indukció ➜ pl. dapsone, methyldopa</li>
+				<li>cholestasis ➜ orális fogamzásgátlók, chlorpromazin, anabolikus szteroidok</li>
+			</td>
+			<td style="text-align:left">
+			  <strong>kreatinin ↑</strong>
+				<li>valós ➜ aminoglikozidok, cisplatin, amphotericin B, NSAID, ACE-gátló</li>
+				<li>ál-emelkedés ➜ trimethoprim, cimetidin (tubuláris szekréció gátlása)</li>
+			  <strong>karbamid</strong>
+				<li>kortikoszteroidok (katabolizmus miatt)</li>
+			  <strong>elektrolit</strong>
+				<li>hyperK⁺ ➜ ACEi, ARB, spironolacton, trimethoprim</li>
+				<li>hypoK⁺ ➜ thiazid, loop diuretikumok, amphotericin B</li>
+				<li>hypoNa⁺ ➜ thiazid, SSRI, carbamazepin, cyclophosphamid (SIADH)</li>
+			</td>
+			<td style="text-align:left">
+			  <strong>anaemia</strong>
+				<li>aplasticus ➜ chloramphenicol, cytostaticumok</li>
+				<li>hemolitikus ➜ methyldopa, dapsone, penicillin</li>
+			  <strong>leukopenia / agranulocytosis</strong>
+				<li>clozapin, carbimazol, methotrexát, sulfonamido</li>
+			  <strong>thrombocyta</strong>
+				<li>thrombocytopenia ➜ heparin (HIT), quinidin, valproát</li>
+				<li>thrombocytosis ➜ kortikoszteroid</li>
+			</td>
+		  </tr><tr>
+			<th>endokrin,metabolikus</th>  <th>alvadási</th>  <th>egyéb</th></tr><tr>
+			<td style="text-align:left">
+			  <strong>vércukor</strong>
+				<li>hyperglykaemia ➜ thiazid, furosemid, kortikoszteroid, tacrolimus, ciklosporin</li>
+				<li>hypoglykaemia ➜ inzulin, szulfanilurea, kinolonok, béta-blokkoló</li>
+			  <strong>lipidek</strong>
+				<li>hyperlipidaemia ➜ retinoidok, kortikoszteroidok, ciklosporin, proteáz-gátlók</li>
+				<li>gypolipidaemia ➜ ösztrogének, fibrátok</li>
+			  <strong>húgysav</strong>
+				<li>hyperurikaemia ➜ thiazid, furosemid, cyclosporin, pyrazinamid</li>
+			</td>
+			<td style="text-align:left">
+				<li>INR/PI ↑ ➜ kumarinok</li>
+				<li>APTI ↑ ➜ heparin</li>
+				<li>direkt trombin/FXa-gátlók: laborban sokszor ál-eltérést is okozhatnak a rutinvizsgálatokban</li>
+			</td>
+			<td style="text-align:left">
+			  <strong>immunoassay zavarok</strong>
+				<li>Biotin (pl. vitaminpótlás nagy dózisban) → TSH, troponin, szteroid hormonok mérésében álértékeket okozhat</li>
+			  <strong>színes vagy fluoreszcens metabolitok</strong>
+				<li>pl. rifampicin → sárgás elszíneződés, bilirubin-mérés zavarása</li>
+			  <strong>antibiotikumok</strong>
+				<li>cefalosporinok interferálnak a vizelet-glükóz tesztekkel</li>
+			  <strong>haemolysis / lipaemia / icterus is gyakori "látszólagos" eltérés forrása</strong>
+			</td>
+		  </tr></table>
+		  <!-- source --> <div>
+			<span class="WHITE">§BevLabMed <span class="bgPink">(nincs)</span></span>
+			<span class="WHITE">§ChatGPT</span>
+		  </div>
+		</details>
+	</div>
+	<details class="[8] kerdes"><summary>minőségellenőrzés</summary><table><tr>
+		<th></th>  <th>belső</th>  <th>külső</th>
+	  </tr><tr><th>cél</th>
+		<td>minden laboratóriumi műveletet definiált módon végezzék
+			<div class="fsMini">(mintavétel, szállítás, eszközök karbantartása, hitelesítés, kalibrálás, reagensek rendelése, tárolás, kezelés, ellenőrzés, a személyzet illetékessége, az eredmények technikai+végleges validálását, adatrögzítési feladatok, vészhelyzetek, észrevételek az ún. „Minőségi könyvben”)</div>
+		</td>
+		<td> belső minőségellenőrzés hibái is felmérhetők </td>
+	  </tr><tr><th>módja</th>
+		<td style="text-align:left">
+			<li>mérési sorozatonként egy vagy több alkalommal kontroll mintákat is mérnek, melynek összetétele és koncentrációja ismert</li>
+			<li><details class="kerdes"><summary>ezek mérési eredményeit diagramon (ún. kontroll kártyán) vezetik</summary>
+				<img data-src="mbjcpgif.png">
+				<li>Levey-Jennings ábrázolás</li><ul>
+					<li>x tengely ➜ idő</li>
+					<li>y tengely ➜ kontroll minták értéke</li>
+				</ul>
+				<li>Youden ábrázolás</li><ul>
+					<li>x tengely ➜ egyik kontroll minta értéke</li>
+					<li>y tengely ➜ másik kontroll minta értéke</li>
+					 ±1SD = jó~megfelelő ...
+					 ±2SD = elfogadható ...
+					 többi elfogadhatatlan
+				</ul>
+				<img data-src="kgplphvs.png">
+			</details></li>
+			<li>amennyiben a kontroll minták mért értéke adott beállított tartományon kívül esik – paraméterektől függően átlag ±1SD, vagy átlag ±2SD – azonnali intézkedés szükséges</li><ul>
+			  ez általában:
+				<li>standard ellenőrzése</li>
+				<li>reagens ellenőrzése</li>
+				<li>mérőeszköz ellenőrzése</li>
+				<li>ismételt kontroll mérés</li>
+				<li>szükség esetén kalibrálás</li>
+			</ul>
+			<li>a rutin elemzéseket csak akkor lehet elkezdeni, vagy folytatni, ha a kontroll mintákon mért eredmények megfelelőek</li>
+		  <hr>
+			<li>számítógépeken a Westgard-szabályokkal történik már ➜ a hiba okára könyebben rá lehet jönni <abbr title="könyv ír róla, de utána kéne néznem pontosan hogy, de ez ráér majd rezidensként inkább">*</abbr></li>
+		</td>
+		<td style="text-align:left">
+			<li>rendszeres időközönként 2-3 féle, a mérést végző számára ismeretlen összetételű mintát küldenek ki a kontrollban részt vevő laboratóriumok számára</li>
+			<li>ezt kell rutin eljárási rend szerint vizsgálni és beküldeni a mért értékeket ➜ a minőségellenőrző szervezet összeveti többi laboratóriumban azonos módszerrel mért értékkel</li>
+		</td>
+	  </tr></table>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed</span>
+	  </div>
+	</details>
+	<details class="[9] kerdes"><summary>Point of Care Testing (POCT)</summary>
+		<li>lényege ➜ beteg közvetlen közelében végzett, egyszerű és gyors diagnosztikai vizsgálatok összessége, amelyek nem a központi laborban történnek</li><ul>
+			pl. vércukormérés otthon ujjbegyből
+		</ul>
+		<li>kisméretű hordozható eszközök ➜ pl. 1x használatos tesztcsíkok</li>
+	  <strong>főbb típusai</strong>
+		<li>vércukor, HbA1c</li>
+		<li>vérgáz, elektrolitok (Na, K, Ca, laktát)</li>
+		<li>troponin, D-dimer (akut kardiológiai diagnosztika)</li>
+		<li>CRP, prokalcitonin</li>
+		<li>gyorsfertőzés-diagnosztikai tesztek (influenza, COVID-19 antigén, streptococcus)</li>
+		<li>vizelet tesztcsík</li>
+		<li>coagulatio ➜ INR-ellenőrzés kumarin-terápia során</li>
+	  <strong>előny,hátrány</strong>
+		<div><span class="plus">+</span> gyors, egyszerű</div>
+		<div><span class="plus">+</span> hasznos ➜ otthon + sürgősségi,intenzív</div>
+		<div><span class="minus">–</span> pontosság, megbízhatóság ➜ pl. INR: POC vs labor között akár 30%-kal is eltérhet egymástól ➜ ha POC volt, akkor utána is az legyen ne váltogasson közte</div>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed (nincs)</span>
+		<span class="WHITE">§ChatGPT</span>
+	  </div>
+	</details>
+	<details class="[10] kerdes"><summary>klinikai kémia</summary>
+		<li>laborban a kért vizsgálatok 50–60%a ilyen</li>
+		<li>ide tartozik:</li><ul>
+			<li>szervetlen összetevők</li>
+			<li>sav-bázis paraméterek</li>
+			<li>fehérjék</li>
+			<li>anyagcsere-termékek</li>
+			<li>diagnosztikailag informatív enzimek többsége</li>
+			<abbr title="BevLabMed">jelen könyv</abbr> a tumormarkerek mérését és a terápiás gyógyszerszint monitorozást külön fejezetben tárgyalja
+		</ul>
+	</details>
+	<details class="[11] kerdes"><summary>ozmolalitás</summary>
+		<li>lényege ➜ oldott részecskék száma / oldószer tömege</li>
+		<li><span class="bgYellow">ozmola<span class="bgBlue">l</span>itás ➜ mOsm/<span class="bgBlue">kg</span>; ozmola<span class="bgBlue">r</span>itás: mOsm/<span class="bgBlue">l</span></span></li>
+		<span class="fsMini">megj.tipp l = kg; r = l (fordított)</span>
+		<details class="kerdes"><summary>oldott; oldószer</summary>
+		  <div><strong>oldott</strong></div>
+			<li>pl. lipidek nem oldódnak, elektrolitok igen</li>
+			<li>fehérjék közül pl. albumin oldódik, de van amelyik nem</li>
+			<li><span class="bgYellow">csak ezeknek van onkotikus nyomása!</span></li>
+		  <strong>oldószer</strong>
+			<li>ozmolaritás ➜ ISE módszerrel mérünk, így a <span class="bgYellow">plazma az oldószer</span> (tehát a víz + oldott/nem oldott részecskék) (ennek térfogatával osztunk)</li>
+			<li>ozmolalitás ➜ fagyáspontcsökkenéssel mérünk, így a <span class="bgYellow">víz az oldószer</span> (ennek tömegével osztunk)</li>
+			<li>ennek következménye:</li><ul>
+				<li>ha a plazmában sok az oldatlan részecske (pl. lipid), akkor az ozmolaritás csökken, hiszen a plazma térfogatába relatív kevesebb az oldott részecske, mert a plazmában az oldatlran részecskék sok térfogatot foglalnak</li>
+				<li>azonban az ozmolalitás továbbra is változatlan, hiszen az oldott részecskék száma a vízhez képest változatlan</li>
+				➜ jelentőségét lásd: <span class="midQ [13]">pseudohypernatraemia</span>
+			</ul>
+		</details>
+		<details><summary class="fsMini">Osm vs mol</summary>
+			<li>100 Osm NaCl = 200 mol NaCl (disszociál)</li>
+			<li>100 Osm glükóz = 100 mol glükóz (disszociál)</li>
+			gyakorlatban mmol-t is szoktak írni, de valójában mOsm a helyes
+		</details>
+		<li>mérése ➜ ozmometria:</li><ul>
+			<li><span class="bgYellow">oldott anyag mennyiségével arányosan csökkenő fagyáspont-változás alapján ➜ 1 mol oldott anyag jelenlétekor a fagyáspont 1,86 °C-kal csökke</span>n</li><ul>
+				<span class="fsMini">előny ➜ minden kis molekula, illékonyak is (etanol, metanol, etilén-glikol) beleszámítanak</span>
+			</ul>
+			<li>gőznyomás-ozmometria ➜ gőznyomás-csökkenés mérésén alapul; egyre elterjedtebb</li><ul>
+				<span class="fsMini">hátrány: illékony oldott anyagok (pl. etanol) zavarják → alkohol-mérgezésnél nem alkalma</span>
+			</ul>
+		</ul>
+	  <strong>plazma</strong>
+		<li><details class="kerdes"><summary>fiziológia</summary>
+			<div data-src="rezidens.html" class="imp [20.11]"></div>
+		</details></li>
+		<li>becslésének képlet (mOsmol/kg)</li><ul>
+			<li><abbr title="klorid és egyéb anionok viszonylagos aránya">1,86</abbr> × Na⁺(mmol/l) + glükóz(mmol/l) + karbamid(mmol/l) + <abbr title="egyéb ozmotikusan aktív anyagok (kálium, kalcium,magnézium, fehérjék)">9</abbr></li>
+			<li>2 × Na⁺(mmol/l) + glükóz(mmol/l) + karbamid(mmol/l)</li>
+		</ul>
+		<li>ozmotikus rés = osmolar gap</li><ul>
+			<li>ozmotikus rés = mért(ozmolalitás) – számolt(ozmolalitás)</li>
+			<li>fiziológiás ➜ 0-8 mOsmol/kg</li>
+			<li>ha nő ➜ ozmotikusan aktív exogén vegyületek (pl. etanol, etilénglikol) jelenléte</li>
+			pl. mért ozmolalitás 320 mOsmol/kg, a számolt 295 mOsmol/kg (2 × 140 + 5 + 10), az ozmotikus rés 25 mOsmol/kg ➜ jelentős különbség tisztázására ilyenkor további vizsgálatokat kell végezni
+		</ul>
+		<li>csökkenés oka pl.</li><ul>
+			<li>hiperhidráció</li>
+			<li>hypoNa⁺</li>
+		</ul>
+		<li>növekedés oka pl.</li><ul>
+			<li>dehidráció</li>
+			<li>hyperNa⁺</li>
+			<li>uraemia</li>
+			<li>ketoacidózis (alkoholos / diabeteses)</li>
+			<li>exogén anyag (alkoholok, mannitol, kontrasztanyagok)</li>
+		</ul>
+	  <strong>vizelet</strong>
+		<li>fiziológiás:</li><ul>
+			<li>random ➜ 50-1200 mOsmol/kg</li>
+			<li>24 órás gyűjtött ➜ 400-1000 mOsmol/kg</li>
+		</ul>
+		<li><span class="bgPink">missing</span></li>
+	  <strong>jelentősége</strong>
+		<li>intenzív terápiás kezelések, parenterális táplálás során szükséges</li>
+		<li>folyadék- és elektrolit-egyensúly, dehidráció, hiperhidráció</li>
+		<li>vese koncentráló képessége</li>
+		<li>SIADH</li>
+		<li>diabetes insipidus</li>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed</span>
+		<span class="bgPink">§ChatGPT</span>
+		<span class="bgPink">§rezidens(vese)</span>
+	  </div>
+	  <hr>
+		<details class="kerdes"><summary> <abbr title="szervezet szabad vízhiányának">'</abbr>vízhiány becslése</summary>
+			<div>H2O hiány (liter) ≈ [1 – (<abbr title="szérum ozmolalitás referenciaértéke">285</abbr>/mért szérum ozmolalitás)] × <abbr title="becsült vízmennyiség">0,6 testtömeg kg</abbr></div>
+		</details>
+	</details>
+	<details class="[12] kerdes"><summary>volumen reguláció</summary>
+		<div data-src="rezidens.html" class="imp [20.10]"></div>
+	  <!-- source --> <div>
+		<span class="bgPink">§BevLabMed</span>
+		<span class="bgPink">§ChatGPT</span>
+		<span class="WHITE">§rezidens(vese)</span>
+	  </div>
+	</details>
+	<details class="[13] kerdes"><summary>Na⁺</summary>
+		<div data-src="rezidens.html" class="imp [1.1]"></div>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed</span>
+		<span class="WHITE">§rezidens</span>
+	  </div>
+	  <hr>
+		<details class="kerdes"><summary>izotóniás fizsó</summary>
+			<li>0,9% NaCl ➜ 154mmol/l Na⁺ és 154mmol/l Cl; ozmolalitása: 308 mOsmol/kg</li>
+			<li>fiziológiásan a vérben:</li><ul>
+				<li>135-145mmol/l ➜ ezt plazmához viszonyítva értjük: a plazma térfogatának 91% víz, 9% lipid fehérje</li>
+				<li>a Na⁺ csak a vízben oldódik, tehát valójában 154mmol/l az ozmolaritása</li>
+				➜ ezért ennyit adunk
+			</ul>
+		</details>
+	</details>
+	<details class="[14] kerdes"><summary>K⁺</summary>
+		<details class="kerdes"><summary>labor</summary>
+			<li>plazma/vér mért káliumszintje kismértékben alacsonyabb, mint a Se-ban ➜ ugyanis a szérumszeparációja kapcsán a vérlemezkék szétesése miatt a Se [K⁺] 0,2-0,5mmol/l-rel emelkedik</li>
+		  <strong><span class="midQ [5]">preanalitikai szakasz</span>ban elkövetett vérvételi hibák a mérést nagymértékben befolyásolhatják</strong>
+			<li>K⁺↑ haemolysis (vérsejtek szétesésekor K⁺ kijut)</li>
+			<li>K⁺↑ hűtött vérmintában</li>
+			<li>K⁺↑ vérvételt előtt erős izommunka során (mikro-izomsérülések miatt)</li>
+		</details>
+		<details class="kerdes"><summary>vizelet</summary>
+			<li>ha &lt;20 mmol/l ➜ extrarenális ok</li><ul>
+				<li>elégtelen bevitel</li>
+				<li>fokozott izzadás</li>
+				<li>hasmenés</li>
+				<li>metab.alkalózis</li>
+			</ul>
+			<li>ha &lt;20 mmol/l ➜ renális</li><ul>
+				<li>renális tubuláris acidózis</li>
+				<li>DKA</li>
+				<li>Fanconi-sy</li>
+				<li>ATN</li>
+				<li>intersticiális nephritis</li>
+			</ul>
+		</details>
+		<details class="kerdes"><summary>fiziológia, hypo-/hyperK⁺</summary>
+			<div data-src="rezidens.html" class="imp [1.2]"></div>
+		</details>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed</span>
+		<span class="WHITE">§rezidens</span>
+	  </div>
+	</details>
+	<details class="[15] kerdes"><summary>pH</summary>
+		<span data-src="rezidens.html" class="imp [52]"></span> <!-- rezidens -->
+	  <!-- source --> <div>
+		<span class="bgPink">§BevLabMed</span>
+		<span class="WHITE">§rezidens</span>
+	  </div>
+	  <hr>
+		<details class="kerdes"><summary>vér állandó pH értékét biztosítja</summary>
+			<li>vér állandó pH értékét biztosítja:</li><ul>
+				<li>CO2/HCO3-</li>
+				<li>pufferrendszerek</li>
+			</ul>
+			<li>pufferrendszerek</li><ul>
+				<li>fehérjék (hemoglobin és plazma fehérjék) ➜ fiziológiásan a felét ezt teszi ki</li>
+				<li>foszfát</li>
+				<li>szerves sav/anion</li>
+			</ul>
+			<li></li>
+		</details>
+	</details>
+	<details class="[16] kerdes"><summary>posztanalitikai szakasz</summary>
+		<li><details class="kerdes"><summary>mértékegység</summary>
+			<img data-src="voxxvbpd.png">
+			<li>különböző mértékegységek használata van</li><ul>
+				<li>hagyományos ➜ Hgmm, mg/dl, setjszám/&micro;l stb.</li>
+				<li>SI ➜ mol/l</li><ul>
+					<li>ha nem ismert egy-egy alkotó / keverék moleukatömeg ➜ g/l (pl. fehérjék)</li>
+					prefixum a <abbr title="mmol/l,&micro;mol/l,nmol/l,pmol/l,fmol/l">mol</abbr>/<abbr title="mg/l,&micro;g/l,ng/l,pg/l,fg/l">g</abbr> elé lehet ➜ mmol/l
+				</ul>
+			</ul>
+			<li>alapvetően SI kéne legyen, de hagyományos még sok helyen van és országonként más</li><ul>
+				<li>1980-as években több ország nem vette át az SI mértékegységet (USA, Izrael, Japán)</li>
+				<li>számos ország az SI-hez csatlakozott (Magyarország, Kanada, Egyesült Királyság)</li>
+				<li>több ország orvosi laboratóriuma pedig az 1990-es években visszaállt a hagyományos mértékegységre (Németország, Ausztria, Csehország, Svájc)</li>
+			  <span class="fsMini">seriously man...</span>
+			</ul>
+			<li>ez problémákat okozhat, ugyanis a mértékegység félreérteértelmezése teljesen más eredményt jelenthet (valójában csökkent, de emiatt azt hiszi nőtt)</li>
+		</details></li>
+		<li><details class="kerdes"><summary>lelet értelmezése (4kérdés)</summary>
+		  <div><strong>4 fő kérdés</strong></div>
+			<li>Referenciatartományon belüli, vagy kívüli (kóros) az érték?</li>
+			<li>Összhangban van-e a klinikai képpel?</li>
+			<li>Lényegesen különbözik-e az előző méréstől?</li>
+			<li>Milyen terápiás döntéshez vezet a mérési eredmény?</li>
+		</details></li>
+		<li><span class="imp [1]"></span></li> <!-- referenciatartomány -->
+		<li><span class="imp [3]"></span></li> <!-- cut-off érték -->
+	</details>
+	<details class="[17] kerdes"><summary>fehérjék labor vizsgálata</summary>
+		<details class="kerdes"><summary>indikáció</summary>
+			<li>szervek állapota (pl. májenzimek)</li>
+			<li>gyulladás, fertőzés</li>
+			<li>fehérjeszintézis/vesztés <span class="fsMini"><abbr title="kéne pl.">(?)</abbr></span></li>
+			<li>véralvadás</li>
+			<li>immunhiány</li>
+			<li>egyéb (pl. peptidek)</li>
+		</details>
+		<details class="kerdes"><summary>csoportosítás (eredet)</summary>
+			<li>plazmafehérjék ➜ fiziológiásan vannak:</li><ul>
+				<li>albumin</li>
+				<li>globulinok</li>
+				<li>alvadási faktorok, fibrinogén</li>
+				<li>transzferrin, haptoglobin, CRP, komplementrendszer fehérjéi</li>
+			</ul>
+			<li>sejtalkotó fehérjék ➜ patológiásan vannak:</li><ul>
+				<li>májsejt ➜ GOT(ASAT), GPT(ALAT), LDH</li>
+				<li>szívizom ➜ CK-MB, troponinok</li>
+				<li>vázizom ➜ CK, myoglobin</li>
+			</ul>
+		</details>
+		<details class="kerdes"><summary>csoportosítás (szerkezetük)</summary>
+			<li>többsége glikoprotein<abbr title="fehérjéhez kovalens kötéssel 1/több poliszacharid kapcsolódik">'</abbr></li><ul>
+				(albumin nem)
+			</ul>
+			<li>lipoprotein ➜ lipid is kapcsolódik hozzá<abbr title="nem kovalensen">'</abbr> ➜ l<span class="bgPink">ásd: lipid anyagcsere vizsgálat (BevLabMed)</span></li>
+		</details>
+		<details class="kerdes"><summary>funkció</summary>
+			<li>onkotikus nyomás fenntartása</li>
+			<li>puffer</li>
+			<li>véralvadási faktor</li>
+			<li>immunvédelem (Ig-k)</li>
+			<li>enzimek</li>
+			<li>hormonok</li>
+			<li>GF-ek</li>
+			<li>komplement fehérjék <span class="bgPink">(?)</span></li>
+			<li>transzport fehérje</li>
+			pl. haptoglobin ➜ megköti a Hgb-t + szerepel az akut fázis reakcióban is
+		</details>
+	  <div><strong>mérésük</strong><abbr title="mennyiség meghatározása">'</abbr></div>
+		<li><details class="kerdes"><summary>immunanalítikai eljárások</summary>
+			<li>laboratóriumi módszerek, amelyek az antigén–ellenanyag specifikus reakcióján alapulnak</li>
+			<li>ha a vizsgálat molekula koncentrációja..</li><ul>
+				<li>elég (közepes/nagy) ➜ jelzés nélküli</li><ul>
+					<span class="fsMini">prealbumin, immunglobulinok, komplementfehérjék, C-reaktív protein, transzferrin, stb.</span>
+				</ul>
+				<li>kicsi ➜ jelzéses</li><ul>
+					 <span class="fsMini">IgE, prokalcitonin, citokinek, peptid hormonok</span>
+				</ul>
+			</ul>
+		  <strong>jelzés nélküli = homogén</strong>
+			<li>turbidimetria ➜ kolloid zavarosság mérése</li>
+			<li>nefelometria ➜ kolloid fényszórás mérése</li>
+		  <strong>jelzéses</strong>
+			<li>RIA (radioimmunassay) – radioaktív izotóppal jelzett</li>
+			<li>ELISA (enzyme-linked immunosorbent assay) – enzimmel jelzett (→ színes termék)</li>
+			<li>FIA (fluoreszcens immunoassay) – fluoreszcens jelzőmolekula</li>
+			<li>kémilumineszcens immunoassay – fénykibocsátással mérhető</li>
+		  <strong>elválasztó módszerek immunológiai azonosítással</strong>
+			<li><span class="midQ [17.1] kerdes">elektroforézis</span> (ELFO)</li>
+			<li>Western blot</li>
+			<li>?? <span class="bgPink">PCR</span> ??</li>
+		  <!-- source --> <div>
+			<span class="WHITE">§ChatGPT</span>
+		  </div>
+		</details></li>
+		<li><details class="kerdes"><summary>(fotometria)</summary>
+			<li>természetes fényelnyelése <abbr title="fehérjék természetes fényelnyelése 280 nm-en a klinikai laboratóriumban nem használható a számos egyéb alkotó elem miatt, ami a plazmában található">nem jó</abbr></li>
+			<li>színes termékképzést követő ➜ csak összfehérje- és albuminszint mérhető</li>
+		</details></li>
+		<li><details class="kerdes"><summary>(reakciókinetika)</summary>
+			<li></li>
+		</details></li>
+	  <!-- source --> <div>
+		<span class="bgPink">§BevLabMed</span>
+	  </div>
+	</details><ul>
+		<details class="[17.1] kerdes"><summary>elektroforézis (ELFO)</summary>
+			<img data-src="nxrfkpaz.png">
+		  <div><strong>lényege</strong></div>
+			<li>lúgos környezetben a <abbr title="vérben lévő">'</abbr>fehérjék töltése negatív</li>
+			<li>van egy pozitív elektróda, ami felé elmozdulnak ➜ minél negatívabb, annál gyorsabban~jobban</li>
+			<li>van egy hordozó, amiben haladnak ➜ minél <abbr title="alapvetően (mérés típusától függ) alakjuk is számít, gömb kevésbé akad el, mint egy szerteágazó">'</abbr>kisebbek<abbr title="tömegük~méretük">'</abbr>, annál gyorsabban~jobban</li><ul>
+				<details><summary class="fsMini">hordozó többféle lehet</summary>
+					<li>pufferrel átitatott nedves szűrőpapír</li>
+					<li>cellulóz-acetát</li>
+					<li>agar gél</li>
+					<li>agaróz gél</li>
+					<li>poliakril-amid gél (PAGE)</li>
+				</details>
+			</ul>
+			<li>tehát a hajtóerő~elmozdulás arányos a fajlagos töltéssel (töltés/tömeg)</li>
+			<li>végén <span class="bgPink">denzitometriásan</span> kiértékelhető az elmozdulás alapján az arány</li>
+		  <div><strong>típusai</strong></div>
+			<li>papírelektroforézis (klasszikus) ➜ hordozó: pufferrel átitatott nedves szűrőpapír ➜ ritka ma már</li>
+			<li>agaróz gél ➜ molekulák méret és töltés alapján vándorolnak a gélpórusokban ➜ DNS, RNS, nagyobb fehérjekomplexek vizsgálata</li>
+			<li>poliakrilamid gél elektroforézis (PAGE) ➜ finomabb pórusú gél, így nagyobb felbontás</li><ul>
+				<li>natúr</li>
+				<li><abbr title="első lépésben hevítéssel denaturáció történik ➜ harmadlagos (és negyedleges) szerkezet megszűnik ➜ kitekerednek és így mindegyik alakja lényegében ugyanaz kb. egy vonal ➜ elmozdulás alaktól függés kilővése megvan">denatúrálódott</abbr> (SDS-PAGE) ➜ alak nem számít (gélben)</li>
+			</ul>
+			<li>izoelektromos fókuszálás (IEF)</li>
+			<li>két-dimenziós gél elektroforézis (2D-PAGE) ➜ 1.lépés IEF, 2.PAGE</li>
+			<li>kapilláris elektroforézis (CE)</li>
+			<li><span class="midQ [17.2]">immunelektroforezis</span></li>
+			<li><span class="midQ [17.2]">immunfixáció</span></li>
+			<div><span class="bgPink">BevLabMed ➜ többi típus is le van írva, de kihagytam</span></div>
+		  <div><strong>5 fő frakció</strong></div>
+			<img data-src="tkvzdnqs.png">
+		  <table><tr>  <th>FEHÉRJEFRAKCIÓ</th>  <th>KOMPONENS (PLAZMASZINT)</th>  </tr><tr>
+			<td> albumin 58-68% </td>
+			<td> albumin – 35-50g/l </td>
+		  </tr><tr><td> α1-globulin 2-6% </td>
+			<td style="text-align:left">
+				<li>α1-antitripszin – 1-2g/l</li>
+				<li>α1-savas glikoprotein – 0,8-1,2g/l</li>
+				<li>α1-lipoprotein (HDL) – 0,5-0,6g/l</li>
+			</td>
+		  </tr><tr><td> α2-globulin 5-10% </td>
+			<td style="text-align:left">
+				<li>haptoglobinok – 0,3-2,0g/l</li>
+				<li>α2-makroglobulin – 2-3g/l</li>
+				<li>cöruloplazmin – 0,2-0,6g/l</li>
+				<li>tiroxinkötő globulin – 12-25g/l</li>
+			</td>
+		  </tr><tr><td> β-globulin 8-12% </td>
+			<td style="text-align:left">
+				<li>transzferrin – 2-4g/l</li>
+				<li>β-lipoprotein (LDL) – 1,0-1,1g/l</li>
+				<li>komplement fehérje (C3) – 0,7-1,8g/l</li>
+				<li>β2-mikroglobulin – 1-2g/l</li>
+				<li>C-reaktiv protein (CRP) – 1-5g/l</li>
+				<li>fibrinogén (β és γ sáv között) – 2-4g/l</li>
+			</td>
+		  </tr><tr><td> γ-globulin 12-18% </td>
+			<td style="text-align:left">
+				<li>IgA – 1-4g/l</li>
+				<li>IgM – 0,7-2,5g/l</li>
+				<li>IgG – 8-16g/l</li>
+				<li>IgD – 0,1-0,4g/l</li>
+				<li>IgE – &lt;0,1g/l</li>
+				<details><summary class="fsMini">megj</summary>
+					<li>γ-globulin ➜  nem az összes Ig van itt (van amelyik beta)</li>
+					<li>továbbá van itt más is, nem csak Ig</li>
+					➜ γ-globulin =/= Ig-k (bár nagy átfedés)
+				</details>
+			</td>
+		  </tr></table>
+		  <!-- egyéb --> <div>
+			<span class="midQ [17] fsMini WHITE">immunanalítikai eljárások</span>
+		  </div>
+		  <!-- source --> <div>
+			<span class="WHITE">§BevLabMed</span>
+		  </div>
+		  <hr><strong>kóros eltérések példák</strong>
+			<li><details class="kerdes"><summary>akut gyulladás, akut fázis reakció</summary>
+				<li>etio ➜ akut fertőzésekben, trauma, sebészi beavatkozás, heveny szövetpusztulás</li>
+				<li>nő = pozitív akut fázisú fehérje</li><ul>
+					<li>CRP</li>
+					<li>prokalcitonin (PCT)</li>
+					<li>orozomukoid (α1-acid glycoprotein)</li>
+					<li>α1-antitripszin</li>
+					<li>cöruloplazmin</li>
+					<li>haptoglobin</li>
+					<li>fibrinogén</li>
+					<li>Ig-k</li>
+				</ul>
+				<li>csökken = negatív akut fázisú fehérje</li><ul>
+					<li>transzferrin</li>
+					<li>albumin</li>
+				</ul>
+			</details></li>
+			<li><details class="kerdes"><summary>krónikus gyulladás</summary>
+				<li>etio ➜ gombás, parazitás, Mycobacterium fertőzés</li>
+				<li>hasonló az akut fázishoz, különbség ➜ γ-globulin is bő</li>
+			</details></li>
+			<li><span class="midQ [18]">májcirrhosis</span></li>
+			<li><details class="kerdes"><summary>nephrosis</summary>
+				<li>↓ albumin, α1-globulin- és γ-globulin-frakció</li>
+				<li>↑ α2- és β-globulin-frakció</li>
+				<li></li>
+			</details></li>
+			<li><details class="kerdes"><summary>monoklonális gammopathia</summary>
+				<li>M-csúcs ➜ β-/γ-globulinok területén egy magas, keskeny sáv</li>
+				<li>etio</li><ul>
+					<li>myeloma multiplexben (IgG- vagy IgA-szaporulat)</li>
+					<li>Waldenström-makroglobulinaemiában (IgM-szaporulat)</li>
+				</ul>
+			</details></li>
+			<li><details class="kerdes"><summary>hypogammaglobulinaemia</summary>
+				<li>↓/hiányzik γ-globulin-frakció</li>
+				<li>etio</li><ul>
+					<li>immunszuppresszív kezelés</li>
+					<li>radioth / kemoth</li>
+					<li>veleszületett gammaglobulin hiány</li>
+					<li>könnyűlánc betegség</li>
+					<li>CLL, MM, Hodgkin-kór</li>
+				</ul>
+			</details></li>
+		</details>
+		<details class="[17.2] kerdes"><summary>immunelektroforezis, immunfixáció</summary>
+			<img data-src="boixswwg.jpg">
+		  <div><strong>immunelektroforezis</strong></div>
+			<li>két lépésből áll</li><ul>
+				<li>1. szétválasztás ➜ ELFO</li>
+				<li>2. fixálás ➜ immun<abbr title="antitest diffúzióval eljut angiténhez">diffúzió</abbr> ~ immun<abbr title="antigén-antitest kicsapódik">precipitáció</abbr></li>
+			</ul>
+			<li>agaróz gélre a mintát felvisszük<abbr title="üreg van a célra">'</abbr> ➜ ELFO hatására külön választjuk</li>
+			<li>ezután teszünk egy antitest csíkot<abbr title="hosszanti szélén van egy vályú erre a célra ➜ diffúzióval eljut a fehérjékhez">'</abbr> ➜ kiderül melyik fehérjére(antigén) hat</li>
+			<li>fehérjekomponens felszaporodását jelenti, ha a precipitációs ív...</li><ul>
+				<li>hosszabb, szélesebb és sötétebb</li>
+				<li>közelebb helyezkedik el az antiszérumot tartalmazó vályúhoz</li>
+			</ul>
+		  <strong>immunfixáció</strong>
+			<li>modernebb</li>
+			<li>ind ➜ monoklonális gammopathia</li><ul>
+				<li>ELFO ➜ annyit látunk, hogy valamely gamma-globulin megnőtt</li>
+				<li>ezzel meg tudjuk mondani melyik ➜ IgG / IgA / IgM <abbr title="nem">(D/E)</abbr></li><ul>
+					<li>továbbá a könnyű lánc típusa is meghatározható ➜ kappa / lambda</li>
+				</ul>
+			</ul>
+			<img data-src="rmrlmzqj.png">
+		  <!-- egyéb --> <div>
+			<span class="midQ [17] fsMini WHITE">immunanalítikai eljárások</span>
+			<span class="midQ [17.1] fsMini WHITE">ELFO</span>
+		  </div>
+		  <!-- source --> <div>
+			<span class="WHITE">§BevLabMed</span>
+		  </div>
+		</details>
+	</ul>
+	<details class="[18] kerdes"><summary>májcirrhosis</summary>
+		<img data-src="foiyjbjg.jpg">
+		<li>fehérjék ELFO</li><ul>↑
+			<li>↑ és kiszélesedik: γ-globulin ➜ poliklonális gammopathia</li>
+			<li>↓ többi (albumin, α- és β-globulin)</li>
+			<span class="fsMini"><abbr title="jellemző, hogy a β- és γ-globulin-frakció között egy ún. „béta-gamma híd” alakul ki az IgA szaporulat miatt">„béta-gamma híd”</abbr></span>
+		</ul>
+		<li></li>
+		<img data-src="nxrfkpaz.png">
+	</details>
+	<details class="[19] kerdes"><summary>turbidimetria, nefelometria</summary>
+		<img data-src="akiwufaa.png">
+		<li>Megfelelő ionerősségű és pH-jú közegben az antitgén-antitest (Ag + Ab → Ag-Ab) reakciót lehet detektálni azon az elven is, hogy a keletkező nagyméretű immunkomplexek növelik a mintán áthaladó fény szóródását. A mintán áthaladó fény intenzitása egyrészt az abszorbancia miatt csökken, másrészt a keletkezett részecskéken szóródik. A turbidimetria az a méréstechnika, amikor áteső fényben mérjük a fényelnyelés mértékét (az ábrán detektor 1), nefelometriánál pedig 45-90 fokban elhelyezett érzékelővel (detektor 2) a szórt fény intenzitását. Mindkét esetben a mért jel függvénykapcsolatban van az Ag-Ab immunkomplex koncentrációjával és a kalibrációs görbe alapján értékelhető az antigén, vagy az antitest koncentrációja.</li>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed</span>
+	  </div>
+	</details>
+	<details class="[20] kerdes"><summary>vizeletvizsgálat</summary>
+	 </details><div>
+		<details class="[20.1] kerdes"><summary>általános</summary>
+		  <div><strong><center>stix = vizelet tesztcsík = vizelet gyorsteszt</center></strong></div>
+			<img data-src="qpbhwjgg.png">
+		  <div><strong>mit mérünk, értékelés</strong></div>
+			<li><details class="kerdes"><summary>színe</summary>
+				<li><span class="abbr kerdes">színtelen ►</span> kis sűrűségű vizelet</li>
+				<li><span class="abbr kerdes">erősen sárga ►</span> nagy sűrűségű vizelet, konjugált bilirubin, biliverdin, urobilinogén, fenacetin</li>
+				<li><span class="abbr kerdes">vöröses-rozsdaszínű ►</span> vér, hemoglobin, myoglobin, porfirinek, anilin, fenolftalein, metildopa, fenotiazin, melanin, karotinoidok (pl. cékla evése)</li>
+				<li><span class="abbr kerdes">narancsvörös ►</span> urobilinogén, gyógyszerek (rifampicin, fenolftalein)</li>
+				<li><span class="abbr kerdes">barnás-fekete ►</span> methemoglobin, melanin, alkaptonuria, fenazopiridin</li>
+				<li><span class="abbr kerdes">kékes-zöld ►</span> Pseudomonas fertőzés, metilénkék</li>
+				<li><span class="abbr kerdes">zavaros, opálos ►</span> genny, nyák, oldhatatlan urát-, és foszfátkristályok</li>
+				<li><span class="abbr kerdes">habos ►</span> fehérje</li>
+			</details></li>
+			<li><details class="kerdes"><summary>fajsúlya</summary>
+				<div data-src="rezidens.html" class="midQ [16.11.4]"></div>
+			</details></li>
+			<li><details class="kerdes"><summary>pH</summary><table><tr>
+				<th>pH &lt;5</th>
+				<th>pH >8</th>
+			  </tr><tr>
+				<td style="text-align:left">
+					<li>acidózis (metab/resp)</li>
+					<li>hasmenés</li>
+					<li>nem kontrollált diabetes</li>
+				</td>
+				<td style="text-align:left">
+					<li>alkalózis (metab/resp)</li>
+					<li>nátrium-bikarbonát, kálium-citrát fogyasztása</li>
+					<li>húgyúti obstrukció</li>
+				</td>
+				<span class="bgPink">stb. lásd BevLabMed-52,265</span>
+			</tr></table></details></li>
+			<li><span class="midQ [20.3] kerdes">fehérje, proteinuria</span></li>
+			<li>nitrit ➜ Gram-negatív baktérium (pl. E.coli) <abbr title="nitrátot nitritté alakítják">'</abbr> ➜ pl. <span data-src="rezidens.html" class="midQ [20.14] kerdes">UTI</span></li>
+			<li>vvt,Hgb ➜ <span data-src="rezidens.html" class="midQ [20.5] kerdes">hematuria</span></li>
+			<li>fvs(pyuria) <abbr title="leukocyta-észterázt mér ➜ indirekt jele">'</abbr> ➜ pl. <span data-src="rezidens.html" class="midQ [20.14] kerdes">UTI</span></li>
+			<li>glükóz ➜ DM</li>
+			<li>ketontestek ➜ ketoacidózis</li>
+			<li>máj ➜ bilirubin, UBG</li>
+			<li><span class="syno">aszkorbinsav | C-vitamin</span> ➜ álnegatív vér/nitrit</li>
+			<li>Ca²⁺</li>
+			<div><span class="fsMini bgPink">részletesebben lásd BevLabMed</span></div>
+		  <strong>menete</strong>
+			<li>vizeletvétel ➜ friss (max. 1 óra régi) ➜ ha nem azonnal vizsgáljuk, 4–8°C-on tároljuk</li>
+			<li>kesztyű felvétele, higiénés kézfertőtlenítés</li>
+			<li>tesztcsík kivétele a tubusból (ne érjünk a tesztmezőkhöz)</li>
+			<li>mártás ➜ rövid időre (kb. 1-2 mp) merítsük bele a vizeletbe úgy, hogy minden reagens mezőt elérjen a folyadék</li>
+			<li>leitatás ➜ a csík élét a pohár széléhez ütögetve vagy papírtörlőre helyezve elkerüljük a túlfolyást, keveredést</li>
+			<li>időzítés ➜ gyártó által megadott időintervallumokat szigorúan be kell tartani (pl. 30 mp, 60 mp, 120 mp egyes mezőkhöz)</li>
+			<li>kiértékelés</li><ul>
+				<li>csíkot a csomagoláson található színskálához hasonlítjuk</li>
+				<li>fontos a jó megvilágítás és pontos időzítés</li>
+			</ul>
+		  <!-- source --> <div>
+			<span class="WHITE">§rezidens</span>
+			<span class="WHITE">§BevLabMed</span>
+		  </div>
+		</details>
+		<details class="[20.2] kerdes"><summary>üledék</summary>
+			<details class="kerdes"><summary>menete</summary>
+				<li>centrifugálás</li>
+				<li>felülúszót leöntjük ➜ 'maradékot az üledékkel' összekeverjük /videó/</li>
+				<li>tárgylemezre cseppentés ➜ FM</li>
+				https://www.youtube.com/watch?v=es1J9_2X3Bc
+			  <hr>
+				<li>automaták végzik már, lásd BevLabMed 58-59o</li>
+			</details>
+		  <table><tbody><tr>
+			<!-- vizelet üledék -->
+			<th>sejtek</th>
+			<th>cylinderek</th>
+			<th><abbr title="gyerekgyógy ➜ tubulopathiák">kristályok</abbr></th>
+			<th>mikrobi</th>
+		  </tr><tr>
+			<td style="text-align:left">
+				<li>vvt ➜ <span data-src="rezidens.html" class="midQ [20.5]">hematuria</span></li>
+				<li>pyuria(fvs) ➜ <span data-src="rezidens.html" class="midQ [20.14]">UTI</span>, gynecologiai infekció, <span data-src="rezidens.html" class="midQ [20.4]">AIN</span>, <span data-src="rezidens.html" class="midQ [20.12]">GN</span></li>
+				<li>tubulus sejtek ➜ <span data-src="rezidens.html" class="midQ [20.4]">ATN</span>, <span data-src="rezidens.html" class="midQ [20.12]">GN</span>, <span class="fsMini">allograft rejekció</span></li>
+				<li><span class="fsMini">(Lh-sejtek)</span></li>
+			</td>
+			<td style="text-align:left">
+				<li>fvs cilinder ➜ <span data-src="rezidens.html" class="midQ [20.14]">PN</span>, <span class="fsMini">GN, AIN</span></li>
+				<li><span class="bgYellow">vvt cilinder ➜ <span data-src="rezidens.html" class="midQ [20.12]">nephritis</span></span></li>
+				<li><span class="bgYellow">tubulus cilinder ➜ <span data-src="rezidens.html" class="midQ [20.4]">ATN</span></span></li>
+				<li><span class="bgYellow">hyalin cilinder</span> ➜ <span data-src="rezidens.html" class="midQ [20.12]">nephrosis</span>, <span data-src="rezidens.html" class="midQ [20.4] bgYellow">prerenalis VE</span></li>
+				<li>lipid cilinder ➜ nephrosis</li>
+			</td>
+			<td style="text-align:left">
+				<li><span class="bgYellow"><span class="syno">húgysav | urát</span> (hyperuricosuria) ➜ <span class="midQ [59.2]" data-src="rezidens.html">tubulopathia</span> - <span data-src="rezidens.html" class="midQ [20.13]">vesekő</span>, <span data-src="rezidens.html" class="midQ [20.15]">kristálymediált vesekárosodás</span></span></li>
+				<li><span class="bgYellow">Ca-oxalát (hypercalciuria) ➜ <span class="midQ [59.2]" data-src="rezidens.html">tubulopathia</span> - <span data-src="rezidens.html" class="midQ [20.13]">vesekő</span>, <span data-src="rezidens.html" class="midQ [20.15]">kristálymediált vesekárosodás</span></span></li>
+				<li><span class="bgYellow">struvit<abbr title="Mg,PO4,NH3 ➜ lásd urológia">'</abbr> ➜ <span class="midQ [59.2]" data-src="rezidens.html">tubulopathia</span> - <span data-src="rezidens.html" class="midQ [20.13]">vesekő</span></span></li>
+				<li><span class="bgYellow">cystin (cisztinuria) ➜ <span class="midQ [59.2]" data-src="rezidens.html">tubulopathia</span> - <span data-src="rezidens.html" class="midQ [20.13]">vesekő</span></span></li>
+			</td>
+			<td style="text-align:left">
+				<li>bacteriuria ➜ <span data-src="rezidens.html" class="midQ [20.14]">UTI</span></li>
+				<li>gombák ➜ candiduria</li>
+				<li>trichomonas ➜ STD</li>
+			</td>
+		  </tr></tbody></table>
+		  <!-- source --> <div>
+			<span class="WHITE">§rezidens</span>
+			<span class="bgPink">§BevLabMed</span>
+		  </div>
+		</details>
+		<details class="[20.3] kerdes"><summary>vizeletfehérjék</summary>
+			<img data-src="nedquqzm.png">
+		  <table><tr><th></th><th>24h gyűjtött vizelet</th><th>reggeli első</th></tr>
+			<tr><th>fizio</th>
+				<td> &lt;30mg/nap </td>
+				<td> &lt;3mg/mmol </td>
+			</tr>
+			<tr><th>mikroalbuminuria</th>
+				<td> 30-300mg/nap </td>
+				<td> 3-30mg/mmol </td>
+			</tr>
+			<tr><th>albuminuria</th>
+				<td> >300mg/nap </td>
+				<td> >30mg/mmol </td>
+			</tr>
+			<tr><th>mértékegység</th>
+				<th>g (albumin)</th>
+				<th>ACR: mg(albumin)/mmol(kreatinin)</th>
+			</tr>
+		  </table>
+			<li>stix</li><ul>
+				<li>nem jelzi ➜ mérsékelt proteinuria / Bence-Jones proteinuria</li>
+				<li>jelzi ➜ albuminuria</li>
+			</ul>
+		  <strong>proteinuria típusa,oka</strong>
+			<li>ortosztatikus ➜ álló helyzetben jelentezik csak, nem betegség</li>
+			<li>átmeneti ➜ pl. láz, fizikai megterhelés</li>
+			<li><details class="kerdes"><summary>glomerularis</summary>
+			  <div><strong>típusa</strong></div>
+				<li>szelektív (enyhébb) ➜ csak albumin és transzferrin a vizeletben</li>
+				<li>nem szelektív (súlyosabb) ➜ &alpha;2-makroglobulin, Ig-k</li>
+			  <div><strong>szelektivitási index</strong></div>
+				<li>(Se albumin * vizelet IgG) / (vizelet albumin * Se IgG)</li>
+				<li>szelektív, ha értéke: 0,01-0,15</li>
+			  <div><strong>jelentősége</strong></div>
+				<li>ha szelektív ➜ szteroidra jól reagál</li>
+				<li>ha nem ➜ szteroidra bizonytalan reakció: relapszus ... VE</li>
+				<img data-src="hzdcijqs.png">
+			</details></li>
+			<li><details class="kerdes"><summary>mikroalbuminuria</summary>
+				<li>glomerularis károsodás így kezdődik</li>
+				<li>albuminuria monitorozása elengedhetetlen:</li><ul>
+					<li>DM</li>
+					<li>hypertonia</li>
+					➜ vesekárosodás korai kimutatása
+				</ul>
+			</details></li>
+			<li><details class="kerdes"><summary>tubularis</summary>
+				<li>kisebb molekulájú fehérjéket a tubulusok a károsodásuk miatt nem tudják visszaszívni</li><ul>
+					<li>β2-mikroglobulin</li>
+					<li>lizozim</li>
+					<li>N-acetil-glükózaminidáz</li>
+				</ul>
+			</details></li>
+			<li><span class="bgPink">túlfolyásos</span> (kihagytam)</li>
+			<li><span class="bgPink">postrenalis</span> (kihagytam)</li>
+			<li>nephrosis ➜ tartósan > 3-4 gramm/nap</li>
+		  <!-- source --> <div>
+			<span class="WHITE">§BevLabMed-53o,269o</span>
+		  </div>
+		</details>
+	</div>
+ </div>
+ <div> <!-- 21 – 40 -->
+	<details class="[21] kerdes"><summary>GFR</summary>
+		<li>GFR ➜  időegység alatt átszűrt plazma volumen (ml/perc/1,73m²)</li>
+		<li>függ</li><ul>
+			<li>vese funkcionális kapacitása</li>
+			<li>kolloid ozmotikus nyomás</li>
+			<li>Bowmann-tokban az ultrafiltrátum nyomása</li>
+		</ul>
+	  <strong>mérése</strong>
+		<li>vizsgálatához olyan anyag kell, amelyre az alábbiak igazak: <img class="mini" data-src="plgmhjzm.jpg"></li><ul>
+			<li>glomerulusban filtrálódik</li>
+			<li>tubulusban nincs reabszorpció</li>
+			<li>tubulusban nincs szekréció</li>
+			pl. <abbr title="be kell adni">(exogén)</abbr> inulin ➜ azonban technikája nem praktikus(időigény stb.), így nem azt használjuk
+		</ul>
+		<li>ezért az <abbr title="alapból ott van, nem kell beadni">(endogén)</abbr> kreatinin clearance alapján becsüljük</li><ul>
+			<li>probléma, hogy a kreatinin tubulusban is szekretálódik bizonyos mértékben ➜ pl. ha a kreatinin a szerumban nagy, akkor jobban (vagy gyerekekben)</li>
+			<li>clearance ➜ az a virtuális plazmatérfogat, amely az egy perc alatt kiürített anyagmennyiséget tartalmazza</li><ul>
+				<li><details><summary>max értéke: RPF ➜ pl. PAH</summary>
+					<img data-src="phgjhtzgnm.jpg">
+				  <div class="fsMini">renal <abbr title="tehát a vesén átáramló vérmennyiség időegység alatt az RBF, annak egy része az RPF (amiben vérsejtek nincsenek)">plasma</abbr> flow</div>
+					<li>g.filtráció és t.szekréció következtében a vénában a koncentrációja zérus lesz</li>
+				  <strong>képletek</strong>
+					<li><abbr title="vizsgált anyag vizeleti koncentrációja">U</abbr> <abbr title="vizeletképződés térfogata percenként">V</abbr> <abbr title="vizsgálta anyag a.renalis koncentrációja">P<sub>a</sub></abbr> <abbr title="vizsgálta anyag v.renalis koncentreációja">P<sub>v</sub></abbr></li>
+					<li>az anyag artérián beáramlott mennyisége megegyezik a vénán kiáramlott és vizelettel távozott mennyiségek összegével <img class="mini" data-src="gnyljkghtm.jpg"></li>
+					<li>mivel a vénában 0 lesz, így az RPF = clearance [kép]</li>
+					<li>megj. Pa ➜ koncentráció a <abbr title="ugyanis ez veseartéria ugye, tehát ha a perif.vénából veszek az ugyanaz">szérumban</abbr></li>
+				</details></li>
+				<li>min értéke: 0 ➜ pl. <abbr title="nem filtrálódnak - fiziológiásan!">glükóz, albumin</abbr></li>
+				<li><details class="kerdes"><summary>kreatinin clearance</summary>
+					<li>C<sub>Kr</sub> = (<abbr title="vizelet konc">U</abbr>*<abbr title="vizelet térfogat/perc">V</abbr>) / <abbr title="Se konc.">P</abbr></li><ul>
+						<span class="fsMini">V = térfogat <span class="bgYellow">/ perc</span></span>
+					</ul>
+					<li>testfelületet is beleszámítva ➜ C<sub>Kr</sub> = C<sub>Kr</sub> * (1.73/A)</li>
+					<span class="fsMini">Számítási példa: vizeletben a kreatininkoncentráció 8,4 mmol/l, azaz 8400 µmol/l, szérumban a kreatininkoncentráció 120 µmol/l, 24 órás (1440 perc) vizeletmenynyiség 1500 ml és a vizsgált egyén 1,60 m2 testfelszínű. Ezekből az adatokból: 8400/120 × 1500/1440 × 1,73/1,60 = 79 ml/perc/1,73m2 az endogén kreatinin clearance, ami enyhe vesekárosodásra utal</span>
+				</details></li>
+			</ul>
+			<li><details class="kerdes"><summary>eGFR</summary>
+			  <div class="fsMini">estimated GFR</div>
+				<img data-src="tqcbpvjg.png">
+				<li>ez a <span class="bgYellow">Se kreatinin koncentráció alapján becsüli a GFR-t</span> ➜ <span class="bgYellow">ezt használjuk jelenleg</span></li>
+				<li>ugyanis a kreatinin clearance függ U és V, tehát a vizeletgyűjtéstől, ahol a preanalítikai hiba kockázata nagy</li>
+				<li>azonban ez se tökéletes, hiszen pl. magas Se [kreatinin] esetében nő a t.szekréció</li>
+				<li>kép ➜ CKD-EPI (Chronic Kidney Disease – Epidemiology Collaboration) képlettel becsüljük</li>
+			</details></li>
+		</ul>
+		<li>(cisztatin-c ➜ <abbr title="nem függ gyulladás, nem, életkor stb.">jobb</abbr> lenne a becsléshez, mint a kreatinin, azonban drága)</li>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed</span>
+	  </div>
+	</details>
+	<details class="[22] kerdes"><summary>vese tubularis funkció</summary>
+		<li>tubuluskárosodás esetén:</li><ul>
+			<li>reabszorpció csökken ➜ pl. glükóz, Na⁺, bikarbonát, foszfát, aminosavak</li>
+			<li>szekréció csökken ➜ pl. H⁺</li>
+		</ul>
+	  <strong>mérések</strong>
+		<li><details class="kerdes"><summary>koncentrálási próba ~ szomjaztatási teszt</summary>
+			<span class="fsMini">folyadékmegvonás 14-16 órán keresztül és vizeletgyűjtés több frakcióban: a vizeletminták fajsúlya/sűrűsége fokozatosan emelkedik az 1,025-1,030 érték felé. A méréshez hagyományos, merülős fajsúlymérő javasolt</span>
+			<div><span class="minus">TILOS</span> koszorúérbetegség</div>
+			<div><span class="minus">TILOS</span> AVE</div>
+			<div><span class="minus">TILOS</span> terhes</div>
+		  <span data-src="rezidens.html" class="midQ [16.11.4]">lásd..</span>
+		</details></li>
+		<li><details class="kerdes"><summary>higítási próba</summary>
+			<li>reggelizés előtt mintegy 1500 ml vizet kell elfogyasztania 30-40 percen belül, majd 4 órán keresztül vizeletet gyűjtenek</li>
+			<li>fiziológiás</li><ul>
+				<li>legalább 1200 ml vizelet várható</li>
+				<li>sűrűsége 1,005-1,010 kg/l az első frakcióban</li>
+			</ul>
+			<div><span class="minus">KI</span> szív-, vesebetegség</div>
+		</details></li>
+		<li><details class="kerdes"><summary>ozmolalitás mérés</summary>
+			<li><details class="kerdes"><summary>ozmozikus konc. szabályozása</summary>
+				<div data-src="rezidens.html" class="imp [20.11]"></div>
+			</details></li>
+			<li>fő indikáció ➜ polyuria</li>
+			<li>vizelet-ozmolalitás egy nap alatt is jelentően változik az 50-1200 mOsmol / kg közötti tartományban</li>
+			<li>fiziológiás</li><ul>
+				<li>Uosm/Posm arány 2,5-3,5 közötti érték, a legnagyobb mértékű koncentrálás esetén 4 körüli (ozmotikus tető, azaz 1200/300)</li>
+			</ul>
+		</details></li>
+		<li><details class="kerdes"><summary>tubularis foszfát reabszorpció</summary>
+			<li>(képlete könyvben)</li>
+			<li>csökkent reabszorpció oka</li><ul>
+				<li>tubulus károsodás</li>
+				<li>primer-, illetve szekunder hyperparathyreosis</li>
+			</ul>
+			<li>tubulus károsodás hypophosphataemiás rachitishez vezet</li>
+		</details></li>
+		<li><details class="kerdes"><summary>frakcionált nátriumkiválasztás (FE<sub>Na</sub>)</summary>
+			<li>(képlete könyvben)</li>
+			<li>lényege ➜ <span class="bgYellow">filtrált nátrium mennyiségének hány százaléka választódik ki a vizelettel</span></li>
+			<li>könnyen kivitelezhető vizsgálat, szérumban és vizeletben kell mérni a kreatinin- és Na⁺-koncentrációt</li>
+		  <hr>
+			<li>ind ➜ glucosuria, aminoaciduria, renális tubularis acidózis, elektrolit vesztés és tubuláris proteinuria</li>
+			<li>ATN ➜ 5-10%-ra is emelkedhet</li>
+			<span class="bgPink">rezidens.html</span>
+		</details></li>
+		<li><span class="midQ [20.1] kerdes">vizelet pH</span></li>
+		<li><span class="bgPink">frakcionált bikarbonát kiválasztás</span></li>
+		<li><span class="bgPink">N-acetil glükózaminidáz ürítés</span></li>
+	  <!-- source --> <div>
+		<span class="WHITE">§BevLabMed</span>
+	  </div>
+	</details>
+	<details class="[23] kerdes"><summary></summary>
+	</details>
+	<details class="[24] kerdes"><summary>ionszelektív elektródok</summary>
+		<li></li>
+	</details>
+	<details class="[25] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[26] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[27] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[28] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[29] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[30] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[31] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[32] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[33] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[34] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[35] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[36] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[37] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[38] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[39] kerdes"><summary></summary>
+	</details>
+	<details class="[40] kerdes"><summary></summary>
+	</details>
+ </div>
+ <div> <!-- 41 – 60 -->
+	<details class="[41] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[42] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[43] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[44] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[45] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[46] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[47] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[48] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[49] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[50] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[51] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[52] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[53] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[54] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[55] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[56] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[57] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[58] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[59] kerdes"><summary></summary>
+	</details>
+	<details class="[60] kerdes"><summary></summary>
+	</details>
+ </div>
+ <div> <!-- 61 – 80 -->
+	<details class="[61] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[62] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[63] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[64] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[65] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[66] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[67] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[68] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[69] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[70] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[71] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[72] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[73] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[74] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[75] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[76] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[77] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[78] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[79] kerdes"><summary></summary>
+	</details>
+	<details class="[80] kerdes"><summary></summary>
+	</details>
+ </div>
+</details>
+
++ chatgpt
++ trafo előadások
++ labmed beugrók, előadások
++ népegészségtan
+(+ biostat?)
+
+
+<details open><summary class="mainTitle">Általános Laboratóriumi Diagnosztika</summary>
+	<details class="open"><summary style="background-color:gainsboro" class="status">Referencia tartomány, terápiás tartomány, cut off értékek</summary>
+		<details class="kerdes"><summary><strong>Referencia tartomány</strong>, terápiás tartomány, cut off értékek</summary>
+			<div class="imp [1]"></div>
+		</details>
+		<details class="kerdes"><summary>Referencia tartomány, <strong>terápiás tartomány</strong>, cut off értékek</summary>
+			<div class="imp [2]"></div>
+		</details>
+		<details class="kerdes"><summary>Referencia tartomány, terápiás tartomány, <strong>cut off értékek</strong></summary>
+			<div class="imp [3]"></div>
+		</details>
+	</details>
+	<details class="open"><summary style="background-color:gainsboro" class="status">Szenzitivitás, specificitás, prediktív érték, ROC analízis</summary>
+		<li>Ez a tétel a diagnosztikai tesztek értékeléséről szól. Arra ad választ, hogy egy adott vizsgálat mennyire megbízható a betegség kimutatásában.</li>
+		<details class="kerdes"><summary><strong>Szenzitivitás, specificitás</strong>, prediktív érték, ROC analízis</summary>
+			<div class="imp [4]"></div>
+		</details>
+		<details class="kerdes"><summary>Szenzitivitás, specificitás, <strong>prediktív érték, ROC analízis</strong></summary>
+			<div class="imp [4]"></div>
+		</details>
+	</details>
+	<details class="kerdes"><summary style="background-color:gainsboro" class="status">Preanalitikai hibák a laboratóriumban</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary style="background-color:gainsboro" class="status">Fiziológiás változások hatása a laboratóriumi tesztekre</summary>
+		<div class="imp [7]"></div>
+	</details>
+	<details class="kerdes"><summary style="background-color:gainsboro" class="status">Gyógyszerhatások okozta laboratóriumi eltérések</summary>
+		<div class="imp [7]"></div>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Posztanalitikai problémák a laboratóriumban</summary>
+		<li></li>
+	</details>
+	<details class="open"><summary style="background-color:gainsboro" class="status">A belső és külső minőségellenőrzés alapelvei, minőségellenőrzési programok</summary>
+		<details class="kerdes"><summary>A <strong>belső</strong> és külső minőségellenőrzés alapelvei, minőségellenőrzési programok</summary>
+			<div class="imp [8]"></div>
+		</details>
+		<details class="kerdes"><summary>A belső és <strong>külső</strong> minőségellenőrzés alapelvei, minőségellenőrzési programok</summary>
+			<div class="imp [8]"></div>
+		</details>
+		<details class="kerdes"><summary>A belső és külső minőségellenőrzés alapelvei, <strong>minőségellenőrzési programok</strong></summary>
+			<div class="imp [8]"></div>
+		</details>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Laboratóriumi automatizáció</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:gainsboro" class="status">Point of Care tesztek jellegzetességei</summary>
+		<div class="imp [9]"></div>
+	</details>
+</details>
+
+<details open><summary class="mainTitle">Klinikai kémia</summary>
+	<details class="open"><summary style="background-color:gainsboro" class="status">Fehérje elektroforézis és immunfixáció</summary>
+		<details class="kerdes"><summary><strong>Fehérje elektroforézis</strong> és immunfixáció</summary>
+			<div class="imp [17.1]"></div>
+		</details>
+		<details class="kerdes"><summary>Fehérje elektroforézis és <strong>immunfixáció</strong></summary>
+			<div class="imp [17.2]"></div>
+		</details>
+	</details>
+	<details class="kerdes"><summary style="background-color:pink" class="status">Turbidimetria, nefelometria és diagnosztikai alkalmazásuk</summary>
+		<div class="imp [19]"></div>
+	</details>
+	<details class="open"><summary class="status"><span style="background-color:coral">Ionszelektív elektródok</span>, ozmometria</summary>
+		<details class="kerdes"><summary><strong>Ionszelektív elektródok</strong>, ozmometria</summary>
+			<div class="imp [24]"></div>
+		</details>
+		<details class="kerdes"><summary>Ionszelektív elektródok, <strong>ozmometria</strong></summary>
+			<div class="imp [11]"></div>
+		</details>
+	</details>
+	<details class="open"><summary class="status">Plazma és vizelet ozmolalitás kóros változásai, volumen reguláció</summary>
+		<details class="kerdes"><summary><strong>Plazma</strong> és vizelet ozmolalitás kóros változásai, volumen reguláció</summary>
+			<div class="imp [11]"></div>
+		</details>
+		<details class="kerdes"><summary>Plazma és <strong>vizelet</strong> ozmolalitás kóros változásai, volumen reguláció</summary>
+			<div class="imp [11]"></div>
+		</details>
+		<details class="kerdes"><summary>Plazma és vizelet ozmolalitás kóros változásai, <strong>volumen reguláció</strong></summary>
+			<div class="imp [12]"></div>
+		</details>
+	</details>
+	<details class="kerdes"><summary style="background-color:gainsboro" class="status">Vese funkció és GFR meghatározási módszerek</summary>
+		<details class="kerdes"><summary><strong>Vese funkció</strong> és GFR meghatározási módszerek</summary>
+			<div class="imp [22]"></div>
+		</details>
+		<details class="kerdes"><summary>Vese funkció és <strong>GFR</strong> meghatározási módszerek</summary>
+			<div class="imp [21]"></div>
+		</details>
+	</details>
+	<details class="kerdes"><summary class="status">Kálium anyagcsere zavarai</summary>
+		<div class="imp [14]"></div>
+	</details>
+	<details class="kerdes"><summary class="status"><span class="bgPink">Víz</span> és nátrium anyagcsere zavarai</summary>
+		<details class="kerdes"><summary><strong>Víz</strong> és nátrium anyagcsere zavarai</summary>
+			<li><span class="bgPink">jó kérdés itt miről...</span></li>
+			<li>rezidens</li><ul>
+				<li>polyuria,polydipsia</li>
+				<li>ozmoreguláció, volumenreguláció</li>
+			</ul>
+			<li>gyermek ➜ dehidráció</li>
+		</details>
+		<details class="kerdes"><summary>Víz és <strong>nátrium</strong> anyagcsere zavarai</summary>
+			<div class="imp [13]"></div>
+		</details>
+	</details>
+	<details class="kerdes"><summary class="status">Metabolikus acidózis, anion gap</summary>
+		<div class="imp [15]"></div>
+	</details>
+	<details class="kerdes"><summary class="status">Respirációs alkalózis és acidózis, metabolikus alkalózis</summary>
+		<div class="imp [15]"></div>
+	</details>
+	<details class="kerdes"><summary style="background-color:gainsboro" class="status">Diabetes mellitus patogenezise, diabetesek fajtái</summary>
+		<div data-src="rezidens.html" class="imp [58.1]"></div>
+	</details>
+	<details class="kerdes"><summary style="background-color:gainsboro" class="status">Diabetes mellitus diagnosztikai és prognosztikai tesztjei</summary>
+		<div data-src="rezidens.html" class="imp [58.2]"></div>
+	</details>
+	<details class="kerdes"><summary style="background-color:gainsboro" class="status">Hypoglikémiák, <span class="bgPink">veleszületett szénhidrát anyagcsere zavarok</span></summary>
+		<details class="kerdes"><summary><strong>Hypoglikémiák</strong>, veleszületett szénhidrát anyagcsere zavarok</summary>
+			<div data-src="rezidens.html" class="imp [58.3]"></div>
+		</details>
+		<details class="kerdes"><summary>Hypoglikémiák, <strong>veleszületett szénhidrát anyagcsere zavarok</strong></summary>
+			<li></li>
+		</details>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Lipid anyagcsere rendellenességei</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Kardiovaszkuláris rizikó faktorok</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Akut koronária szindróma laboratóriumi vizsgálata</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Cholestasis vizsgálati módszerei és patobiokémiája</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Hepatocelluláris enzimek vizsgálati módszerei és patobiokémiája</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Ikteruszok differenciál diagnosztikája</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Sejtkárosodások laboratóriumi jelei</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Gyulladásos mediátorok kimutatásának jelentősége</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary class="status">Vizeletből kimutatható fehérjék diagnosztikai alkalmazása</summary>
+		<div class="imp [20.3]"></div>
+	</details>
+	<details class="open"><summary class="status">Vizelet általános és üledék vizsgálat</summary>
+		<details class="kerdes"><summary>Vizelet <strong>általános</strong> és üledék vizsgálat</summary>
+			<div class="imp [20.1]"></div>
+		</details>
+		<details class="kerdes"><summary>Vizelet általános és <strong>üledék</strong> vizsgálat</summary>
+			<div class="imp [20.2]"></div>
+		</details>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Likvor kémiai tesztek, sejtek analízise likvorban</summary>
+		<li></li>
+	</details>
+</details>
+
+<details open><summary class="mainTitle">Hematológia, Hemosztázis és Transzfuziológia</summary>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Fehérvérsejtek analízise hematológiai automatákkal</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Mikrociter és makrociter anémiák laboratóriumi analitikája</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Intravaszkuláris hemolízis laboratóriumi vizsgálata</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Reaktív és malignus elváltozások a fehérvérsejt morfológiában</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Vércsoport antigének kémiai jellegzetességei és öröklődésük</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Transzfúziológiában alkalmazott készítmények jellegzetességei</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Az alvadási rendszer komponensei, szűrőtesztjei</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Antikoaguláns terápia laboratóriumi monitorizálása (heparin, K-vitamin antagonista, DOAC)</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Coagulopathiák laboratóriumi vizsgálata</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Thrombotikus állapotok laboratóriumi vizsgálata (D-dimer, lupus anticoaguláns kivizsgálása, DIC)</summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary style="background-color:coral" class="status">Thrombocyták számbeli rendellenességeinek vizsgálata</summary>
+		<li></li>
+	</details>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+<div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> </div>
+<script> window.parent.postMessage(['varA', document.body.innerHTML], '*') </script>
