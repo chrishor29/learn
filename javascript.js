@@ -1,4 +1,5 @@
 // × ✖ ✔ ●
+
 // Night mode
 var bodyBGcolor, abbrBGcolor, QingTetelsBG, QingQuestsBG, QingBg, abbrBorderColor, midQColor, midQSrcColor, midQBGColor, searchBGColor, timerColor, pageLinksColor, selectJegyBGColor, summaryColor, selectJegyColor
 if ( localStorage.getItem("nightMode") == "true" ) {
