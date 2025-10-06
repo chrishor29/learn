@@ -212,11 +212,13 @@ function F_writePage(pageText,id) { // lenntre kiírja a page szövegét (idb>ht
 	//console.log("endLoad - "+ currTime)
 	document.getElementById("div_QingBg").style.display = "none"
 }
-function F_openHTML(path,type) { /* betölti page html, (clear és) elmenti IDB, majd...
+function F_openHTML(path,type,detElem) { /* betölti page html, (clear és) elmenti IDB, majd...
 	ha sima pageLink-re click történt (type="click") ➜ F_writePage()
-	ha search btn-ra click történt (type="search") ➜ 
+	ha search btn-ra click történt (type="search")
+	ha impQ betöltés közben hiányzott (type="loadImpQ") 
 */
-	//console.log("F_openHTML: "+path+" ("+type+")")
+	// detElem ➜ csak loadImpQ esetén kell! ➜ visszaugrik a többi betöltéséhez
+	// console.log("F_openHTML: "+path+" ("+type+")")
 	if ( document.getElementById("iframe_targyak") == null ) {
 		var iframe = document.createElement("iframe") // ebbe tölti be a webpage-ket, majd innen másolja ki innerhtml-üket
 		document.body.appendChild(iframe)
@@ -246,6 +248,11 @@ function F_openHTML(path,type) { /* betölti page html, (clear és) elmenti IDB,
 			}, 100);
 		} else if ( type == "search" ) { 
 			F_loadAllPages()
+		} else if ( type == "loadImpQ" ) { 
+			document.getElementById("div_searchingBg").style.display = "none"
+			document.getElementById("span_msgSavingIDB").style.display = "none"
+			document.getElementById("span_msgSavingIDB").innerHTML = "..saving.."
+			F_loadElem(detElem)
 		}
 	}
 	window.addEventListener('message', handler, false) /* ez azért indul el, mert a .html fájl végén ott van, hogy:
@@ -568,8 +575,7 @@ function F_loadImpQs(detElem,full) {
   'gyakori hibák:' 
 		adott tárgy impQ-it nézzem meg, nincsenek-e véletlen az alján üres 1,2,3 impQ-k, mert akkor azok felülírják a fenntieket!
 		impQs-nál még {}-van, pedig már [] kell!!
-	✔ megnézi a detElem összes imp child-ját
-	✔ feltételek: 
+	✔ megnézi a detElem összes imp child-ját ➜ feltételek: 
 		visible 
 			nem mindig! -> pl. Qing esetén, az első kiválasztásnál betölti összeset
 		van benne []
@@ -582,6 +588,7 @@ function F_loadImpQs(detElem,full) {
 		ha azon belül is van impQ, akkor azt is abból a tárgyból fogja értelemszerűen (kivéve, ha meg van adva más)
 */
 	var repeat = true
+	var missingPath // a hiányzó(IDB) tárgy path
 	//var startTime = F_getTime()
 	//console.log("F_loadImpQs START")
 	function F_loadNextImpQ(detElem) {
@@ -646,8 +653,9 @@ function F_loadImpQs(detElem,full) {
 			if ( qText == undefined ) { // ha hiányozna az [impQ]
 				//var string = i+" ["+impID+"] - "+path +" - "+detElem.innerHTML.slice(0,100) +"\n"
 				var string = i+" ["+impID+"] - "+path +"\n"
+				missingPath = path
 				if ( error.indexOf(string) == -1 ) { error = error + string }
-				impQs[i].dataset.loaded = "true"
+				//impQs[i].dataset.loaded = "true"
 				continue
 			}
 			if ( impQs[i].tagName == "div" || impQs[i].tagName == "DIV" ) {
@@ -659,10 +667,17 @@ function F_loadImpQs(detElem,full) {
 		}
 		// ha hiányzott valamelyik [impQ]
 		if ( error != "" ) { 
+			document.getElementById("div_searchingBg").style.display = "block"
+			document.getElementById("span_msgSavingIDB").style.display = "block"
+			document.getElementById("span_msgSavingIDB").innerHTML = "..loading.."
+			F_openHTML(missingPath,"loadImpQ",detElem,full)
 			console.log(error)
-			alert("hiányzik impQ (lásd console.log) -> töltsd be összes tárgyat (search btn click!)")
+			repeat = false
+			return repeat
+			//alert("hiányzik impQ (lásd console.log) -> töltsd be összes tárgyat (search btn click!)")
+		} else {
+			return repeat
 		}
-		return repeat
 	}
 	while (repeat === true) { repeat = F_loadNextImpQ(detElem) }
 	//var currTime = F_getTime() - startTime
