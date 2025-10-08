@@ -212,12 +212,13 @@ function F_writePage(pageText,id) { // lenntre kiírja a page szövegét (idb>ht
 	//console.log("endLoad - "+ currTime)
 	document.getElementById("div_QingBg").style.display = "none"
 }
-function F_openHTML(path,type,detElem) { /* betölti page html, (clear és) elmenti IDB, majd...
+function F_openHTML(path,type,detElem,impID) { /* betölti page html, (clear és) elmenti IDB, majd...
 	ha sima pageLink-re click történt (type="click") ➜ F_writePage()
 	ha search btn-ra click történt (type="search")
 	ha impQ betöltés közben hiányzott (type="loadImpQ") 
 */
 	// detElem ➜ csak loadImpQ esetén kell! ➜ visszaugrik a többi betöltéséhez
+	// impID ➜ csak loadMidQ esetén kell! ➜ betölti a midQ-t (ráklikkelés)
 	// console.log("F_openHTML: "+path+" ("+type+")")
 	if ( document.getElementById("iframe_targyak") == null ) {
 		var iframe = document.createElement("iframe") // ebbe tölti be a webpage-ket, majd innen másolja ki innerhtml-üket
@@ -253,6 +254,13 @@ function F_openHTML(path,type,detElem) { /* betölti page html, (clear és) elme
 			document.getElementById("span_msgSavingIDB").style.display = "none"
 			document.getElementById("span_msgSavingIDB").innerHTML = "..saving.."
 			F_loadElem(detElem)
+		} else if ( type == "loadMidQ" ) { 
+			document.getElementById("div_searchingBg").style.display = "none"
+			document.getElementById("span_msgSavingIDB").style.display = "none"
+			document.getElementById("span_msgSavingIDB").innerHTML = "..saving.."
+			var qText = F_getQText(path,impID)
+			prevMidQs.push(impID+" - "+path)
+			F_setMidQ(qText,path) 
 		}
 	}
 	window.addEventListener('message', handler, false) /* ez azért indul el, mert a .html fájl végén ott van, hogy:
@@ -670,7 +678,7 @@ function F_loadImpQs(detElem,full) {
 			document.getElementById("div_searchingBg").style.display = "block"
 			document.getElementById("span_msgSavingIDB").style.display = "block"
 			document.getElementById("span_msgSavingIDB").innerHTML = "..loading.."
-			F_openHTML(missingPath,"loadImpQ",detElem,full)
+			F_openHTML(missingPath,"loadImpQ",detElem)
 			console.log(error)
 			repeat = false
 			return repeat
@@ -4448,9 +4456,17 @@ function F_clickWord(thatWord) { // midQ, syno
 	if ( thatWord.classList.contains("midQ") ) {
 		var impID = F_getImpID(thatWord)
 		var path = F_getQPath(thatWord,impID) 
-		prevMidQs.push(impID+" - "+path)
 		var qText = F_getQText(path,impID)
-		F_setMidQ(qText,path) 
+		
+		if ( qText == undefined ) { // ha hiányozna az [impQ]
+			document.getElementById("div_searchingBg").style.display = "block"
+			document.getElementById("span_msgSavingIDB").style.display = "block"
+			document.getElementById("span_msgSavingIDB").innerHTML = "..loading.."
+			F_openHTML(path,"loadMidQ","",impID)
+		} else {
+			prevMidQs.push(impID+" - "+path)
+			F_setMidQ(qText,path) 
+		}
 	}
 }
 
