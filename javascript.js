@@ -75,6 +75,7 @@ function F_toggleNightMode(){
 	location.reload();
 }
 
+
 document.body.style.backgroundColor = bodyBGcolor
 document.body.style.margin = "2px" // ez valahol nagyobbra van állítva, visszakéne
 
