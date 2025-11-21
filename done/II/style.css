@@ -1,0 +1,355 @@
+html, body, {
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+a:link {color:Blue} 
+a:visited {color:Blue} 
+a:hover {
+	background-color: Yellow;
+	color: Blue;
+}
+a.source {
+	text-decoration: none;
+}
+
+span.seekBar{
+	position: absolute;
+	background: orange;
+}
+div.seekBar{
+	height:21px;
+	background: grey;
+	opacity: 0; 
+}
+
+/*video::-webkit-media-controls-panel { // sajna nem műkszik a drágalátos quantum firefoxon (baszná teherbe magát)
+	display: flex !important;
+	opacity: 1 !important;
+	bottom: -30px;
+}*/
+
+video{
+	border-style: solid;
+	border-width: 4px;
+	border-color: black;
+	background-color: blueviolet;
+}
+
+abbr {
+	position: relative;
+	text-decoration: none;
+	padding-left: 1px; 
+	padding-right: 1px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	background-color: lavender;
+}
+abbr.test {
+	position: relative;
+	text-decoration: none;
+	padding-left: 1px; 
+	padding-right: 1px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	background-color: #ffffff;
+}
+abbr:hover{
+	background-color: Chartreuse
+}
+
+details[open] > summary {
+	background-color: paleGreen;
+}
+details[open] > summary.mainTitle {
+	background-color: black;
+	color: yellow;
+}
+details > summary.mainTitle {
+	color: orange;
+}
+
+li{ 
+	line-height: 24px;
+	margin-left: 15px;
+}
+div {
+	line-height: 22px;
+}
+ul, ol { 
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: -15px;
+}
+.normal {
+	border-bottom: 4px solid black;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	overflow: hidden;
+	padding-left: 20px;
+	text-align:left;
+}
+div.normal {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+hr.mini {
+    border: none;
+    height: 1px;
+    background-color: #333;
+}
+hr.large {
+    border: none;
+    height: 2px;
+    background-color: #333;
+}
+
+span.abbr { 
+	border: Black 1px solid; 
+	padding-left: 1px; 
+	padding-right: 1px; 
+}
+
+.phase {
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	font-size: large;
+	font-weight: bolder;
+	background-color: Gainsboro;
+	color: Black;
+	border: 2px solid Black;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	display: inline-block;
+}
+.normPhase {
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: medium;
+	font-weight: normal;
+	border: 1px solid Black;
+	background-color: AliceBlue;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	display: inline-block;
+}
+
+span { 
+	padding-left: 0px; 
+	padding-right: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+}
+.WHITE { 
+	border: Black 1px solid; 
+	padding-left: 1px; 
+	padding-right: 1px; 
+	background-color: White;
+}
+.plus { 
+	border: Black 1px solid; 
+	padding-left: 1px; 
+	padding-right: 1px; 
+	background-color: green;
+	color: white;
+}
+.minus { 
+	border: Black 1px solid; 
+	padding-left: 1px; 
+	padding-right: 1px; 
+	background-color: red;
+	color: white;
+}
+.IMPORTANT { 
+	background-color: Aqua /*PaleTurquoise*/
+}
+.lasd { 
+	font-size: 80%;
+	background-color: Lavender;
+	vertical-align: 1px;
+	border: Black 1px solid; 
+	padding-left: 2px; 
+	padding-right: 2px; 
+}
+.fix { 
+	background-color: red;
+	color: white;
+	font-weight: bold;
+}
+.status { 
+	color: Black;
+	background-color: AliceBlue;
+	border: 1px solid Black;
+	padding-left: 2px;
+	padding-right: 2px;
+	
+	display: inline-block;
+}
+.miss { 
+	background-color: pink;
+}
+.pseudo { 
+	color: Black;
+	background-color: AliceBlue;
+	border: 1px solid Black;
+	padding-left: 2px;
+	padding-right: 2px;
+	
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-bottom: 1px;
+	display: inline-block;
+}
+.answer { 
+	background-color: gold;
+	border: 1px solid Black;
+	padding-left: 2px;
+	padding-right: 2px;
+	
+	padding-top: 1px;
+	padding-bottom: 1px;
+	margin-bottom: 1px;
+	display: inline-block;
+}
+/*span.abbr { 
+	border: Black 1px solid; 
+}*/
+
+.progress { 
+	background-color: yellow
+}
+.Vocab { 
+	background-color: Gainsboro
+}
+.HPyes { 
+	background-color: Aqua; /*PaleTurquoise*/
+	border: Black 1px solid; 
+	padding-top: -1px; 
+	padding-left: 1px; 
+	padding-right: 1px; 
+}
+.Done { 
+	background-color: SpringGreen
+}
+.skip { 
+	background-color: dodgerblue;
+}
+.dark { 
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
+span.dol { 
+	padding-left: 2px; 
+	padding-right: 2px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	border: Black 0px solid; 
+}
+
+table {
+	border-collapse: collapse;
+	padding: 2px;
+	padding-top: 3px; 
+	text-align: center;
+}
+th, td {
+	border-collapse: collapse;
+	padding: 3px;
+	border: 3px solid black;
+	padding-top: 3px; 
+	text-align: center;
+}
+th {
+	background: Silver;
+}
+
+
+img, iframe, object {
+	border: 3px solid black;
+	max-width: 98%;
+	float: right;
+}
+img.HUN {
+	border: 0px solid black;
+	max-width: 98%;
+	float: none;
+	content:url(hun.png);
+}
+img.mini {
+	border: 2px solid DeepSkyBlue;
+	max-height: 14px;
+	float: none;
+	margin-bottom: -2px
+}
+img.metszet {
+	border: 5px solid red;
+}
+
+.mirror {
+	display:inline-block;
+	transform: scale(-1,1);
+	text-indent: 0;
+}
+
+
+summary {
+	color: Green;
+	cursor: pointer;
+	display: inline-block;
+}
+
+* {
+ font-size: 100%;
+ font-family: Tahoma;
+}
+sup, sub {
+ font-size: 80%;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+div.images {
+	float: right;
+	max-width: 45%;
+}
+.title {
+	font-weight: bold;
+	font-size: 110%;
+}
+.mainTitle {
+	font-weight: bold;
+	font-size: large;
+	color: yellow;
+	background-color:black; 
+	border: 5px solid black; 
+	text-align: center;
+	min-width: 99%;
+	left: -10px;
+}
+div.erettsegi {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+

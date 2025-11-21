@@ -1,0 +1,680 @@
+<head><meta charset="UTF-8"></head>
+
+
+<div id="div_SkipFix" style="background-color:white; overflow:auto; width:80vh; height:60vh; position:fixed; top:50%; left:50%; margin-top:-30vh; margin-left:-40vh; border:10px solid black; display:none;"></div>
+
+<input onclick="toggleAll();" type="button" id="input_toggleAll" value="0" style="position:fixed; right: 0px;"><div id="quest" style="display:none;">
+	
+	<details><summary class="phase">tételek</summary><div id="container"></div></details>
+	<input type="file" id="fileinput" style="display:none;">
+	<input style="position:absolute; left:35%; top:1%;" type="button" value="load LS" onclick="document.getElementById('fileinput').click();">
+	<input style="position:absolute; left:50%; top:1%;" type="button" value="save LS" onclick="func_saveLS()">
+
+	<input type="button" class="white" style="border: 3px solid black;" onclick="func_spanClick(this)" id="btn_newQuest" value="0">
+	<span class="vocab" style="border: 1px solid black; padding-left:5px; padding-right:5px; padding-top:3px; padding-bottom:3px;" id="cont_RepSlow"></span>
+	<input type="button" class="MISS" style="border: 3px solid black;" onclick="func_spanClick(this)" id="cont_RepFast" value="0">
+	&nbsp; &nbsp;
+	<!--<input type="checkbox" id="checkbox_RepNew">--><span class="WHITE" style="border: 1px solid black; padding-left:5px; padding-right:5px; padding-top:3px; padding-bottom:3px;" id="cont_RepNew"></span><span class="VOCAB" style="border: 1px solid black; padding-left:5px; padding-right:5px; padding-top:3px; padding-bottom:3px;" id="cont_RepOld"></span>
+	&nbsp; &nbsp;
+	<span class="WHITE" style="border: 1px solid black; padding-left:5px; padding-right:5px; padding-top:3px; padding-bottom:3px;" id="span_Date"></span><span class="vocab" style="border: 1px solid black; padding-left:5px; padding-right:5px; padding-top:3px; padding-bottom:3px;" id="span_Jegy"></span><span class="WHITE" style="border: 1px solid black; padding-left:5px; padding-right:5px; padding-top:3px; padding-bottom:3px;" id="span_Repeat"></span>
+	<span style="position:absolute; left:32%;">
+		<select style="visibility:hidden" id="select_lvl">
+			<option value="empty"></option>
+			<option value="40">40</option>
+			<option value="60">60</option>
+			<option value="70">70</option>
+			<option value="80">80</option>
+			<option value="100">100</option>
+		</select> &nbsp; 
+		<input style="border: 3px solid black;" id="btn_Note" onclick="toggleNote();" type="button" value="&#10045;"> &nbsp; &nbsp;
+		<select id="jegy"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select> &nbsp; 
+		<span class="white" id="pJegy" style="font-weight:bold; padding-left:3px; padding-right:3px;">&nbsp; </span> &nbsp; &nbsp;
+		<input onclick="koviKerdes();" type="button" value=" ► ">
+	</span>
+	<span style="font-weight: bold;font-size: large; position:absolute; right:40px; top:9px;" id="questLeveL"></span>
+	<span style="position:absolute; right:0px; top:50px;">
+		<span id="repeat" class="WHITE" style="border: 1px solid black; padding-left:5px; padding-right:5px; padding-top:2px; padding-bottom:2px;">&nbsp; &nbsp; &nbsp;</span>
+		<span id="rank" class="white" class="WHITE" style="border: 1px solid black; padding-left:5px; padding-right:5px; padding-top:2px; padding-bottom:2px;">&nbsp; (rank)</span>
+		<select id="skip"><option value=""></option><option value="1">1</option><option value="2">2</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select> 
+		<input type="button" class="FIX" style="border: 3px solid black;" onclick="func_spanClick(this)" id="btn_fix" value="0">
+		<input type="button" class="dark" style="border: 3px solid black;" onclick="func_spanClick(this)" id="btn_skip" value="0">
+	</span>
+	<center><textarea style="display:none; position:fixed; left: 40%; top: 70%;" id="note" rows="4" cols="40"></textarea></center>
+	
+	<div style="font-weight: bold;font-size: large;" id="questTitle"></div>
+	<div id="kerdeslocation"></div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+<details><summary>(előadások kidolgozottsága táblázat)</summary><ul class="normal"><table><tr>
+	<td class="done">szerkea_2017</td>
+	<td class="done">lipoelo4_2017</td>
+	<td class="fix">lipo16_kalorimetria_fluoreszcencia</td>
+	<td class="">lipodiag_2016</td>
+	<td class="important">lipother_2016</td>
+  </tr><tr>
+	<td class="fix">Matko_2017_4</td>
+	<td class="important">Sarkadi_2017_4</td>
+	<td class="fix">hegedus_modellmembranok_2017w</td>
+	<td class="done">Fenyszoras_merese</td>
+</tr></table></ul></details>
+
+
+
+<!----><details open><summary class="phase">Teszt</summary><div><div class="title"></div>
+	<details class="open kerdes 3/1" id="modmem.1"><summary>teszt</summary><ul class="normal">
+		<div><img data-src="images/krd_01.png"></div>
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">A</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.2"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_02.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">A</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.3"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_03.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">D</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.4"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_04.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">C</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.5"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_05.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.6"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_06.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">A</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.7"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_07.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span> <abbr title="Ethosomes are noninvasive delivery carriers that enable drugs to reach the deep skin layers and/or the systemic circulation. Although ethosomal systems are conceptually sophisticated, they are characterized by simplicity in their preparation, safety, and efficacy a combination that can highly expand their application.">§</abbr></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.8"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_08.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">C</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.9"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_09.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span> <abbr title="nem teljesen világos">!?</abbr></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.10"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_10.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">C</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.11"><summary style="color:red">teszt</summary><ul class="normal">
+		<img data-src="images/krd_11.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.12"><summary style="color:red">teszt</summary><ul class="normal">
+		<img data-src="images/krd_12.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">D</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.13"><summary style="color:red">teszt</summary><ul class="normal">
+		<img data-src="images/krd_13.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.14"><summary style="color:red">teszt</summary><ul class="normal">
+		<img data-src="images/krd_14.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">D</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.15"><summary style="color:red">teszt</summary><ul class="normal">
+		<img data-src="images/krd_15.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">C</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.16"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_16.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">A</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.17"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_17.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE"><abbr title="C nemvolt legutóbbi (2017) tesztben a válaszok között, és amúgy is szvsz erről ad infot a dia alapján">A</abbr></span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.18"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_18.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">C</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.19"><summary style="color:red">teszt</summary><ul class="normal">
+		<img data-src="images/krd_19.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">?</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.20"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_20.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.21"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_21.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.22"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_22.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span> <img class="mini" src="images/mmbnrkslknt.png"></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.23"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_23.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">A</span> <abbr title="wiki: MRI kontrasztanyagok (lecsekkolva)">§</abbr></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.24"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_24.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">D</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.25"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_25.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span> <abbr title="nem teljesen világos">!?</abbr></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.26"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_26.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.27"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_27.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span> <abbr title="nem teljesen világos">!?</abbr></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.28"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_28.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">D</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.29"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_29.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.30"><summary>teszt</summary><ul class="normal">
+		<img data-src="images/krd_30.png">
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.97"><summary>Melyikbe nem juthat be a HIV vírus CD4 receptoron keresztül?</summary><ul class="normal">
+		<li>makrofág</li>
+		<li>B-lymphocyta</li>
+		<li>T-lymphocyta</li>
+		<li>dendritikus sejt</li>
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">B-lymphocyta</span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.98"><summary>Melyik ion tölt be meghatározó szerepet a sejten belüli jelátvitelben?</summary><ul class="normal">
+		<li>Na<sup>+</sup></li>
+		<li>K<sup>+</sup></li>
+		<li>Ca<sup>2+</sup></li>
+		<li>Mg<sup>2+</sup></li>
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">Ca<sup>2+</sup></span></li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.99"><summary>GPI horgonyzó fehérje hol van?</summary><ul class="normal">
+		<li>Intracelluláris tér</li>
+		<li>Extracelluláris tér</li>
+		<li>Mindkettő</li>
+		<li>Sejttípustól függ</li>
+		<li><font class="abbr">megoldás ►</font> <span class="WHITE">Extracelluláris tér</span></li>
+	</ul></details>
+<!----></div></details>
+
+<details><summary class="phase">Kifejtős</summary>
+ <div><div class="title">kategorizálatlan</div>
+	<details class="kerdes 3/1" id="modmem.31"><summary>koleszterin funkció?</summary><ul class="normal">
+		<li>Destabilizál (T<sub>m</sub> csökken) telített lipidek jelenlétében &#10140; a membrán fluiditása és permeabilitása növekszik</li>
+		<li>Stabilizál (T<sub>m</sub> növekszik) telítetlen lipidek jelenlétében &#10140; a membrán fluiditása és permeabilitása csökken</li>
+		<div><strong>T<sub>m</sub></strong> = fázisátalakulási hőmérséklet</div>
+		<img style="float:right" src="images/fzsktklsklsztn.png">
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.32"><summary>membránalkotó molekulák felsorolása?</summary><ul class="normal">
+		<li>lipidek 40-60%</li><ul>
+			<li>foszfolipidek</li>
+			<li>koleszterin</li>
+			<li>egyéb lipidek &#10140; szfingolipidek, glikolipidek</li>
+		</ul>
+		<li>fehérjék 30-50%</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.33"><summary>foszfolipidek csoportosítása?</summary><ul class="normal">
+		<li>semleges, negatív, pozitív töltésű</li>
+		<li>telített vagy telítetlen</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.37"><summary>Mesterséges membránok &#10140; funkció?</summary><ul class="normal">
+		<li>A biológiai membránok modellezése</li>
+		<li>A membrán „csomagolóanyagként” és szállítóeszközként történő felhasználása</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.38"><summary>Mesterséges membránok &#10140; típusai?</summary><ul class="normal">
+		<li>Lipid kettősrétegek (BLM)</li>
+		<li>liposzómák</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.40"><summary>liposzómák típusai méret & rétegszám alapján?</summary><ul class="normal">
+		<li>Unilamelláris liposzóma &#10140; 1 lipid kettősétegből áll</li><ul>
+			<li>small (SUV) &#10140; <abbr title="átmérője kisebb, mint 100nm">d &lt; 100nm</abbr></li>
+			<li>large (LUV) &#10140; d > 100nm</li>
+		</ul>
+		<li>multilamelláris liposzóma (MLV) &#10140; 1-nél több lipid kettősrétegből áll</li>
+	</ul></details>
+	<details class="kerdes 3/5" id="modmem.41"><summary>liposzómák típusai <abbr title="felszínen lévő molekula etc.">"működésük"</abbr> alapján?</summary><ul class="normal">
+		<li>konvencionális (C) liposzómákat &#10140; felszínén semmilyen speciális molekula nem található &#10140; Ezeket az immunrendszer idegenként ismeri fel és nagy részüket a makrofágok kebelezik be</li>
+		<li>stabilizált, „lopakodó (stealth)” – S &#10140; felszínén polimerláncok (pl. polietilén-glikol – PEG) találhatók &#10140; ezek elrejtik a liposzómát az immunsejtek elől &#10140; hosszú keringési életidejűek &#10140; Az ilyen típusú liposzómákat sokkal kisebb mértékben kebelezik be a makrofágok, mint a konvencionálisakat, és így sokkal nagyobb eséllyel jutnak el a szervezet más területeire</li>
+		<li>immunliposzómák &#10140; antitestek vannak a felszínén &#10140; célsejten van az antitest-receptor, így ahhoz fog kötődni, aminek hatására destabilizálódik a membránja és így kiürül a tartalma &#10140; daganatterápiára megfelelő</li>
+		<li>mágneses liposzómák &#10140; <abbr title="A paramágneses anyagokban a mágneses dipólmomentummal rendelkező atomok külső tér hiányában a hőmérsékleti rendezetlenség miatt nem orientálódnak; ilyenkor az anyag nem mutat mágneses tulajdonságot. A külső mágneses tér hatására azonban már igen.">paramágneses</abbr> anyag (vas-oxid) van bennük &#10140; külső mágneses tér segítségével irányíthatók a szervezeten belül</li>
+		<li>pH szenzitív liposzómák</li><ul>
+			<li>savas környezetben (pl. gyulladásos területen) könnyen fúzionál, tartalmát endocitózissal űríti a célsejtbe</li>
+			<li>lipidkomponense a DOPE</li>
+		</ul>
+		<li>termoszenzitív liposzómák</li><ul>
+			<li>Tm kicsivel a testhőmérséklet fölötti &#10140; lokális hipertermia (= rákellenes hőkezelés) esetén űríti ki a tartalmát</li>
+			<li>LUV</li>
+			<li>lipidkomponense a DPPC/DSPC keverék</li>
+		</ul>
+		<li>fotoszenzitív liposzómák</li><ul>
+			<li>fotoszenzitív lipidet tartalmaz &#10140; ez fény hatására polimerizálódik &#10140; membrán permeabilitása és a bezárt hatóanyag kiáramlása megnövekszik</li>
+		</ul>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.56"><summary>foszfolipid feji része mit befolyásol hogyan?</summary><ul class="normal">
+		<table>
+			<tr> <th>ha a teljes foszfolipid nettó töltése semleges</th>  <td><abbr title="pl. szomszéd sejttel, liposzómával">kölcsönhatásra</abbr> kevésbé hajlandó</td>  <td>stabilabb</td> </tr>
+			<tr> <th>ha a teljes foszfolipid nettó töltése negatív</th>  <td><abbr title="pl. szomszéd sejttel, liposzómával">kölcsönhatásra</abbr> inkább hajlandó</td>  <td>instabilabb</td> </tr>
+		</table>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.57"><summary>foszfolipidek mozgásai a membránban? gyakoriságuk?</summary><ul class="normal">
+		<li>flexio > laterális diffúzió >>> flip-flop</li>
+		<img data-src="images/lpdmgzslshtsgv.png">
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.58"><summary>liposzómába zárt hatóanyagok hol találhatók?</summary><ul class="normal">
+		<li>hidrofil hatóanyag a belsejében</li>
+		<li>hidrofób hatóanyag a lipid kettősrétegben</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.59"><summary>foszfolipidet alkotó zsírsavláncok hossza Tm-et hogy befolyásolja?</summary><ul class="normal">
+		<li>hossza arányos a Tm-el &#10140; minél hosszabb, annál nagyobb</li>
+		<div>(Minél kevesebb szénatomot, minél több kettőskötést tartalmaznak, olvadáspontjuk annál alacsonyabb)</div>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.43"><summary>foszfolipidet alkotó zsírsavláncban lévő kettős kötések száma hogy befolyásolja a Tm-et</summary><ul class="normal">
+		<li>kettős kötések száma FORDÍTOTTAN arányos a Tm-el &#10140; minél több, annál kisebb</li>
+		<div>(Minél kevesebb szénatomot, minél több kettőskötést tartalmaznak, olvadáspontjuk annál alacsonyabb)</div>
+	</ul></details>
+
+	<details class="kerdes 3/2" id="modmem.74"><summary>membrán nanocsövek &#10140; kialakulása & típusai?</summary><ul class="normal">
+		<img data-src="images/fktcsvknnbltn.png">
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.75"><summary>extracelluláris vezikulák csoportosítása?</summary><ul class="normal">
+		<li>exoszóma <span class="WHITE">30-100nm</span></li>
+		<li>mikrovezikula <span class="WHITE">100-800nm</span></li>
+		<li>apoptotikus test <span class="WHITE">800nm-5&micro;m</span></li>
+		<img data-src="images/xtrcllrlsvezklk.png">
+	</ul></details>
+ </div>
+ <div><div class="title">folyadékkristályok</div>
+	<details class="kerdes 3/3" id="modmem.53"><summary>típusai rendezettségük alapján?</summary><ul class="normal">
+		<img style="float:right" src="images/klsztrks.png">
+		<div><span class="WHITE">a</span> szmektikus &#10140; traszlációs & orientációs rendezettség</div>
+		<div><span class="WHITE">b</span> nematikus &#10140; csak orientációs rendezettség</div>
+		<div><span class="WHITE">c</span> koleszterikus</div><ul>
+			<li>olyan mint a nematikus, de a síkok olyan szöget zárnak be, hogy a molekulatengelyek csavarvonalat alkotnak</li>
+			<li>koleszterinnél vették először észre, innen a neve</li>
+		</ul>
+	  <hr>
+		<details><summary>rendezettség 2 típusának (transzlációs & orientációs) lényege?</summary><ul class="normal">
+			<li>transzlációs ➜ molekulák tömegközéppontja egy síkban, köztük azonos távolság (és több ilyen síkből tevődik össze)</li>
+			<li>orientációs ➜ molekulatengelyek egy irányba mutatnak</li>
+		</ul></details>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.54"><summary>típusai rendezettségük befolyásolása alapján?</summary><ul class="normal">
+		<li>termotrop &#10140; rendezettségük elsősorban a <strong>hőmérséklet</strong>től függ</li>
+		<li>liotrop &#10140; rendezettségük elsősorban a <strong><abbr title="azaz a lipid-víz milyen arányban van">komponensek koncentrációjának arányától</strong></abbr> függ</li>
+		<details><summary>"foszfolipid-struktúrákra"(sejtmembrán,liposzóma) mely jellemző?</summary><ul class="normal">
+			<li>liotrop</li>
+			<li>oka, hogy amfifil a foszfolipid, és az amfilil molekulák víz jelenlétében liotrop struktúrát alkotnak <div class="mirror">&#10140;</div> amfifilnek azt a molekulát nevezzük, amelyiknek egymástól jól elkülönülő poláris és apoláris része van</li>
+		</ul></details>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.55"><summary>termotróp folyadékkristályok felhasználására 2 pl?</summary><ul class="normal">
+		<li>kontakttermográfia</li>
+		<li>LCD-kijelzők</li>
+	</ul></details>
+ </div>
+ <div><div class="title">liposzómák előállítása</div>
+	<details class="kerdes 3/1" id="modmem.44"><summary>bezárási hatásfok?</summary><ul class="normal">
+		<li>megadja, hogy a hatóanyag mekkora hányada zárható liposzómákba</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.45"><summary>mesterséges lipidek számától hogyan függenek az alábbiak &#10140; bezárási hatásfok? sejtekbe való felvétel hatásfoka? élettartama?</summary><ul class="normal">
+		<div>minél több van, annál inkább...</div>
+		<li>nő &#10140; <abbr title="tehát ilyen molekulákat jobban betud fogni">hidrofil molekulák bezárási hatásfoka</abbr> & sejtekbe való felvétel</li>
+		<li>csökken &#10140; élettartam</li>
+		<li><font class="abbr">mesterséges lipidek nettó töltése? ►</font> pozitív</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.46"><summary>két fő összetevő felsorolása?</summary><ul class="normal">
+		<li>lipid(film)</li>
+		<li>vizes fázis</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.47"><summary>vizes fázis mikor destabilizál?</summary><ul class="normal">
+		<li>ha a pH-ja kisebb, mint 6,5 vagy nagyobb mint 8,5</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.48"><summary>BLM &#10140; mi? funkció?</summary><ul class="normal">
+		<li>Bilayer Lipid Membrane &#10140; kétrétegű sík membrán</li>
+		<li>transzport vizsgálatára alkalmazzák (pl. ioncsatornák működésének vizsgálata)</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.49"><summary>MLV bezárási hatásfoka?</summary><ul class="normal">
+		<li>kicsi</li>
+	</ul></details>
+	<details class="kerdes 3/3" id="modmem.50"><summary>előállításuk &#10140; SUV, LUV, MLV?</summary><ul class="normal">
+		<li>MLV &#10140; ezé a legegyszerűbb</li>
+		<li>SUV</li><ul>
+			<li>MLV-ből ultrahangozzással</li>
+			<li>MLV-ből French Press alkalmazással</li>
+			<li>gyors injektálással</li>
+		</ul>
+		<li>LUV</li><ul>
+			<li>MLV-ből filtrációval</li>
+			<li>SUV fúzióval (ugyanis a SUV állás során fúzióra hajlamos)</li>
+			<li>lassú injektálással</li>
+		</ul>
+	</ul></details>
+ </div>
+ <div><div class="title">fényszórás mérés</div>
+	<details class="kerdes 3/1" id="modmem.51"><summary>szórt fény mi?</summary><ul class="normal">
+		<li>Fényszórásról beszélünk, ha egy részecske a rá eső fény hatására időbeli késleltetés nélkül maga is fényt bocsát ki (szekunder sugárzás), a beeső fénytől (primer sugárzás) eltérő irányokban</li>
+	</ul></details>
+	<details class="kerdes 3/3" id="modmem.52"><summary>szórt fény intenzitása miktől függ?(5)</summary><ul class="normal">
+		<li>részecskeszám &#10140; arányos vele</li>
+		<li>részecskék mérete & hullámhossz</li><ul>
+			<li>ha részecskeméret kisebb, mint a hullámhossz &#10140; akkor ún. Raleigh-szórás van</li>
+			<li>ha részecskeméret nagyobb, mint a hullámhossz &#10140; akkor ún. Mie-szórás van</li>
+		</ul>
+		<li>detektor távolsága</li>
+		<li>megfigyelés szöge</li>
+		<li>(a képletet nem kell tudni!)</li>
+		<img data-src="images/szrtfnynzt.png">
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.76"><summary>alapja (1-2 mondatban kifejtve)?</summary><ul class="normal">
+		<li>fény elektromágneses hullám &#10140; töltésekre erőhatást fejt ki &#10140; ennek következtében ún. oszcilláló dipólusokat hoz létre, melyek frekvenciája megegyezik a fényével (ami kiváltotta)</li>
+	  <hr>
+		<li>dipólusmomentum &#10140; pl. víz esetében a képen látható</li>
+		<li>oszcilláló &#10140; egyik pillanatban egyik irányba, másik pillanatban ellenkező irányba mutat</li>
+		<img data-src="images/dplsnmmntm.png">
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.77"><summary>szórt fény intenzitása és dipólusmomentum közti összefüggés</summary><ul class="normal">
+		<li>dipólusmomentum tengelyére merőlegesen a legnagyobb az intenzitás &#10140; tehát ha A) pontból nézem, akkor nagyobb intenzitást észlelek ("erősebb fény"), mintha B) pontból</li>
+		<li>(ezért függ a megfigyelés szögétől a szórt fény intenzitása!)</li>
+		<img data-src="images/szrtfnynztnzt.png">
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.78"><summary>szórásprofil mi?</summary><ul class="normal">
+		<li>megmutatja, hogy egyes irányokba hogyan szóródik a fény</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.79"><summary style="color:red"><font color="Green">Raleigh-szórás?</font></summary><ul class="normal">
+		<li>A részecskék mérete &lt; λ</li>
+		<li>ezt használjuk elvileg</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.80"><summary style="color:red"><font color="Green">Mie-szórás?</font></summary><ul class="normal">
+		<li>A részecskék mérete > λ</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.81"><summary>módszerek felsorolása csoportosítva!</summary><ul class="normal">
+		<li>egyszerű &#10140; nefelometria, turbidimetria</li>
+		<li>részletesebb &#10140; statikus, dinamikus</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.82"><summary>nefelometria &#10140; mikor használatos? mit mér? mérésből mit határoz meg és hogy?</summary><ul class="normal">
+		<li>kismértékű fényszórás esetében használatos</li>
+		<li>J<sub>szórt</sub> &#10140; ezt méri</li>
+		<li>koncentrációt határoz meg, ugyanis &#10140; J<sub>szórt</sub> arányos a koncentrációval</li>
+		<img data-src="images/fnszrnsmrs.png">
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.83"><summary style="color:Magenta"><font color="Green">turbidimetria &#10140; mikor használatos? mit mér? mérésből mit határoz meg és hogy?</font></summary><ul class="normal">
+		<li>nagymértékű fényszórás esetében használatos</li>
+		<li><abbr title="eredeti irányba továbbhaladó fény intenzitása">J</abbr> &#10140; ezt méri</li>
+		<li>koncentrációt határoz meg, ugyanis &#10140; mért intenzitásból meghatározható az <abbr title="most akkor mégis van abszorpció? vagy mivan? ...">!?</abbr> optikai denzitás = abszorbancia = extinkció, ami pedig arányos a koncentrációval</li>
+		<img data-src="images/fnszrnsmrs.png">
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.84"><summary>statikus fényszórás mérésnél mit mérünk? ebből milyen információ nyerhető?</summary><ul class="normal">
+		<li>intenzitás szög szerinti eloszlása</li>
+		<li>kisméretű részecskék esetében &#10140; a mólsúly meghatározható</li>
+		<li>nagyméretű részecskék esetében &#10140; a részecskék alakja meghatározható</li>
+	</ul></details>
+	<details class="kerdes 3/3" id="modmem.85"><summary>dinamikus fényszórás mérésnél &#10140; mit mérünk? ebből milyen információ nyerhető?</summary><ul class="normal">
+		<li>intenzitás időbeli változását (azaz fluktuációját)</li>
+		<li>A dinamikus fényszórás mérés során azt használjuk ki, hogy a részecske mozgása miatt a részecske által szórt fény frekvenciája némiképp eltérő lehet a beeső fény frekvenciájától. Ebből meghatározható a diffúziós együttható, amiből pedig a részecske mérete becsülhető</li><ul>
+			<li>monodiszperz (azonos méretű részecskékből álló) rendszer esetében &#10140; diffúziós állandó egyértelműen meghatározható &#10140; a sugár pontosan meghatározható</li>
+			<li>polidiszperz (sokféle méretű részecskékből álló) rendszer esetében &#10140; diffúziós állandókat nem lehet meghatározni egyértelműen &#10140; a sugár csak becsülhető (eloszlással)</li>
+			<div><strong>liposzómák polidiszperzek!</strong></div>
+		</ul>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.86"><summary>fényforrás követelményei?(3)</summary><ul class="normal">
+		<li>monokromatikus (ugyanis Raleigh-mérés, ahol &lambda;-tól függ)</li>
+		<li>polarizált (egyirányba rezegjen)</li>
+		<li>nagy teljesítményű legyen</li>
+		<div>&#10140; ezen követelményeknek <span class="Important">a lézer</span> megfelel (Ar-ion, He-Ne)</div>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.87"><summary>detektorokra 2pl?</summary><ul class="normal">
+		<li>fotoelektron-sokszorozó</li>
+		<li>Avalanche-fotodióda</li>
+	</ul></details>
+	<details class="open kerdes 3/1" id="modmem.88"><summary>képen lévő R<sub>ex</sub> mit határoz meg?</summary><ul class="normal">
+		<img data-src="images/rexfelügyelö.png">
+		<li><font class="abbr">megoldás ►</font> az oldat mennyivel több fényt szór, mint az oldószer</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.89"><summary>autokorrelációs fv. &#10140; hol használatos? mit mutat?</summary><ul class="normal">
+		<li>dinamikus fényszórás mérésnél</li>
+		<li>minél gyorsabban mozognak a részecskék, annál gyorsabban cseng le a fv.</li>
+		<img data-src="images/aktkrllcfv.png">
+	</ul></details>
+ </div>
+ <div><div class="title">transzporterek a lipidmembránokban</div>
+	<details class="kerdes 3/2" id="modmem.42"><summary>ioncsatornák típusai?</summary><ul class="normal">
+		<img style="float:right" src="images/ncstrnktos.png">
+		<div>zárt állapotban vannak alapvetően &#10140; szignál hatására nyílnak, a szignál típusa alapján lehetnek</div>
+		<li>feszültség-függők (A) &#10140; feszültség-változásra nyílnak, ilyenek pl. Na<sup>+</sup>- és K<sup>+</sup>- és Ca<sup>2+</sup>-csatornák</li>
+		<li>ligand-függők (B,C) &#10140; pl. neurotranszmitter (pl. acetilkolin, glicin, &gamma;-aminovajsav, <strong><i>IP3</i></strong>) hatására nyílnak</li>
+		<li>stressz-aktivált (D) &#10140; mechanikai hatásra nyílnak ki</li>
+	</ul></details>
+	<details class="kerdes 3/3" id="modmem.39"><summary>transzportfehérjék típusai?</summary><ul class="normal">
+		<table>
+			<tr><th colspan="3">transzportfehérjék <abbr title="transzportfehérje =/= transzporter-fehérje">!!!!!!!!!</abbr> </th></tr>
+			<tr>
+				<th>csatorna (víz/ion)</th>
+				<th>passzív_karrier (=transzporterek)</th>
+				<th>primer pumpák <span class="idk">=</span> transzport-ATP-ázok</th>
+			</tr>
+			<tr>
+				<td colspan="3"><details><summary>kötés az átjutó anyag és transzportfehérje között...</summary>
+					nem jön létre | létrejön | létrejön
+				</details></td>
+			</tr>
+			<tr><td colspan="3"><details><summary>átjuttatás módja?</summary>
+				fehérje belsejében lévő csatornán diffúzióval átjut az anyag | membrán másik oldalára "átpumpálja és elengedi" | membrán másik oldalára "átpumpálja és elengedi"
+			</details></td></tr>
+			<tr><td colspan="3"><details><summary>transzportfehérje szerkezetével mi történik a folyamat során?</summary>
+				nem változik meg | megváltozik | megváltozik
+			</details></td></tr>
+			<tr><td colspan="3"><details><summary>folyamat sebessége?</summary>
+				gyorsabb | lassabb | lassabb
+			</details></td></tr>
+			<tr><td colspan="3"><details><summary>milyen transzportra képes(passzív/aktív)?</summary>
+				passzív | passzív | aktív
+			</details></td></tr>
+		</table>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.34"><summary>membránfehérjék csoportosítása elhelyezkedésük szerint?</summary><ul class="normal">
+		<li>integráns &#10140; van apoláris része amivel mélyen kötődik a lipidrétegbe</li><ul>
+			<li>transzmembrán ➜ integráns, mely teljesen átér</li>
+		</ul>
+		<li>perifériás &#10140; csak felszínesen kötődik</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.36"><summary>transzportfehérjék csoportosítása az anyagtranszport irányítottsága szerint?</summary><ul class="normal">
+		<li>uniport &#10140; 1féle</li>
+		<li>kotranszport &#10140; 2féle</li><ul>
+			<li>szimport &#10140; 1irányba</li>
+			<li>antiport &#10140; ellentétes irányba</li>
+		</ul>
+		<img style="float:right" src="images/ktrvtnszptfp.png">
+	</ul></details>
+	<details class="kerdes 3/7" id="modmem.35"><summary>"membránátjutás" lehetőségeinek felsorolása?</summary><ul class="normal">
+		<img style="float:right" src="images/e2_memntrnrszport.png">
+		<table>
+			<tr>
+				<th rowspan="2">egyszerű_diffúzió</th>
+				<th colspan="2">transzport</th>
+			</tr><tr>
+				<th>passzív = facilitált_diffúzió</th>
+				<th>aktív</th>
+			</tr>
+			<tr><td colspan="3"><details><summary>transzportfehérje? <abbr title="transzport-fehérje =/= transzporter-fehérje">!!</abbr></summary>
+				<li>egyszerű_diffúzió &#10140; nincs</li>
+				<li>facilitált_diffúzió &#10140; csatornafehérje vagy passzív_transzport<strong>er</strong>-fehérje</li>
+				<li>aktív_transzport &#10140; primer-pumpa</li>
+			</details></td></tr>
+			<tr><td colspan="3"><details><summary>nagyobb / kisebb koncentrációjú térbe megy a szállítandó?</summary>
+				<li>egyszerű_diffúzió &#10140; nagyobbtól kisebb koncentráció fele</li>
+				<li>facilitált_diffúzió &#10140; nagyobbtól kisebb koncentráció fele <abbr title="ha az összes ioncsatorna facilitált diffúziót végez, akkor  nincs olyan, hogy: kinnt van 50Cl- és 50K+ bennt 49Cl-, és a Cl- a töltéskülönbség miatt kifele megy, tehát a nagyobb koncentráció fele">&#10045;</abbr></li>
+				<li>aktív_transzport &#10140; kisebbtől nagyobb koncentrációjú fele</li>
+			</details></td></tr>
+			<tr><td colspan="3"><details><summary style="color:Magenta"><font color="Green">energiáját mi fedezi?</font></summary>
+				<li>egyszerű_diffúzió &#10140; koncentrációkiegyenlítődés</li>
+				<li>facilitált_diffúzió &#10140; koncentrációkiegyenlítődés <span class="FIX">+/-</span> töltéskiegyenlítődés</li>
+				<li>aktív_transzport &#10140; ATP közvetlenül vagy közvetve</li>
+			</details></td></tr>
+		</table>
+		<details><summary>töltéskiegyenlítődés egyszerű/facilitált diffúziónál miért van/nincs?</summary><ul class="normal">
+			<li>egyszerűnél ionok nem juthatnak át, facilitáltnál igen</li>
+		</ul></details>
+		<details><summary style="color:Magenta"><font color="Green">(töltéskiegyenlítődés facilitáltnál mi a gondom?)</font></summary><ul class="normal">
+			<li>az, hogy elméletben a töltéskiegyenlítődés mind segítheti, mind gátolhatja a transzportot</li>
+			<li><span class="WHITE">segítheti pl</span> &#10140; van 10000db <span class="WHITE">A<sup>+</sup></span> molekula kinnt, és 1db <span class="WHITE">A<sup>+</sup></span> bennt &#10140; befele megy az A<sup>+</sup> szállítása hisz töltéskül. és koncentrációkül. is azt diktálja</li>
+			<li><span class="WHITE">gátolhatja pl</span> &#10140; van 10000db <span class="WHITE">A<sup>+</sup></span> és 10000db <span class="WHITE">B<sup>-</sup></span> kinnt, és 1db <span class="WHITE">A<sup>+</sup></span> bennt &#10140; csak A<sup>+</sup> transzportja engedélyezett &#10140; nyilván befele megy az A szállítása hisz koncentrációkül nagyon ezt diktálja, de itt a töltéskül. ellene szól</li>
+			<li>problémám, hogy nincs konkrét példám ezekre, hogy milyen lehet (illetve az se világos, hogy csatorna és transzporter esetében is vannak-e ilyenek)</li>
+		</ul></details>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.60"><summary>izotóniás, hipotóniás és hipertóniás oldatok?</summary><ul class="normal">
+		<li>ha az oldat ozmózisnyomása a másik oldatéhoz képest...</li><ul>
+			<li>kisebb &#10140; akkor az oldat hipotóniás</li>
+			<li>megegyező &#10140; akkor az oldat izotóniás</li>
+			<li>nagyobb &#10140; akkor az oldat hipertóniás</li>
+		</ul>
+		<li>fiziológiás (izotóniás egy típusa) &#10140; vérrel azonos ozmolaritású oldat, pl. 0,9v% (0,009g/ml) NaCl</li>
+		<li>pl. ha a vvt-ket hipotóniás oldatba teszem, tehát az oldat ozmózisnyomása kisebb, mint a vvt-ben lévő sejtnedvé &#10140; így a sejtbe áramlik a vér és kipukkad</li>
+		<img data-src="images/hprtnztn.png">
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.61"><summary>transzport-ATP-ázok csoportosítása?</summary><ul class="normal">
+		<li>P típusú (ilyen pl. Ca<sup>2+</sup> ATP-áz)</li>
+		<li>V típusú</li>
+		<li>ABC szupercsalád</li>
+	  <hr>
+		<li>transzport-ATP-ázok esetében az ATP megkötése okozza a konformációváltozást</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.62"><summary>lipid-raft &#10140; mi? jellemzése?(2+1)</summary><ul class="normal">
+		<li>membrán megvastagodás</li>
+	  <hr>
+		<li>sok koleszterint tartalmaznak</li>
+		<li>sok szfingolipidet tartalmaznak</li>
+		<li>(speciális fehérjék körül alakulnak ki) <abbr title="A lipid tutajokra jellemző, hogy bennük jellemzően hosszabb zsírsavláncú lipidek koncentrálódnak, ezért ezen a területen a membrán vastagsága megnő, sőt, ezen a területen a membrán két rétege együtt mozog. A fentiek miatt a lipid tutajokba csak speciális fehérjék képesek beépülni">§</abbr></li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.64"><summary>lipid-raft hol fordul elő nagy számban?</summary><ul class="normal">
+		<li>immunrendszer</li>
+		<li>idegrendszerben (szinapszisok)</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.63"><summary>[Ca<sup>2+</sup>] intracellulárisan és extracellulárisan milyen?</summary><ul class="normal">
+		<li>intracellulárisan alacsony a koncentráció <abbr title="mármint gondolom ,,alaphelyzetben''">&#10045;</abbr></li>
+		<li>extracellulárisan magas a koncentráció</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.65"><summary>membránfehérjék hol fordulnak elő?</summary><ul class="normal">
+		<li>végig csak a membránban &#10140; már képződésük is ott történik, ugyanis ha nem ott lennének tönkremennének</li>
+		<li>plazmamembránba vezikulákon keresztül jutnak ki</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.66"><summary>mikrovezikulák funkciója?</summary><ul class="normal">
+		<li>idegsejteknél a neurotranszmitterek "ezeken keresztül jutnak ki a szinapszisba"</li>
+		<li>immunrendszer és daganatsejtek &#10140; pl. ezáltal jelzi a környezetnek, hogy nagyobb vérellátást kapjon</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.67"><summary style="color:Magenta"><font color="Green">membránfehérjék vizsgálata hogy történik?</font></summary><ul class="normal">
+		<li>ha kivennénk a fehérjét a membránból tönkremenne</li>
+		<li>de ha nem vesszük ki, akkor alig lehet vizsgálni</li>
+		<li>&#10140; ún. detergens molekulákkal veszik körbe a fehérjéket, majd visszateszik a membránba</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.68"><summary>ABC-transzporterre 1pl?</summary><ul class="normal">
+		<li>multidrog-rezisztencia protein</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.70"><summary>ABC-transzporterek &#10140; előfordulásra 4pl?</summary><ul class="normal">
+		<li>embrionális őssejtek</li>
+		<li>daganatsejtek</li>
+		<li>tüdő & máj</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.71"><summary>daganatsejtekben ABC-transzporter funkciója?</summary><ul class="normal">
+		<li>multidrog rezisztencia &#10140; nagy apoláros molekulákat, tehát a gyógyszereket kipumpálják magukból, és így rezisztensek vele szemben</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.72"><summary>tüdő & máj ABC-transzporter funkciója?</summary><ul class="normal">
+		<li>itt lévő ABC-transzporterek védenek meg minket alapvetően a toxikus anyagoktól (pl. epesók stb.) &#10140; ha gátolnánk működésüket, hogy a daganatsejt elpusztuljon, akkor rosszabb eredményt kapnánk, mert így a többi helyen is megszűnne a védekezés &#10140; máj stb. elpusztulna</li>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.73"><summary>embrionális őssejtek ABC-transzporter funkciója?</summary><ul class="normal">
+		<li>anyai vérkeringésbe kipumpálják a toxinokat</li>
+	</ul></details>
+ </div>
+ <div><div class="title">liposzómák terápiás alkalmazásai</div>
+	<details class="kerdes 3/1" id="modmem.91"><summary>amphotericin B mi ellen használatos?</summary><ul class="normal">
+		<li>gomba</li>
+		<li>leishmaniasis</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.90"><summary>génátvitel &#10140; gén a liposzóma mely részében van(4)? jellemző alkotója és funkciója?</summary><ul class="normal">
+		<li>liposzóma felületén &#10140; pozitív FELÜLETI töltésű liposzómák esetében</li>
+		<li>liposzóma üregébe zárva / belső felszínéhez kapcsolódva</li>
+		<li>részben belül, részben kívül</li>
+		<li>fúzió során <strong>két</strong> <strong>kettős</strong>-lipidréteg közé zárva</li>
+	  <hr>
+		<li>A DOPE általában alkotóeleme &#10140; membrándestabilizáló hatás (ahhoz szükséges, hogy a DNS kiszabaduljon az endoszómából)</li>
+		<img data-src="images/gntvtllhsgk.png">
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.92"><summary>előnye a liposzómába zárt gyógyszereknek?</summary><ul class="normal">
+		<li>kisebb mennyiség is elég, mert "nagyobb hatásfokkal ér a célterületre"</li>
+		<li>kevesebb melléhatással jár</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.93"><summary>mikor használatos?(3pl)</summary><ul class="normal">
+		<li>antibiotikumokat akkor zárnak liposzómába, amennyiben a terápiás koncentráció és toxikus között kicsi az eltérés &#10140; így csökkenthető a mennyiség, és kevésbé lesz toxikus a szervezet számáta</li>
+		<li>daganatterápia esetében</li>
+		<li>AIDS kezelés esetében (hosszabb távú kezelés csontvelői toxicitása megelőzhető)</li>
+	  <hr>
+		<li><span class="idk">azért csak ilyen "szélsőségesebb" esetekben, mert igen drága</span></li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.94"><summary>daganatterápiában szelektív módszerekre 2pl?</summary><ul class="normal">
+		<li>A daganatsejtek felszíni LDL-receptorainak száma a malignitással arányosan nő &#10140; <abbr title="sejtosztódás gátló szerek">citosztatikumok</abbr> LDL-be zárva szelektíven bejuttathatók a daganat-sejtekbe</li>
+		<li>immunliposzómák</li><ul>
+			<li>szelektíven kötődnek a daganatsejthez</li>
+			<li>toxin vagy citosztatikum zárható bele</li>
+			<li><abbr title="tumor necrosis factor">TNF</abbr> együttes adása segíti a liposzómák átlépését az erekből a tumorba</li>
+		</ul>
+	</ul></details>
+	<details class="kerdes 3/1" id="modmem.95"><summary>PDT minek a rövidítése?</summary><ul class="normal">
+		<li>Fotodinámiás terápia</li>
+	</ul></details>
+	<details class="kerdes 3/2" id="modmem.96"><summary>Fotodinámiás terápia &#10140; lényege, probléma, megoldás?</summary><ul class="normal">
+		<li>fényérzékenyítő anyagot (hematoporfirin, ftalocianin származékok, stb.) juttatnak a tumorsejtekbe &#10140; Megvilágítják megfelelő hullámhosszú fénnyel &#10140; reaktív oxigéngyökök képződnek &#10140; tumorsejtek pusztulása</li>
+		<li>A hatás függ a fényérzékenyítő anyag jellemzőitől. Minél hidrofilebb (pl. szulfonált forma) annál inkább a tumorban lokalizálódik. De a daganatpusztító hatás fordítottan arányos a szulfonáltsággal</li>
+		<li>Megoldás pl.: a liposzómába zárt fényérzékenyítőt LDL-lel asszociáltatva juttatják a tumorba</li>
+	</ul></details>
+ </div>
+</details>
+
+
+
+
+
+
+
+
+<center><a href="../targyvalasztas.html"><strong style="font-size: 150%;">tárgyválasztás</strong></a></center>
+<div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> </div>
+<script> window.parent.postMessage(['varA', document.body.innerHTML], '*') </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

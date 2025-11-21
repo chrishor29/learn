@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+	<link rel="shortcut icon" href="favicon.png?v=2">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="stylePC.css" id="link_style">
+	<title>Tárgyválasztás</title>
+	<style>*{line-height: 130%;}</style>
+</head>
+
+<!-- 
+	belgyógy- GOKI				oktatas@kardio.hu
+	gyerek- heim pál			lhardy@heimpalkorhaz.hu
+	neuro-uzsoki				humanpolitika@uzsoki.hu
+	pszichi- péterfy			
+ -->
+<!-- û õ õ ≥ ↑ ↓ × ± ✖ ✔ „” ♀ ♂ ⅓ ○ -->
+<!-- data-src="done/Kardio/kardio.html"     expqs.html -->
+<!-- PROJECT
+Belgyógy: egybe tegyem (endokrin,szív,GI,nefro,hepato)
+Sebészet: kidolgozni
+Patológia: kidolgozni (TK-t szerezzem be!)
+Élettan: átdolgozni (impQ-k értelmesebben, meg tudom mi a fontos már)
+
+Nefrológia, GI, Hepatológia, Endokrinológia: hiányzó tételeket pótolni!
+Kórélettan: kidolgozni (TK-t szerezzem be!)
+fontosak: Belgyógy(közép), FOG(alapok), mikrobi(alapok), Farmakológia(közép), Sebészet(alapközép)
+traumatológia: kötések, gipsz, ezeket kéne tudnom (+1st aid)
+-->
+<!-- TK
+	HEROLD: 528oldal! --- újra fotozzam, mert rossz
+-->
+
+<body><div id="div_body" style="position:absolute; top:2px; bottom:2px; left:2px; right:2px;">
+
+<!-- mind2 div kell! -->
+<div><div style="max-width:75%; overflow-x:auto;"><table id="table_weboldalak"><tr> <!-- weboldalak -->
+	<!-- VI.év --> <td style="text-align:left"> 
+		<span class="page" data-src="Belgyogy/belgyogy.html">Belgyógyászat</span>
+			<span style="font-size:80%" class="page" data-path="bel" data-src="Belgyogy/belgyogyAV.html">(AV)</span><br>
+		<span class="page" data-src="Gyerekgyogy/gyermek.html"><span style="color:brown">Gy</span>ermekgyógyászat</span>
+			<span style="font-size:80%" class="page" data-path="gyerek" data-src="Gyerekgyogy/gyermekAV.html">(AV)</span><br>
+		<span class="page" data-src="Neurologia/neurologia.html"><span style="color:brown">N</span>eurológia</span>
+			<span style="font-size:80%" class="page" data-path="neuro" data-src="Neurologia/neuroAV.html">(AV)</span><br>
+			<span style="font-size:80%" class="page" data-src="Neurologia/neuroteszt.html">(teszt+eset)</span><br>
+		<span class="page" data-src="Pszichiatria/pszichi.html"><span style="color:brown">P</span>szichiátria</span>
+			<span style="font-size:80%" class="page" data-path="psy" data-src="Pszichiatria/pszichiAV.html">(AV)</span><br>
+		<span class="page" data-src="Sebeszet/sebeszet.html"><span style="color:brown">S</span>ebészet</span>
+			<span style="font-size:80%" class="page" data-path="seb" data-src="Sebeszet/sebeszetAV.html">(AV)</span><br>
+		<span class="page" data-src="Szuleszet/szuleszet.html">Szülészet-<br>
+		Nőgyógyászat</span>
+			<span style="font-size:80%" class="page" data-path="szul" data-src="Szuleszet/szuleszetAV.html">(AV)</span><br>
+			<span style="font-size:80%" class="page" data-src="Szuleszet/nogyogy.html">(regi)</span><br>
+		<hr><span class="page" data-path="rez" data-src="REZIDENS/rezidens.html"><strong><u>Rezidens</u></strong></span>
+		<span class="page" data-path="rez" data-src="REZIDENS/labor.html"><strong><u>labor</u></strong></span>
+		<br><span class="page" data-path="zarov" data-src="Allamvizsga/zarov.html"><u><span style="color:brown">Á</span>llamVizsga</u></span>, 
+			<span style="font-size:80%" class="page" data-src="Allamvizsga/teszt.html">TESZT</span>
+		<br><span class="page" style="font-size:80%" data-src="sajat/sajat.html">sajat</span>,
+		<span class="page" style="font-size:80%" data-src="English/english.html">English(B2,ecl)</span>
+	</td>
+	<!-- V.év --> <td style="text-align:left"> 
+		<span class="page" data-path="aneszt" data-src="done/Aneszt/aneszt.html"><span style="color:brown">A</span>neszteziológia-
+			<br> Intenzív terápia
+		</span><br>
+		<span class="page" data-src="Belgyogy/hiirlm.html"><span style="color:brown">H</span>emato-, 
+			<br> Infekto-, 
+			<br> Immuno-, Rheumatológia
+		</span> <br>
+		<span class="page" data-src="done/IgOr/igor.html"><span style="color:brown">I</span>g.Orvostan</span><br>
+		<span class="page" data-src="done/KlinGen/klingen.html"><span style="color:red">K</span>linikai Genetika</span><br>
+		<span class="page" data-src="done/Nepegeszsegtan/nepeg.html">Népegészségtan</span><br>
+		<span class="page" data-src="done/Sportorvostan/Sportorvostan.html"><span style="color:red">S</span>portorvostan</span><br>
+		<span class="page" data-src="done/Szemeszet/szemeszet.html"><span style="color:red">S</span>zemeszet</span><br>
+		<span class="page" data-src="done/Transzfuziologia/trafo.html"><span style="color:red">T</span>ranszfuziológia</span><br>
+		<span class="page" data-src="done/Urologia/urologia.html">Urológia</span><br>
+	</td>
+	<!-- IV.év --> <td style="text-align:left"> 
+		<span class="page" data-src="done/Borgyogy/borgyogy.html"><span style="color:brown">B</span>őrgyógyászat</span> <br>
+		<span class="page" data-path="farmak" data-src="done/Farmak/farmak.html"><span style="color:brown">F</span>armakológia</span> 
+			<!-- <span class="page" style="font-size:80%" data-src="Farmak/farmak_1.html">(I)</span> --><br>
+		<span class="page" data-src="done/FOG/FOG.html"><span style="color:brown">F</span>ül-orr-gégészet</span><br>
+		<span class="page" data-src="done/Kardio/kardio.html"><span style="color:brown">K</span>ardiológia</span><br>
+		<span class="page" data-src="Belgyogy/nephro.html"><span style="color:red">N</span>ephrológia, GI</span><br>
+		<span class="page" data-src="done/Onkologia/onko.html"><span style="color:brown">O</span>nkológia</span><br>
+		<span class="page" data-src="done/Ortopedia/ortop.html"><span style="color:red">O</span>rtopedia</span><br>
+		<span class="page" data-src="done/Pulmo/pulmo.html"><span style="color:red">P</span>ulmonológia</span><br>
+		<span class="page" data-src="done/Radiologia/radio.html"><span style="color:red">R</span>adiológia</span><br>
+		<span class="page" data-src="done/Szajseb/szajseb.html"><span style="color:red">S</span>zájsebészet</span><br>
+		<span class="page" data-src="done/Trauma/trauma.html"><span style="color:red">T</span>raumatológia</span><br>
+	</td>
+	<!-- III.év --> <td style="text-align:left">
+		<span class="page" data-src="done/Bioetika/bioetika.html"><span style="color:red">B</span>ioetika</span><br>
+		<span class="page" data-src="Belgyogy/endokrin.html"><span style="color:brown">E</span>ndokrinológia</span><br>
+		<span class="page" data-src="done/Mikrobi/mikrobi.html"><span style="color:brown">M</span>ikrobiológia</span>
+			<span class="page" style="font-size:80%" data-src="done/Mikrobi/mikrobi1.html">(regi)</span><br>
+		<span class="page" data-src="done/Pszicho/pszicho.html"><span style="color:brown">P</span>szichológia</span><br>
+		<span class="page" data-src="done/Patosz/patosz.html"><font style="color:red">P</font>atológia</span><br>
+		<span class="page" data-src="done/Kortan/kortan.html"><span style="color:red">K</span>órélettan</span><br>
+		<span class="page" data-src="done/Genetika/genetika.html"><span style="color:red">G</span>enetika</span><br>
+		<span class="page" data-src="done/Mutettan/mutettan.html"><span style="color:red">M</span>űtéttan</span><br>
+		<span class="page" data-src="done/LabMed/labmed.html"><span style="color:brown">L</span>aboratóriumi Medicina</span><br>
+		<span class="page" data-src="done/Immunologia/immun.html"><span style="color:red">I</span>mmunológia</span><br>
+		<span class="page" data-src="Belgyogy/proped.html"><span style="color:red">P</span>ropedeutika</span><br>
+	</td>
+	<!-- I-II.év --> <td style="text-align:left">
+		<span class="page" data-src="done/ANAT/anat.html"><span style="color:red">A</span>natómia</span><br>
+		<span class="page" data-src="done/ANAT/Histology/histo.html"><span style="color:brown">S</span>zövettan</span><br>
+		<span class="page" data-src="done/ANAT/Fejlodestan/embrio.html"><span style="color:red">F</span>ejlődéstan</span><br>
+		<span class="page" data-src="done/SejtBiosz/sejtbiosz2.html"><span style="color:red">M</span>olekuláris sejtbiológia</span> 
+			<span class="page" style="font-size:80%" data-src="done/SejtBiosz/sejtbiosz1.html">(I)</span><br>
+		<span class="page" data-src="done/Elettan/elettan2.html"><span style="color:brown">É</span>lettan</span>
+			<span class="page" style="font-size:80%" data-src="done/Elettan/elettan1.html">(<span style="color:red">I</span>)</span>
+			<span class="page" style="font-size:80%" data-src="done/Elettan/elettan1old.html">(<span style="color:red">r</span>égi)</span><br>
+		<span class="page" data-src="done/BioKemia/III/biokemia.html"><span style="color:brown">B</span>iokémia</span>
+			<span class="page" style="font-size:80%" data-src="done/BioKemia/I/biokemiaI.html">(I)</span>
+			<span class="page" style="font-size:80%" data-src="done/BioKemia/II/biokemiaII.html">(II)</span>
+			<span class="page" style="font-size:80%" data-src="done/BioKemia/III/biokemiaIII.html">(III)</span><br>
+		<span class="page" data-src="done/Biologia/biosz.html">Orvosi biológia</span><br>
+		<span class="page" data-src="done/Kemia/kemia.html">Orvosi kémia</span><br>
+		<span class="page" data-src="done/BioFizika/bifiz.html"><span style="color:brown">B</span>iofizika</span><br>
+	  <hr>
+		<span class="page" style="font-size:80%" data-src="done/Apolastan/apolastan.html">Ápolástan</span><br>
+		<span class="page" style="font-size:80%" data-src="done/FejlodesBiosz/FejlBiosz.html">Fejlődésbiológia I</span><br>
+		<span class="page" style="font-size:80%" data-src="done/ModMem/ModMem.html">Modellmembránok</span><br>
+		<span class="page" style="font-size:80%" data-src="expqs.html">expqs</span>
+		<!-- <br><span class="page" data-src="szakdoga/szakdoga.html">SZAKDOLGOZAT</span> -->
+	</td>
+	<!-- tételek --> <td><div>
+		<button id="btn_toggleEditMode" onclick="F_toggleEditMode(this)">🔧</button></div>
+	  <br><br>
+		<button id="btn_downloadIDB" style="background-color:green; color:white; font-weight:bold;" onclick="F_downloadIDB()">IDB</button>
+	  <br><br><br>
+		<button id="btn_toggleNightMode" onclick="F_toggleNightMode()">&#x1F319;</button>
+	  <br><br><br><br>
+		<button id="btn_clearIDB" style="background-color:red; color:white; font-weight:bold;" onclick="clearFullIDB()">IDB</button>
+	</div></td>
+</tr></table></div></div>
+
+<input type="file" id="fileinput" style="display:none;"></input>
+
+<div id="div_centVideoBg" style="position:fixed; top:5px; left:5px; right:5px; bottom:5px; visibility:hidden; z-index:5; background-color:rgba(0,0,0,0.7);">
+	<div style="border:6px solid black; padding:6px; background-color:black; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); max-width:90%; max-height:85%">
+		<video id="video_cent" style="cursor:pointer; width:100%; height:100%;"></video>
+		<div id="div_centVideoSeek" style="height:21px; background:grey;"><span style="height:21px; position:absolute; background:gold;" id="centVideoBar"></span></div>
+	</div>
+</div>
+
+<img id="img_mini" style="position:absolute; border:5px solid deepskyblue; display:none; margin-bottom:-2px; z-index:4;"></img>
+<div><!-- bg --> <div><!--overlay--> <div><!--overlayContent--> <img id="img_cent"> </div> </div> </div>
+
+<div id="div_pageQTargy" style="display:block;"></div>
+<div id="div_consoleLog" style="display:block;"></div>
+
+</div></body>
+
+</html>
+
+<style>
+	span.page {
+		color: black;
+	}
+	span.page:hover {
+		background-color: yellow;
+		cursor: pointer;
+	}
+	img.targy{
+		max-width:16px;
+		max-height:16px;
+		border:0px;
+		float: none;
+		margin-bottom: -2px
+	}
+</style>
+<script> // load Time
+	var myTime
+	var oldTime = false
+	function F_getTime(){
+		var myDate = new Date()
+		myTime = myDate.getTime() /1000
+		if ( oldTime == false ) { oldTime = myTime }
+	}
+	F_getTime()
+	function F_loadTime() {
+		F_getTime()
+		var diffTime = myTime-oldTime
+		console.log("– – – Loading finished – – – " + diffTime+"s")
+	}
+</script>
+<script> // console.log --> itt kell, mert ha a js-ben van hiba, akkoris ki kell írja
+	function F_divConsoleLog() {
+		var div = document.createElement("div")
+		div.id = "div_consoleLog"
+		document.getElementById("div_body").appendChild(div)
+		//outputDiv.style.position = 'absolute';
+		div.style.maxHeight = '15%';
+		div.style.overflowY = 'scroll';
+		div.style.border = '5px solid black';
+		//div.style.color = 'white';
+		div.style.fontSize = '12px';
+		//console.log = function(message) { div.innerHTML += message + '<br>' }
+		console.error = function(message) { div.innerHTML += "<span style='color:red'>ERROR: " + message + '</span><br>'; };
+		window.onerror = function(message, source, lineno, colno, error) {
+			div.innerHTML += "<span style='color:red'>Uncaught " + message + " at " + source + ":" + lineno + "</span><br>";
+		//	return true; // A hiba kezelését jelezzük, hogy ne jelenjen meg a böngésző konzoljában
+		};
+	}
+	F_divConsoleLog()
+</script>
+<script> //javascript.js
+	function registerScript(scriptPath) {
+		var scriptTag = document.createElement('script');
+		scriptTag.type = 'text/javascript';
+		scriptTag.async = true;
+		scriptTag.src = scriptPath;
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(scriptTag, s);
+	}
+
+	registerScript("javascript.js");
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

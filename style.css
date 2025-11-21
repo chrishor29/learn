@@ -1,0 +1,188 @@
+
+details > summary { list-style: none; } /* ne mutassa a nyilat: egyik android, másik gép */
+details summary::-webkit-details-marker { display:none; } /* ne mutassa a nyilat: egyik android, másik gép */
+
+details[open] > summary { background-color: paleGreen; }
+details[open] > summary.mainTitle {
+	background-color: black;
+	color: yellow;
+}
+details[open] {
+	border-bottom: 3px solid black;
+	margin-bottom: 8px; /* vonal felett kis hej */
+	padding-bottom: 8px; /* vonal alatt kis hej */
+	overflow: hidden; /* ha van egy kép, akkor az ne lógjon át az alatta lévő kérdésekre, hanem 'tegye lejjeb a vonalat' */
+	/* text-align: left; */
+}
+
+.mainTitle {
+	font-weight: bold;
+	font-size: larger;
+	text-align: center;
+	color: orange;
+	background-color:black; 
+	border: 5px solid black;
+	display: block; /* div legyen, ne csak span! -> tehát teljes sor, NE csak amíg a szöveg tart */
+	/* min-width: 99%; */
+	/* left: -10px; */
+}
+.phase {
+	/*
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 1px;
+	*/
+	
+	margin-top: 1px;
+	margin-bottom: 1px;
+	
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	
+	/* font-weight: bold; */
+	background-color: AliceBlue;
+	color: Black;
+	border: 2px solid Black;
+	
+	display: inline-block;
+}
+.status { 
+	color: Black;
+	background-color: AliceBlue;
+	border: 1px solid Black;
+	
+	display: inline-block;
+
+	padding-left: 2px;
+	padding-right: 2px;
+
+}
+
+* {
+	font-family: Tahoma, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+	list-style-type: disc;
+}
+
+li {
+	list-style-type:none; /* removes default bullet */
+}
+li:before  {
+	content:"•";    /* escaped unicode character */
+	float: left;
+	line-height:0;  /* kills huge line height on resized bullet */
+	position:relative;  /* position bullet relative to list item */
+}
+
+summary {
+	color: Green;
+	cursor: pointer;
+	display: inline-block; /* ne legyen div, csak span! -> tehát ne teljes sor, hanem amíg a szöveg tart */
+}
+
+video{
+	border-bottom: 5px solid black;
+	background-color: black;
+	display: block; 
+}
+
+table {
+	border-collapse: collapse; /* borderek egybe legyenek */
+	/* padding: 2px; */
+	/* padding-top: 3px; */
+	text-align: center;
+}
+th, td {
+	border: 3px solid black;
+	/* border-collapse: collapse; */
+	padding: 3px;
+	/* padding-top: 3px; */
+	vertical-align: middle;
+	text-align: center;
+}
+th { background: Silver }
+
+ul, ol { 
+	margin-top: 0; /* fölötte ne legyen hej */
+	margin-bottom: 0; /* alatta ne legyen hej */
+}
+
+.mirror {
+	display:inline-block;
+	transform: scale(-1,1);
+}
+
+.ORANGE { 
+	border: Black 1px solid; 
+	padding-left: 3px; 
+	padding-right: 3px; 
+	background-color: orange;
+}
+.plus { 
+	padding-left: 2px; 
+	padding-right: 2px; 
+	background-color: green;
+	color: white;
+	font-weight: bold;
+}
+.minus { 
+	padding-left: 3px; 
+	padding-right: 3px; 
+	background-color: red;
+	color: white;
+	font-weight: bold;
+}
+.fsMini { font-size: 80% }
+.bgGrey { background-color: Gainsboro }
+.bgBlue { background-color: Aqua }
+.bgGreen { background-color: Lime }
+.bgPink { background-color: Pink }
+.bgYellow { background-color: Yellow }
+.important { background-color: Lime /*SpringGreen*/ }
+.done { background-color: Aqua /*PaleTurquoise < Aqua < aquamarine < DarkTurquoise < deepskyblue < LightSeaGreen < dodgerblue*/ }
+.fix { 
+	background-color: red;
+	color: white;
+	font-weight: bold;
+}
+.WHITE { 
+	border: Black 1px solid; 
+	padding-left: 1px; 
+	padding-right: 1px; 
+	/* background-color: White; */
+}
+.miss { background-color: pink }
+.lasd { font-variant: small-caps }
+/*.lasd { font-style: italic }*/
+
+abbr {
+	/*position: relative;*/
+	padding-left: 1px; /* a szürke háttér kicsit szélesebb oldalt */
+	padding-right: 1px; 
+	/*padding-top: 0px; 
+	padding-bottom: 0px;*/
+	text-decoration: none;
+	background-color: gainsboro; /* DarkGrey; */
+}
+/*abbr.test {
+	position: relative;
+	text-decoration: none;
+	padding-left: 1px; 
+	padding-right: 1px; 
+	padding-top: 0px; 
+	padding-bottom: 0px; 
+	background-color: #ffffff;
+}*/
+abbr:hover{
+	background-color: Chartreuse
+}
+
+
+
+
+
+
+
+
