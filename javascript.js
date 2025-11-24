@@ -676,10 +676,14 @@ function F_loadImpQs(detElem,full) {
 		}
 		// ha hiányzott valamelyik [impQ]
 		if ( error != "" ) { 
-			document.getElementById("div_searchingBg").style.display = "block"
-			document.getElementById("span_msgSavingIDB").style.display = "block"
-			document.getElementById("span_msgSavingIDB").innerHTML = "..loading.."
-			F_openHTML(missingPath,"loadImpQ",detElem)
+			if ( currPath != missingPath ) { 
+				document.getElementById("div_searchingBg").style.display = "block"
+				document.getElementById("span_msgSavingIDB").style.display = "block"
+				document.getElementById("span_msgSavingIDB").innerHTML = "..loading.."
+				F_openHTML(missingPath,"loadImpQ",detElem)
+			} else {
+				alert("hiányzik impQ (lásd console.log)")
+			}
 			console.log(error)
 			repeat = false
 			return repeat
