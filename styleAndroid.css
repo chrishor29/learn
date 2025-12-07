@@ -1,4 +1,6 @@
-
+* {
+	text-rendering: optimizeLegibility;
+}
 
 .normal { margin-left: -40px; } /* detailson belül ne tolja jobbra fölösen az elsőket */
 ul, ol { margin-left: -25px; } /* annyira nem kell beljebb a következőt */
