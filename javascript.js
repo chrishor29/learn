@@ -1,5 +1,7 @@
 // × ✖ ✔ ●
 
+console.log("update 20:00")
+
 // Night mode
 function checkNightMode() {
 	let isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
