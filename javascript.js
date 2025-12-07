@@ -1,6 +1,6 @@
 // × ✖ ✔ ●
 
-console.log("update 20:00")
+alert("update 20:00")
 
 // Night mode
 function checkNightMode() {
