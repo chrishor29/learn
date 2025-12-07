@@ -2,10 +2,15 @@
 	-moz-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 	word-spacing: normal;
+	letter-spacing: normal;
 
-	font-family: Tahoma, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+	font-family: Tahoma, sans-serif;
 	list-style-type: disc;
 }
+.emoji {
+	font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+}
+
 
 body { background-color: azure }
 body.night { background-color: rgb(24, 26, 27) }

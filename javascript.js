@@ -1,6 +1,6 @@
 // × ✖ ✔ ●
 
-alert("update 20:25")
+alert("update 20:40")
 
 // Night mode
 function checkNightMode() {
@@ -11,18 +11,18 @@ function checkNightMode() {
 	} else if ( document.body.classList.contains("night") ) {
 		document.body.classList.remove("night")
 	}
-	document.getElementById("btn_toggleNightMode").innerHTML = "🌕"
+	document.getElementById("btn_toggleNightMode").innerHTML = "🌓"
 }
 if ( localStorage.getItem("nightMode") == "true" ) {
 	//console.log("night")
-	document.getElementById("btn_toggleNightMode").innerHTML = "🌓"
 	document.body.classList.add("night")
+	document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
 } else if ( localStorage.getItem("nightMode") == "auto" ) {
 	//console.log("auto")
 	checkNightMode()
 } else {
+	document.getElementById("btn_toggleNightMode").innerHTML = "🌕"
 	//console.log("day")
-	document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
 }
 function F_toggleNightMode() { // click: day -> night -> auto
 	let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -36,12 +36,12 @@ function F_toggleNightMode() { // click: day -> night -> auto
 		mediaQuery.removeEventListener('change', checkNightMode)
 		localStorage.removeItem("nightMode")
 		document.body.classList.remove("night")
-		document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
+		document.getElementById("btn_toggleNightMode").innerHTML = "🌕"
 	} else {
 		//console.log("night")
 		localStorage.setItem("nightMode","true")
 		document.body.classList.add("night")
-		document.getElementById("btn_toggleNightMode").innerHTML = "🌓"
+		document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
 	}
 	//location.reload();
 }

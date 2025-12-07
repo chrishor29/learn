@@ -3,11 +3,10 @@
 ul, ol { margin-left: -25px; } /* annyira nem kell beljebb a következőt */
 
 li:before  {
-	content: "•";
-	position: absolute; /* ALTERNATÍVA: teljesen kiveszi a flow-ból */
-	font-size: 150%;
-	top: 12px;
-	left: -10px;
+	content:"•";
+	float: left;
+	line-height:0;
+	position:relative;
 }
 li {
 	position: relative; /* kell hozzá */
