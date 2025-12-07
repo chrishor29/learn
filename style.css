@@ -1,5 +1,8 @@
-* {
+html {
 	-moz-text-size-adjust: none;
+	text-size-adjust: none;
+}
+* {
 	font-family: Tahoma, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
 	list-style-type: disc;
 }
