@@ -5,21 +5,45 @@ window.onerror = function(msg, url, linenumber) {
 }
 
 // Night mode
-if ( localStorage.getItem("nightMode") == "true" ) {
-	document.getElementById("btn_toggleNightMode").innerHTML = "☀️"
-	document.body.classList.add("night")
-} else {
-	document.getElementById("btn_toggleNightMode").innerHTML = "🌙"
+function checkNightMode() {
+	let isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+	//console.log("Dark mode?", isSystemDark);
+	if ( isSystemDark ) {
+		document.body.classList.add("night")
+	} else if ( document.body.classList.contains("night") ) {
+		document.body.classList.remove("night")
+	}
+	document.getElementById("btn_toggleNightMode").innerHTML = "🌕"
 }
-function F_toggleNightMode() { // click
+if ( localStorage.getItem("nightMode") == "true" ) {
+	//console.log("night")
+	document.getElementById("btn_toggleNightMode").innerHTML = "🌓"
+	document.body.classList.add("night")
+} else if ( localStorage.getItem("nightMode") == "auto" ) {
+	//console.log("auto")
+	checkNightMode()
+} else {
+	//console.log("day")
+	document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
+}
+function F_toggleNightMode() { // click: day -> night -> auto
+	let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 	if ( localStorage.getItem("nightMode") == "true" ) {
+		//console.log("auto")
+		localStorage.setItem("nightMode","auto")
+		checkNightMode()
+		mediaQuery.addEventListener('change', checkNightMode);
+	} else if ( localStorage.getItem("nightMode") == "auto" ) {
+		//console.log("day")
+		mediaQuery.removeEventListener('change', checkNightMode)
 		localStorage.removeItem("nightMode")
 		document.body.classList.remove("night")
-		document.getElementById("btn_toggleNightMode").innerHTML = "🌙"
+		document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
 	} else {
-		localStorage.setItem("nightMode",true)
+		//console.log("night")
+		localStorage.setItem("nightMode","true")
 		document.body.classList.add("night")
-		document.getElementById("btn_toggleNightMode").innerHTML = "☀️"
+		document.getElementById("btn_toggleNightMode").innerHTML = "🌓"
 	}
 	//location.reload();
 }
