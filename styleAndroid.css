@@ -7,6 +7,8 @@ li:before  {
 	font-size: 150%;    /* the default unicode bullet size is very small */
 	top: 12px;           /* vertical align bullet position relative to list item */
 	left: -10px;            /* position the bullet L- R relative to list item */
+	width: 0;           /* ÚJ: ne foglaljon helyet */
+	display: inline-block; /* ÚJ: pontosabb kontroll */
 }
 
 
