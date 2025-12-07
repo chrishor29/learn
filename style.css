@@ -253,9 +253,7 @@ abbr {
 	text-decoration: none;
 	background-color: gainsboro;
 }
-.night abbr  {
-	background-color: dimgray;
-}
+.night abbr  { background-color: dimgray }
 /*abbr.test {
 	position: relative;
 	text-decoration: none;
