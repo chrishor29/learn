@@ -2,7 +2,7 @@
 	-moz-text-size-adjust: 100%;
 	text-size-adjust: 100%;
 	word-spacing: normal;
-	letter-spacing: normal;
+	/*letter-spacing: normal;*/
 
 	font-family: Tahoma, sans-serif;
 	list-style-type: disc;
