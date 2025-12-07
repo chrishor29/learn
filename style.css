@@ -1,8 +1,8 @@
-html {
-	-moz-text-size-adjust: none;
-	text-size-adjust: none;
-}
 * {
+	-moz-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	word-spacing: normal;
+
 	font-family: Tahoma, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
 	list-style-type: disc;
 }
