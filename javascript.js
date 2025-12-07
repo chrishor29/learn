@@ -1,8 +1,4 @@
 // × ✖ ✔ ●
-window.onerror = function(msg, url, linenumber) {
-	alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
-	return true;
-}
 
 // Night mode
 function checkNightMode() {
@@ -58,7 +54,7 @@ if ( isAndroid ) { // ezis egy variáció, font size hejett, de pl. middle img, 
 	andrScale = 2.5
 	//var divBody = document.body
 	var divBody = document.getElementById("div_body")
-	//divBody.style.transform = 'scale('+andrScale+')'
+	divBody.style.transform = 'scale('+andrScale+')'
 	divBody.style.transformOrigin = '0 0'
 	var width = 100 / andrScale
 	var height = 100 / andrScale
