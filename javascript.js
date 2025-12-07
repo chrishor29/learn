@@ -1,82 +1,30 @@
 // × ✖ ✔ ●
+window.onerror = function(msg, url, linenumber) {
+	alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+	return true;
+}
 
 // Night mode
-var bodyBGcolor, abbrBGcolor, QingTetelsBG, QingQuestsBG, QingBg, abbrBorderColor, midQColor, midQSrcColor, midQBGColor, searchBGColor, timerColor, pageLinksColor, selectJegyBGColor, summaryColor, selectJegyColor
 if ( localStorage.getItem("nightMode") == "true" ) {
-	bodyBGcolor = "rgb(24, 26, 27)"
-	abbrBGcolor = "rgb(30, 30, 30)"
-	abbrQBGcolor = "brown"
-	QingTetelsBG = "rgb(24, 26, 27)"
-	QingQuestsBG = "rgb(24, 26, 27)"
-	QingBgBG = "grey"
-	abbrBorderColor = "white"
-	midQColor = "aqua"
-	midQSrcColor = "plum"
-	midQBGColor = "rgb(24, 26, 27)"
-	searchBGColor = "rgb(24, 26, 27)"
-	timerColor = "crimson"
-	pageLinksColor = "cornflowerblue" // kis betűvel kell írni különben F_loadAllPages-nél amikor lecheckolja hiba lenne
-	selectJegyBGColor = "black"
-	topQColor = "gold"
-	trueColor = "green"
-	falseColor = "brown"
-	answerColor = "darkgoldenrod"
-	summaryColor = "mediumseagreen" // search resultoknál is kell!
-	//summaryColor = "chartreuse" // search resultoknál is kell!
-	selectJegyColor = "white"
-
-
-	var style = document.createElement("style");
-	document.head.appendChild(style);
-	//style.innerHTML = ".bgYellow { color:black }"
-	style.innerHTML = ".bgYellow { background-color:saddlebrown }"
-	style.innerHTML = style.innerHTML + ".bgBlue { background-color:blue }"
-	style.innerHTML = style.innerHTML + ".bgGreen { background-color:darkgreen }"
-	style.innerHTML = style.innerHTML + ".bgPink { background-color:deeppink }"
-	style.innerHTML = style.innerHTML + ".WHITE { border: white 1px solid; }"
-	//style.innerHTML = style.innerHTML + ".WHITE { background-color:black; border: white 1px solid; }"
-	style.innerHTML = style.innerHTML + "abbr { background-color:dimgray }"
-	style.innerHTML = style.innerHTML + "th { background-color:darkslategray }"
-	style.innerHTML = style.innerHTML + "th,td { border: 3px solid gray; }"
-	style.innerHTML = style.innerHTML + "summary { color:"+summaryColor+"}"
-	style.innerHTML = style.innerHTML + "details[open] { border-bottom: 3px solid gray; }"
-
-	
-	document.body.style.color = "ghostwhite"
-	document.getElementById("btn_toggleNightMode").innerHTML = "☀️" // &#9728;
+	document.getElementById("btn_toggleNightMode").innerHTML = "☀️"
+	document.body.classList.add("night")
 } else {
-	bodyBGcolor = "azure"
-	abbrBGcolor = "azure"
-	abbrQBGcolor = "bisque"
-	QingTetelsBG = "azure"
-	QingQuestsBG = "azure"
-	QingBgBG = "grey"
-	abbrBorderColor = "black"
-	midQColor = "blue"
-	midQSrcColor = "purple"
-	midQBGColor = "white"
-	searchBGColor = "white"
-	timerColor = "black"
-	pageLinksColor = "blue"
-	selectJegyBGColor = "#f1f1f1"
-	topQColor = "yellow"
-	trueColor = "springgreen"
-	falseColor = "tomato"
-	answerColor = "gold"
-	summaryColor = "green" // search resultoknál kell!
-	selectJegyColor = "black"
+	document.getElementById("btn_toggleNightMode").innerHTML = "🌙"
 }
-function F_toggleNightMode(){
+function F_toggleNightMode() { // click
 	if ( localStorage.getItem("nightMode") == "true" ) {
 		localStorage.removeItem("nightMode")
+		document.body.classList.remove("night")
+		document.getElementById("btn_toggleNightMode").innerHTML = "🌙"
 	} else {
 		localStorage.setItem("nightMode",true)
+		document.body.classList.add("night")
+		document.getElementById("btn_toggleNightMode").innerHTML = "☀️"
 	}
-	location.reload();
+	//location.reload();
 }
 
 
-document.body.style.backgroundColor = bodyBGcolor
 document.body.style.margin = "2px" // ez valahol nagyobbra van állítva, visszakéne
 
 var ua = navigator.userAgent.toLowerCase()
@@ -86,7 +34,7 @@ if ( isAndroid ) { // ezis egy variáció, font size hejett, de pl. middle img, 
 	andrScale = 2.5
 	//var divBody = document.body
 	var divBody = document.getElementById("div_body")
-	divBody.style.transform = 'scale('+andrScale+')'
+	//divBody.style.transform = 'scale('+andrScale+')'
 	divBody.style.transformOrigin = '0 0'
 	var width = 100 / andrScale
 	var height = 100 / andrScale
@@ -344,7 +292,7 @@ function F_loadIDBs() { // végigmegy a pageken és betölti az idb-jét, ha van
 					page.style.color = "darkviolet"
 					//page.dataset.loaded = true
 				} else { // pageEdited == "html"
-					page.style.color = pageLinksColor
+					page.style.color = ""
 				}
 				
 				count = count +1
@@ -391,11 +339,10 @@ function F_saveIDB(path,pageText,id,edited) { // editPAGE vagy openHTML során..
 		saveMsg = document.createElement("span")
 		saveMsg.id = "span_msgSavingIDB"
 		document.getElementById("div_body").appendChild(saveMsg)
-		saveMsg.style.backgroundColor = midQBGColor
+		saveMsg.classList.add("bgAzureDark")
 		saveMsg.style.border = "3px solid black"
 		saveMsg.style.outline = "3px solid yellow"
 		saveMsg.innerHTML = "..saving.."
-		saveMsg.style.display = "none"
 		
 		saveMsg.style.position = "fixed"
 		saveMsg.style.top = "50%"
@@ -432,7 +379,7 @@ function F_saveIDB(path,pageText,id,edited) { // editPAGE vagy openHTML során..
 		if ( edited == "edited" ) {
 			pageLinks[id].style.color = "darkviolet"
 		} else { // pageEdited == "html"
-			pageLinks[id].style.color = pageLinksColor
+			pageLinks[id].style.color = ""
 		}
 		document.getElementById("span_msgSavingIDB").style.display = "none"
 		//console.log("F_saveIDB -" +path+ " END")
@@ -707,7 +654,7 @@ function F_createMidQElems() { // lekreálja középre a divet, ahova kidobja ma
 		div.id = "div_MidQ"
 		document.getElementById("div_body").appendChild(div)
 		div.dataset.origin = "pageQs"
-		div.style.backgroundColor = midQBGColor
+		div.classList.add("bgAzureDark")
 		div.style.overflow = "auto"
 		div.style.border = "8px solid black"
 		div.style.outline = "5px solid yellow"
@@ -923,21 +870,9 @@ function F_loadMidQs(detElem) { // midQ[i] elemeket beállítja: kék fontColor,
 			var path = F_getQPath(midQ,impID)
 		}
 		//console.log(midQ.innerHTML)
-		if ( midQ.dataset.src != currPath ) { 
-			midQ.style.color = midQSrcColor
-		} else {
-			midQ.style.color = midQColor
-		}
+		if ( midQ.dataset.src != currPath ) { midQ.classList.add("fontPlumPurple") }
 		midQ.style.textShadow = "0 0 1px yellow, 0 0 1px black"
 		midQ.style.cursor = "pointer"
-		midQ.onmouseover = function() { this.style.color = "green" }
-		midQ.onmouseout = function() {
-			if ( this.dataset.src != currPath ) { 
-				this.style.color = midQSrcColor
-			} else {
-				this.style.color = midQColor
-			}
-		}
 		midQ.onclick = function() { F_clickWord(this) }
 		midQ.dataset.loaded = "true"
 	}
@@ -951,8 +886,10 @@ function F_tooltipFuncs(){
 	document.getElementById("div_body").appendChild(span)
 	//document.body.appendChild(span)
 	span.style.display = "none"
-	span.style.border = `2px solid ${abbrBorderColor}`
-	span.style.backgroundColor = abbrBGcolor
+	span.style.borderWidth = "2px"
+	span.style.borderStyle = "solid"
+	span.classList.add("borderBlackWhite")
+	span.classList.add("bgAzureDark")
 	span.style.position = "absolute"
 	span.style.maxWidth = "300px"
 	span.style.padding = "2px 2px 2px 5px"
@@ -1330,7 +1267,7 @@ function F_searchResult() { // találati eredmények betöltése...
 			summaryID = summaryID +1
 			objSearchTexts[summaryID] = resultText
 			
-			fullText = fullText+ "<li><span data-id='"+summaryID+"' data-path='"+path+"' style='color:"+summaryColor+"; cursor:pointer' onclick='F_clickSearchResult(this)'>"+summaryText+"</span></li>"
+			fullText = fullText+ "<li><summary data-id='"+summaryID+"' data-path='"+path+"' style='cursor:pointer' onclick='F_clickSearchResult(this)'>"+summaryText+"</summary></li>"
 			//targyText = targyText.slice(targyText.indexOf(resultText)+resultText.length)
 		} while ( targyText.toLowerCase().indexOf(searchText,locST+1) != -1 )
 		document.getElementById("div_searchResults").innerHTML = fullText
@@ -1385,7 +1322,7 @@ function F_createSearchElems() {
 		document.getElementById("div_body").appendChild(div)
 		//document.body.appendChild(div)
 		div.id = "div_searchBg"
-		div.style.backgroundColor = searchBGColor
+		div.classList.add("bgAzureDark")
 		div.style.overflow = "auto"
 		div.style.border = "8px solid black"
 		div.style.outline = "5px solid aqua"
@@ -2033,8 +1970,10 @@ function F_tTipEdit(){
 	document.getElementById("div_body").appendChild(tooltip)
 	//document.body.appendChild(tooltip)
 	tooltip.style.display = "none"
-	tooltip.style.borderTop = `4px solid ${abbrBorderColor}`
-	tooltip.style.backgroundColor = abbrBGcolor
+	tooltip.style.borderTopWidth = "4px"
+	tooltip.style.borderTopStyle = "solid"
+	tooltip.style.borderTopColor = 'grey'
+	tooltip.classList.add("bgAzureDark")
 	tooltip.style.position = "fixed"
 	tooltip.style.bottom = "0%" //"10%"
 	tooltip.style.left = "50%"
@@ -2086,7 +2025,7 @@ function F_tTipEdit(){
 		span.style.top = "-30px"
 		span.style.display = "flex"
 		span.style.gap = "5px"
-		span.style.backgroundColor = abbrBGcolor
+		span.classList.add("bgAzureDark")
 		span.style.borderRadius = "5px"
 		span.style.boxShadow = "0px 2px 5px rgba(0, 0, 0, 0.2)"
 		
@@ -2116,7 +2055,7 @@ function F_tTipEdit(){
 		 span.style.display = "block"
 		 span.style.width = "fit-content"
 		span.style.fontSize = "80%"
-		span.style.backgroundColor = answerColor
+		span.classList.add("bgGoldDarkgoldenrod")
 		span.style.margin = "0 auto";  // Középre igazítás vízszintesen
 		span.style.textAlign = "center"; // A szöveg középen marad
 		// így külön sor, de nem tölti ki, mint a sima div!
@@ -2130,7 +2069,7 @@ function F_tTipEdit(){
 		// így külön sor, de nem tölti ki, mint a sima div!
 		 span.style.display = "block"
 		 span.style.width = "fit-content"
-		span.style.backgroundColor = answerColor
+		span.classList.add("bgGoldDarkgoldenrod")
 		span.style.margin = "0 auto";  // Középre igazítás vízszintesen
 		span.style.textAlign = "center"; // A szöveg középen marad
 		span.style.fontSize = "80%"
@@ -2225,7 +2164,7 @@ function F_tTipEdit(){
 		span.style.top = "-30px"
 		span.style.display = "flex"
 		span.style.gap = "5px"
-		span.style.backgroundColor = abbrBGcolor
+		span.classList.add("bgAzureDark")
 		span.style.borderRadius = "5px"
 		span.style.boxShadow = "0px 2px 5px rgba(0, 0, 0, 0.2)"
 
@@ -2611,8 +2550,10 @@ function F_setScript(detElem) {
 				styleElem.customNode = parent
 				styleElem.style.fontSize = "60%"
 				styleElem.style.cursor = "pointer"
-				styleElem.style.backgroundColor = abbrBGcolor
-				styleElem.style.border = `1px solid ${abbrBorderColor}`
+				styleElem.classList.add("bgAzureDark")
+				styleElem.style.borderWidth = "1px"
+				styleElem.style.borderStyle = "solid"
+				styleElem.classList.add("borderBlackWhite")
 				styleElem.innerHTML = parent.style.cssText
 				if ( styleElem.innerHTML == "" ) { styleElem.style.display = "none" }
 				
@@ -2622,8 +2563,10 @@ function F_setScript(detElem) {
 				classElem.customNode = parent
 				classElem.style.fontSize = "60%"
 				classElem.style.cursor = "pointer"
-				classElem.style.backgroundColor = abbrBGcolor
-				classElem.style.border = `1px solid ${abbrBorderColor}`
+				classElem.classList.add("bgAzureDark")
+				classElem.style.borderWidth = "1px"
+				classElem.style.borderStyle = "solid"
+				classElem.classList.add("borderBlackWhite")
 				classElem.innerHTML = parent.className
 				if ( classElem.innerHTML == "" ) { classElem.style.display = "none" }
 				
@@ -2633,8 +2576,10 @@ function F_setScript(detElem) {
 				tagElem.customNode = parent
 				tagElem.style.fontSize = "60%"
 				tagElem.style.cursor = "pointer"
-				tagElem.style.backgroundColor = abbrBGcolor
-				tagElem.style.border = `1px solid ${abbrBorderColor}`
+				tagElem.classList.add("bgAzureDark")
+				tagElem.style.borderWidth = "1px"
+				tagElem.style.borderStyle = "solid"
+				tagElem.classList.add("borderBlackWhite")
 				tagElem.innerHTML = parent.tagName
 				tagElem.onmouseover = function() {
 					this.originalBGColor = this.customNode.style.backgroundColor
@@ -2723,7 +2668,6 @@ function F_tTipParents(){
 	tooltip.id = "span_tTipParents"
 	//document.body.appendChild(tooltip)
 	tooltip.style.display = "none"
-	//tooltip.style.backgroundColor = abbrBGcolor
 	tooltip.style.position = "fixed"
 	tooltip.style.top = "0%" //"10%"
 	tooltip.style.right = "0%"
@@ -2773,9 +2717,9 @@ function F_saveLS() {
 		document.getElementById('parSpan.'+num).dataset.elemi = ""
 		
 		var skip = "false"
-		if ( document.getElementById("span.2."+num).style.backgroundColor == topQColor ) {
+		if ( document.getElementById("span.2."+num).classList.contains("bgYellowGold") ) {
 			skip = "top"
-		} else if ( document.getElementById("span.2."+num).style.backgroundColor == QingBgBG ) {
+		} else if ( document.getElementById("span.2."+num).classList.contains("bgGrey") ) {
 			skip = "skip"
 		}
 		document.getElementById("span.2."+num).style.backgroundColor = ""
@@ -2963,7 +2907,7 @@ function F_createQingElems() {
 		var div = document.createElement("div")
 		document.body.appendChild(div)
 		div.id = "div_QingBg"
-		div.style.backgroundColor = QingBgBG
+		div.style.backgroundColor = "grey"
 		div.style.opacity = "0.35"
 		div.style.overflow = "auto"
 		div.style.display = "block"
@@ -3063,7 +3007,7 @@ function F_createQingElems() {
 			//console.log(myTime+" vs "+lastClickTime)
 			if ( diffTime < 1 ) { return }
 			if ( this.style.backgroundColor == "aqua" ) { 
-				document.body.style.backgroundColor = "Gainsboro"
+				//document.body.style.backgroundColor = "Gainsboro"
 			} else {
 				this.style.backgroundColor  = "black"
 				this.style.color  = "white"
@@ -3071,7 +3015,6 @@ function F_createQingElems() {
 			setTimeout(function() { 
 				lastClickTime = F_getTime()
 				F_nextQ()
-				document.body.style.backgroundColor = bodyBGcolor
 			}, 100)
 		}
 	}
@@ -3434,7 +3377,7 @@ function F_createQingElems() {
 			td.innerHTML = i
 			tr.appendChild(td)
 			td.style.cursor = "pointer"
-			td.style.color = timerColor
+			td.classList.add("fontBlackCrimson")
 			if ( localStorage.getItem("hk.qJegyDisable"+i) ) { 
 				td.style.backgroundColor = "coral"
 			} else {
@@ -3452,7 +3395,7 @@ function F_createQingElems() {
 			
 			var td = document.createElement("TD")
 			td.id = "td_jegy"+i
-			td.style.color = timerColor
+			td.classList.add("fontBlackCrimson")
 			tr.appendChild(td)
 		}
 	}
@@ -3471,7 +3414,7 @@ function F_createQingElems() {
 		div.id = "div_QingTetels"
 		document.getElementById("div_QingMain").appendChild(div)
 		//document.getElementById("div_QingLowerPart").appendChild(div)
-		div.style.backgroundColor = QingTetelsBG
+		div.classList.add("bgAzureDark")
 		div.style.border = "10px solid black"
 		div.style.display = "none"
 		div.style.position = "fixed"
@@ -3487,7 +3430,7 @@ function F_createQingElems() {
 		var div = document.createElement("div")
 		div.id = "div_QingQuests"
 		document.getElementById("div_QingMain").appendChild(div)
-		div.style.backgroundColor = QingQuestsBG
+		div.classList.add("bgAzureDark")
 		//div.style.color = "green"
 		div.style.border = "10px solid black"
 		div.style.display = "none"
@@ -3525,7 +3468,7 @@ function F_createQingElems() {
 		div.style.top = "60px"
 		div.style.width = "45px"
 		div.style.display = "none"
-		div.style.backgroundColor = selectJegyBGColor // fehér kb.
+		div.classList.add("bgWhitesmokeBlack")
 		div.style.boxShadow = "0px 8px 16px 0px rgba(0,0,0,0.4)"
 		div.style.border = "1px solid grey"
 		div.style.zIndex = "2"
@@ -4062,39 +4005,39 @@ function F_nextQ() {
 						var qNev = arrQnev[i].qNev
 						var child = dropdown.childNodes
 						for ( var y=0; y < child.length; y++ ) { 
-							child[y].style.fontWeight = "normal"
-							child[y].style.color = selectJegyColor
+							// minden elemet alapállapotba
+							child[y].classList.remove("active");
+							child[y].classList.add("fontBlackWhite");
 							if ( localStorage.getItem(currPath+" | "+qNev) ) {
 								var jegyName = localStorage.getItem(currPath+" | "+qNev)
 								var jegy = jegyName.slice(0,jegyName.indexOf(" , "))
-								if ( child[y].innerHTML == jegy ) { 
-									child[y].style.fontWeight = "bolder"
-									child[y].style.color = midQColor
-								}
+								if ( child[y].innerHTML == jegy ) {  child[y].classList.add("active") }
 							}
 						}
 					}
 				} else if ( x == 2 ) {
 					span.style.top = "60px"
 					span.style.fontSize = "x-small"
-					span.style.color = timerColor
+					span.classList.add("fontBlackCrimson")
 					span.onclick = function(){  // left click
-						if ( this.style.backgroundColor == QingBgBG ) {
-							this.style.backgroundColor = ""
-						} else if ( this.style.backgroundColor == topQColor ) {
-							this.style.backgroundColor = QingBgBG
+						if ( this.classList.contains("bgGrey") ) {
+							this.classList.remove("bgGrey")
+						} else if ( this.classList.contains("bgYellowGold") ) {
+							this.classList.remove("bgYellowGold")
+							this.classList.add("bgGrey")
 						} else {
-							this.style.backgroundColor = topQColor
+							this.classList.add("bgYellowGold")
 						}
 					}
 					span.addEventListener('contextmenu', function(ev) { // right click
 						ev.preventDefault();
-						if ( this.style.backgroundColor == QingBgBG ) {
-							this.style.backgroundColor = topQColor
-						} else if ( this.style.backgroundColor == topQColor ) {
-							this.style.backgroundColor = ""
+						if ( this.classList.contains("bgGrey") ) {
+							this.classList.remove("bgGrey")
+							this.classList.add("bgYellowGold")
+						} else if ( this.classList.contains("bgYellowGold") ) {
+							this.classList.remove("bgYellowGold")
 						} else {
-							this.style.backgroundColor = QingBgBG
+							this.classList.add("bgGrey")
 						}
 						return false
 					}, false)
@@ -4141,9 +4084,9 @@ function F_nextQ() {
 					document.getElementById("span.0."+num).style.color = "white" 
 				} 
 				if ( repeat == "top" ) {
-					document.getElementById("span.2."+num).style.backgroundColor = topQColor 
+					document.getElementById("span.2."+num).classList.add("bgYellowGold")
 				} else {
-					document.getElementById("span.2."+num).style.backgroundColor = "" 
+					document.getElementById("span.2."+num).classList.remove("bgYellowGold")
 				}
 				if ( jegy != "&nbsp;" ) { 
 					var diffTime = Number(currTime) - Number(date)
@@ -4609,7 +4552,7 @@ function F_loadAnswerQ(detElem) {
 		for ( var i=0; i<trueA.length; i++ ) { trueA[i].style.backgroundColor = "" }
 		for ( var i=0; i<tippA.length; i++ ) { tippA[i].style.backgroundColor = "" }
 		for ( var i=0; i<falseA.length; i++ ) { falseA[i].style.backgroundColor = "" }
-		for ( var i=0; i<answers.length; i++ ) { answers[i].style.backgroundColor = answerColor }
+		for ( var i=0; i<answers.length; i++ ) { answers[i].classList.add("bgGoldDarkgoldenrod") }
 		for ( var i=0; i<hiddens.length; i++ ) { hiddens[i].style.display = "none" }
 		//return // ez nem tudom miért kellett anno, de kivettem így a search esetén is működik már
 	}
@@ -4625,33 +4568,34 @@ function F_loadAnswerQ(detElem) {
 	for ( var x=0; x<answers.length; x++ ) { 
 		answers[x].style.cursor = "pointer"
 		answers[x].onclick = function(){
-			for ( var i=0; i<trueA.length; i++ ) { trueA[i].style.backgroundColor = trueColor }
+			for ( var i=0; i<trueA.length; i++ ) { trueA[i].classList.add("bgSpringgreenGreen") }
 			for ( var i=0; i<tippA.length; i++ ) { tippA[i].style.backgroundColor = "yellow" }
-			for ( var i=0; i<falseA.length; i++ ) {  falseA[i].style.backgroundColor = falseColor }
+			for ( var i=0; i<falseA.length; i++ ) { falseA[i].classList.add("bgTomatoBrown") }
 			for ( var i=0; i<hiddens.length; i++ ) { hiddens[i].style.display = "inline" }
 			this.style.cursor = ""
 			this.style.backgroundColor = ""
-			this.style.color = QingBgBG
+			this.style.color = "grey"
 		}
 	}
 }
 
 function F_loadAbbrQ(detElem) { 
-	var abbrQs = detElem.getElementsByClassName("abbr")
-	for ( var i=0; i<abbrQs.length; i++ ) { 
-		if (abbrQs[i].dataset.done == undefined) {
-			var text = abbrQs[i].parentElement.innerHTML
-			text = text.replace(abbrQs[i].innerHTML,"")
+	let allQAbbr = detElem.getElementsByClassName("abbr")
+	for ( var i=0; i<allQAbbr.length; i++ ) { 
+		let qAbbr = allQAbbr[i]
+		if (qAbbr.dataset.done == undefined) {
+			let text = qAbbr.parentElement.innerHTML
+			text = text.replace(qAbbr.innerHTML,"")
 			text = text.slice(text.indexOf("</"))
 			text = text.slice(text.indexOf(">")+1)
-			abbrQs[i].parentElement.innerHTML = '<'+abbrQs[i].tagName+' class="'+abbrQs[i].className+'">'+abbrQs[i].innerHTML+'</'+abbrQs[i].tagName+'>' + '<span class="abbrAnswer" style="display:none">'+text+'</span>'
+			qAbbr.parentElement.innerHTML = '<'+qAbbr.tagName+' class="'+qAbbr.className+'">'+qAbbr.innerHTML+'</'+qAbbr.tagName+'>' + '<span class="abbrAnswer" style="display:none">'+text+'</span>'
 			
-			abbrQs[i].dataset.done = "true"
-			abbrQs[i].style.backgroundColor = abbrQBGcolor
-			abbrQs[i].style.cursor = "pointer"
+			qAbbr.dataset.done = "true"
+			qAbbr.classList.add("bgBisqueBrown")
+			qAbbr.style.cursor = "pointer"
 			
-			abbrQs[i].onclick = function() {
-				var spans = this.parentElement.getElementsByClassName("abbrAnswer");
+			qAbbr.onclick = function() {
+				let spans = this.parentElement.getElementsByClassName("abbrAnswer");
 				spans[0].style.display = "inline"
 				this.style.backgroundColor = ""
 				this.style.cursor = ""

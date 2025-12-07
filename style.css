@@ -1,6 +1,17 @@
+* {
+	font-family: Tahoma, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+	list-style-type: disc;
+}
 
-details > summary { list-style: none; } /* ne mutassa a nyilat: egyik android, másik gép */
-details summary::-webkit-details-marker { display:none; } /* ne mutassa a nyilat: egyik android, másik gép */
+body { background-color: azure }
+body.night { background-color: rgb(24, 26, 27) }
+body.night { color: ghostwhite }
+
+
+
+/* ne mutassa a nyilat: egyik android, másik gép */
+details > summary { list-style: none; } 
+details summary::-webkit-details-marker { display:none; }
 
 details[open] > summary { background-color: paleGreen; }
 details[open] > summary.mainTitle {
@@ -14,8 +25,16 @@ details[open] {
 	overflow: hidden; /* ha van egy kép, akkor az ne lógjon át az alatta lévő kérdésekre, hanem 'tegye lejjeb a vonalat' */
 	/* text-align: left; */
 }
+.night details[open] { border-bottom: 3px solid gray }
 
-.mainTitle {
+summary {
+	color: green;
+	cursor: pointer;
+	display: inline-block; /* ne legyen div, csak span! -> tehát ne teljes sor, hanem amíg a szöveg tart */
+}
+.night summary { color: mediumseagreen }
+
+summary.mainTitle {
 	font-weight: bold;
 	font-size: larger;
 	text-align: center;
@@ -26,7 +45,7 @@ details[open] {
 	/* min-width: 99%; */
 	/* left: -10px; */
 }
-.phase {
+summary.phase {
 	/*
 	padding-left: 2px;
 	padding-right: 2px;
@@ -49,7 +68,7 @@ details[open] {
 	
 	display: inline-block;
 }
-.status { 
+summary.status { 
 	color: Black;
 	background-color: AliceBlue;
 	border: 1px solid Black;
@@ -61,25 +80,14 @@ details[open] {
 
 }
 
-* {
-	font-family: Tahoma, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
-	list-style-type: disc;
-}
 
-li {
-	list-style-type:none; /* removes default bullet */
-}
+
+li { list-style-type:none } /* removes default bullet */
 li:before  {
 	content:"•";    /* escaped unicode character */
 	float: left;
 	line-height:0;  /* kills huge line height on resized bullet */
 	position:relative;  /* position bullet relative to list item */
-}
-
-summary {
-	color: Green;
-	cursor: pointer;
-	display: inline-block; /* ne legyen div, csak span! -> tehát ne teljes sor, hanem amíg a szöveg tart */
 }
 
 video{
@@ -102,7 +110,10 @@ th, td {
 	vertical-align: middle;
 	text-align: center;
 }
+.night th { border: 3px solid gray }
+.night td { border: 3px solid gray }
 th { background: Silver }
+.night th { background: darkslategray }
 
 ul, ol { 
 	margin-top: 0; /* fölötte ne legyen hej */
@@ -135,23 +146,95 @@ ul, ol {
 	font-weight: bold;
 }
 .fsMini { font-size: 80% }
-.bgGrey { background-color: Gainsboro }
-.bgBlue { background-color: Aqua }
-.bgGreen { background-color: Lime }
-.bgPink { background-color: Pink }
-.bgYellow { background-color: Yellow }
+.bgGrey { background-color: gainsboro }
+
+.bgBlue { background-color: aqua }
+.night .bgBlue { background-color: blue }
+.bgGreen { background-color: lime }
+.night .bgGreen { background-color: darkgreen }
+.bgPink { background-color: pink }
+.night .bgPink { background-color: deeppink }
+.bgYellow { background-color: yellow }
+.night .bgYellow { background-color: saddlebrown }
+
+.WHITE { 
+	border: Black 1px solid; 
+	padding-left: 1px; 
+	padding-right: 1px; 
+	/* background-color: White; */
+}
+.night .WHITE { border: white 1px solid }
+
+/**/
+
+/*tárgyak linkje*/
+.page { color: blue }
+.night .page { color: cornflowerblue }
+
+/*select jegy*/
+.fontBlackWhite { color: black } 
+.fontBlackWhite.active { 
+	color: blue;
+	font-weight: bolder;
+} 
+.night .fontBlackWhite { color: white }
+.night .fontBlackWhite.active { 
+	color: aqua;
+	font-weight: bolder;
+} 
+
+/*midQ*/
+.midQ { color: blue }
+.midQ.fontPlumPurple { color: purple } /* másik tárgy */
+.midQ:hover { color: green }
+.night .midQ { color: aqua }
+.night .midQ.fontPlumPurple { color: plum }
+.night .midQ:hover { color: green }
+
+/**/
+.fontBlackCrimson { color: black }
+.night .fontBlackCrimson { color: crimson }
+
+/**/
+.borderBlackWhite { border-color: black }
+.night .borderBlackWhite { border-color: white }
+
+/*klikk ➜ mennyi ideje csináltam a Q-t*/
+.bgGrey { background-color: grey }
+.bgYellowGold { background-color: yellow }
+.night .bgYellowGold { background-color: gold }
+
+/*tooltip*/ /*tételválasztás*/ /*questek statusa*/ /*midQ-DIV*/ /*..saving..*/
+.bgAzureDark { background-color: azure }
+.night .bgAzureDark { background-color: rgb(30,30,30) }
+
+/*kerdes: abbr típusú*/
+.bgBisqueBrown { background-color: bisque }
+.night .bgBisqueBrown { background-color: brown }
+
+/*trueAnswer*/
+.bgSpringgreenGreen { background-color: springgreen }
+.night .bgSpringgreenGreen { background-color: green }
+
+/*falseAnswer*/
+.bgTomatoBrown { background-color: tomato }
+.night .bgTomatoBrown { background-color: brown }
+
+/*Answer*/
+.bgGoldDarkgoldenrod { background-color: gold }
+.night .bgGoldDarkgoldenrod { background-color: darkgoldenrod }
+
+/*selectJegyBGColor*/
+.bgWhitesmokeBlack { background-color: whitesmoke }
+.night .bgWhitesmokeBlack { background-color: black }
+
+
 .important { background-color: Lime /*SpringGreen*/ }
 .done { background-color: Aqua /*PaleTurquoise < Aqua < aquamarine < DarkTurquoise < deepskyblue < LightSeaGreen < dodgerblue*/ }
 .fix { 
 	background-color: red;
 	color: white;
 	font-weight: bold;
-}
-.WHITE { 
-	border: Black 1px solid; 
-	padding-left: 1px; 
-	padding-right: 1px; 
-	/* background-color: White; */
 }
 .miss { background-color: pink }
 .lasd { font-variant: small-caps }
@@ -164,7 +247,10 @@ abbr {
 	/*padding-top: 0px; 
 	padding-bottom: 0px;*/
 	text-decoration: none;
-	background-color: gainsboro; /* DarkGrey; */
+	background-color: gainsboro;
+}
+.night abbr  {
+	background-color: dimgray;
 }
 /*abbr.test {
 	position: relative;
