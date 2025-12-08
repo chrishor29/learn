@@ -38,8 +38,6 @@ if varZene = true
 	; MsgBox Zene update
 	Run ZeneBatch.ffs_batch,,, zenePID ; %destination%\ZeneBatch.ffs_batch
 	Process,WaitClose,%zenePID%
-	Run ZeneBatch_old.ffs_batch,,, zeneoldPID ; %destination%\ZeneBatch.ffs_batch
-	
 }
 Process,WaitClose,%updPID%
 Process,WaitClose,%zeneoldPID%

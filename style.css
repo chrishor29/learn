@@ -90,22 +90,26 @@ summary.status {
 }
 
 
-
 li { 
-	list-style-type: none;
-	position: relative;
-	padding-left: 13px; /* jobbra tolja a szöveget */
+/*	list-style-type: none;*/
+/*	position: relative;*/
+/*	padding-left: 13px;*/ /* jobbra tolja a szöveget */
 }
 li:before  {
-	content: "•";
-	position: absolute;
-	line-height: inherit; /* ÚJ: örökölje a szülő line-height-ját */
-	font-size: 100%; /* ÚJ: normál méret először */
+/*	content: "•";*/
+/*	position: absolute;*/
+/*	line-height: inherit;*/ /* ÚJ: örökölje a szülő line-height-ját */
+/*	font-size: 100%;*/ /* ÚJ: normál méret először */
 	
-	top: 0px;           /* vertical align bullet position relative to list item */
-	left: 2px;            /* balra tolja a discet(•) */
+/*	top: 0px;*/           /* vertical align bullet position relative to list item */
+/*	left: 1px;*/            /* balra tolja a discet(•) */
 }
 
+li {
+  display: list-item;
+  list-style-position: outside; /* Alapértelmezett */
+  margin-left: 1em; /* Ez határozza meg a bullet pozícióját */
+}
 
 
 video{
