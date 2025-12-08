@@ -105,12 +105,6 @@ li:before  {
 	top: 0px;           /* vertical align bullet position relative to list item */
 	left: 2px;            /* balra tolja a discet(•) */
 }
-/* Androidon */
-@media (max-width: 768px) {
-	li:before {
-		font-size: 150%;
-	}
-}
 
 
 
