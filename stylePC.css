@@ -3,11 +3,6 @@
 .normal { margin-left: -35px; } /* detailson belül ne tolja jobbra fölösen az elsőket */
 ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
 
-li { margin-left: 14px; } /* jobbra tolja: ha a parent nem <ul>, akkor ne lógjon ki a DISC a képernyőn balra */
-li:before  {
-	top: 10px;           /* vertical align bullet position relative to list item */
-	left: -13px;            /* position the bullet L- R relative to list item */
-}
 
 
 

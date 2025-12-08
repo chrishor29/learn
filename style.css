@@ -105,9 +105,12 @@ li:before  {
 	top: 0px;           /* vertical align bullet position relative to list item */
 	left: 2px;            /* balra tolja a discet(•) */
 }
-
-.normal { margin-left: -35px; } /* detailson belül ne tolja jobbra fölösen az elsőket */
-ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
+/* Androidon */
+@media (max-width: 768px) {
+	li:before {
+		font-size: 150%;
+	}
+}
 
 
 

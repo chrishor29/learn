@@ -2,15 +2,8 @@
 .normal { margin-left: -40px; } /* detailson belül ne tolja jobbra fölösen az elsőket */
 ul, ol { margin-left: -25px; } /* annyira nem kell beljebb a következőt */
 
-li:before  {
-	content:"•";
-	float: left;
-	line-height:0;
-	position:relative;
-}
-li {
-	position: relative; /* kell hozzá */
-	margin-left: 12px; /* jobbra tolja: ha a parent nem <ul>, akkor ne lógjon ki a DISC a képernyőn balra */
+li:before {
+	font-size: 150%;
 }
 
 
