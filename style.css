@@ -101,9 +101,7 @@ li::before {
 	position: absolute;
 	left: 0;
 	
-	/* ez igazítja középre */
-	top: 55%;
-	transform: translateY(-50%); 
+	top: 0.45em; /* ez igazítja középre */
 
 	width: 0.35em;
 	height: 0.35em;

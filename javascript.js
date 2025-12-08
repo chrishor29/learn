@@ -1,6 +1,6 @@
 // × ✖ ✔ ●
 
-alert("update 15:36")
+//alert("update 15:36")
 
 // Night mode
 function checkNightMode() {
