@@ -1,6 +1,6 @@
 // × ✖ ✔ ●
 
-alert("update 16:11")
+alert("update 16:45")
 
 // Night mode
 function checkNightMode() {
@@ -13,7 +13,7 @@ function checkNightMode() {
 	}
 	document.getElementById("btn_toggleNightMode").innerHTML = "🌓"
 }
-if ( localStorage.getItem("nightMode") == "true" ) {
+if ( localStorage.getItem("nightMode") == "night" ) {
 	//console.log("night")
 	document.body.classList.add("night")
 	document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
@@ -26,7 +26,7 @@ if ( localStorage.getItem("nightMode") == "true" ) {
 }
 function F_toggleNightMode() { // click: day -> night -> auto
 	let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-	if ( localStorage.getItem("nightMode") == "true" ) {
+	if ( localStorage.getItem("nightMode") == "night" ) {
 		//console.log("auto")
 		localStorage.setItem("nightMode","auto")
 		checkNightMode()
@@ -39,7 +39,7 @@ function F_toggleNightMode() { // click: day -> night -> auto
 		document.getElementById("btn_toggleNightMode").innerHTML = "🌕"
 	} else {
 		//console.log("night")
-		localStorage.setItem("nightMode","true")
+		localStorage.setItem("nightMode","night")
 		document.body.classList.add("night")
 		document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
 	}

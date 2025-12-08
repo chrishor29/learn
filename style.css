@@ -103,8 +103,8 @@ li::before {
 	
 	top: 0.9ex; /* ez igazítja középre */
 
-	width: 0.35em;
-	height: 0.35em;
+	width: 0.66ex;
+	height: 0.66ex;
 	background: white;
 	border-radius: 50%;
 }
