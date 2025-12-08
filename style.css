@@ -4,7 +4,7 @@
 	word-spacing: normal;
 	/*letter-spacing: normal;*/
 
-	font-family: Tahoma, sans-serif;
+	font-family: Tahoma, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
 	list-style-type: disc;
 }
 /*.emoji {
