@@ -36,8 +36,8 @@
     </Filter>
     <FolderPairs>
         <Pair>
-            <Left>C:\Users\Kristof\Desktop\MIX\learn</Left>
-            <Right>mtp:\Galaxy A13\Internal storage\Download\LEARN</Right>
+            <Left>D:\zene</Left>
+            <Right>mtp:\Kristof's A13\Internal storage\Zene</Right>
             <Filter>
                 <Include>
                     <Item>*</Item>
@@ -51,10 +51,6 @@
                     <Item>ZeneBatch_old.ffs_batch</Item>
                     <Item>update.bat</Item>
                     <Item>update.ahk</Item>
-                    <Item>*.png</Item>
-                    <Item>*.jpg</Item>
-                    <Item>*.mp4</Item>
-                    <Item>*.mp3</Item>
                 </Exclude>
                 <TimeSpan Type="None">0</TimeSpan>
                 <SizeMin Unit="None">0</SizeMin>
