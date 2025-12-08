@@ -90,14 +90,21 @@ summary.status {
 }
 
 
-
-li {
-  display: list-item;
-  list-style-position: inside;
-  padding-left: 0px;
-  text-indent: -0.3em; /* Húzd közelebb a szöveget a bullethez */
-  padding-left: 0.3em; /* Kompenzáld a negatív indent-et */
+li { 
+	list-style-type: none;
+	position: relative;
+	padding-left: 13px; /* jobbra tolja a szöveget */
 }
+li:before  {
+	content: "•";
+	position: absolute;
+	left: 1px;            /* balra tolja a discet(•) */
+	
+	top: 0px;           /* vertical align bullet position relative to list item */
+	line-height: inherit; /* ÚJ: örökölje a szülő line-height-ját */
+	font-size: 100%; /* ÚJ: normál méret először */
+}
+
 
 video{
 	border-bottom: 5px solid black;
