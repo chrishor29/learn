@@ -90,21 +90,28 @@ summary.status {
 }
 
 
-li { 
-	list-style-type: none;
+li {
+	list-style: none;
 	position: relative;
-	padding-left: 13px; /* jobbra tolja a szöveget */
-}
-li:before  {
-	content: "•";
-	position: absolute;
-	left: 1px;            /* balra tolja a discet(•) */
-	
-	top: 0px;           /* vertical align bullet position relative to list item */
-	line-height: inherit; /* ÚJ: örökölje a szülő line-height-ját */
-	font-size: 100%; /* ÚJ: normál méret először */
+	padding-left: 0.70rem; /* távolság a marker és a szöveg között */
 }
 
+li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	
+	/* ez igazítja középre */
+	top: 55%;
+	transform: translateY(-50%); 
+
+	width: 0.35em;
+	height: 0.35em;
+	background: black;
+	border-radius: 50%;
+}
+
+ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
 
 video{
 	border-bottom: 5px solid black;
