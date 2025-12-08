@@ -106,11 +106,15 @@ li:before  {
 }
 
 li {
-  display: list-item;
-  list-style-position: inside;
-  padding-left: 0px;
-  text-indent: -0.3em; /* Húzd közelebb a szöveget a bullethez */
-  padding-left: 0.3em; /* Kompenzáld a negatív indent-et */
+  list-style: none;
+  padding-left: 0.8em; /* Csak ennyi hely a bullet + szövegnek */
+  position: relative;
+}
+
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
 }
 
 video{
