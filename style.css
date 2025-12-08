@@ -91,13 +91,25 @@ summary.status {
 
 
 
-li { list-style-type:none } /* removes default bullet */
-li:before  {
-	content:"•";    /* escaped unicode character */
-	float: left;
-	line-height:0;  /* kills huge line height on resized bullet */
-	position:relative;  /* position bullet relative to list item */
+li { 
+	list-style-type: none;
+	position: relative;
+	padding-left: 13px; /* jobbra tolja a szöveget */
 }
+li:before  {
+	content: "•";
+	position: absolute;
+	line-height: inherit; /* ÚJ: örökölje a szülő line-height-ját */
+	font-size: 100%; /* ÚJ: normál méret először */
+	
+	top: 0px;           /* vertical align bullet position relative to list item */
+	left: 2px;            /* balra tolja a discet(•) */
+}
+
+.normal { margin-left: -35px; } /* detailson belül ne tolja jobbra fölösen az elsőket */
+ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
+
+
 
 video{
 	border-bottom: 5px solid black;
