@@ -91,22 +91,17 @@ summary.status {
 
 
 li {
-	list-style: none;
-	position: relative;
-	padding-left: 0.70rem; /* távolság a marker és a szöveg között */
+	list-style-type:none; /* removes default bullet */
+	margin-left: 14px;
 }
-
-li::before {
-	content: "";
-	position: absolute;
-	left: 0;
+li:before  {
+	content:"•";    /* escaped unicode character */
+	float: left;
+	line-height:0;  /* kills huge line height on resized bullet */
+	position:relative;  /* position bullet relative to list item */
 	
-	top: 0.9ex; /* ez igazítja középre */
-
-	width: 0.66ex;
-	height: 0.66ex;
-	background: white;
-	border-radius: 50%;
+	top: 10px;           /* vertical align bullet position relative to list item */
+	left: -13px;            /* position the bullet L- R relative to list item */
 }
 
 ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
