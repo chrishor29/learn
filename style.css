@@ -101,11 +101,11 @@ li::before {
 	position: absolute;
 	left: 0;
 	
-	top: 0.45em; /* ez igazítja középre */
+	top: 0.9ex; /* ez igazítja középre */
 
 	width: 0.35em;
 	height: 0.35em;
-	background: black;
+	background: white;
 	border-radius: 50%;
 }
 
