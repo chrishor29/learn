@@ -107,10 +107,11 @@ li:before  {
 
 li {
   display: list-item;
-  list-style-position: outside; /* Alapértelmezett */
-  margin-left: 1em; /* Ez határozza meg a bullet pozícióját */
+  list-style-position: inside;
+  padding-left: 0px;
+  text-indent: -0.3em; /* Húzd közelebb a szöveget a bullethez */
+  padding-left: 0.3em; /* Kompenzáld a negatív indent-et */
 }
-
 
 video{
 	border-bottom: 5px solid black;
