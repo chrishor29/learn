@@ -1,6 +1,6 @@
 
-.normal { margin-left: -40px; } /* detailson belül ne tolja jobbra fölösen az elsőket */
-ul, ol { margin-left: -25px; } /* annyira nem kell beljebb a következőt */
+.normal { margin-left: -35px; } /* detailson belül ne tolja jobbra fölösen az elsőket */
+ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
 
 
 
