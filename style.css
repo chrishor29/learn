@@ -102,7 +102,7 @@ li::before {
     position: absolute;
     left: 0.1em;
     top: 0;
-    margin-top: calc(1.2em / 2 - 0.1em); /* line-height fele mínusz kör sugara */
+    top: calc(0.6em - 0.17em); /* line-height fele mínusz kör sugara */
     width: 0.34em;
     height: 0.34em;
     background: black;
