@@ -94,20 +94,21 @@ summary.status {
 li {
     list-style: none;
     position: relative;
-    padding-left: 0.8rem; /* szöveget ennyivel tolja jobbra (disctől függetlenül) */
+    padding-left: 0.8rem;
 }
 
 li::before {
     content: "";
     position: absolute;
-    left: 0.1em; /* discet ennyivel tolja jobbra (szövegtől függetlenül) */
-    top: 0.5em; /* <<< ez pozicionálja az első sorhoz */
+    left: 0.1em;
+    top: 0.5em; /* első sor tetejétől induló távolság */
+    transform: translateY(calc(-0em)); /* középre igazítás: fél sor magasság - saját magasság fele */
     width: 0.34em;
     height: 0.34em;
     background: black;
     border-radius: 50%;
-	line-height:0;  /* kills huge line height on resized bullet */
 }
+
 .night li::before {  background: ghostwhite }
 
 
