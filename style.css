@@ -6,6 +6,7 @@
 
 	font-family: Tahoma, sans-serif;
 	list-style-type: disc;
+	line-height: 1.2; /* kell, mert a '➜' nagyobbá tenné a sort */
 }
 .emoji {
 	font-family: 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif
@@ -91,18 +92,23 @@ summary.status {
 
 
 li {
-	list-style-type:none; /* removes default bullet */
-	margin-left: 14px;
+    list-style: none;
+    position: relative;
+    padding-left: 0.7rem;
 }
-li:before  {
-	content:"•";    /* escaped unicode character */
-	float: left;
-	line-height:0;  /* kills huge line height on resized bullet */
-	position:relative;  /* position bullet relative to list item */
-	
-	top: 10px;           /* vertical align bullet position relative to list item */
-	left: -13px;            /* position the bullet L- R relative to list item */
+
+li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em; /* <<< ez pozicionálja az első sorhoz */
+    width: 0.34em;
+    height: 0.34em;
+    background: black;
+    border-radius: 50%;
 }
+
+
 
 ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
 
