@@ -94,15 +94,15 @@ summary.status {
 li {
     list-style: none;
     position: relative;
-    padding-left: 0.8rem;
+    padding-left: 0.8em;
 }
 
 li::before {
     content: "";
     position: absolute;
     left: 0.1em;
-    top: 0.5em; /* első sor tetejétől induló távolság */
-    transform: translateY(calc(-0em)); /* középre igazítás: fél sor magasság - saját magasság fele */
+    top: 0;
+    margin-top: 0.5em; /* Ez lesz az első sor közepe */
     width: 0.34em;
     height: 0.34em;
     background: black;
