@@ -101,7 +101,8 @@ li::before {
     content: "";
     position: absolute;
     left: 0.1em;
-    top: 0.55em; /* Finomhangolás: körülbelül fél sorhézag */
+    top: 0;
+    margin-top: calc(1.2em / 2 - 0.1em); /* line-height fele mínusz kör sugara */
     width: 0.34em;
     height: 0.34em;
     background: black;
