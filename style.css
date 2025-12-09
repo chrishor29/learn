@@ -93,19 +93,18 @@ summary.status {
 
 li {
     list-style: none;
-    position: relative;
-    padding-left: 0.7rem;
+    display: flex;
+    align-items: center; /* <<< a disc mindig a szöveg középvonalára kerül */
+    gap: 0.4rem;        /* távolság a disc és a szöveg között */
 }
 
 li::before {
     content: "";
-    position: absolute;
-    left: 0.1em;
-    top: 0.5em; /* <<< ez pozicionálja az első sorhoz */
     width: 0.34em;
     height: 0.34em;
     background: black;
     border-radius: 50%;
+    flex-shrink: 0; /* ne kicsinyítse össze tablet */
 }
 .night li::before {  background: ghostwhite }
 
