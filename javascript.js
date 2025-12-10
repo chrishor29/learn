@@ -3,7 +3,7 @@
 //alert("update 14:00")
 
 // Night mode
-function checkNightMode() {
+function checkSystemMode() {
 	let isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 	//console.log("Dark mode?", isSystemDark);
 	if ( isSystemDark ) {
@@ -13,27 +13,29 @@ function checkNightMode() {
 	}
 	document.getElementById("btn_toggleNightMode").innerHTML = "🌓"
 }
-if ( localStorage.getItem("nightMode") == "night" ) {
-	//console.log("night")
-	document.body.classList.add("night")
-	document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
-} else if ( localStorage.getItem("nightMode") == "auto" ) {
-	//console.log("auto")
-	checkNightMode()
-} else {
-	document.getElementById("btn_toggleNightMode").innerHTML = "🌕"
-	//console.log("day")
+function checkNightMode() {
+	if ( localStorage.getItem("nightMode") == "night" ) {
+		//console.log("night")
+		document.body.classList.add("night")
+		document.getElementById("btn_toggleNightMode").innerHTML = "🌑"
+	} else if ( localStorage.getItem("nightMode") == "auto" ) {
+		//console.log("auto")
+		checkSystemMode()
+	} else {
+		document.getElementById("btn_toggleNightMode").innerHTML = "🌕"
+		//console.log("day")
+	}
 }
 function F_toggleNightMode() { // click: day -> night -> auto
 	let mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 	if ( localStorage.getItem("nightMode") == "night" ) {
 		//console.log("auto")
 		localStorage.setItem("nightMode","auto")
-		checkNightMode()
-		mediaQuery.addEventListener('change', checkNightMode);
+		checkSystemMode()
+		mediaQuery.addEventListener('change', checkSystemMode);
 	} else if ( localStorage.getItem("nightMode") == "auto" ) {
 		//console.log("day")
-		mediaQuery.removeEventListener('change', checkNightMode)
+		mediaQuery.removeEventListener('change', checkSystemMode)
 		localStorage.removeItem("nightMode")
 		document.body.classList.remove("night")
 		document.getElementById("btn_toggleNightMode").innerHTML = "🌕"
@@ -45,7 +47,13 @@ function F_toggleNightMode() { // click: day -> night -> auto
 	}
 	//location.reload();
 }
-
+document.addEventListener("visibilitychange", () => {
+	if (document.visibilityState === "visible") {
+		console.log("Tab fókuszba került!");
+		checkNightMode()
+	}
+})
+checkNightMode()
 
 document.body.style.margin = "2px" // ez valahol nagyobbra van állítva, visszakéne
 
@@ -328,6 +336,7 @@ function F_loadIDBs() { // végigmegy a pageken és betölti az idb-jét, ha van
 	for ( var i=0; i<pageLinks.length; i++ ) { F_loadIDB(pageLinks[i]) }
 }
 F_loadIDBs()
+
 
 function F_downloadIDB() {
 	for ( var i=0; i<pageLinks.length; i++ ) { 
