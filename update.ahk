@@ -2,6 +2,7 @@
 
 Gui, Add, CheckBox, vTeloMix, Telo - Mix
 Gui, Add, CheckBox, vWebPage, Web - LEARN
+Gui, Add, CheckBox, vGyogyszer, Web - Gyogyszer
 Gui, Add, CheckBox, vZene, Telo - Zene
 Gui, Add, Button, Default w80 gGuiClose, OK
 Gui, Show
@@ -19,6 +20,12 @@ if ( WebPage == 1 ) {
 	varWebPage = false
 }
 
+if ( Gyogyszer == 1 ) {
+	varGyogyszer = true
+} else {
+	varGyogyszer = false
+}
+
 if ( Zene == 1 ) {
 	varZene = true
 } else {
@@ -31,6 +38,12 @@ if varWebPage = true
 {
 	; MsgBox WebPage update
 	Run update.bat,,, updPID
+}
+
+if varGyogyszer = true
+{
+	; MsgBox WebGyogyszer update
+	Run D:\GYOGYSZER\update.bat,,, updPID
 }
 
 if varZene = true

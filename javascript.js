@@ -3936,7 +3936,17 @@ function F_nextQ() {
 	document.getElementById("div_QingLowerPart").innerHTML = parQ.outerHTML + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>"
 	
 	var childs = document.getElementById("div_QingLowerPart").childNodes;
-	for ( var i=0; i<childs.length; i++ ) { if ( childs[i].className.indexOf("open") != -1 ) { childs[i].open = true } }
+	// ha open, megnyitja
+	for ( var i=0; i<childs.length; i++ ) { if ( childs[i].classList.contains("open") ) { childs[i].open = true } }
+	
+	// ha ismerd fel, átírja summary
+	for ( var i=0; i<childs.length; i++ ) { 
+		if ( childs[i].classList.contains("if") ) {
+			if ( childs[i].firstChild.tagName == "SUMMARY" ) { 
+				childs[i].firstChild.innerHTML = "ismerd fel"
+			}
+		}
+	}
 	
 	// detailsra klikk
 	function F_onToggle(detElem) {
