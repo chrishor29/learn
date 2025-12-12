@@ -15,9 +15,10 @@ Gui, Submit ; elmenti a beállított értékeket
 
 Process,WaitClose,%szemPID% ;MsgBox szemeszter.bat closed.
 
-
-MsgBox, WebPage=%WebPage%`nGyogyszer=%Gyogyszer%
-
+if ( WebPage == 1 ) {
+	; MsgBox WebPage update
+	Run update.bat,,, learnPID
+}
 
 if ( Gyogyszer == 1 ) {
 	; MsgBox WebGyogyszer update
@@ -29,12 +30,10 @@ if ( Zene == 1 ) {
 	Run ZeneBatch.ffs_batch,,, zenePID ; %destination%\ZeneBatch.ffs_batch
 	Process,WaitClose,%zenePID%
 }
-if (learnPID)
-	Process,WaitClose, %learnPID%
-if (gyogyszerPID)
-	Process,WaitClose, %gyogyszerPID%
-if (zeneoldPID)
-	Process,WaitClose, %zeneoldPID%
+
+Process,WaitClose, %learnPID%
+Process,WaitClose, %gyogyszerPID%
+Process,WaitClose, %zeneoldPID%
 
 if ( TeloMix == 1 ) {
 	Run BatchTeloMix.ffs_batch,,, TeloMixPID 
