@@ -18,10 +18,6 @@ Process,WaitClose,%szemPID% ;MsgBox szemeszter.bat closed.
 
 MsgBox, WebPage=%WebPage%`nGyogyszer=%Gyogyszer%
 
-if ( WebPage == 1 ) {
-	; MsgBox WebPage update
-	Run update.bat,,, learnPID
-}
 
 if ( Gyogyszer == 1 ) {
 	; MsgBox WebGyogyszer update
