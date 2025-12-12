@@ -15,6 +15,9 @@ Gui, Submit ; elmenti a beállított értékeket
 
 Process,WaitClose,%szemPID% ;MsgBox szemeszter.bat closed.
 
+
+MsgBox, WebPage=%WebPage%`nGyogyszer=%Gyogyszer%
+
 if ( WebPage == 1 ) {
 	; MsgBox WebPage update
 	Run update.bat,,, learnPID
