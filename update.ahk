@@ -13,40 +13,29 @@ GuiClose: ; ha megnyomtan az OK, akkor megy tovább itt
 
 Gui, Submit ; elmenti a beállított értékeket
 
-
-if ( WebPage == 1 ) {
-	varWebPage = true
-} else {
-	varWebPage = false
-}
-
-if ( Zene == 1 ) {
-	varZene = true
-} else {
-	varZene = false
-}
-
 Process,WaitClose,%szemPID% ;MsgBox szemeszter.bat closed.
 
-if varWebPage = true
-{
+if ( WebPage == 1 ) {
 	; MsgBox WebPage update
-	Run update.bat,,, updPID
+	Run update.bat,,, learnPID
 }
 
 if ( Gyogyszer == 1 ) {
 	; MsgBox WebGyogyszer update
-	Run D:\GYOGYSZER\update.bat,,, updPID
+	Run D:\GYOGYSZER\update.bat,,, gyogyszerPID
 }
 
-if varZene = true
-{
+if ( Zene == 1 ) {
 	; MsgBox Zene update
 	Run ZeneBatch.ffs_batch,,, zenePID ; %destination%\ZeneBatch.ffs_batch
 	Process,WaitClose,%zenePID%
 }
-Process,WaitClose,%updPID%
-Process,WaitClose,%zeneoldPID%
+if (learnPID)
+	Process,WaitClose, %learnPID%
+if (gyogyszerPID)
+	Process,WaitClose, %gyogyszerPID%
+if (zeneoldPID)
+	Process,WaitClose, %zeneoldPID%
 
 if ( TeloMix == 1 ) {
 	Run BatchTeloMix.ffs_batch,,, TeloMixPID 
