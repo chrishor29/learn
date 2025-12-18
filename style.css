@@ -103,11 +103,8 @@ li::before {
 	line-height:0;  /* kills huge line height on resized bullet */
 	position:relative;  /* position bullet relative to list item */
 	
-    left: -0.75em;
-    top: calc(0.6em); /* line-height fele mínusz kör sugara */
-}
-.android li::before {
-	content:"●";    /* escaped unicode character */
+	left: -0.75em;
+	top: calc(0.6em); /* line-height fele mínusz kör sugara */
 }
 
 .night li::before {  background: ghostwhite }
