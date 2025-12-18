@@ -91,26 +91,10 @@ summary.status {
 }
 
 
-li {
-    list-style: none;
-    /*position: relative;*/
-    margin-left: 14px
+li { 
+  margin-left: 16px;
+  text-indent: -2px; /* ezt add hozzá - állítsd a kívánt értékre */
 }
-
-li::before {
-	content:"•";    /* escaped unicode character */
-	float: left;
-	line-height:0;  /* kills huge line height on resized bullet */
-	position:relative;  /* position bullet relative to list item */
-	
-	left: -0.75em;
-	top: calc(0.6em); /* line-height fele mínusz kör sugara */
-}
-
-.night li::before {  background: ghostwhite }
-
-
-
 ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
 
 video{
