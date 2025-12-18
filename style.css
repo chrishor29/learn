@@ -106,6 +106,9 @@ li::before {
     left: -0.75em;
     top: calc(0.6em); /* line-height fele mínusz kör sugara */
 }
+.android li::before {
+	content:"●";    /* escaped unicode character */
+}
 
 .night li::before {  background: ghostwhite }
 
