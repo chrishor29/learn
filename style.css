@@ -1,6 +1,6 @@
 * {
-	-moz-text-size-adjust: 100%;
-	text-size-adjust: 100%;
+	/*-moz-text-size-adjust: 100%;*/
+	/*text-size-adjust: 100%;*/
 	word-spacing: normal;
 	/*letter-spacing: normal;*/
 
@@ -153,6 +153,12 @@ ul, ol {
 	padding-left: 3px; 
 	padding-right: 3px; 
 	background-color: orange;
+}
+.night .ORANGE { 
+	border: Black 1px solid; 
+	padding-left: 3px; 
+	padding-right: 3px; 
+	background-color: coral;
 }
 .plus { 
 	padding-left: 2px; 

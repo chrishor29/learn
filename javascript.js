@@ -4385,7 +4385,6 @@ function F_downloadLS() {
 
 function F_andrSize() { if ( isAndroid ) { 
 	//document.body.style.fontSize = "300%" // android font size
-	document.getElementById('link_style').href = 'styleAndroid.css'; // android li,table position
 	
 	//imgMiniHeight = "54px"
 	document.getElementById('btn_toggleSearch').style.fontSize = '300%'
