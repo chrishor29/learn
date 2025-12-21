@@ -40,7 +40,7 @@ details[open] {
 summary {
 	color: green;
 	cursor: pointer;
-	display: inline-block; /* ne legyen div, csak span! -> tehát ne teljes sor, hanem amíg a szöveg tart */
+	display: inline; /* ne legyen div, csak span! -> tehát ne teljes sor, hanem amíg a szöveg tart */
 }
 .night summary { color: mediumseagreen }
 
@@ -90,10 +90,8 @@ summary.status {
 
 }
 
-
 li { 
-  margin-left: 16px;
-  text-indent: -2px; /* ezt add hozzá - állítsd a kívánt értékre */
+	margin-left: 16px;
 }
 ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
 
