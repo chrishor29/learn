@@ -120,6 +120,13 @@ th, td {
 th { background: Silver }
 .night th { background: darkslategray }
 
+.vertical-text { /* elfordítja 90° */ 
+  writing-mode: vertical-rl; /* Próbáld ezt vertical-lr helyett */
+  vertical-align: middle;
+  white-space: nowrap;
+  transform: scale(-1, -1);
+}
+
 ul, ol { 
 	margin-top: 0; /* fölötte ne legyen hej */
 	margin-bottom: 0; /* alatta ne legyen hej */
