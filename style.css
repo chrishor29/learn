@@ -63,18 +63,19 @@ summary.phase {
 	padding-bottom: 1px;
 	*/
 	
+	/*
 	margin-top: 1px;
 	margin-bottom: 1px;
+	*/
 	
 	padding-left: 3px;
 	padding-right: 3px;
-	padding-top: 1px;
-	padding-bottom: 1px;
+	/* padding-bottom: 1px; */
 	
 	/* font-weight: bold; */
 	background-color: AliceBlue;
 	color: Black;
-	border: 2px solid Black;
+	border: 1.5px solid Black;
 	
 	display: inline-block;
 }
