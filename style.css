@@ -23,6 +23,9 @@ body.night { color: ghostwhite }
 details > summary { list-style: none; } 
 details summary::-webkit-details-marker { display:none; }
 
+/* csak így jó a ➜ <li><span class="imp"></span></li> */
+span.imp { display: contents }
+
 details[open] > summary { background-color: paleGreen; }
 details[open] > summary.mainTitle {
 	background-color: black;
@@ -94,7 +97,11 @@ summary.status {
 li { 
 	margin-left: 16px;
 }
-ul, ol { margin-left: -20px; } /* annyira nem kell beljebb a következőt */
+ul, ol { 
+	margin-left: -20px; /* annyira nem kell beljebb a következőt */
+	margin-top: 0; /* fölötte ne legyen hej */
+	margin-bottom: 0; /* alatta ne legyen hej */
+}
 
 video{
 	border-bottom: 5px solid black;
@@ -128,10 +135,6 @@ th { background: Silver }
   transform: scale(-1, -1);
 }
 
-ul, ol { 
-	margin-top: 0; /* fölötte ne legyen hej */
-	margin-bottom: 0; /* alatta ne legyen hej */
-}
 
 .mirror {
 	display:inline-block;

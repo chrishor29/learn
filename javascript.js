@@ -649,6 +649,7 @@ function F_loadImpQs(detElem,full) {
 				qText = qText.slice(qText.indexOf('</summary>')+10)
 				qText = qText.slice(0,qText.lastIndexOf('</details>'))
 			}
+			//console.log(qText)
 			impQs[i].innerHTML = qText
 			impQs[i].dataset.loaded = "true"
 		}
@@ -3565,8 +3566,8 @@ function F_getQnev(detElem){
 	if ( detElem.classList.contains("abbr") ) { qNev = detElem.innerHTML }
 	if ( detElem.classList.contains("midQ") ) { qNev = detElem.innerHTML }
 	if ( qNev == undefined ) { // div, span
-		qNev = detElem.firstChild.innerHTML
-		console.log('A <'+detElem.tagName+' class="'+detElem.className+'">-nek a qNeve: '+qNev)
+		qNev = detElem.innerHTML
+		//console.log('A <'+detElem.tagName+' class="'+detElem.className+'">-nek a qNeve: '+qNev)
 	}
 	
 	if ( detElem.className.indexOf("[") != -1 ) { 
@@ -4111,6 +4112,9 @@ function F_nextQ() {
 			document.getElementById("span.0."+num).style.color = "black" 
 			document.getElementById('span.1.'+num).innerHTML = "&nbsp"
 			document.getElementById('span.2.'+num).innerHTML = "&nbsp"
+			
+			document.getElementById('span.2.'+num).classList.remove("bgGrey")
+			document.getElementById('span.2.'+num).classList.remove("bgYellowGold")
 			
 			// beírja a dátumot, ha van
 			// console.log(i)
