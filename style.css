@@ -190,8 +190,20 @@ th { background: Silver }
 /**/
 
 /*tárgyak linkje*/
-.page { color: blue }
-.night .page { color: cornflowerblue }
+
+.page.loaded { color: blue }
+.night .page.loaded { color: cornflowerblue }
+.page:hover { 
+	background-color: yellow;
+	cursor: pointer;
+}
+.night .page:hover { background-color: darkgoldenrod }
+/*tárgyak linkje*/
+.page.edited { color: violet }
+.night .page.edited { color: violet }
+/*tárgyak linkje*/
+.page.notLoaded { color: black }
+.night .page.notLoaded { color: white }
 
 /*select jegy*/
 .fontBlackWhite { color: black } 

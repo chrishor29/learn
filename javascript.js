@@ -177,6 +177,13 @@ function isElementVisible(detElem) {
 	return !detElem.closest('details:not([open])')
 }
 
+function pageColor(elem,color) {
+	let classList = elem.classList;
+	classList.remove("loaded")
+	classList.remove("edited")
+	classList.remove("notLoaded")
+	classList.add(color)
+}
 function F_writePage(pageText,id) { // lenntre kiírja a page szövegét (idb>html)
 	//console.log("F_writePage: "+id+"(id)")
 	pageLinks[id].style.backgroundColor = "yellow"
@@ -251,7 +258,7 @@ function F_pageClick(detElem,type) { // ezt csinálja mikor ráklikkelek page / 
 	detElem.style.backgroundColor = "orange"
 
 	currPath = detElem.dataset.src
-	if ( detElem.style.color == "darkviolet" )  { // ha új IDB van ➜ azt beOlvassa és kiírja lentre
+	if ( detElem.classList.contains("edited"))  { // ha új IDB van ➜ azt beOlvassa és kiírja lentre
 		var id
 		for ( var i=0; i<pageLinks.length; i++ ) { if ( pageLinks[i].dataset.src == detElem.dataset.src ) { id = i } }
 		//console.log("id: "+id)
@@ -318,10 +325,11 @@ function F_loadIDBs() { // végigmegy a pageken és betölti az idb-jét, ha van
 				var pageEdited = this.result[1]["pageEDITED"]
 				//console.log(path+" : "+this.result[1]["pageEDITED"])
 				
-				if ( pageEdited == "edited" ) {
-					page.style.color = "darkviolet"
+				if ( pageEdited == "edited" ) { // violet
+					pageColor(page,"edited")
 					//page.dataset.loaded = true
-				} else { // pageEdited == "html"
+				} else { // blue ... pageEdited == "html"
+					pageColor(page,"loaded")
 					page.style.color = ""
 				}
 				
@@ -340,7 +348,7 @@ F_loadIDBs()
 
 function F_downloadIDB() {
 	for ( var i=0; i<pageLinks.length; i++ ) { 
-		if ( pageLinks[i].style.color != "darkviolet" ) { continue }
+		if ( !pageLinks[i].classList.contains("edited") ) { continue }
 		var path = pageLinks[i].dataset.src
 		
 		var fileName = path.slice(path.lastIndexOf("/")+1)
@@ -408,8 +416,9 @@ function F_saveIDB(path,pageText,id,edited) { // editPAGE vagy openHTML során..
 		
 		// ez nem jó (hisz a változó itt már nincs), de még nem tudom hogy oldjam meg (hívjam le idb-ből? mentsem el máshova? máshol állítsam be a colort?)
 		if ( edited == "edited" ) {
-			pageLinks[id].style.color = "darkviolet"
-		} else { // pageEdited == "html"
+			pageColor(pageLinks[id],"edited")
+		} else { // blue ... pageEdited == "html"
+			pageColor(pageLinks[id],"loaded")
 			pageLinks[id].style.color = ""
 		}
 		document.getElementById("span_msgSavingIDB").style.display = "none"
@@ -417,12 +426,11 @@ function F_saveIDB(path,pageText,id,edited) { // editPAGE vagy openHTML során..
 	}
 }
 function clearIDB(path,page) {
+	// console.log("clearIDB("+path+","+page+")")
 	var request = indexedDB.deleteDatabase(path);
-	//request.onsuccess = function(event) { console.log("database DELETE – "+path) }
-	if ( pageTexts[path] == undefined ) { 
-		page.style.color = ""
-	} else {
-		page.style.color = ""
+	request.onsuccess = function(event) { 
+		// console.log("database DELETE – "+path)
+		pageColor(page,"notLoaded")
 	}
 }
 function clearFullIDB() { 
