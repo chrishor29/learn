@@ -3889,6 +3889,7 @@ function F_nextQ() {
 		do {
 			if ( parent.firstChild.className == "status" ) { parQ = parent }
 			if ( parent.parentElement.firstChild.className == "phase" ) { parQ = "phase" }
+			
 			parent = parent.parentElement
 		} while ( parQ == false && parent != document.body )
 		if ( parQ == "phase" ) { 
@@ -3941,6 +3942,14 @@ function F_nextQ() {
 	
 	// kérdéseket kiírja
 	document.getElementById("div_QingLowerPart").innerHTML = parQ.outerHTML + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>"
+	
+	// felirat, ha kell
+	if ( parQ.parentElement.classList.contains("title") ) {
+		let div = document.getElementById("div_QingLowerPart")
+		
+		let title = parQ.parentElement.firstChild.innerHTML
+		div.innerHTML = "<div><b>"+title+"</div></b>" + div.innerHTML
+	}
 	
 	var childs = document.getElementById("div_QingLowerPart").childNodes;
 	// ha open, megnyitja
