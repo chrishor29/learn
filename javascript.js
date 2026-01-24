@@ -3627,8 +3627,11 @@ function F_arrQs(){
 		var inTitle = false
 		var parent = allQs[i]
 		do {
-			if ( parent.firstChild.className == "phase" ) { inTetel = parent.firstChild.innerHTML }
-			if ( parent.firstChild.className == "status" ) { inTetel = parent.firstChild.innerHTML }
+			//console.log(parent.firstChild.innerHTML)
+			if ( parent.firstChild.classList?.contains("phase") ) { inTetel = parent.firstChild.innerHTML }
+			//if ( parent.firstChild.className == "phase" ) { inTetel = parent.firstChild.innerHTML }
+			if ( parent.firstChild.classList?.contains("status") ) { inTetel = parent.firstChild.innerHTML }
+			//if ( parent.firstChild.className == "status" ) { inTetel = parent.firstChild.innerHTML }
 			parent = parent.parentElement
 		} while ( inTetel == false && parent != document.body )
 		if ( inTetel != false ) {
@@ -3875,8 +3878,9 @@ function F_nextQ() {
 	var qElem = allQs[priorID]
 	
 	// felmegy document.body -> ha status van, az lesz amit bemásol; (de! a Q ami ugye ki lesz jelölve változatlan)
-	function F_getParentQ(qElem) {
+	function getParents(qElem) {
 		var parent = qElem
+		var title = false
 		var parQ = false
 		/* régi: ezt azért vettem ki, mert ha (div imp) van egy phase-ben, akkor abban az összes kérdést kidobná egyben
 		do {
@@ -3886,26 +3890,46 @@ function F_nextQ() {
 		} while ( parQ == false && parent != document.body )*/
 		
 		//console.log(parent)
+		
+		// megnézi, hogy status vagy phase
+			// ha status, akkor azt dobja majd ki, tehát vége
+			// ha phase, akkor az első kérdést dobja ki, de a phase/title nevét is
 		do {
-			if ( parent.firstChild.className == "status" ) { parQ = parent }
-			if ( parent.parentElement.firstChild.className == "phase" ) { parQ = "phase" }
+			if ( parent.firstElementChild?.classList.contains("status") ) { parQ = parent }
+			if ( parent.parentElement.firstElementChild?.classList.contains("phase") ) { parQ = "phase" }
 			
 			parent = parent.parentElement
 		} while ( parQ == false && parent != document.body )
+		
 		if ( parQ == "phase" ) { 
+			// legfelső kerdest megkeresi a phasen belül (nextQ parentjei közt)
 			parent = qElem
 			do {
+				//console.log(parent.firstElementChild.innerHTML)
 				if ( parent.classList.contains("kerdes") ) { parQ = parent }
-					// ez a feltétel nem tudom miért kell.. ugyanis, ha csak egy open-es az egész, akkor is kéne.. mindenesetre nyílván nem ok nélkül kellett, így inkább beraktam kövei sorba az opent is, hogy akkor is jó legyen
+					// ez a feltétel nem tudom miért kell.. ugyanis, ha csak egy open-es az egész, akkor is kéne.. mindenesetre nyílván nem ok nélkül kellett, így inkább beraktam kövi sorba az opent is, hogy akkor is jó legyen
 				if ( parent.classList.contains("open") ) { parQ = parent }
 				parent = parent.parentElement
-			} while ( parent.firstChild.className != "phase" )
+			} while ( !parent.firstElementChild?.classList.contains("phase") )
+			//console.log(parQ.innerHTML)
+			
+			// 1. phase/title nevét
+			parent = qElem
+			do {
+				if ( parent.firstElementChild?.classList.contains("phase") ) { title = parent.firstElementChild.innerHTML }
+					// ez a feltétel nem tudom miért kell.. ugyanis, ha csak egy open-es az egész, akkor is kéne.. mindenesetre nyílván nem ok nélkül kellett, így inkább beraktam kövei sorba az opent is, hogy akkor is jó legyen
+				if ( parent.classList.contains("title") ) { title = parent.firstElementChild.innerHTML }
+				parent = parent.parentElement
+			} while ( title == false )
 		}
 		if ( parQ == false ) { parQ = qElem }
 		
-		return parQ
+		return { parQ, title };
 	}
-	var parQ = F_getParentQ(qElem)
+	let parQ = getParents(qElem).parQ;
+	let title = getParents(qElem).title;
+	//console.log(title)
+	//console.log(parQ.innerHTML)
 	
 	var xTOi = [] // x = amit kidob kérdések, ott hányadik fenntről lefele; i = tárgy összes kérdése közül hányadik
 	var nevTOnum = [] // num = amit kidob kérdések, ott hányadik fenntről lefele DE! ami többször van, az ugyanazt kapja!
@@ -3944,10 +3968,8 @@ function F_nextQ() {
 	document.getElementById("div_QingLowerPart").innerHTML = parQ.outerHTML + "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>"
 	
 	// felirat, ha kell
-	if ( parQ.parentElement.classList.contains("title") ) {
+	if ( title ) {
 		let div = document.getElementById("div_QingLowerPart")
-		
-		let title = parQ.parentElement.firstChild.innerHTML
 		div.innerHTML = "<div><b>"+title+"</div></b>" + div.innerHTML
 	}
 	
@@ -4639,24 +4661,39 @@ function F_loadAnswerQ(detElem) {
 }
 
 function F_loadAbbrQ(detElem) { 
+	//console.log("F_loadAbbrQ")
 	let allQAbbr = detElem.getElementsByClassName("abbr")
 	for ( var i=0; i<allQAbbr.length; i++ ) { 
 		let qAbbr = allQAbbr[i]
+		//if ( isElementVisible(qAbbr) == false ) { continue }
+		//console.log(i+" - "+qAbbr.innerHTML)
 		if (qAbbr.dataset.done == undefined) {
-			let text = qAbbr.parentElement.innerHTML
-			text = text.replace(qAbbr.innerHTML,"")
-			text = text.slice(text.indexOf("</"))
-			text = text.slice(text.indexOf(">")+1)
-			qAbbr.parentElement.innerHTML = '<'+qAbbr.tagName+' class="'+qAbbr.className+'">'+qAbbr.innerHTML+'</'+qAbbr.tagName+'>' + '<span class="abbrAnswer" style="display:none">'+text+'</span>'
+			
+			let answerText = qAbbr.parentElement.innerHTML
+			answerText = answerText.replace(qAbbr.innerHTML,"")
+			answerText = answerText.slice(answerText.indexOf("</"))
+			answerText = answerText.slice(answerText.indexOf(">")+1)
+			
+			let answerSpan = document.createElement("span")
+			answerSpan.className = "abbrAnswer"
+			answerSpan.style.display = "none"
+			answerSpan.innerHTML = answerText
 			
 			qAbbr.dataset.done = "true"
 			qAbbr.classList.add("bgBisqueBrown")
 			qAbbr.style.cursor = "pointer"
 			
+			let parent = qAbbr.parentElement
+			document.body.appendChild(qAbbr)
+			parent.innerHTML = ""
+			parent.appendChild(qAbbr)
+			parent.appendChild(answerSpan)
+			
 			qAbbr.onclick = function() {
 				let spans = this.parentElement.getElementsByClassName("abbrAnswer");
 				spans[0].style.display = "inline"
-				this.style.backgroundColor = ""
+				delete this.dataset.done;
+				this.classList.remove("bgBisqueBrown")
 				this.style.cursor = ""
 				event.target.onclick = null;
 			}
