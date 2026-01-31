@@ -1710,7 +1710,7 @@ Orvosi dokumentáció helye és módja:
 	</td>
   </tr></table>
   <b>továbbiak</b>
-	<li><span class="bgYellow"><span class="midQ [94]" data-src="bel">aortadissectio</span> ➜ hirtelen kialakuló, nagyon erős (hasító/szakító jellegű)</span></li>
+	<li><span class="bgYellow"><span class="midQ [37.2]">aortadissectio, -ruptúra</span> ➜ hirtelen kialakuló, nagyon erős (hasító/szakító jellegű)</span></li>
 	<li><span class="bgYellow"><span class="midQ [22] kerdes">PE</span>, <span class="midQ [25]">PTX</span> ➜ hirtelen kezdetű, késszúrásszerű, légzésre fokozódó</span></li>
 	<li><span class="midQ [23] kerdes">pneumonia</span> ➜ légzésre fokozódó</li>
 	<li><span class="bgYellow"><span class="midQ [67.4] kerdes">pericarditis</span> ➜ fekve rosszabb</span></li>
@@ -2554,7 +2554,11 @@ Orvosi dokumentáció helye és módja:
 		<li><span class="midQ [39] bgYellow" data-src="bel">phaeochromocytoma</span></li>
 		<li><span data-src="szul" class="midQ [64] bgYellow">eclampsia</span></li>
 		<li><span class="midQ [13.3] bgYellow">amfetamin, kokain</span> <abbr title="chatGPT">§</abbr></li>
-		<li>MAO-A bénító okozta „sajteffektus”</li>
+		<li><details class="kerdes"><summary>„sajteffektus”</summary>
+			<li>MAO-gátlóval kezelt betegek NEM fogyaszthatnak tiramin tartalmú élelmiszert ➜ ugyanis ha a tiramin a szisztémás keringésükbe jut, nAdr-t szabadít fel, ami symp tónus fokozódásához vezet ➜ hipertenzív krízist okoz(hat)</li>
+			<li><span class="midQ [a4]">MAO-A</span> gátlók ➜ <span class="midQ [12.9]">indirekt szimpatomimetikum</span>ok</li>
+			<li>tiramin ➜ élelmiszerek tartalmazzák ➜ sajt, csirkemáj, vörösbor stb</li>
+		</details></li>
 	</td>
 	<td style="text-align:left">
 		<li><span data-src="neuro" class="midQ [89] bgYellow">hypertenzív encephalopathia</span>, <span data-src="neuro" class="midQ [100]">agyoedema</span></li>
@@ -3002,14 +3006,21 @@ Orvosi dokumentáció helye és módja:
 		<td colspan="2"><span class="midQ [a4] fsMini WHITE">vegetatív IR</span> <span data-src="farmak" class="midQ [6] fsMini WHITE">adrenerg receptorok</span></td>
 	  </tr><tr>
 		<td style="text-align:left"> <!-- szimpatomimetikum -->
-		  <center><b>direkt:</b></center>
+		  <center><abbr title="Adrenerg-receptoron hatnak közvetlenül"><b>direkt:</b></abbr></center>
 		  <b>katekolaminok</b>
-			<li><u>dopamin</u><abbr title="(D1,D2,β<sub>1</sub>,α<sub>1</sub>)">'</abbr></li>
-			<div><span class="plus">ind</span> Parkinson-kór ➜ <u><span class="syno">L-Dopa | levodopa</span></u></div>
-			<div><span class="plus">ind</span> hyperprolactinaemia <span class="fsMini">(<u>bromocriptin</u>: D2-agonista)</span></div><ul>
-				<span class="fsMini">antipszichotikumok D2-antagonisták, így azok mh-a a hyperprolactinaemia!</span>
-			</ul>
-			<details><summary>élettani jelentősége</summary>
+			<details><summary><b>élettan</b></summary>
+			  <div><b>szintézis:</b> L-Dopa ➜ dopamin ➜ nAdr ➜ Adr</div>
+				<li>ha dopaminerg neuron ➜ dopaminig jut el</li>
+				<li><span class="midQ [a4]">ha MVV ➜ végigmegy (Adr) (csak itt!)</span></li>
+				<li>egyébként nAdr a jellemző</li>
+			  <b>dopamin és nAdr neurotranszmitter, Adr hormon</b>
+				<li>reuptake-gátlók így a dopamin és nAdr hatnak csak</li>
+			</details>
+			<li><details><summary style="color:blue"><u>dopamin</u><abbr title="(D1,D2,β<sub>1</sub>,α<sub>1</sub>)">'</abbr></summary>
+				<div><span class="plus">ind</span> Parkinson-kór ➜ <u><span class="syno">L-Dopa | levodopa</span></u></div>
+				<div><span class="plus">ind</span> hyperprolactinaemia <span class="fsMini">(<u>bromocriptin</u>: D2-agonista)</span></div><ul>
+					<span class="fsMini">antipszichotikumok D2-antagonisták, így azok mh-a a hyperprolactinaemia!</span>
+				</ul>
 			  <div><span data-src="psy" class="midQ [36]">dopaminerg pályák</span></div>
 				<li>hormon ➜ tuberoinfundibularis pálya: prolaktinra negatív feedbacként hat (adenohypophysis hormonok - <span class="bgPink">link</span>)</li>
 				<li>neurotranszmitter ➜ többi:</li><ul>
@@ -3019,7 +3030,7 @@ Orvosi dokumentáció helye és módja:
 					</ul>
 					<li>mezokortikális pálya ➜ szkizofrénia(–)</li>
 				</ul>
-			</details>
+			</details></li>
 			<li><span class="bgYellow"><u>dobutamin</u></span>(<abbr title="agonista">β<sub>1</sub></abbr>) ➜ <i>,igazi pozitív inotróp'</i></li>
 			<li><span class="bgYellow"><u>Adr</u></span>(<abbr title="agonista">α<sub>1</sub>,β<sub>1</sub>,β<sub>2</sub></abbr>)</li>
 			<li><span class="bgYellow"><u>nAdr</u></span>(<abbr title="agonista">α<sub>1</sub>,<span class="fsMini">β<sub>1</sub></span></abbr>) ➜ inkább vazopresszor</li>
@@ -3032,8 +3043,10 @@ Orvosi dokumentáció helye és módja:
 			<div><span class="plus">ind</span> <span class="midQ [5] bgYellow">asthma, <span class="fsMini">COPD</span></span>, <span data-src="gyer" class="midQ [51] fsMini">obstruktív bronchitis</span> ➜ <span class="midQ [12.17] bgYellow">bronchodilatátor</span></div>
 			<div><span class="plus">ind</span> <span data-src="szul" class="midQ [99]">tocolysis</span> ➜ <span class="bgYellow">uterus relaxálása</span> (=tocolyticum!)</div>
 		  <center><b>indirekt</b></center>
-			<li><span class="midQ [13.3]"><u>amfetamin</u>, <u>methamfetamin</u></span> <abbr title="transzporter-mediált nAdr+dopamin+Ser felszabadítók (főleg KIR)">'</abbr></li>
-			<li><span class="fsMini"><abbr title="pszichostimulánsként gyenge (vér-agy gáton nem jut rendesen át). indikáció ➜ hipotónia (hosszan tartó enyhe vérnyomásemelkedést okoz). hátránya ➜ idővel tolerancia alakul ki vele szemben">(<u>ephedrin</u>)</abbr></span>, <span class="fsMini"><abbr title="élelmiszerek tartalmazzák ➜ sajt, csirkemáj, vörösbor stb. ➜ MAO-gátlóval kezelt betegek NEM fogyaszthatnak tiramin tartalmú élelmiszert ➜ ugyanis ha a tiramin a szisztémás keringésükbe jut, nAdr-t szabadít fel, ami symp tónus fokozódásához vezet ➜ hipertenzív krízist okoz(hat)">(<u>tiramin</u>)</abbr></span> <abbr title="idegimpulzustól független nAdr felszabadítók">'</abbr></li>
+			<li><span class="midQ [13.3]"><u>amfetamin</u>, <span class="syno"><u>methamfetamin</u> | kristály</span></span>, <abbr title="felszabadítók (transzporter-mediált) nAdr +/ dopamin +/ Ser  (főleg KIR)">'</abbr></li>
+			<li><span class="midQ [13.3]"><u>kokain</u></span> <abbr title="reuptake gátló">'</abbr></li>
+			<li><span class="midQ [9]">„sajteffektus”</span></li>
+			<li><span class="fsMini"><abbr title="pszichostimulánsként gyenge (vér-agy gáton nem jut rendesen át). indikáció ➜ hipotónia (hosszan tartó enyhe vérnyomásemelkedést okoz). hátránya ➜ idővel tolerancia alakul ki vele szemben">(<u>ephedrin</u>)</abbr></span></li>
 		</td>
 		<td style="text-align:left"> <!-- szimpatolítikum -->
 		  <div><b>β-blokkolók</b></div>
@@ -4265,8 +4278,9 @@ Orvosi dokumentáció helye és módja:
 	  </tr><tr><th class="vertical-text">lényeg</th>
 		<td class="fsMini" style="text-align:left"><center>dopamin↑ +/ nAdr↑ +/ Ser↑ <abbr title="reuptake inhibitor / felszabadulás fokozó">'</abbr></center>
 			<li><u>kokain</u> <span data-src="farmak" class="midQ [44]">*</span><span data-src="farmak" class="midQ [73]">*</span><abbr title="katekolamin reuptake-gátló">'</abbr></li>
-			<li><u>amfetamin</u>, <u>methamfetamin</u> <span class="midQ [12.9]">*</span></li>
-			<span class="fsMini"><u>nikotin</u>, <u>koffein</u></span>
+			<li><u>amfetamin</u>, <u>methamfetamin</u></li>
+			<li><u>nikotin</u>, <u>koffein</u> <abbr title="nem szimpatomimetikumok közé sorolandók, de hatásukat tekintve azok. (sok idő és részlet, ha megakarom érteni pontosan)">'</abbr></li>
+		  <span class="midQ [12.9] fsMini">[szimpatomimetikumok]</span>
 		</td>
 		<td class="fsMini" style="text-align:left"> 
 		  <center><abbr title="cannabinoid">CB</abbr>1<abbr title="receptor">R</abbr>,CB2R <abbr title="THC kötődéssel">aktiválása</abbr> (KIR)</center>
@@ -7165,99 +7179,92 @@ Orvosi dokumentáció helye és módja:
 	</details>
 </ul>
 <details class="[19] kerdes"><summary>anamnézis</summary>
-	<div class="fsMini">anamnézis = kórelőzmény</div>
-  <div><b>menete</b></div>
-	<div>1) bemutatkozás<span style="font-size:80%">(orvostanhallgató vagyok)</span> + mi a neve + mikor született</div>
-	<div>2) mi a fő panasza, miért jött (mindig ezzel kell kezdeni) (röviden)</div><ul>
-		<li>végighallgatom</li>
-		<li>megpróbálom visszamondani, a beteg javítsa ki, akár többször elismétlem és leírom</li>
-		<li>utána/közben felteszem az OPQRST-t</li>
-	</ul>
-	<details class="kerdes"><summary>3a) korábbi betegségek</summary>
-		<li>milyen gyermekbetegségek voltak ➜ pl. bárányhimlős volt, akkor nem lehet az</li>
-		<li>műtét volt-e? műtéti hegek?</li><ul>
-			<li>pl. ha volt appendectómiája, nem lehet appendicitise(vakbél-gyulladás)</li>
-			<li>pl. cholecystectomia ugyanez</li>
+  <div class="fsMini">anamnézis = kórelőzmény</div>
+	<li><details class="kerdes"><summary>menete</summary>
+		<div>1) bemutatkozás<span style="font-size:80%">(orvostanhallgató vagyok)</span> + mi a neve + mikor született</div>
+		<div>2) mi a fő panasza, miért jött (mindig ezzel kell kezdeni) (röviden)</div><ul>
+			<li>végighallgatom</li>
+			<li>megpróbálom visszamondani, a beteg javítsa ki, akár többször elismétlem és leírom</li>
+			<li>utána/közben felteszem az OPQRST-t</li>
 		</ul>
-		<li>maradandó elváltozást okozó betegség volt-e</li><ul>
-			<li><span class="bgPink">rheumás láz</span> ➜ billentyű</li>
-			<li>TBC ➜ tüdőben maradandó gócok</li>
-			<li>syphilis ➜ aorta aneurizma, idegi <abbr title="mikrobi">!?</abbr></li>
-			<li><span class="bgPink">hepatitis</span> ➜ májkárosodás</li>
-		</ul>
-	</details>
-	<div>3b) családi anamnézis ➜ volt-e valakinek: szívinfarktus, DM, hypertonia, TBC, daganat</li>
-	<div>3c) munkája mi, és mik voltak ➜ pl. szilikózis nevű tüdőbetegség gyakori betegség a bányászok körében, és sok év múlva lesznek csak tünetei</div>
-	<div>3d) gyógyszerszedés ➜ milyet? mióta? napi adag?</div>
-	<details class="kerdes"><summary>4) jelenlegi státusz ➜ fenntről-lefele</summary>
-	  <b>fej</b>
-		<li>fejfájás?</li>
-		<li>szédülés? ➜ ha van: felállás után? <span class="midQ [48]">eszméletvesztés</span> volt?</li>
-	  <b>mellkas</b>
-		<li>torokfájás</li>
-		<li>hányinger / nyelési panasz / reflux</li><ul>
-			<li><span class="midQ [47] kerdes">vérhányás</span></li>
-		</ul>
-		<li>mellkasi tünetek:</li><ul>
-			<li><span class="midQ [66]">nehézlégzés</span></li>
-			<li>köhögés</li>
-			<li>köpet <span class="LASD">7t</span> színe</li><ul>
-				<li>sárgás(zöldes) ➜ gyulladás / fertőzés</li>
-				<li>véres(piros) ➜ TBC, tüdőtumor</li>
+		<details class="kerdes"><summary>3a) korábbi betegségek</summary>
+			<li>milyen gyermekbetegségek voltak ➜ pl. bárányhimlős volt, akkor nem lehet az</li>
+			<li>műtét volt-e? műtéti hegek?</li><ul>
+				<li>pl. ha volt appendectómiája, nem lehet appendicitise(vakbél-gyulladás)</li>
+				<li>pl. cholecystectomia ugyanez</li>
 			</ul>
-			<li><span class="midQ [3] kerdes">mellkasi fájdalom</span></li>
-		</ul>
-		<li>étvágya milyen, testsúlyváltozás</li>
-		<li>lázas volt-e, hány fokos ➜ ha igen…</li><ul>
-			<li>volt-e külföldön?</li>
-			<li>fertőző beteggel volt-e kapcsolatban(család)?</li>
-			<li>kiütése van?</li>
-		</ul>
-	  <b>has</b>
-		<li>gyomorégés?</li><ul>
-			<li><span class="bgYellow">ha <span class="midQ [29.5]">nyombélfekély</span> ➜ éles, étkezésre csökken</span></li>
-			<li><span class="bgYellow">ha <span class="midQ [29.5]">gyomorfekély</span> ➜ tompa, étkezésre rosszabbodó</span></li>
-		</ul>
-		<li>vizelet normális-e</li><ul>
-			<li>mennyisége? éjszaka felkel-e? (mennyit iszik?)</li>
-			<li>színe? (szalmasárga a normális) ➜ pl. véres oka leggyakrabban felfázás miatti hólyaghurut <span style="font-size:80%">(de lehet daganat, vesekő stb.)</span></li>
-			<li>csíp-e?</li>
-		</ul>
-		<li>széklet normális-e (színe,hasmenés)</li><ul>
-			<li>világos ➜ epekárosodás az oka</li>
-			<li>véres</li><ul>
-				<li>fekete + <abbr title="nem teljesen szilárd, mert a folyadékvisszaszívást gátolta 'az emésztett vér'">szurokszerű</abbr> <span class="midQ [47] kerdes">(melaena)</span></li>
-				<li>friss-piros <span class="midQ [47] kerdes">(hematokézia)</span></li>
+			<li>maradandó elváltozást okozó betegség volt-e</li><ul>
+				<li><span class="bgPink">rheumás láz</span> ➜ billentyű</li>
+				<li>TBC ➜ tüdőben maradandó gócok</li>
+				<li>syphilis ➜ aorta aneurizma, idegi <abbr title="mikrobi">!?</abbr></li>
+				<li><span class="bgPink">hepatitis</span> ➜ májkárosodás</li>
 			</ul>
-		</ul>
-	  <b>láb</b>
-		<li><span class="midQ [oedema]">oedema</span>?</li>
-		<li><span class="midQ [15.1]">ízületi fájdalom</span>?</li>
-	</details>
-	<details><summary>5) további kötelező kérdések</summary>
-		<li>alvászavar</li>
-		<li>verejtékezés</li>
-		<li>diabeteszes-e? ➜ ha igen, mióta? (I vagy II)</li>
-		<li>transzfúzió volt-e?</li>
-		<li>műtét volt-e? ➜ appendectomia / cholecystectomia</li>
-		<li><abbr title="itt 1. dohány, 2.kávé(ezt a papírra nem kell felvinnem, csak ez segíti, hogy alkoholra válaszoljon majd) 3. alkohol (kábítószert max akkor kérdezem, ha privát helyen vagyunk)">dohány? kávé? alkohol? kábítószer?</abbr> (mit,mennyit)</li>
-		<li>pacemaker van-e</li>
-		<li>menstruáció ➜ első és utolsó mikor volt?</li>
-		<li>születések vs terhességek száma (utóbbi nagyobb-e, tehát volt-e abortusz)</li>
-	</details>
-  <hr>
-	<details class="kerdes"><summary>célja</summary>
-		<li>jó anamnézis = fél diagnózis</li>
-		<li>jelentősége</li><ul>
-			<li>diagnózis szempontjából döntő</li>
-			<li>az első találkozás évekre megszabja az orvos és beteg kapcsolatát</li>
-		</ul>
-	</details>
-	<details class="kerdes"><summary>megj a kivitelezéssel kapcsolatban</summary>
-		<li>ne gyorsan (hangosan, érthetően beszéljek)</li>
-		<li>mindig a betegnek van igaza, bármennyire is hihetetlen /kivéve pszichiátriai kórkép/ ➜ azt írjam, amit ő mondott, ne amit én gondolok</li>
-	</details>
-	<details class="kerdes"><summary>OPQRST(+2)</summary>
+		</details>
+		<div>3b) családi anamnézis ➜ volt-e valakinek: szívinfarktus, DM, hypertonia, TBC, daganat</div>
+		<div>3c) munkája mi, és mik voltak ➜ pl. szilikózis nevű tüdőbetegség gyakori betegség a bányászok körében, és sok év múlva lesznek csak tünetei</div>
+		<div>3d) gyógyszerszedés ➜ milyet? mióta? napi adag?</div>
+		<details class="kerdes"><summary>4) jelenlegi státusz ➜ fenntről-lefele</summary>
+		  <b>fej</b>
+			<li>fejfájás?</li>
+			<li>szédülés? ➜ ha van: felállás után? <span class="midQ [48]">eszméletvesztés</span> volt?</li>
+		  <b>mellkas</b>
+			<li>torokfájás</li>
+			<li>hányinger / nyelési panasz / reflux</li><ul>
+				<li><span class="midQ [47] kerdes">vérhányás</span></li>
+			</ul>
+			<li>mellkasi tünetek:</li><ul>
+				<li><span class="midQ [66]">nehézlégzés</span></li>
+				<li>köhögés</li>
+				<li>köpet <span class="LASD">7t</span> színe</li><ul>
+					<li>sárgás(zöldes) ➜ gyulladás / fertőzés</li>
+					<li>véres(piros) ➜ TBC, tüdőtumor</li>
+				</ul>
+				<li><span class="midQ [3] kerdes">mellkasi fájdalom</span></li>
+			</ul>
+			<li>étvágya milyen, testsúlyváltozás</li>
+			<li>lázas volt-e, hány fokos ➜ ha igen…</li><ul>
+				<li>volt-e külföldön?</li>
+				<li>fertőző beteggel volt-e kapcsolatban(család)?</li>
+				<li>kiütése van?</li>
+			</ul>
+		  <b>has</b>
+			<li>gyomorégés?</li><ul>
+				<li><span class="bgYellow">ha <span class="midQ [29.5]">nyombélfekély</span> ➜ éles, étkezésre csökken</span></li>
+				<li><span class="bgYellow">ha <span class="midQ [29.5]">gyomorfekély</span> ➜ tompa, étkezésre rosszabbodó</span></li>
+			</ul>
+			<li>vizelet normális-e</li><ul>
+				<li>mennyisége? éjszaka felkel-e? (mennyit iszik?)</li>
+				<li>színe? (szalmasárga a normális) ➜ pl. véres oka leggyakrabban felfázás miatti hólyaghurut <span style="font-size:80%">(de lehet daganat, vesekő stb.)</span></li>
+				<li>csíp-e?</li>
+			</ul>
+			<li>széklet normális-e (színe,hasmenés)</li><ul>
+				<li>világos ➜ epekárosodás az oka</li>
+				<li>véres</li><ul>
+					<li>fekete + <abbr title="nem teljesen szilárd, mert a folyadékvisszaszívást gátolta 'az emésztett vér'">szurokszerű</abbr> <span class="midQ [47] kerdes">(melaena)</span></li>
+					<li>friss-piros <span class="midQ [47] kerdes">(hematokézia)</span></li>
+				</ul>
+			</ul>
+		  <b>láb</b>
+			<li><span class="midQ [oedema]">oedema</span>?</li>
+			<li><span class="midQ [15.1]">ízületi fájdalom</span>?</li>
+		</details>
+		<details><summary>5) további kötelező kérdések</summary>
+			<li>alvászavar</li>
+			<li>verejtékezés</li>
+			<li>diabeteszes-e? ➜ ha igen, mióta? (I vagy II)</li>
+			<li>transzfúzió volt-e?</li>
+			<li>műtét volt-e? ➜ appendectomia / cholecystectomia</li>
+			<li><abbr title="itt 1. dohány, 2.kávé(ezt a papírra nem kell felvinnem, csak ez segíti, hogy alkoholra válaszoljon majd) 3. alkohol (kábítószert max akkor kérdezem, ha privát helyen vagyunk)">dohány? kávé? alkohol? kábítószer?</abbr> (mit,mennyit)</li>
+			<li>pacemaker van-e</li>
+			<li>menstruáció ➜ első és utolsó mikor volt?</li>
+			<li>születések vs terhességek száma (utóbbi nagyobb-e, tehát volt-e abortusz)</li>
+		</details>
+	</details></li>
+  <div><b>panaszok ➜ DD</b></div>
+	<li><details class="kerdes"><summary><span class="bgPink">mikor gyanakodj sürgősségi esetre</span></summary>
+		<li></li>
+	</details></li>
+	<li><details class="kerdes"><summary>OPQRST(+2)</summary>
 		<li>lényege ➜ panasz leírására irányuló 8 kérdés (főként ha fájdalom, de többinél is jó alapnak)</li>
 		<div>Onset – panasz kezdete ➜ ("Mikor és hogyan kezdődött?")</div>
 		<details class="kerdes"><summary>Provocation/Palliation – panasz kiváltója/csillapítója</summary>
@@ -7272,6 +7279,30 @@ Orvosi dokumentáció helye és módja:
 		<li>kísérő tünet (láz,hidegrázás) ➜ ha lázas, szedett-e rá <span class="syno">gyógyszert | lázcsillapítót</span></li>
 		<li>esetleg gyógyszerek, melyeket szedett ➜ fájdalmat csökkentik / nem hatnak</li>
 		<li><span class="bgPink">DN4-kérdőív ➜ 4 felett neuropátiás, alatta nociceptív</span></li>
+	</details></li>
+	<li><details class="kerdes"><summary><span class="bgPink">fejfájás</span></summary>
+		<li></li>
+	</details></li>
+	<li><details class="kerdes"><summary><span class="bgPink">hasfájás</span></summary>
+		<li></li>
+	</details></li>
+	<li><details class="kerdes"><summary><span class="bgPink">hátfájás</span></summary>
+		<li></li>
+	</details></li>
+	<li><details class="kerdes"><summary><span class="bgPink">lábfájás</span></summary>
+		<li></li>
+	</details></li>
+  <hr>
+	<details class="kerdes"><summary>célja</summary>
+		<li>jó anamnézis = fél dg</li>
+		<li>jelentősége</li><ul>
+			<li>dg szempontjából döntő</li>
+			<li>az első találkozás évekre megszabja az orvos és beteg kapcsolatát</li>
+		</ul>
+	</details>
+	<details class="kerdes"><summary>megj a kivitelezéssel kapcsolatban</summary>
+		<li>ne gyorsan (hangosan, érthetően beszéljek)</li>
+		<li>mindig a betegnek van igaza, bármennyire is hihetetlen /kivéve pszichiátriai kórkép/ ➜ azt írjam, amit ő mondott, ne amit én gondolok</li>
 	</details>
 	<details class="kerdes"><summary><span data-src="neuro" class="midQ [371.4]">stroke</span> ~ a.carotis szűkület: 'triász'</summary>
 	  <div>"volt-e ezek közül valamelyike?"</div>
@@ -9033,10 +9064,9 @@ Orvosi dokumentáció helye és módja:
 	</details>
 	<li><span class="bgYellow">betegek 1/3a akut meghal</span></li>
 	<li>RiFa:</li><ul>
-		<li>poli<span class="bgYellow">trauma, alsó végtag törés</span>, térd/csípőprotézis</li><ul>
-			<span class="fsMini">zsírembólia ?! (House!)</span>
-		</ul>
-		<li><span class="bgYellow">3hónapon belüli hospitalizáció AMI/SZE/pitvarfibrill. miatt</span></li>
+		<li><span class="bgYellow">thromboembolia ➜ lásd MVT-nél (pl. immobiolizáció</span> (benntfekvés))</li>
+		<li><span class="bgYellow">zsírembolia ➜ alsó végtag törés</span> (House S6e22)</li>
+		<span class="fsMini">politrauma, alsó végtag törés, térd/csípőprotézis, 3 hónapon belüli hospitalizáció AMI/SZE/pitvarfibrill. miatt</span>
 	</ul>
   <b>tünetek</b>
 	<img data-src="strlzkdy.webp">
@@ -9655,8 +9685,8 @@ Orvosi dokumentáció helye és módja:
 	  </tr></table>
 	</details>
 </ul>
-<details class="[25] kerdes"><summary>PTX (pneumothorax = légmell)</summary>
-	<div class="fsMini">PTX = légmell</div>
+<details class="[25] kerdes"><summary>PTX</summary>
+	<div class="fsMini"><abbr title="pneumothorax">PTX</abbr> = légmell</div>
   <div><b>lényege</b> ➜ <span class="bgYellow">levegő jut a pleura két lemeze közé</span></div>
 	<li>alapvetően a mellkas tágulna<abbr title="bordák illesztése és a mellkasfal szerkezete következtében a mellkasnak nyugalmi állapotban tágulási („expanziós”)tendenciája van">*</abbr>, a tüdő pedig összeesne<abbr title="egyrészt az alveolusok falában lévő elasztikus rostok vannak feszült állapotban, másrészt a felületi feszültség miatt">*</abbr> ➜ azonban a pleuralis folyadék ezt gátolja</li><ul>
 		<span style="font-size:80%">szemléltetése: ha veszek két tárgylemezt és egymásra teszem őket, akkor ha a felsőt tartom csak akkor az alsó leesik ➜ azonban ha teszek közéjük egy vékony folyadék-film (pl.víz) réteget, akkor ha utána csak a felsőt tartom, az alsó sem fog leesni ➜ ugyanis a folyadékot összetartó kohéziós erők nagyon nagyok, így alig képes tágulni <abbr title="élettan">§</abbr></span> <img class="mini" data-src="vmgnjnghgn.webp">
@@ -11551,7 +11581,7 @@ Orvosi dokumentáció helye és módja:
 			<li><span class="bgYellow">képalkotó</span> ➜ hasi UH, mrtg, CT</li>
 		</td>
 		<td style="text-align:left">
-			<li><span class="bgBlue"><span class="midQ [85]" data-src="bel">mellkasi fájdalom</span> ➜ hirtelen kialakuló, nagyon erős (hasító/szakító jellegű)</span></li>
+			<li><span class="bgBlue"><span class="midQ [3]">mellkasi fájdalom</span> ➜ hirtelen kialakuló, nagyon erős (hasító/szakító jellegű)</span></li>
 			<li><span class="bgYellow">vérnyomásmérés ➜ alsó vs felső végtag, illetve a két oldalt között</span> van-e különbség</li>
 			<li>labor ➜ <span class="midQ [16.15]">D-dimer</span> nőtt-e?</li>
 			<li>ha alapos a gyanú, akkor <span class="bgBlue">CT-angio</span>graphia ➜ <span class="bgYellow">ez ami biztossá teszi a diagnózist</span></li>
@@ -12120,9 +12150,9 @@ Orvosi dokumentáció helye és módja:
   <b>szövődménye</b>
 	<li>neuro ➜ fejfájás, szédülés, homályos látás, tudatzavar</li>
 	<li>CV</li><ul>
-		<li><span class="midQ [61.5] bgYellow">stasist</span> okoz ➜ vénás <span class="bgYellow">thrombosis</span></li>
+		<li><span class="midQ [61.5] bgYellow">stasist</span> okoz ➜ <span class="bgYellow">thrombosis</span> (<abbr title="ugye a stasis alapján ez lenne a prior, de pl. PV esetén a stroke a gyakori halál ok">vénás</abbr>,artériás)</li>
 		<li><span class="bgYellow">hypertonia</span></li>
-		<li>SZE</li>
+		<li>SzE</li>
 	</ul>
 	<li><span class="bgYellow">vérzések</span> (pl. orr, retina)</li>
   <b>dg</b>
@@ -13629,97 +13659,93 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 	<div class="imp [50.1]"></div>
 	<div class="imp [1.3]"></div>
  </details><ul>
-	<details class="[50.1] kerdes"><summary>hypo- / hyperparathyreosis</summary><table>
-		<tr><th style="writing-mode:sideways-lr; width:15px" rowspan="2"></th>  <th rowspan="2">hypoparathyreosis</th>  <th colspan="2">hyperparathyreosis</th></tr>
-		<tr><th>primer</th>  <th>szekunder</th></tr>
-		<tr><th style="writing-mode:sideways-lr;">lényege</th>
-			<td> <span class="bgYellow">mpm alulműködése miatti PTH-hiány</span> </td>
-			<td> <span class="bgYellow">mpm zavar miatti PTH túltermelés (hyperCa²⁺ nem negatív feedback-el)</span> </td>
-			<td> <span class="bgYellow">hypoCa²⁺ következtébeni fokozott PTH termelés a mpm-ben</span> </td>
-		</tr>
-		<tr><th style="writing-mode:sideways-lr;">etiológia</th>
-			<td style="text-align:left">
-				<li><span class="bgYellow">iatrogén ➜ nyaki műtét, irradiatio</span></li>
-				<li>idiopathiás</li>
-				<li>aplasia pl. <span class="midQ [5] kerdes bgYellow" data-src="bel">DiGeorge-sy</span></li>
-			</td>
-			<td style="text-align:left">
-				<li><span class="bgYellow">mpm adenoma</span> (75%)</li><ul>
-					<li>solitaer (70%)</li>
-					<li>multiplex (5%)</li>
-				</ul>
-				<li>mpm hyperplasia (10%)</li>
-				<li><span class="midQ [46] bgYellow kerdes" data-src="bel">MEN</span></li>
-			</td>
-			<td style="text-align:left">
-				<li>bél ➜ <span class="midQ [10]" data-src="bel">malabszorpció</span> (Ca²⁺ / D-vitamin felszívódási zavar)</li>
-				<li><span class="bgYellow">vese</span> (Ca²⁺ reabszorpciós zavar, D-vitamin szintézis zavar)</li>
-				<li>máj (D-vitamin szintézis zavar)</li>
-				<li><span class="bgYellow"><span class="midQ [50.3] kerdes syno" data-syno="rachitis | angolkór">rachitis</span> ➜ D-vitamin hiány</span></li>
-			</td>
-		</tr>
-		<tr><th style="writing-mode:sideways-lr;">patho</th>
-			<td colspan="3"> <span class="midQ [50.2]">lásd Ca/foszfát anyagcsere</span> </td>
-		</tr>
-		<tr><th style="writing-mode:sideways-lr;">tünetek</th>
-			<td style="text-align:left">
-				<li>lásd <span class="midQ [50.4] kerdes">hypoCa²⁺</span></li>
-				<li>szervi elváltozások: haj-, körömnövekedési zavarok, cataracta, osteosclerosis</li>
-				<li>ingerlékenység, depresszió</li>
-			</td>
-			<td> lásd <span class="midQ [50.4] kerdes">hyperCa²⁺</span> </td>
-			<td> lásd <span class="midQ [50.4] kerdes">hypoCa²⁺</span> + etio </td>
-		</tr>
-		<tr><th style="writing-mode:sideways-lr;">Dg</th>
-			<td style="text-align:left">
-			  labor Se:
-				<li><span class="bgYellow"><span class="midQ [50.4]">PTH↓ Ca²⁺↓<abbr title="hypocalcaemia">'</abbr> <abbr title="foszfátion">Pi</abbr>↑<abbr title="hyperphosphataemia">'</abbr></span></span></li>
-				<li>Mg²⁺↓<abbr title="hypomagnesaemia">'</abbr></li>
-				<span class="bgYellow">Se Ca²⁺ ➜ minden laborvizsgálatban benne kéne legyen, mert olcsó, ellenben segíti az időben észrevételt</span>
-			</td>
-			<td style="text-align:left">
-				<li><span class="bgYellow">Se ➜ <span class="midQ [50.4]">PTH↑ Ca²⁺↑<abbr title="hypercalcaemia">'</abbr> Pi↓</span><abbr title="hypophosphataemia">'</abbr></span></li>
-				<li>vizelet ➜ <span class="midQ [20.15]">hypercalciuria</span>, hyperphosphaturia</li>
-				<li>hyperchloraemiás acidosis</li>
-				<li>radiológia ➜ tumorkeresés, csontszcintigráfia</li>
-			</td>
-			<td style="text-align:left">
-				<li>PTH↑</li>
-				<li>Ca²⁺–/↓ <abbr title="attól függ kompenzált-e">'</abbr><abbr title="A vese csökkent foszfátürítése miatt a szérum foszfát szintje megemelkedik. A magas foszfátszint megköti a szérumban lévő Ca²⁺-t, így csökken az ionizált kalcium szintje. A vese nem tudja megfelelően aktiválni a D-vitamint, ami miatt csökken a bélben a Ca²⁺ felszívódása. A csökkent szérum Ca²⁺ szint stimulálja a mellékpajzsmirigyet, ami fokozott PTH-termelést eredményez. A magas PTH mobilizálja a csontokból a Ca²⁺-t, de a veseelégtelenség miatt a szérum Ca²⁺ szintje gyakran nem tud normális szintre emelkedni, vagy csak enyhén emelkedik.">'</abbr></li>
-				<li>Pi</li><ul>
-					<li>ha <span class="midQ [50.3]">angolkór</span> ➜ normál, majd csökken</li>
-					<li>ha vese ➜ nő (nem tudja kiválasztani)</li>
-				</ul>
-			</td>
-		</tr>
-		<tr><th style="writing-mode:sideways-lr;">th</th>
-			<td style="text-align:left">
-				<li>ha tetania ➜ iv.Ca²⁺</li>
-				<li>tartós kezelés ➜ po.Ca²⁺ + D-vitamin</li>
-			</td>
-			<td style="text-align:left">
-			  lásd <span data-src="Aneszt/aneszt.html" class="midQ [22]">aneszt</span>
-				<li>300-500ml fiz.só, majd furosemid</li>
-				<li>hemodialízis</li>
-			  oki:
-				<li>-ectomia pl.</li><ul>
-					<li>ha hyperplasia</li>
-					<li>ha megnagyobbodik</li>
-					<li>ha vesefunkció beszűkülés</li>
-				</ul>
-				<li>D-vitamin megvonása, Ca²⁺ felvétel csökkentése</li>
-				<li>osteoporosis:</li><ul>
-				  osteoclastok gátlása:
-					<li>biszfoszfonát (pl.zoledronat)</li>
-					<li>kalcitonin</li>
-				</ul>
-			</td>
-			<td style="text-align:left">
-				<li>alapbetegség kezelése</li>
-				<li>D-vitamin és Ca²⁺</li>
-			</td>
-		</tr>
-	</table></details>
+	<details class="[50.1] kerdes"><summary>hypo- / hyperparathyreosis</summary><table><tr>
+		<th style="writing-mode:sideways-lr; width:15px" rowspan="2"></th>
+		<th rowspan="2">hypoparathyreosis</th>  <th colspan="2">hyperparathyreosis</th>
+	  </tr><tr>
+		<th>primer</th>  <th>szekunder</th>
+	  </tr><tr><th style="writing-mode:sideways-lr;">lényege</th>
+		<td> <span class="bgYellow">mpm alulműködése miatti PTH-hiány</span> </td>
+		<td> <span class="bgYellow">mpm zavar miatti PTH túltermelés (hyperCa²⁺ nem negatív feedback-el)</span> </td>
+		<td> <span class="bgYellow">hypoCa²⁺ következtébeni fokozott PTH termelés a mpm-ben</span> </td>
+	  </tr><tr><th style="writing-mode:sideways-lr;">etiológia</th>
+		<td style="text-align:left">
+			<li><span class="bgYellow">iatrogén ➜ nyaki műtét, irradiatio</span></li>
+			<li>idiopathiás</li>
+			<li>aplasia pl. <span class="midQ [5] kerdes bgYellow" data-src="bel">DiGeorge-sy</span></li>
+		</td>
+		<td style="text-align:left">
+			<li><span class="bgYellow">mpm adenoma</span> (75%)</li><ul>
+				<li>solitaer (70%)</li>
+				<li>multiplex (5%)</li>
+			</ul>
+			<li>mpm hyperplasia (10%)</li>
+			<li><span class="midQ [46] bgYellow kerdes" data-src="bel">MEN</span></li>
+		</td>
+		<td style="text-align:left">
+			<li>bél ➜ <span class="midQ [10]" data-src="bel">malabszorpció</span> (Ca²⁺ / D-vitamin felszívódási zavar)</li>
+			<li><span class="bgYellow">vese</span> (Ca²⁺ reabszorpciós zavar, D-vitamin szintézis zavar)</li>
+			<li>máj (D-vitamin szintézis zavar)</li>
+			<li><span class="bgYellow"><span class="midQ [50.3] kerdes syno" data-syno="rachitis | angolkór">rachitis</span> ➜ D-vitamin hiány</span></li>
+		</td>
+	  </tr><tr><th style="writing-mode:sideways-lr;">patho</th>
+		<td colspan="3"> <span class="midQ [50.2]">lásd Ca/foszfát anyagcsere</span> </td>
+	  </tr><tr><th style="writing-mode:sideways-lr;">tünetek</th>
+		<td style="text-align:left">
+			<li>lásd <span class="midQ [50.4] kerdes">hypoCa²⁺</span></li>
+			<li>szervi elváltozások: haj-, körömnövekedési zavarok, cataracta, osteosclerosis</li>
+			<li>ingerlékenység, depresszió</li>
+		</td>
+		<td> lásd <span class="midQ [50.4] kerdes">hyperCa²⁺</span> </td>
+		<td> lásd <span class="midQ [50.4] kerdes">hypoCa²⁺</span> + etio </td>
+	  </tr><tr><th style="writing-mode:sideways-lr;">Dg</th>
+		<td style="text-align:left">
+		  labor Se:
+			<li><span class="bgYellow"><span class="midQ [50.4]">PTH↓ Ca²⁺↓<abbr title="hypocalcaemia">'</abbr> <abbr title="foszfátion">Pi</abbr>↑<abbr title="hyperphosphataemia">'</abbr></span></span></li>
+			<li>Mg²⁺↓<abbr title="hypomagnesaemia">'</abbr></li>
+			<span class="bgYellow">Se Ca²⁺ ➜ minden laborvizsgálatban benne kéne legyen, mert olcsó, ellenben segíti az időben észrevételt</span>
+		</td>
+		<td style="text-align:left">
+			<li><span class="bgYellow">Se ➜ <span class="midQ [50.4]">PTH↑ Ca²⁺↑<abbr title="hypercalcaemia">'</abbr> Pi↓</span><abbr title="hypophosphataemia">'</abbr></span></li>
+			<li>vizelet ➜ <span class="midQ [20.15]">hypercalciuria</span>, hyperphosphaturia</li>
+			<li>hyperchloraemiás acidosis</li>
+			<li>radiológia ➜ tumorkeresés, csontszcintigráfia</li>
+		</td>
+		<td style="text-align:left">
+			<li>PTH↑</li>
+			<li>Ca²⁺–/↓ <abbr title="attól függ kompenzált-e">'</abbr><abbr title="A vese csökkent foszfátürítése miatt a szérum foszfát szintje megemelkedik. A magas foszfátszint megköti a szérumban lévő Ca²⁺-t, így csökken az ionizált kalcium szintje. A vese nem tudja megfelelően aktiválni a D-vitamint, ami miatt csökken a bélben a Ca²⁺ felszívódása. A csökkent szérum Ca²⁺ szint stimulálja a mellékpajzsmirigyet, ami fokozott PTH-termelést eredményez. A magas PTH mobilizálja a csontokból a Ca²⁺-t, de a veseelégtelenség miatt a szérum Ca²⁺ szintje gyakran nem tud normális szintre emelkedni, vagy csak enyhén emelkedik.">'</abbr></li>
+			<li>Pi</li><ul>
+				<li>ha <span class="midQ [50.3]">angolkór</span> ➜ normál, majd csökken</li>
+				<li>ha vese ➜ nő (nem tudja kiválasztani)</li>
+			</ul>
+		</td>
+	  </tr><tr><th style="writing-mode:sideways-lr;">th</th>
+		<td style="text-align:left">
+			<li>ha tetania ➜ iv.Ca²⁺</li>
+			<li>tartós kezelés ➜ po.Ca²⁺ + D-vitamin</li>
+		</td>
+		<td style="text-align:left">
+		  lásd <span data-src="Aneszt/aneszt.html" class="midQ [22]">aneszt</span>
+			<li>300-500ml fiz.só, majd furosemid</li>
+			<li>hemodialízis</li>
+		  oki:
+			<li>-ectomia pl.</li><ul>
+				<li>ha hyperplasia</li>
+				<li>ha megnagyobbodik</li>
+				<li>ha vesefunkció beszűkülés</li>
+			</ul>
+			<li>D-vitamin megvonása, Ca²⁺ felvétel csökkentése</li>
+			<li>osteoporosis:</li><ul>
+			  osteoclastok gátlása:
+				<li>biszfoszfonát (pl.zoledronat)</li>
+				<li>kalcitonin</li>
+			</ul>
+		</td>
+		<td style="text-align:left">
+			<li>alapbetegség kezelése</li>
+			<li>D-vitamin és Ca²⁺</li>
+		</td>
+	</tr></table></details>
 	<details class="[50.2] kerdes"><summary>Ca²⁺ anyagcsere</summary>
 		<li>bélben kerül felvételre <span style="font-size:80%">(200mg/nap)</span></li>
 		<li>vesén keresztül távozik <span style="font-size:80%">(200mg/nap)</span></li>
@@ -18064,7 +18090,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 		<th style="width:20%"><abbr title="szimpatikus mellékvesevelőhöz tartó része">szimp. mellékvesevelő</abbr></th>
 	  </tr><tr>
 		<th style="width:15%"><b>pre</b>ggl-rost <abbr title="tehát amivel a vegetatív ggl-ban átadja az információt">'</abbr></th>
-		<td colspan="3"><span class="IMPORTANT">ACh</span>(neurotranszmitter) ➜ <span class="midQ [20]">nikotinerg-receptor</span>(idegi típusú)</td>
+		<td colspan="3"><span class="bgBlue">ACh</span>(neurotranszmitter) ➜ <span data-src="farmak" class="midQ [20]">nikotinerg-receptor</span>(idegi típusú)</td>
 	  </tr><tr><th style="width:15%"><b>poszt</b>ggl-rost</th>
 		<td style="text-align:left">
 		  <center><span class="bgBlue">ACh</span><abbr title="neurotranszmitter">'</abbr></center>
@@ -18083,19 +18109,19 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 		  <center><span class="bgBlue">nAdr</span></center>
 			<li><span class="midQ [6]">noradrenerg</span>-receptorok</li>
 		  kivéve:
-			<li>verejtékmirigy: <span class="bgBlue">ACh</span> ➜ <span class="midQ [20]">muszkarinerg</span>-receptor</li>
+			<li>verejtékmirigy: <span class="bgBlue">ACh</span> ➜ <span data-src="farmak" class="midQ [20]">muszkarinerg</span>-receptor</li>
 			<li><abbr title="?!">vese(simaizom)</abbr>: <span class="bgBlue">dopamin</span> ➜ D1R</li>
 		</td>
 		<td>
 		  <center><span class="bgBlue">Adr</span></center>
-			<li><span class="midQ [6]">noradrenerg</span>-receptorok</li>
+			<li><span data-src="farmak" class="midQ [6]">noradrenerg</span>-receptorok</li>
 			<span class="done">itt NINCS posztggl rost, hanem a vérbe jut!!</span>
 		</td>
 	  </tr><tr>
 		<th style="width:15%">neurotranszmitter<abbr title="posztganglionáris">'</abbr> sorsa</th>
 		<td style="text-align:left" colspan="3">
-			<li><span class="midQ [30]">ACh ➜ kolinészteráz lebontja</span></li>
-			<li><span class="midQ [44]">nAdr ➜ visszavételre kerülnek (preszinaptikus sejt), majd egy részüket MAO lebontja</span></li>
+			<li><span data-src="farmak" class="midQ [30]">ACh ➜ kolinészteráz lebontja</span></li>
+			<li><span data-src="farmak" class="midQ [44]">nAdr ➜ reuptake (preszinaptikus sejt), majd egy részüket MAO/COMT lebontja</span></li>
 			<span style="font-size:80%">többi nem lényeges</span>
 		</td>
 	</tr></table><img data-src="uzckagon.webp"></details>
@@ -18472,7 +18498,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 <!-- a1 – 10 --></details>
 
 	<!-- tesztek -->
-<!-- 📝1 – 10 --><details><summary>t11–20</summary>
+<!-- 📝1 – 10 --><details><summary>📝11–20</summary>
 <details class="[📝1] title"><summary>📝 ált.anesztetikumok</summary>
 	<details class="kerdes"><summary>anesztetikumok csoportosítása</summary>
 		<li>lokális</li>
@@ -18851,7 +18877,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 	</details>
 </details>
 <!-- 📝1 – 10 --></details>
-<!-- 📝11 – 20 --><details><summary>t11–20</summary>
+<!-- 📝11 – 20 --><details><summary>📝11–20</summary>
 <details class="[📝11] title"><summary>📝 NMJ-gátlók</summary>
 	<details class="kerdes"><summary>hatóanyag(3)</summary>
 		<div class="imp [12.19]"></div> <!-- hcs.izomra hatók -->
@@ -19009,7 +19035,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 	</details>
 </details>
 <!-- 📝11 – 20 --></details>
-<!-- 📝21 – 30 --><details><summary>t21–30</summary>
+<!-- 📝21 – 30 --><details><summary>📝21–30</summary>
 <details class="[📝21] title"><summary>📝 hypothermia</summary>
 	<details class="kerdes"><summary>etio (4)</summary>
 		<div class="imp [13.9]"></div>
@@ -19157,7 +19183,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 	</details>
 </details>
 <!-- 📝21 – 30 --></details>
-<!-- 📝31 – 40 --><details><summary>t31–40</summary>
+<!-- 📝31 – 40 --><details><summary>📝31–40</summary>
 <details class="[📝31] title"><summary>📝 infektív endocarditis</summary>
 	<details class="kerdes"><summary>patho (4)</summary>
 		<div class="imp [67.4]"></div>
@@ -19377,7 +19403,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 	</details>
 </details>
 <!-- 📝31 – 40 --></details>
-<!-- 📝41 – 50 --><details><summary>t41–50</summary>
+<!-- 📝41 – 50 --><details><summary>📝41–50</summary>
 <details class="[📝41] title"><summary>📝 hypertonia</summary>
 	<details class="kerdes"><summary>definíció</summary>
 		<div class="imp [8]"></div>
@@ -19447,136 +19473,605 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 </details>
 <details class="[📝46] title"><summary>📝 DM</summary>
 	<details class="kerdes"><summary>formái (3)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.1]"></div>
 	</details>
 	<details class="kerdes"><summary>T1DM lényege</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.1]"></div>
 	</details>
 	<details class="kerdes"><summary>T2DM lényege</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.1]"></div>
 	</details>
 	<details class="kerdes"><summary>gestatios DM lényege</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.1]"></div>
 	</details>
 	<details class="kerdes"><summary>dg (9)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.2]"></div>
 	</details>
+  <b>szövődmények</b>
 	<details class="kerdes"><summary>krónikus szövődmények felsorolása (7)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>diabeteses nephropathia (5)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>diabeteses retinopathia (2)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>diabeteses neuropathia (8)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>diabeteses láb sy</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>akut szövődmények felsorolása (3)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>hypoglycaemia ➜ def</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>hypoglycaemia ➜ etio (4)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>hypoglycaemia ➜ tünet (4)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>hypoglycaemia ➜ dg (4</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>hyperglycaemia ➜ patho</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>hyperglycaemia ➜ tünet (4)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>hyperglycaemia ➜ dg (4)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
 	</details>
 	<details class="kerdes"><summary>hyperglycaemia ➜ th (4)</summary>
-		<div class="imp [58]"></div>
+		<div class="imp [58.3]"></div>
+	</details>
+  <b>th</b>
+	<details class="kerdes"><summary>th protokoll</summary>
+		<div class="imp [58.7]"></div>
+	</details>
+	<details class="kerdes"><summary>orális antidiabetikumok ➜ típusai</summary>
+		<div class="imp [58.4]"></div>
+	</details>
+	<details class="kerdes"><summary>orális antidiabetikumok ➜ mh</summary>
+		<div class="imp [58.7]"></div>
+	</details>
+	<details class="kerdes"><summary>inzulin funkció (4)</summary>
+		<div class="imp [58.5]"></div>
+	</details>
+	<details class="kerdes"><summary>inzulinkezelés ➜ beadás módja</summary>
+		<div class="imp [58.6]"></div>
+	</details>
+	<details class="kerdes"><summary>inzulinkezelés ➜ hatóanyagok (4)</summary>
+		<div class="imp [58.6]"></div>
+	</details>
+	<details class="kerdes"><summary>inzulinkezelés ➜ mh</summary>
+		<div class="imp [58.6]"></div>
+	</details>
+	<details class="kerdes"><summary>inzulinkezelés ➜ típusai</summary>
+		<div class="imp [58.6]"></div>
+	</details>
+	<details class="kerdes"><summary>konvencionális inzulin th</summary>
+		<div class="imp [58.6]"></div>
+	</details>
+	<details class="kerdes"><summary>intenzív konvencionális inzulin th</summary>
+		<div class="imp [58.6]"></div>
+	</details>
+	<details class="kerdes"><summary>izulinpumpa</summary>
+		<div class="imp [58.6]"></div>
 	</details>
 </details>
-<details class="[📝47] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝47] title"><summary>📝 hypertriglyceridaemia</summary>
+	<details class="kerdes"><summary>definíció</summary>
+		<div class="imp [39]"></div>
+	</details>
+	<details class="kerdes"><summary>LDL,HDL szintek</summary>
+		<div class="imp [39]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (3)</summary>
+		<div class="imp [39]"></div>
+	</details>
+	<details class="kerdes"><summary>szövődmény (3)</summary>
+		<div class="imp [39]"></div>
+	</details>
+	<details class="kerdes"><summary>th (2)</summary>
+		<div class="imp [39]"></div>
+	</details>
+	<details class="kerdes"><summary>hyperkoleszterinaemia ➜ etio (3)</summary>
+		<div class="imp [39]"></div>
+	</details>
+	<details class="kerdes"><summary>hyperkoleszterinaemia ➜ szöv (2)</summary>
+		<div class="imp [39]"></div>
+	</details>
+	<details class="kerdes"><summary>hyperkoleszterinaemia ➜ th (3)</summary>
+		<div class="imp [39]"></div>
 	</details>
 </details>
-<details class="[📝48] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝48] title"><summary>📝 hyperviscositas sy</summary>
+	<details class="kerdes"><summary>lényeg (2)</summary>
+		<div class="imp [40]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (3)</summary>
+		<div class="imp [40]"></div>
+	</details>
+	<details class="kerdes"><summary>szöv (3)</summary>
+		<div class="imp [40]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (2)</summary>
+		<div class="imp [40]"></div>
+	</details>
+	<details class="kerdes"><summary>th (2)</summary>
+		<div class="imp [40]"></div>
 	</details>
 </details>
-<details class="[📝49] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝49] title"><summary>📝 mellkasi fájdalom</summary>
+	<details class="kerdes"><summary>etio (5)</summary>
+		<div class="imp [3]"></div>
+	</details>
+	<details class="kerdes"><summary>angina pectoris ➜ lényege (etio, mellette / ellene szól)</summary>
+		<div class="imp [3]"></div>
+	</details>
+	<details class="kerdes"><summary>angina pectoris ➜ típusainak felsorolása</summary>
+		<div class="imp [3]"></div>
 	</details>
 </details>
-<details class="[📝50] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝50] title"><summary>📝 mechanikus keringéstámogatás</summary>
+	<details class="kerdes"><summary>típusainak felsorolása</summary>
+		<div class="imp [57.1]"></div>
+	</details>
+	<details class="kerdes"><summary>ind (2)</summary>
+		<div class="imp [57.1]"></div>
 	</details>
 </details>
 <!-- 📝41 – 50 --></details>
-<!-- 📝51 – 60 --><details><summary>t51–60</summary>
-<details class="[📝51] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<!-- 📝51 – 60 --><details><summary>📝51–60</summary>
+<details class="[📝51] title"><summary>📝 vesepótló kezelések</summary>
+	<details class="kerdes"><summary>lényege</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>ind (3)</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>típusainak felsorolása (6)</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>hemodialítis ➜ lényege</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>hemodialízis ➜ kivitelezése</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>peritoneális dialízis ➜ lényege</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>peritoneális dialízis ➜ előny vs hátrány</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>hemofiltráció lényege</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>hemoperfúzió lényege</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>hemoperfúzió ind</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>plasmapheresis lényege</summary>
+		<div class="imp [57.3]"></div>
+	</details>
+	<details class="kerdes"><summary>plasmapheresis ind</summary>
+		<div class="imp [57.3]"></div>
 	</details>
 </details>
-<details class="[📝52] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝52] title"><summary>📝 veseelégtelenség</summary>
+	<details class="kerdes"><summary>oilguria vs anuria</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>akut ➜ def</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>akut ➜ etio (6)</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>akut ➜ leggyakoribb etio</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>akut ➜ prerenalis lényege</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>akut ➜ tünetek (5)</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>akut ➜ dg (5)</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>akut ➜ th (3)</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>krónikus ➜ etio (4)</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>krónikus ➜ tünetek (4)</summary>
+		<div class="imp [20.4]"></div>
+	</details>
+	<details class="kerdes"><summary>krónikus ➜ dg (4)</summary>
+		<div class="imp [20.4]"></div>
 	</details>
 </details>
-<details class="[📝53] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝53] title"><summary>📝 hypoparathyreosis</summary>
+	<details class="kerdes"><summary>lényege</summary>
+		<div class="imp [50.1]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (2)</summary>
+		<div class="imp [50.1]"></div>
+	</details>
+	<details class="kerdes"><summary>tünetek (2)</summary>
+		<div class="imp [50.1]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (2)</summary>
+		<div class="imp [50.1]"></div>
 	</details>
 </details>
-<details class="[📝54] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝54] title"><summary>📝 hyperparathyreosis</summary>
+	<details class="kerdes"><summary>lényege</summary>
+		<div class="imp [50.1]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (4)</summary>
+		<div class="imp [50.1]"></div>
+	</details>
+	<details class="kerdes"><summary>tünetek (5)</summary>
+		<div class="imp [50.1]"></div>
+	</details>
+	<details class="kerdes"><summary>dg</summary>
+		<div class="imp [50.1]"></div>
 	</details>
 </details>
-<details class="[📝55] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝55] title"><summary>📝 (hypo/hyper)calcaemia</summary>
+	<details class="kerdes"><summary>Ca²⁺ anyagcsere (rajz)</summary>
+		<div class="imp [50.2]"></div>
+	</details>
+	<details class="kerdes"><summary>szint (vér)</summary>
+		<div class="imp [50.4]"></div>
+	</details>
+	<details class="kerdes"><summary>változás hatása általánosan</summary>
+		<div class="imp [50.4]"></div>
+	</details>
+	<details class="kerdes"><summary>hypo ➜ klinikum (2)</summary>
+		<div class="imp [50.4]"></div>
+	</details>
+	<details class="kerdes"><summary>hyper ➜ klinikum (5)</summary>
+		<div class="imp [50.4]"></div>
+	</details>
+	<details class="kerdes"><summary>hypo ➜ etio (5)</summary>
+		<div class="imp [50.4]"></div>
+	</details>
+	<details class="kerdes"><summary>hyper ➜ etio (4)</summary>
+		<div class="imp [50.4]"></div>
 	</details>
 </details>
-<details class="[📝56] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝56] title"><summary>📝 (hypo/hyper)thyreosis</summary>
+	<details class="kerdes"><summary>etio (3,3)</summary>
+		<div class="imp [36.1]"></div>
+	</details>
+	<details class="kerdes"><summary>tünetek (4,4)</summary>
+		<div class="imp [36.1]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (4,4)</summary>
+		<div class="imp [36.1]"></div>
+	</details>
+	<details class="kerdes"><summary>th (1,3)</summary>
+		<div class="imp [36.1]"></div>
+	</details>
+	<details class="kerdes"><summary>struma ➜ lényege,etio,típusa</summary>
+		<div class="imp [36.4]"></div>
+	</details>
+	<details class="kerdes"><summary>Hashimoto-thyreoiditis</summary>
+		<div class="imp [36.3]"></div>
+	</details>
+	<details class="kerdes"><summary>Graves–Basedow-kór</summary>
+		<div class="imp [36.3]"></div>
+	</details>
+	<details class="kerdes"><summary>myxoedemas coma</summary>
+		<div class="imp [36.4]"></div>
+	</details>
+	<details class="kerdes"><summary>thyreotoxicus krízis</summary>
+		<div class="imp [36.4]"></div>
 	</details>
 </details>
-<details class="[📝57] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝57] title"><summary>📝 endokrin krízisek</summary>
+	<details class="kerdes"><summary>lényegük</summary>
+		<div class="imp [6]"></div>
+	</details>
+	<details class="kerdes"><summary>felsorolás (8)</summary>
+		<div class="imp [6]"></div>
+	</details>
+	<details class="kerdes"><summary><span class="bgPink">phaeochromocytomás krízis</span></summary>
+		<div class="imp [6]"></div>
+	</details>
+	<details class="kerdes"><summary><span class="bgPink">Addison-krízis</span></summary>
+		<div class="imp [6]"></div>
 	</details>
 </details>
-<details class="[📝58] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝58] title"><summary>📝 asthma bronchiale</summary>
+	<details class="kerdes"><summary>patho</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (2)</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>tünetek (3)</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (2)</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>th (3)</summary>
+		<div class="imp [5]"></div>
 	</details>
 </details>
-<details class="[📝59] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝59] title"><summary>📝 COPD</summary>
+	<details class="kerdes"><summary>patho</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (2)</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>tünetek (8)</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (2)</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>th (4)</summary>
+		<div class="imp [5]"></div>
 	</details>
 </details>
-<details class="[📝60] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝60] title"><summary>📝 akut exacerbáció</summary>
+	<details class="kerdes"><summary>lényege</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>tünetek (3)</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>dg</summary>
+		<div class="imp [5]"></div>
+	</details>
+	<details class="kerdes"><summary>th (4)</summary>
+		<div class="imp [5]"></div>
 	</details>
 </details>
 <!-- 📝51 – 60 --></details>
+<!-- 📝61 – 70 --><details><summary>📝61–70</summary>
+<details class="[📝61] title"><summary>📝 leukamia, lymphoma</summary>
+	<details class="kerdes"><summary>leukaemia lényege</summary>
+		<div class="imp [38.1]"></div>
+	</details>
+	<details class="kerdes"><summary>leukaemia típusai</summary>
+		<div class="imp [38.1]"></div>
+	</details>
+	<details class="kerdes"><summary>lymphoma lényege</summary>
+		<div class="imp [38.1]"></div>
+	</details>
+	<details class="kerdes"><summary>lymphoma típusai</summary>
+		<div class="imp [38.1]"></div>
+	</details>
+	<details class="kerdes"><summary>MPN lényege</summary>
+		<div class="imp [38.1]"></div>
+	</details>
+	<details class="kerdes"><summary>MPD típusai</summary>
+		<div class="imp [38.1]"></div>
+	</details>
+	<details class="kerdes"><summary>MDS lényege</summary>
+		<div class="imp [38.1]"></div>
+	</details>
+	<details class="kerdes"><summary>általános tünetek (10)</summary>
+		<div class="imp [38.2]"></div>
+	</details>
+	<details class="kerdes"><summary>MM lényege</summary>
+		<div class="imp [38.2]"></div>
+	</details>
+	<details class="kerdes"><summary>melyik gyermekben/idősben (AML,ALL,CML,CLL)</summary>
+		<div class="imp [38.2]"></div>
+	</details>
+</details>
+<details class="[📝62] title"><summary>📝 agranulocytosis, neutropenia</summary>
+	<details class="kerdes"><summary>def</summary>
+		<div class="imp [38.3]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (4)</summary>
+		<div class="imp [38.3]"></div>
+	</details>
+	<details class="kerdes"><summary>tünetek (3)</summary>
+		<div class="imp [38.3]"></div>
+	</details>
+</details>
+<details class="[📝63] title"><summary>📝 anaemia</summary>
+	<details class="kerdes"><summary>def</summary>
+		<div class="imp [24.1]"></div>
+	</details>
+	<details class="kerdes"><summary>általános tünetek (2)</summary>
+		<div class="imp [24.2]"></div>
+	</details>
+	<details class="kerdes"><summary>DD (3)</summary>
+		<div class="imp [24.3]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (10)</summary>
+		<div class="imp [24.3]"></div>
+	</details>
+	<details class="kerdes"><summary>vashiányos ➜ etio (2)</summary>
+		<div class="imp [24.5]"></div>
+	</details>
+	<details class="kerdes"><summary>vashiányos ➜ dg (3)</summary>
+		<div class="imp [24.5]"></div>
+	</details>
+	<details class="kerdes"><summary>haemolyticus ➜ lényege</summary>
+		<div class="imp [24.6]"></div>
+	</details>
+	<details class="kerdes"><summary>haemolyticus ➜ lokalizáció (2)</summary>
+		<div class="imp [24.6]"></div>
+	</details>
+	<details class="kerdes"><summary>haemolyticus ➜ dg (6)</summary>
+		<div class="imp [24.6]"></div>
+	</details>
+</details>
+<details class="[📝64] title"><summary>📝 pneumonia</summary>
+	<details class="kerdes"><summary>típusainak felsorolása</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>CAP ➜ etio (4)</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>nozokomiális ➜ etio (4)</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>típusos ➜ etio (3)</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>típusos ➜ tünetek (3)</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>típusos ➜ dg (1)</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>atípusos ➜ etio (3)</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>atípusos ➜ tünetek (4)</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>atípusos ➜ dg (1)</summary>
+		<div class="imp [23]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (5)</summary>
+		<div class="imp [23]"></div>
+	</details>
+</details>
+<details class="[📝65] title"><summary>📝 ptx</summary>
+	<details class="kerdes"><summary>def</summary>
+		<div class="imp [25]"></div>
+	</details>
+	<details class="kerdes"><summary>típusai</summary>
+		<div class="imp [25]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (4)</summary>
+		<div class="imp [25]"></div>
+	</details>
+	<details class="kerdes"><summary>tünetek (3)</summary>
+		<div class="imp [25]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (5)</summary>
+		<div class="imp [25]"></div>
+	</details>
+	<details class="kerdes"><summary>th (3)</summary>
+		<div class="imp [25]"></div>
+	</details>
+</details>
+<details class="[📝66] title"><summary>📝 hydrothorax</summary>
+	<details class="kerdes"><summary>lényege</summary>
+		<div class="imp [30]"></div>
+	</details>
+	<details class="kerdes"><summary>etio (3)</summary>
+		<div class="imp [30]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (2)</summary>
+		<div class="imp [30]"></div>
+	</details>
+	<details class="kerdes"><summary>th (2)</summary>
+		<div class="imp [30]"></div>
+	</details>
+</details>
+<details class="[📝67] title"><summary>📝 tüdőembolia</summary>
+	<details class="kerdes"><summary>patho</summary>
+		<div class="imp [22]"></div>
+	</details>
+	<details class="kerdes"><summary>etio</summary>
+		<div class="imp [22]"></div>
+	</details>
+	<details class="kerdes"><summary>RiFa (2)</summary>
+		<div class="imp [22]"></div>
+	</details>
+	<details class="kerdes"><summary>tünet (6)</summary>
+		<div class="imp [22]"></div>
+	</details>
+	<details class="kerdes"><summary>dg (6)</summary>
+		<div class="imp [22]"></div>
+	</details>
+	<details class="kerdes"><summary>th</summary>
+		<div class="imp [22]"></div>
+	</details>
+</details>
+<details class="[📝68] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝69] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝70] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<!-- 📝61 – 70 --></details>
+<!-- 📝71 – 80 --><details><summary>📝71–80</summary>
+<details class="[📝71] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝72] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝73] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝74] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝75] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝76] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝77] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝78] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝79] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<details class="[📝80] title"><summary>📝 </summary>
+	<details class="kerdes"><summary> ()</summary>
+		<div class="imp [1.1]"></div>
+	</details>
+</details>
+<!-- 📝71 – 80 --></details>
 </details>
 
 <details><summary class="mainTitle">Anamnézis, gyógyszerek, labor</summary>
@@ -19832,6 +20327,11 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 			<img data-src=".webp">
 		</details>
 		<details class="kerdes open"><summary>🖼 ✖ bőr <span class="bgPink">cyanosis</span> <!--  --></summary>
+			<span class="midQ [FiVi.bőr] fsMini WHITE">FiVi - bőr</span>
+			<li><span class="abbr">megoldás ►</span> </li>
+			<img data-src=".webp">
+		</details>
+		<details class="kerdes open"><summary>🖼 ✖ bőr <span class="bgPink">Cullen, Grey Turner</span> <!--  --></summary>
 			<span class="midQ [FiVi.bőr] fsMini WHITE">FiVi - bőr</span>
 			<li><span class="abbr">megoldás ►</span> </li>
 			<img data-src=".webp">
@@ -22113,6 +22613,7 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 	<span class="imp [a1]"></span> <!-- allergiás betegségek -->
 	<span class="imp [a2]"></span> <!-- vitium -->
 	<span class="imp [a3]"></span> <!-- pleuralis folyadékgyülem -->
+	<span class="imp [a4]"></span> <!-- vegetatív IR -->
 	<span class="imp [29.5]"></span> <!-- gyomorfekély -->
 	<span class="imp [a8.1]"></span> <!-- Streptococcus pyogenes -->
 <!----></details>
@@ -22214,43 +22715,71 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 	<span class="imp [📝45]"></span> <!-- aorta-ruptúra -->
 </details>
 <details><summary class="phase">Diabetes mellitus tünetei, formái, diagnosztikája</summary>
+  <div><b>DM</b></div>
 	<div class="imp [📝46]"></div> <!-- dm -->
 </details>
 <details><summary class="phase">Diabetes mellitus szövődményei, diabeteses veszélyállapotok</summary>
+  <div><b>DM</b></div>
 	<div class="imp [📝46]"></div> <!-- dm -->
 </details>
 <details><summary class="phase">Hypo- és hyperglycaemia</summary>
+  <div><b>DM</b></div>
 	<div class="imp [📝46]"></div> <!-- dm -->
 </details>
-<details><summary class="phase"><span class="bgPink">Diabetes kezelésében használatos kezelési módszerek, azok mellékhatásai</span></summary>
+<details><summary class="phase">Diabetes kezelésében használatos kezelési módszerek, azok mellékhatásai</summary>
+  <div><b>DM</b></div>
+	<div class="imp [📝46]"></div> <!-- dm -->
 </details>
-<details><summary class="phase"><span class="bgPink">Hypertriglyceridaemia, hyperviscositas syndroma</span></summary>
+<details><summary class="phase">Hypertriglyceridaemia, hyperviscositas syndroma</summary>
+	<span class="imp [📝47]"></span> <!-- hypertriglyceridaemia -->
+	<span class="imp [📝48]"></span> <!-- hyperviscositas sy -->
 </details>
-<details><summary class="phase"><span class="bgPink">Mellkasi fájdalom differenciál-diagnosztikája</span></summary>
+<details><summary class="phase">Mellkasi fájdalom differenciál-diagnosztikája</summary>
+	<div class="imp [📝49]"></div> <!-- mellkasi fájdalom -->
 </details>
-<details><summary class="phase"><span class="bgPink">Endokrin krízisek</span></summary>
+<details><summary class="phase">Endokrin krízisek</summary>
+	<div class="imp [📝57]"></div> <!-- endokrin krízisek -->
 </details>
-<details><summary class="phase"><span class="bgPink">Pajzsmirgy-diszfunkció</span></summary>
+<details><summary class="phase">Pajzsmirgy-diszfunkció</summary>
+	<div class="imp [📝56]"></div> <!-- pajzsmirgy-diszfunkció -->
 </details>
-<details><summary class="phase"><span class="bgPink">Hypo- és hypercalcaemia, hyperparathyreosis</span></summary>
+<details><summary class="phase">Hypo- és hypercalcaemia, hyperparathyreosis</summary>
+	<span class="imp [📝55]"></span> <!-- -/+calcaemia -->
+	<span class="imp [📝53]"></span> <!-- hypoparathyreosis -->
+	<span class="imp [📝54]"></span> <!-- hyperparathyreosis -->
 </details>
-<details><summary class="phase"><span class="bgPink">Akut veseelégtelenség</span></summary>
+<details><summary class="phase">Akut veseelégtelenség</summary>
+	<div class="imp [📝52]"></div> <!-- veseelégtelenség -->
 </details>
-<details><summary class="phase"><span class="bgPink">Krónikus veseelégtelenség</span></summary>
+<details><summary class="phase">Krónikus veseelégtelenség</summary>
+	<div class="imp [📝52]"></div> <!-- veseelégtelenség -->
 </details>
-<details><summary class="phase"><span class="bgPink">Extracorporalis szervpótló modalitások, plazmaferezis</span></summary>
+<details><summary class="phase">Extracorporalis szervpótló modalitások, plazmaferezis</summary>
+	<span class="imp [📝50]"></span> <!-- mechanikus keringéstámogatás -->
+	<span class="imp [📝51]"></span> <!-- vesepótló kezelések -->
 </details>
-<details><summary class="phase"><span class="bgPink">Asthma bronchiale</span></summary>
+<details><summary class="phase">Asthma bronchiale</summary>
+	<div class="imp [📝58]"></div> <!-- asthma -->
+	<span class="imp [📝60]"></span> <!-- akut exacerábió -->
 </details>
-<details><summary class="phase"><span class="bgPink">Acut és chronicus bronchitis</span></summary>
+<details><summary class="phase">Acut és chronicus bronchitis</summary>
+	<span class="imp [📝59]"></span> <!-- copd -->
+	<span class="imp [📝60]"></span> <!-- akut exacerábió -->
 </details>
-<details><summary class="phase"><span class="bgPink">Pneumonia</span></summary>
+<details><summary class="phase">Pneumonia</summary>
+	<div class="imp [📝64]"></div> <!-- Pneumonia -->
 </details>
-<details><summary class="phase"><span class="bgPink">Pneomothorax, hydrothorax; tüdőembolia</span></summary>
+<details><summary class="phase">Pneomothorax, hydrothorax; tüdőembolia</summary>
+	<span class="imp [📝65]"></span> <!-- ptx -->
+	<span class="imp [📝66]"></span> <!-- hydrothorax -->
+	<span class="imp [📝67]"></span> <!-- tüdőembolia -->
 </details>
-<details><summary class="phase"><span class="bgPink">Anaemia formái, differenciáldiagnosztikája</span></summary>
+<details><summary class="phase">Anaemia formái, differenciáldiagnosztikája</summary>
+	<div class="imp [📝63]"></div> <!-- anaemia -->
 </details>
-<details><summary class="phase"><span class="bgPink">Leukaemiák és lymphomák, agranulocytosis, neutropenia</span></summary>
+<details><summary class="phase">Leukaemiák és lymphomák, agranulocytosis, neutropenia</summary>
+	<span class="imp [📝61]"></span> <!-- leukaemiák és lymphomák -->
+	<span class="imp [📝62]"></span> <!-- neutropenia -->
 </details>
 <details><summary class="phase"><span class="bgPink">Thrombocytopenia, thrombocytopathia, DIC</span></summary>
 </details>
@@ -22375,8 +22904,6 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 <!----></details>
 
 <details class="fsMini" open><summary>progress</summary>
-	<div>🟡 teszt ➜ gyógyszerek ➜ status epilepticus</li>
-	
 	<div>⭕ 1) ➜ szepszis</div><ul>
 		<span class="bgYellow">GRAM- ➜ nozokomiális pneumonia … szepszis … DIC ?!</span>
 	</ul>
@@ -22388,27 +22915,37 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 		<li>tudatállapotok (search: EEG, Rapid Eye Movement) ➜ neuro + pszichi + életan ➜ meditáció</li>
 		<li>GCS-t társítsam a kómához!</li>
 	</ul>
-	
 	<div>⭕ anamnézis</div><ul>
 		<li>protokoll (nyomtatható)</li>
 		<li>oltások</li>
+		<div>DD</li>
+		<div>sürgősségi</li>
 	</ul>
-	
 	<div>⭕ 1) + álmodból felkelve is… ➜ ÁramTrauma: + mit tegyek, hogy ismerem fel - képek -> gyakorlat (Szimuláció)</div>
+	
+	<div>⭕ teszt ➜ gyógyszerek ➜ status epilepticus</li>
 	<div>⭕ nephro ➜ hepatorenalis-sy</div>
+	<div>⭕ FiVi ➜ alap protokoll (alap protokoll: legfontosabbak, mert nyílván mindent mindig nem fogok, főleg elején)</div>
 	<div>⭕ FiVi ➜ tüdőhallg</div>
-	<div>⭕ 1) ➜ (1.) sürgősségi ellátás</div>
+	<div>⭕ FiVi ➜ ismerd fel (kép,gif), pl. diabeteses láb, fekély, gangrenosus, hematoma, mvt, pa-obv</div>
+	<div>⭕ anamnézis + 1) ➜ (1.) sürgősségi ➜ felismerés + ellátás</div><ul>
+		<li>commotio/contusio, fül/orr vérzés/liquor, pupilla</li>
+		<li>mentőhivás szöveg gyakorlás (ki vagyok, helyszín, szituáció: tudatállapot / pulzuslégzés, trauma típusa … hány éves ffi/nő) … vérzések megkülönböztetés protokoll + képek (pl. közlekedési baleset / verekedés)</li>
+	</ul>
 	<div>⭕ ALAPOK ➜ GERD, IBS (vegetatív IR gyógyszereknél van egy farmak link, majd azt is update)</div>
 	<div>⭕ ALAPOK ➜ radiológia ➜ pl. belgyógy mappa: diagn. zsebkönyv - 165o</div>
-	<div>⭕ ALAPOK ➜ fizsó, vs másik kettő (aneszt)</div>
+	<div>⭕ ALAPOK ➜ volumenpótlás: fizsó.. (aneszt)</div>
 	<div>⭕ ALAPOK ➜ EKG elemzés - gyakorlás</div>
 	<div>⭕ ALAPOK + gyógyszerek(analgetikumok) ➜ migrén</div>
-	<div>⭕ ALAPOK ➜ legfontosabbak / szakma (amit írtak/mondtak + amit gondolok + chatgpt is kérdezzem)</div><ul>
-		<li>pl. szemészet ➜ "belenézek a szembe laikusként ezeket látom:"</li>
-		<li>szülészetben a 3 dolog a könyv elején</li>
+	<div>⭕ ALAPOK ➜ legfontosabbak / szakma (amit írtak/mondtak + amit gondolok + chatgpt is kérdezzem) ➜ pl.</div><ul>
+		<li>szemészet ➜ "belenézek a szembe laikusként ezeket látom:", akut glaucoma</li>
+		<li>szülészet nőgyógy ➜ a 3 dolog a könyv elején, Van néhány alapigazság…</li>
 		<li>IgOr ➜ 1. tétel ('hatóság értesítés')</li>
+		<li>trafo ➜ vércsoport stb</li>
+		<li>neuro fivi: gócjelek, ICP fokozódás, látens parézis…</li>
 	</ul>
-	<div>⭕ ALAPOK ➜ DD: hányás, hasmenés</div>
+	<div>⭕ anamnézis + ALAPOK ➜ DD: hányás, hasmenés</div>
+	<div>⭕ anamnézis + ALAPOK ➜ fejfájás (migrén, stb.)</div>
 	<div>⭕ Gyakorlati vizsga ➜ …</div>
 	<div>⭕ Gyakorlati részvétel ➜ …</div>
 	<div>⭕ gyógyszerek ➜ lokál anesztetikumok</div>
@@ -22416,6 +22953,11 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 	<div>⭕ 1) akut VE - aneszt</div>
 	<div>⭕ 1) copd + asthma ➜ aneszt akut exacerbáció képek</div>
 	<div>⭕ 1) copd + asthma ➜ patho</div>
+	<div>⭕ 1) pH</div><ul>
+		<li>ketontestek: élettan, értékek, oka:dka / …,</li>
+		<li>Pufferbázis,bázistöblet etc.. élettan</li>
+	</ul>
+	<div>⭕</div>
 </details>
 
 
