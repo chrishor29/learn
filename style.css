@@ -276,25 +276,17 @@ th { background: Silver }
 
 abbr {
 	/*position: relative;*/
-	padding-left: 1px; /* a szürke háttér kicsit szélesebb oldalt */
-	padding-right: 1px; 
+	/*border: white 1px solid; 
+	padding-left: 1px; 
+	padding-right: 1px; */
 	/*padding-top: 0px; 
 	padding-bottom: 0px;*/
-	text-decoration: none;
-	background-color: gainsboro;
+	text-decoration: underline;
+	text-decoration-color: red;
 }
-.night abbr  { background-color: dimgray }
-/*abbr.test {
-	position: relative;
-	text-decoration: none;
-	padding-left: 1px; 
-	padding-right: 1px; 
-	padding-top: 0px; 
-	padding-bottom: 0px; 
-	background-color: #ffffff;
-}*/
+/* .night abbr  { background-color: dimgray } */
 abbr:hover{
-	background-color: Chartreuse
+	text-decoration-color: green;
 }
 
 
