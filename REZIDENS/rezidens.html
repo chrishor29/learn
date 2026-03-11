@@ -1654,6 +1654,12 @@ Orvosi dokumentáció helye és módja:
 			<li>epigastrium</li>
 		</ul>
 		<li>kísérőtünet ➜ <span class="bgYellow">verejtékezés, halálfélelem</span></li>
+		<li>anamnézis ➜ <span class="midQ [61.5] bgYellow kerdes">atherosclerosis</span></li><ul>
+			<li><span class="bgYellow">dohányzás</span></li>
+			<li><span class="midQ [68] bgYellow kerdes">metabolikus-sy</span></li>
+			<li><span class="midQ [39] bgYellow kerdes">dyslipidaemia</span></li>
+			➜ <span class="midQ [51] bgYellow kerdes">BKI</span>
+		</ul>
 	</td>
 	<td style="text-align:left">
 		<li><span class="bgYellow">éles, tű- vagy késszúrásszerű</span></li>
@@ -1681,8 +1687,28 @@ Orvosi dokumentáció helye és módja:
 		<li>oka ➜ <span class="bgYellow">coronaria stenosis</span><abbr title="stenosis = krónikus szűkület (részleges elzáródás)">'</abbr></li>
 	  <b>klinikum</b>
 		<li><span class="bgYellow">nyugalomban nincs, csak terhelésre</span></li>
-		<li>terhelésre <span class="midQ [7]">ST-depresszió/T-inverzió</span> lehet<abbr title="ChatGPT depressziót írt. jegyzetemben ST-eltérés volt. gondolom depresszió a gyakori, de lehet hogy lehet elevatio is">'</abbr>, nekrózismarker negatív</li>
+		<li><details class="kerdes"><summary>EKG ➜ terhelésre <span class="midQ [7]">ST-depresszió/ST-elevatio/T-inverzió</span> <span class="fsMini">(lehet)</span></summary>
+			<li>nyugalmi ➜ esetek több mint felében normális</li>
+			<li>terheléses</li><ul>
+				<div><span class="minus">KI</span> ➜ AMI kevesebb mint 2 hete, aorta stenosis, tüdőembólia stb.</div>
+				<li>frekvencia:</li><ul>
+					<li>submax = 200-életkor ➜ negativitás kimondása csak ennek elérése után történhet!</li>
+					<li>max = 220-életkor ➜ efölött hyperlactacidaemia lépne föl!</li>
+				</ul>
+			</ul>
+			<li>Holter-EKG (0-24h)</li>
+		</details></li>
+		<li>nekrózismarker negatív</li>
 		<li>nitrát hatására megszűnik</li>
+		<li><details class="kerdes"><summary>ha PTP…</summary>
+		  <div><span class="bgYellow">PTP = pre-teszt probabilitás</span> ➜ megbecsülhető a <span class="bgYellow">koronáriabetegség kockázata</span>, az alábbiak alapján</div>
+			<li><span class="bgYellow">életkor</span></li>
+			<li><span class="bgYellow">nem</span></li>
+			<li><span class="bgYellow">angina típusa</span></li>
+		 </details></li><ul>
+			<li>alacsony ➜ coronaro-CT-angiográfia</li>
+			<li>magas ➜ invazív coronarográfia</li>
+		</ul>
 	</td>
 	<td style="text-align:left">
 		<li>oka ➜ <span class="bgYellow">coronaria obliteráció</span><abbr title="obliteráció = akut szűkület (részleges elzáródás)">'</abbr> (<span class="midQ [67.3] kerdes bgYellow">ACS</span>)</li>
@@ -1944,35 +1970,7 @@ Orvosi dokumentáció helye és módja:
 			</details></li>
 		</ul>
 	  <div><b>kamrai</b></div>
-		<li><details class="kerdes"><summary><span class="bgPink">k</span>amrai tachycardia</summary>
-			<li>hirtelen szívhalálért leggyakrabban felelő szívritmuszavar</li>
-			<li>RiFa ➜ ischaemia, hypoK⁺, antiarrhythmiás szerek (<u>amiodaron</u>,<u>sotalol</u>) nem megfelelő alkalmazása</li>
-			<li>leggyakoribb oka: heg következtében kialakuló reentry ➜ korábbi MI során megindul a szövetkárosodás, de PCI-vel időben megállítódik a terjedése ➜ 'azonban ahogy a heget kétoldalról kikerüli az ingerületterjedés, a két oldal közül az egyik még refrakter-stádiumban lesz, a másik nem, ez lesz a re-entry oka' (kéne egy gif) <abbr title="ez nem AVRT / AVNRT / preexcitációs ?">?</abbr></li>
-			<li>típusai: <img class="mini" data-src="ystlkbye.webp"></li><ul>
-				<li>monomorf</li>
-				<li>polimorf, pl. <span class="bgYellow">Torsades de Point</span>:<abbr title="torszád dö poánt">*</abbr> <img class="mini" data-src="kjpvwvtz.webp"></li><ul>
-					<li>leállhat önmagától…</li>
-					<li>vagy átmehet kamrafibrillációba</li>
-				</ul>
-			</ul>
-		  <b><span class="midQ [7]">EKG</span></b>
-			<li><span class="bgYellow">széles QRS</span></li>
-			<li><span class="bgYellow">ritmusos</span></li>
-			<li><span class="bgYellow">P-hullámot kell megtalálni: ha azok függetlenül mennek QRS-től, akkor kamrai</span></li>
-			<li>a QRS utáni ST és T ellentétes irányú</li>
-			<li>Tawara-szár blokk morfológia nem fedezhető fel</li>
-			<li>'néhány normál ütés'</li><ul>
-				<li>fúziós ütés ➜ ritkán a supraventricularis &amp; kamrai együtt jelentkezik</li>
-				<li>befogott ütés ➜ ritkán a supraventricularis eredetű végigmegy (pont úgy van az időzítés, hogy a kamrai eredetű előtt érkezik oda)</li>
-			</ul>
-		  <b>th</b>
-			<li>prevenció ➜ <span class="midQ [12.9]">β-blokkolók</span></li>
-			<li>hosszútávú</li><ul>
-				<li><span data-src="done/Kardio/kardio.html" class="midQ [45]">abláció(katéteres)</span><abbr title="(történhet epicardialisan/endocardialisan, a heg lokalizációtól függően)">'</abbr></li>
-				<li><span data-src="done/Kardio/kardio.html" class="midQ [47]">ICD</span> <span class="fsMini">(ha nem tisztázható az etiológia, nem megoldható az abláció)</span></li>
-			</ul>
-			<li>ha akut ➜ <span class="midQ [48.1] kerdes">kardioverzió</span></li>
-		</details></li>
+		<li><span class="midQ [48.2]">kamrai tachycardia (VT)</span></li>
 		<li><span class="midQ [48.2]">kamrafibrilláció (VF)</span></li>
 	</td>
   </tr><tr>
@@ -2317,7 +2315,7 @@ Orvosi dokumentáció helye és módja:
 	  </tr><tr>
 		<td style="text-align:left">
 			<li>T-hullám ellaposodik, <span class="bgYellow">U-hullám megjelenik</span>, <span class="bgYellow">ST depresszió</span></li>
-			<li>lehetséges szövődménye ➜ <span class="midQ [4]">Torsades de Point</span></li>
+			<li><span class="bgYellow">QT megnyúlik</span> (<span class="midQ [4]">LQTS</span>) ➜ <span class="midQ [4]">Torsades de Point</span> rizikó</li>
 			<img style="max-width:100%" data-src="rgxqcvvh.webp">
 			<img class="mini" data-src="ibaflxdu.webp">
 		</td>
@@ -2329,7 +2327,7 @@ Orvosi dokumentáció helye és módja:
 		<th><span class="midQ [50.4]">hypoCa²⁺</span></th>  <th><span class="midQ [50.4]">hyperCa²⁺</span></th>  
 	  </tr><tr>
 		<td>
-			<span class="bgYellow">QT széles</span>edik &gt;0,44s <img class="mini" data-src="diiqiehq.webp">
+			<span class="bgYellow">QT széles</span>edik &gt;0,45s (<span class="midQ [4]">LQTS</span>) (TdP rizikó <abbr title="mint hypoK+">kisebb</abbr>) <img class="mini" data-src="diiqiehq.webp">
 		</td>
 		<td>
 			<span class="bgYellow">QT rövid</span>ül <img class="mini" data-src="ifieibun.webp">
@@ -5701,21 +5699,26 @@ Orvosi dokumentáció helye és módja:
 			<li>lényege ➜ a kifiltrált Na⁺ hány százaléka ürül ki</li>
 		</details></li>
 		<li><details class="[16.11.4] kerdes"><summary>vizelet fajsúly, osmolaritás</summary>
-		  <div><b><span class="bgYellow">24h-ás</span> vizeletgyűjtés</b></div>
-			<li>normál tartomány – 1015-1025g/dm<sup>3</sup></li>
-			<li>alacsony &lt; 1010g/dm<sup>3</sup></li><ul>
-				<li><span data-src="gyerek" class="midQ [72] bgYellow">diabetes insipidus</span> </li>
+		  <div><b>vizelet fajsúly</b></div>
+			<li>fiziológiás: 1010-1025g/dm<sup>3</sup></li>
+			<li>alacsony(híg) &lt; 1010g/dm<sup>3</sup></li><ul>
+				<li><span class="midQ [20.19] bgYellow">diabetes insipidus</span> </li>
 				<li><span class="bgYellow">fokozott folyadékbevitel</span></li>
-				<li>egyéb (pl. akut / krónikus VE, alkalózis, hypothermia)</li>
+				<li>egyéb ➜ krónikus vesebetegség, <span class="bgYellow">diuretikum</span>, alkalózis, hypothermia</li>
 			</ul>
-			<li>magas > 1025g/dm<sup>3</sup></li><ul>
+			<li>magas(sűrű) > 1025g/dm<sup>3</sup></li><ul>
 				<li><span class="bgYellow">DM</span> (ugyanis glükóz megnöveli!!)</li>
 				<li><span class="bgYellow">dehidráció, folyadékhiány</span></li>
 				<li>egyéb (pl. iv. albumin infúzió, májbetegség, <span class="midQ [20.12.1] fsMini">nephrosis</span>)</li>
 			</ul>
-			<li>vizelet ozmolalitás <abbr title="1.010 esetén ➜ 300mOsm/kg">≈</abbr> 30000 × (vizelet sűrűség – <abbr title="1000, ha g/dm3">1</abbr>)</li>
+		  <div><b>vizelet ozmolalitás (Uosm)</b></div>
+			<li>különbség fajsúllyal szemben ➜ kizárólag a részecskék számától függ (tömegük nem befolyásolja)</li>
+			<li>mérés ➜ labor</li><ul>
+				<li>pontos ➜ labor</li>
+				<li>becslése ➜ stix alapján ➜ <abbr title="1.010 esetén ➜ 300mOsm/kg">≈</abbr> 30000 × (vizelet sűrűség – <abbr title="1000, ha g/dm3">1</abbr>)</li>
+			</ul>
 		  <b>szomjaztatási teszt</b>
-			<li>cél ➜ <span data-src="gyerek" class="midQ [71]">DD:</span> <span class="midQ [72]" data-src="gyerek">diabetes insipidus</span> típusai &amp; primer polydipsia</li>
+			<li>cél ➜ <span class="midQ [16.11.5]">DD:</span> <span class="midQ [20.19]">diabetes insipidus</span> típusai &amp; primer polydipsia</li>
 			<li>lényege ➜ nem kap folyadékot…</li><ul>
 				<li>ha csökken a vizelés ezután, hyperosmolaris lesz a vizelet, a <abbr title="viezelt mennyiségétől függ">testsúly alig csökken</abbr>, a Se Na⁺ és ozmolaritás változatlan ➜ primer polydipsia</li>
 				<li>ha ugyanúgy vizel sokat tovább, hypoosmolaris továbbra is a vizelet, a testsúly csökken, a Se Na⁺ és ozmolaritás nő ➜ <span data-src="gyerek" class="midQ [72]">diabetes insipidus</span></li><ul>
@@ -5746,11 +5749,10 @@ Orvosi dokumentáció helye és módja:
 		  <center><b>polyuria & polydipsia</b></center>
 		  <table><tr><th>polydipsia = szomjúságérzés↑</th>  <th>polyuria = napi vizelet > 3l (krónikus)</th></tr><tr>
 			<td style="text-align:left">
-			  <b>primer két típusa:</b>
-				<li>dypsogen ➜ az ozmoreceptorok küszöbszintje megy leljebb, és ezért lesz fokozott szomjúságérzet</li>
+			  <b><abbr title="polydipsia miatt lesz polyuria (szekudnernél fordítva)">primer</abbr> ➜ két típusa:</b>
+				<li>dypsogen ➜ az ozmoreceptorok küszöbszintje megy lejjebb, és ezért lesz fokozott szomjúságérzet</li>
 				<li>pszichogén ➜ nincs fokozott szomjúságérzete, csak sokat iszik (stressz stb.)</li>
-			  <b>szekunder = polyuria következtében</b>
-				<li>pl. T1DM</li>
+			  <b>szekunder ➜ oka: polyuria</b> (pl. T1DM stb.)
 			</td>
 			<td style="text-align:left">
 				<li>fiziológiás ➜ 1,5-2l</li><ul>
@@ -5764,28 +5766,43 @@ Orvosi dokumentáció helye és módja:
 			</td>
 		  </tr></table>
 		  <b>etio</b>
-			<li><details class="kerdes"><summary class="bgYellow"><span class="syno">primer | pszichogén</span> polydipsia</summary>
-				<li>lényege ➜ nagy mennyiségű folyadék fogyasztása ➜ folyadékmegvonásra megszűnik a panasz</li>
-				<li>primer ➜ ugyanis itt a <abbr title="ennek oka idiopátiás, pszichiátriai stb.">polydipsia</abbr> miatt lesz polyuria ➜ összes többinék fordítva van</li>
-				<li>dg ➜ többi kizárása</li>
-			</details></li>
-			<li><span class="midQ [20.4] kerdes bgYellow">krónikus VE</span></li>
-			<li>endokrin:</li><ul>
-				<li><span data-src="gyerek" class="midQ [72] bgYellow">diabetes insipidus</span></li>
-				<li><span class="midQ [58] bgYellow">T1DM</span></li>
-				<li><span data-src="gyerek" class="midQ [38.5]">hyperaldoszteronizmus</span></li>
-			</ul>
-			<li>diuretikum (/szteroid…) - tartós használat</li>
-		  <b>DD</b>
-			<li><abbr title="1.lépésnek ezt (nem kell vért se venni)">'</abbr> <span class="midQ [16.11.7] kerdes">stix</span>:</li><ul>
-				<li><span class="bgGreen">ha glükóz /+ ketontestek<abbr title="acetacetát, &beta;-hidroxi-vajsav (glükóz helyett alternatív források) … aceton a tüdőn kereszül távozik">*</abbr> ➜ T1DM</span></li>
-				<li>ha híg ➜ primer polydipsia / diabetes insipidus</li><ul>
-					<span class="fsMini">T1DM is lehet híg, de glükózuria alapján (+éhomi vércukor ha kell) már eldőlt</span>
+			<img class="mini" data-src="jcxnpvob.webp">
+			<img class="mini" data-src="yzlrywxf.webp">
+		  <table><tr>
+			<th>ozmotikus diurézis [Uosm > 600mOsm]</th>
+			<th>víz diurézis [Uosm &lt; 300mOsm]</th>
+		  </tr><tr>
+			<td> ozmózis visszatartja a vír reabszorpciót </td>
+			<td> ADH hiány/rezisztencia vagy túl sok vízbevitel </td>
+		  </tr><tr>
+			<td style="text-align:left">
+				<li><span class="bgBlue">diuretikum</span> <span class="bgPink">link</span></li>
+				<li><span class="bgYellow">hyperglycaemia - rosszul kezelt <span class="midQ [58] bgYellow">DM</span></span></li><ul>
+					<span class="fsMini"><abbr title="is">SGLT-2 gátlók</abbr></span>
 				</ul>
+				<li><span class="bgYellow">mannitol infúzió</span> <span class="bgPink">link</span></li>
+				<li>urea↑ (fehérjebontás↑) pl. akut VE-ből felépülés, fokozott fehérjebevitel, fokozott anyagcsere (szteroid), GI vérzés</li>
+			</td>
+			<td style="text-align:left">
+			  <details class="kerdes"><summary>szomjaztatási teszt</summary>
+				<div class="imp [16.11.4]"></div>
+			  </details>
+				<li><span class="midQ [20.19] bgYellow">diabetes insipidus</span></li>
+				<li><details class="kerdes"><summary class="bgYellow">primer polydipsia</summary>
+					<li>lényege ➜ nagy mennyiségű folyadék fogyasztása ➜ folyadékmegvonásra megszűnik a panasz</li>
+					<li>primer ➜ ugyanis itt a <abbr title="ennek oka idiopátiás, pszichiátriai stb.">polydipsia</abbr> miatt lesz polyuria ➜ összes többinék fordítva van</li>
+					<li>dg ➜ többi kizárása</li>
+				</details></li>
+			</td>
+		  </tr></table>
+		  <b>DD ➜ protokoll</b>
+			<li><abbr title="1.lépésnek ezt (nem kell vért se venni)"><span class="midQ [16.11.7] kerdes">stix</span></abbr>:</li><ul>
+				<li><span class="bgGreen">ha glükóz /+ ketontestek<abbr title="acetacetát, &beta;-hidroxi-vajsav (glükóz helyett alternatív források) … aceton a tüdőn kereszül távozik">*</abbr> ➜ DM</span></li>
+				<li><abbr title="hasonló az omozlaritáshoz, de itt a molekulatömeg is beleszámít. előbbinél csak részecskeszám, de ahhoz kell külön labor">fajsúly</abbr> ➜ primer polydipsia / diabetes insipidus</li>
 			</ul>
-			<li><details class="kerdes"><summary>szomjaztatási teszt</summary>
-				<div data-src="bel" class="imp [16.11.4]"></div>
-			</details></li>
+		  <div class="fsMini">
+			<span class="midQ [1] bgPink WHITE">hypo-, hyperNa<sup>+</sup></span>
+		  </div>
 		  <!-- FORRÁSOK --> <div>
 			<abbr title="konzultáció - 6 (CAH, polyuria)">§</abbr>
 			<abbr title="diff.diag Tulassay">§</abbr>
@@ -5826,21 +5843,21 @@ Orvosi dokumentáció helye és módja:
 		<li><details class="[16.11.7] kerdes"><summary>stix = vizelet tesztcsík = vizelet gyorsteszt</summary>
 			<img data-src="qpbhwjgg.webp">
 		  <div><b>mit mérünk, értékelés</b></div>
-			<li><span class="midQ [16.11.4]">fajsúly</span> ➜ fizio: 1001-1030g/l</li>
-			<li>proteinuria</li><ul>
+			<li><span class="midQ [16.11.4] bgBlue">fajsúly</span></li>
+			<li><span class="bgYellow">proteinuria</span></li><ul>
 				<li>nem jelzi ➜ mérsékelt proteinuria / Bence-Jones proteinuria</li>
 				<li>jelzi ➜ albuminuria: >30mg/mmol</li>
 				<span class="fsMini">glomerulopathia, nephrosis</span>
 			</ul>
-			<li>pH</li><ul>
+			<li><span class="bgYellow">pH</span></li><ul>
 				<li>lúgos vizelet → álpozitív leukocyta</li>
 			</ul>
-			<li>nitrit ➜ Gram-negatív baktérium (pl. E.coli) <abbr title="nitrátot nitritté alakítják">'</abbr> ➜ pl. <span class="midQ [20.14] kerdes">UTI</span></li>
-			<li>vvt,Hgb ➜ <span class="midQ [20.5] kerdes">hematuria</span></li>
-			<li>fvs(pyuria) <abbr title="leukocyta-észterázt mér ➜ indirekt jele">'</abbr> ➜ pl. <span class="midQ [20.14] kerdes">UTI</span></li>
-			<li>glükóz ➜ DM</li>
-			<li>ketontestek ➜ ketoacidózis</li>
-			<li>máj ➜ bilirubin, UBG</li>
+			<li><span class="bgYellow">nitrit</span> ➜ Gram-negatív baktérium (pl. E.coli) <abbr title="nitrátot nitritté alakítják">'</abbr> ➜ pl. <span class="midQ [20.14] kerdes">UTI</span></li>
+			<li><span class="bgYellow">vvt,Hgb</span> ➜ <span class="midQ [20.5] kerdes">hematuria</span></li>
+			<li><span class="bgYellow">fvs(pyuria)</span> <abbr title="leukocyta-észterázt mér ➜ indirekt jele">'</abbr> ➜ pl. <span class="midQ [20.14] kerdes">UTI</span></li>
+			<li><span class="bgYellow">glükóz</span> ➜ DM</li>
+			<li><span class="bgYellow">ketontestek</span> ➜ ketoacidózis</li>
+			<li><span class="bgYellow">máj</span> ➜ bilirubin, UBG</li>
 			<li><span class="syno">aszkorbinsav | C-vitamin</span> ➜ álnegatív vér/nitrit</li>
 			<li>Ca²⁺</li>
 		  <b>menete</b>
@@ -7384,6 +7401,7 @@ Orvosi dokumentáció helye és módja:
 	<span class="imp [20.15]"></span> <!-- tubulointerstitialis betegségek -->
 	<span class="imp [20.16]"></span> <!-- cystas vesebetegségek -->
 	<span class="imp [20.17]"></span> <!-- proteinuria -->
+	<span class="imp [20.19]"></span> <!-- diab insip -->
 	
 	<li><span class="bgPink">transzplant</span></li>
 	<li><span class="WHITE fsMini">veseelégtelenség (akut/krónikus)</span></li>
@@ -8546,7 +8564,7 @@ Orvosi dokumentáció helye és módja:
 			<li><span class="bgYellow">hólyagkő ➜ hólyagban keletkezik, urethraban akad el ➜  endémiás területeken a számottevő</span></li>
 		</ul>
 		<li><span class="bgYellow">lényegük ➜ vizeletben oldott ásványi anyagok kristály formájában kicsapódnak</span></li>
-		<li><span class="bgYellow">Ca²⁺-oxalát kő a leggyakoribb</span></li>
+		<li><span class="bgYellow">Ca²⁺-oxalát kő a leggyakoribb</span></li> <!-- kalcium-oxalát -->
 	  <b>RiFa</b>
 		<li>vizeletben kőképző „mag” (baktérium-konglomerátum, necrotikus szövetdarab)</li>
 		<li>elfolyási akadály</li>
@@ -8575,6 +8593,10 @@ Orvosi dokumentáció helye és módja:
 		</ul>
 		<li>ha nem lehet ESWL-lel kezelni ➜ <span class="bgYellow">eltávolítás</span></li>
 	  <b>profilaxis</b>
+		<li>oxalát-bevitel csökkentése</li><ul>
+			<li>élelmiszerek sokat tartalmaznak ➜ csokoládé, mandula, mogyoró, spenót/sóska stb.</li>
+			<li>azonban normális Ca²⁺-bevitel mellet csökken a felszívódásuk, így nem kell tiltani, csak legyen elég Ca²⁺ is</li>
+		</ul>
 		<li>Ca²⁺ ürítés csökkentése ➜ <span class="midQ [12.6] kerdes">thiazid diuretikum</span> <span class="fsMini">(<u>hypothiazid</u>)</span></li>
 		<li><span class="bgGreen">húgysav csökkentés ➜ <u>allopurinol</u></span> <abbr title="gátolja a szintézisét">'</abbr></li>
 		<li><abbr title="struvitkő ➜ célzott AB, vizelet alkalizálás">'</abbr></li>
@@ -9000,7 +9022,49 @@ Orvosi dokumentáció helye és módja:
 		<li><span class="midQ [124.2] kerdes bgYellow" data-src="bel">ANCA+ vasculitis-ek</span></li>
 		<li><span class="midQ [20.12.3] kerdes bgYellow">Goodpasture-sy</span></li>
 	</details>
-	<details class="[20.19] kerdes"><summary></summary>
+	<details class="[20.19] kerdes"><summary>diabetes insipidus</summary><table><tr>
+		<th>centralis</th>
+		<th>renalis</th>
+	  </tr><tr>
+		<td colspan="2">
+			<span class="bgBlue">víz reabszorpció csökken</span> a <span class="midQ [108]">distalis tubulusokban</span>
+		</td>
+	  </tr><tr>
+		<td style="text-align:left">
+			<li>patho ➜ <span class="bgBlue"><span class="syno">vazopresszin | ADH</span> hiány</span></li>
+			<li>etio ➜ neurohypophysis eredetű</li><ul>
+				<span class="fsMini">pl. trauma, fejl.rend., autoimmun, infekció, tumor</span>
+			</ul>
+			<li>anamnézis:</li><ul>
+				<li>koponya trauma</li>
+				<li>FUO</li>
+			</ul>
+			<li>dg ➜ <span class="bgYellow">MR: tumor van-e</span></li><ul>
+				<span style="font-size:80%">Se &beta;-HCG mérés (tumor expresszálja)</span>
+			</ul>
+			<li>th ➜ <span class="bgYellow"><u>dezmopresszin</u></span></li>
+		</td>
+		<td style="text-align:left">
+			<li>patho ➜ <span class="bgBlue"><span class="syno">vazopresszin | ADH</span> rezisztencia</span></li>
+			<li>etio</li><ul>
+				<li>V2<abbr title="receptor">R</abbr> mutáció<abbr title="kódoló géné. egyébként ritkán lehet az aquaporin 2 csatornát kódoló géné is">'</abbr></li>
+				<li>lítium</li>
+				<li>krónikus <span class="midQ [50.4]">hyperCa<sup>2+</sup></span> <abbr title="Hypercalcemia maga aktiválja a Ca-szenzitív receptorokat a vastag Henle-kacsban → csökkenti a NKCC2 működését → medulláris koncentrációs gradiens csökken → ADH hatás kevésbé érvényesül → polyuria.">*</abbr></li>
+			</ul>
+			<li>th ➜ hydrochlorothiazid<abbr title="(Na filtrációt növeli)">'</abbr> <abbr title="és/vagy indometacin (GFR-t csökkenti)">'</abbr></li>
+		</td>
+	  </tr><tr>
+		<td colspan="2" style="text-align:left">
+		  <center>tünet:</center>
+			<li><span class="midQ [16.11.5] bgYellow">polydypsia & polyuria</span></li><ul>
+				<li><span style="font-size:80%">hypernatraemia, exsiccatio, híg vizelet</span></li>
+			</ul>
+			<li>láz</li>
+		</td>
+	  </tr><tr>
+		<td colspan="2"> DD ➜ <span class="midQ [16.11.4] kerdes bgBlue">szomjaztatási teszt</span> </td>
+	</tr></table></details>
+	<details class="[20.20] kerdes"><summary></summary>
 		<li></li>
 	</details>
 </ul>
@@ -13329,6 +13393,17 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li>elektromos ➜ ha hemodinamikailag instabil</li>
 		</ul>
 	  <table><tr>
+		<th colspan="2">ha haemodinamikailag stabil</th>
+		<th style="text-align:left" colspan="2"><details><summary style="text-align:center; display:block;">ha haemodinamikailag instabil</summary>
+			(chatGPT - hogy dönthető el? ➜ Ha az aritmia jelentős keringési zavart okoz, a beteg instabilnak tekintendő. Az instabilitás jelei:)
+			<li>Hipotenzió (szisztolés vérnyomás &lt;90 Hgmm, különösen, ha tüneteket okoz)</li>
+			<li>Tudatzavar (szédülés, syncope, zavartság)</li>
+			<li>Mellkasi fájdalom, angina (a coronaria keringés csökkenése miatt)</li>
+			<li>Dyspnoe, tüdőoedema (a csökkent perctérfogat és pulmonalis pangás miatt)</li>
+			<li>Sokk jelei (hideg, nyirkos bőr, oliguria, cyanosis)</li>
+			(chatGPT - Ha a betegnek nincs fentebb említett tünete, és a vitális paraméterei kielégítőek, akkor az aritmia stabilnak tekinthető.)
+		</details></th>
+	  </tr><tr>
 		<th colspan="2" rowspan="2">gyógyszeres
 			<div class="fsMini">antiarrhythmiás szerek, amelyek visszaállíthatják a sinusritmust</div>
 		</th>
@@ -13347,10 +13422,11 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<div>✅ <u>prokainamid</u>, <u>ibutilid</u> <span class="fsMini">(csak AKUT adhatók)</span></div>
 		</td>
 		<td style="text-align:left">
-		  <span class="plus">ind</span> <b><span class="midQ [4]">VT pulzussal</span></b>
+		  <span class="plus">ind</span> <b><span class="midQ [4]">VT pulzussal</span> ➜ ha nem TdP:</b>
 			<div>✅ <u>amiodaron</u> (K-csat. blokkoló)</div>
 			<div>✅ <u>sotalol</u></div>
 			<div>✅ <span class="midQ [12.24]"><u>lidokain</u></span> <span class="fsMini">(csak AKUT adható)</span></div>
+			<div><span class="minus">KI</span> <span class="bgYellow">K-csat. blokkoló (pl. amiodaron), ha TdP</span></div>
 		</td>
 		<td style="text-align:left">
 			<div><span class="plus">ind</span> <b><span class="midQ [4]">SVT</span></b> <span class="fsMini">(AVNRT, AVRT, PF/P.flutter)</span></div>
@@ -13360,17 +13436,6 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<div><span class="plus">ind</span> 🚨 <abbr title="pulzus nélküli ventricularis tachycardia">pnVT</abbr> (mindig instabil!) </div>
 			<div><span class="plus">ind</span> 🚨 <abbr title="kamrafibrilláció!">VF</abbr> (mindig instabil!)</div>
 		</td>
-	  </tr><tr>
-		<th colspan="2">haemodinamikailag stabil</th>
-		<th style="text-align:left" colspan="2"><details><summary style="text-align:center; display:block;">haemodinamikailag instabil</summary>
-			(chatGPT - hogy dönthető el? ➜ Ha az aritmia jelentős keringési zavart okoz, a beteg instabilnak tekintendő. Az instabilitás jelei:)
-			<li>Hipotenzió (szisztolés vérnyomás &lt;90 Hgmm, különösen, ha tüneteket okoz)</li>
-			<li>Tudatzavar (szédülés, syncope, zavartság)</li>
-			<li>Mellkasi fájdalom, angina (a coronaria keringés csökkenése miatt)</li>
-			<li>Dyspnoe, tüdőoedema (a csökkent perctérfogat és pulmonalis pangás miatt)</li>
-			<li>Sokk jelei (hideg, nyirkos bőr, oliguria, cyanosis)</li>
-			(chatGPT - Ha a betegnek nincs fentebb említett tünete, és a vitális paraméterei kielégítőek, akkor az aritmia stabilnak tekinthető.)
-		</details></th>
 	  </tr></table>
 	  <b>későbbiekben</b>
 		<li><span data-src="done/Kardio/kardio.html" class="kerdes midQ [45]">abláció(katéteres)</span> ➜ SVT, VT</li>
@@ -13391,50 +13456,103 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 	  <b>eddigiek tachycardia és tachyarrhythmiak ➜ ez bradycardia és bradyarrhyhtmia</b>
 		<li><span data-src="done/Kardio/kardio.html" class="midQ [42] kerdes">pacemaker</span> ➜ Mobitz II-től</li>
 	</details>
-	<details class="[48.2] kerdes"><summary>keringésleállás, szívleállás, defibrilláció</summary>
-		<li>szívleállás ➜ <span class="bgBlue">mechanikus kontrakció nincs</span> <abbr title="ezért írtam külön le defbe ezt, hogy tudjam: ott sincs">(PEA)</abbr></li>
+	<details class="[48.2] kerdes"><summary>klinikai halál, keringésleállás, szívleállás, defibrilláció</summary>
+		<li>hirtelen szívleállás = keringésleállás = klinikai halál ➜ <span class="bgBlue">mechanikus kontrakció nincs</span> <abbr title="ezért írtam külön le defbe ezt, hogy tudjam: ott sincs">(PEA)</abbr></li><ul>
+			<details><summary class="fsMini">keringés vs légzés</summary>
+				<li>ha keringés leállt, max fél perc és <abbr title="Az agyi perfúzió azonnal megszűnik
+...
+10 mp → eszméletvesztés
+...
+~15–30 mp → agytörzsi légzőközpont ischaemiás lesz
+...
+≈30 mp-en belül a spontán légzés megszűnik
+...
+Ritkán még rövid ideig lehetnek agonális légvételek (gasping)">leáll</abbr> a légzés</li>
+				<li>ha légzés leállt, <abbr title="SpO₂ esni kezd azonnal
+...
+Súlyos hypoxia: ~1–2 perc
+...
+Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a keringés</li>
+			</details>
+			<li><details><summary>váratlan és kardiális eredetű</summary>
+				<li>váratlan:</li><ul>
+					<li>lehet akár alapbetegsége (SzE)</li>
+					<li>viszont nem <span class="syno">progresszív pumpaelégtelenség | lassú keringésösszeomlás</span> lesz az oka, hanem váratlan arrhythmia</li>
+				</ul>
+				<li>kardiális ➜ lásd etio</li><ul>
+					<span class="fsMini">nem tartozik ide egyéb pl. szepszis, trauma, agyvérzés</span>
+				</ul>
+			</details></li>
+			<li>lefutása ➜ VF,pnVT,PEA,ASY</li>
+		</ul>
+		<li>hirtelen szívhalál</li><ul>
+			<li>akut tünet kezdet után ≤1 órával halál</li>
+			<li>onnantól mondjuk csak ezt, ha a szívleállást nem sikerült visszafordítani és már elhunyt</li>
+		</ul>
+		<li><details class="kerdes"><summary>etio ➜ hirtelen szívleállás, VT, VF</summary>
+		</details></li>
 	  <table><tr>
-		<th><span class="syno">szívleállás | keringésleállás</span> típusa</th>
+		<th>szívleállás típusa</th>
 		<th>defibrilláció</th>
 		<th>Adr</th>
 	  </tr><tr> <!-- kamrafibrilláció -->
-		<th><details class="kerdes"><summary>VF = <abbr title="kamrafibrillációt mutat a defibrillátor EKG">kamrafibrilláció</abbr></summary><div style="text-align:left; font-weight:normal">
-			<img class="mini" data-src="cdlwasrq.webp">
-			<img class="mini" data-src="suyzhldu.webp">
-		  <div><b>etio</b></div>
-			<li>(70-80%) <span class="bgBlue">ACS ➜ AMI</span> <span class="fsMini">(,posztinfarctus reentry)</span></li>
-			<li>(~5–10%) primer elektromos zavarok<abbr title="külön téma, ha utána akarok járni (primer ioncsatorna-betegségek / idiopathiás)">*</abbr></li>
-			<li>(~10–15%) strukturális szívbetegségek</li><ul>
-				<li>CM-ek</li>
-				<li>myocarditis</li>
-				<li>súlyos SzE</li>
-			</ul>
-			<li>(~&lt;5%) elektrolit zavarok:</li><ul>
-				<li>hypoK⁺,hyperK⁺</li>
-				<li>hypo<abbr title="magnesaemia">Mg²⁺</abbr></li>
-				<li>súlyos acidózis, hypoxia</li>
-			</ul>
-			<li>(1-3%) supraventricularis arrhythmiak ➜ pl. FBI-tachycardia</li>
-			<li>(&lt;1%) toxin</li><ul>
-				<li><span class="midQ [13.11]">digitalis intoxikáció</span></li>
-				<li>antiarrhythmiás proarrhythmia (pl. IA, IC, III)</li>
-			</ul>
-			<div class="fsMini">#chatgpt</div>
-		  <b>th</b>
+		<td style="text-align:left"><details class="kerdes"><summary><div style="background-color:silver; text-align:center">VF = <abbr title="kamrafibrillációt mutat a defibrillátor EKG">kamrafibrilláció</abbr> <img class="mini" data-src="cdlwasrq.webp"> <img class="mini" data-src="suyzhldu.webp"></div></summary>
+		  <div><b>th</b></div>
 			<li><span class="bgBlue"><span class="midQ [48.6]">CPR</span>:</span></li><ul>
 				<li><span class="bgBlue">manuálist elkezdeni</span></li>
 				<li><span class="bgBlue">közben szerezni egy defibrillátort</span> ➜ <span class="midQ [48.1] kerdes">ASZINKRON kardioverzió!</span></li>
 			</ul>
 			<li>magától soha nem áll le ➜ csak defibrilláció után</li>
 		  <span class="midQ [4] fsMini WHITE">arrhythmia</span>
-		</div></details></th>
+		</details></td>
 		<td>✅ elsődleges</td>
 		<td>✅ 2. defibrilláció után (1mg,iv) 3-5 percenként</td>
-	  </tr><tr><th>pnVT = <abbr title="kamra tachycardiát mutat a defibrillátor EKG és pulzust nem tapinthatok">pulzus nélküli kamrai tachycardia</abbr>
-			<img class="mini" data-src="cdlwasrq.webp">
-			<img class="mini" data-src="rbpbylhb.webp">
-			<img class="mini" data-src="euyjsans.webp">
-		</th>
+	  </tr><tr>
+		<td style="text-align:left"><details class="kerdes"><summary><div style="background-color:silver; text-align:center">pnVT = <abbr title="kamra tachycardiát mutat a defibrillátor EKG és pulzust nem tapinthatok">pulzus nélküli kamrai tachycardia</abbr> <img class="mini" data-src="cdlwasrq.webp"> <img class="mini" data-src="rbpbylhb.webp"> <img class="mini" data-src="euyjsans.webp"></div></summary>
+		  <b><center>KAMRAI TACHYCARDIA</center></b>
+		  <b><span class="midQ [7]">EKG</span></b>
+			<li><span class="bgYellow">széles QRS</span></li>
+			<li><span class="bgYellow">ritmusos</span></li>
+			<li><span class="bgYellow">P-hullámot kell megtalálni: ha azok függetlenül mennek QRS-től, akkor kamrai</span></li>
+			<li>a QRS utáni ST és T ellentétes irányú</li>
+			<li>Tawara-szár blokk morfológia nem fedezhető fel</li>
+			<li>'néhány normál ütés'</li><ul>
+				<li>fúziós ütés ➜ ritkán a supraventricularis &amp; kamrai együtt jelentkezik</li>
+				<li>befogott ütés ➜ ritkán a supraventricularis eredetű végigmegy (pont úgy van az időzítés, hogy a kamrai eredetű előtt érkezik oda)</li>
+			</ul>
+		  <div><b>th</b></div>
+			<div>1) ha pnVT ➜ <span class="midQ [48.2]">szívleállás…</span></div>
+			<div>2) ha van pulzus, de instabil ➜ <span class="midQ [48.1]">arrhythmia th…</span></div>
+			<div>3) ha van pulzus és stabil <img class="mini" data-src="ystlkbye.webp"></div><ul>
+				<li><details class="kerdes"><summary>ha monomorf = reentry ➜ <span class="midQ [48.1]">arrhythmia th…</span></summary>
+				  <div><b>etio</b></div>
+					<li>posztinfarctusos (<abbr title="heg következtében kialakuló reentry ➜ korábbi MI során megindul a szövetkárosodás, de PCI-vel időben megállítódik a terjedése ➜ 'azonban ahogy a heget kétoldalról kikerüli az ingerületterjedés, a két oldal közül az egyik még refrakter-stádiumban lesz, a másik nem, ez lesz a re-entry oka' (kéne egy gif)">hegesedés</abbr>) ➜ leggyakoribb</li>
+					<li>struktúrális szívbetegség</li>
+					<span class="fsMini">(anamnézis ➜ idős, régi infarktus)</span>
+				</details></li>
+				<li>ha polimorf</li><ul>
+					<li>ha QT normál = instabil reentry ➜ etio & th: <span class="midQ [67.3]">ACS…</span></li><ul>
+						<span class="fsMini">gyakran átmegy VF</span>
+					</ul>
+					<li><details class="kerdes"><summary>ha QT > 0.45s (LQTS) <abbr title="torszád dö poánt"><span class="bgYellow">Torsades de Point</span></abbr> <img class="mini" data-src="kjpvwvtz.webp"> ➜ th: <span class="bgYellow">tilos <u>amiodaron</u>!</span></summary>
+					  <div><b>th</b></div>
+						<li>MgSO₄</li>
+						<li>K rendezés</li>
+						<li>frekvencianövelés (isoprenalin / overdrive pacing)</li>
+						<li>QT-nyújtó szer leállítása</li>
+					</details></li><ul>
+						<span class="fsMini">gyakran leáll önmagától</span>
+					</ul>
+				</ul>
+			</ul>
+		  <b>prevenció</b>
+			<li><span class="midQ [12.9]">β-blokkolók</span></li>
+			<li>hosszútávú</li><ul>
+				<li><span data-src="done/Kardio/kardio.html" class="midQ [45]">abláció(katéteres)</span><abbr title="(történhet epicardialisan/endocardialisan, a heg lokalizációtól függően)">'</abbr></li>
+				<li><span data-src="done/Kardio/kardio.html" class="midQ [47]">ICD</span> <span class="fsMini">(ha nem tisztázható az etiológia, nem megoldható az abláció)</span></li>
+			</ul>
+		  <span class="midQ [4] fsMini WHITE">arrhythmia</span>
+		</details></td>
 		<td>✅ elsődleges</td>
 		<td>✅ 2. defibrilláció után (1mg,iv) 3-5 percenként</td>
 	  </tr><tr>
@@ -13448,6 +13566,34 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		</th>
 		<td>❌ nem defibrillálható</td>
 		<td>✅ azonnal</td>
+	  </tr></table>
+	  <table><tr> <th colspan="2"> protokoll </th> </tr><tr>
+		<td style="text-align:left" colspan="2">
+			<div>1) CPR megy... megérkezik a defibrillátor...</div>
+			<div>2) felhelyezed (CPR közben megy)</div>
+			<div>3) utána megnézed EKG ➜  ➜ sokk(200J)</div>
+		</td>
+	  </tr><tr>
+		<th>ha VF, pnVT..</th>
+		<th>ha ASY, PEA..</th>
+	  </tr><tr>
+		<td style="text-align:left">
+			<div>4) 2p CPR (30x2)</div>
+			<div>5) EKG és pulzus ellenőrzés</div>
+		   ha VF / pnVT:
+			<li>sokk (360J) ... 4) ... 5)</li>
+			<li>1. sokk után (CPR közben) Adr: 1mg (iv) ➜ 3-5p ismétlés</li>
+		  ha változás:
+			<li>ha PEA/ASY ➜ másik (Adr + CPR)</li>
+			<li>ha van QRS + pulzus ➜ 'ABCDE' (ROSC)</li>
+		  <hr>
+			mind ezek közben itt is keresni kell a kiváltó okot: <span class="midQ [48.7]">4H-4T</span>
+		</td>
+		<td style="text-align:left">
+			<li>2p CPR (30x2)</li>
+			<li>Adr: 1mg (iv) azonnal</li>
+			<li><span class="midQ [48.7]">4H-4T</span> keresése</li>
+		</td>
 	  </tr></table>
 	  <div><b>defibrillátor</b></div>
 		<img data-src="ojackvdw.webp">
@@ -13479,35 +13625,6 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li>végig <span class="bgYellow">határozottan mondom a dolgokat</span>, nem pedig: légyszi menj arébb, stb.</li>
 			<li><span class="bgBlue">sosincs a sütő gomb közelében az ujjam</span> (mintha pisztoly lenne, ottse tartom a ravaszon), hanem odateszem a többi ujjam mellé (képen pl. a hüvelykujj rajta van az elsütő gombon, ez csak akkor lesz, amikor elsütöm, addig nincs ott, hanem stabilan a többi mellett) <img class="mini" data-src="uaswjxfl.webp"></li>
 		</details></li>
-	  <table><tr> <th colspan="2"> protokoll </th> </tr><tr>
-		<td style="text-align:left" colspan="2">
-			<div>1) CPR megy... megérkezik a defibrillátor...</div>
-			<div>2) felhelyezed (CPR közben megy)</div>
-			<div>3) utána megnézed EKG ➜  ➜ sokk(200J)</div>
-		</td>
-	  </tr><tr>
-		<th>ha VF, pnVT..</th>
-		<th>ha ASY, PEA..</th>
-	  </tr><tr>
-		<td style="text-align:left">
-			<div>4) 2p CPR (30x2)</div>
-			<div>5) EKG és pulzus ellenőrzés</div>
-		   ha VF / pnVT:
-			<li>sokk (360J) ... 4) ... 5)</li>
-			<li>1. sokk után (CPR közben) Adr: 1mg (iv) ➜ 3-5p ismétlés</li>
-		  ha változás:
-			<li>ha PEA/ASY ➜ másik (Adr + CPR)</li>
-			<li>ha van QRS + pulzus ➜ 'ABCDE' (ROSC)</li>
-		  <hr>
-			mind ezek közben itt is keresni kell a kiváltó okot: <span class="midQ [48.7]">4H-4T</span>
-		</td>
-		<td style="text-align:left">
-			<li>2p CPR (30x2)</li>
-			<li>Adr: 1mg (iv) azonnal</li>
-			<li><span class="midQ [48.7]">4H-4T</span> keresése</li>
-		</td>
-	  </tr></table>
-	  
 	</details>
 	<details class="[48.3] kerdes"><summary>ABCDE</summary>
 		<div>DEM_IV_2_1_1_3_abra.pdf <img class="mini" data-src="nacacpqy.webp"></div>
@@ -13738,34 +13855,65 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 	</details>
 	<details class="[48.7] kerdes"><summary>4H - 4T</summary>
 		<li>lényege ➜ <span class="bgBlue"><span class="midQ [48.2]">szívleállás</span> reverzibilis okai</span> <img class="mini" data-src="vxgcjhqj.webp"></li>
-	  <table><tr>
-		<td style="text-align:left"><center> <span class="midQ [🩺9.2]">hypox(aem)ia</span> </center>
+		<li><details><summary>egyenlőre úgy fogjam fel, hogy VT - VF - hirtelen szívleállás okai ezek</summary>
+			<li>ez nem teljesen igaz, hiszen ezek csak reverzibilisek</li>
+			<li>másrészt pl. FBI-tachycardia VF-be megy át</li>
+			<li>meg LQTS alapból egyikse, de lehet belőle TdP gyakran, amiből aztán VF</li>
+			<li>szóval vannak ilyen részletek de egyenlőre skip</li>
+		  <details><summary>(megőrzés)</summary>
+<li>(70-80%) <span class="midQ [67.2]">ISZB</span> (<span class="bgBlue">ACS, AMI</span>) <span class="fsMini">(,posztinfarctus reentry)</span></li>
+<li>strukturális szívbetegség (fiatalabbak) ➜ CM-ek, myocarditis, súlyos SzE</li>
+<li>hypoxia(légzésleállás)</li>
+<li>elektrolitzavar</li><ul>
+	<li>(LQTS) <span class="midQ [7]">hypoK+, hypoCa2+</span>, hypoMg2+</li>
+	<li>súlyos acidózis</li>
+</ul>
+<li>supraventricularis arrhythmiak ➜ pl. bradycardia, FBI-tachycardia</li>
+<li>gyógyszer pl.</li><ul>
+	<li><span class="midQ [13.11]">digitalis</span></li>
+	<li>(LQTS) <span class="midQ [48.1]">K-csat. blokkolók</span> pl. <u>amiodaron</u></li>
+	<li>(LQTS) antidepresszáns, antipszochotikum</li>
+	<li>(LQTS) AB ➜ fluorokinolonok, makrolidok</li>
+</ul>
+		  </details>
+		</details></li>
+	  <table><tr> <th> 4H </th> <th> 4T </th> </tr><tr>
+		<!-- 4H --> <td style="text-align:left"><center> <span class="midQ [🩺9.2]">hypox(aem)ia</span> </center>
 			<li>gyanú ➜ <span class="midQ [FiVi.bőr]">cyanosis</span></li>
 			<li>th ➜ <span class="midQ [46]">oxigenizáció</span></li>
 		</td>
-		<td style="text-align:left"><center> <span class="midQ [67.5.2]">hypovolaemia</span> </center>
+		<!-- 4T --> <td> <span class="bgBlue">(70-80%)</span> thrombosis: <span class="midQ [67.3]">ACS</span>(<span class="midQ [67.2]">ISZB</span>),<span class="midQ [22]">PE</span> </td>
+	  </tr><tr>
+		<!-- 4H --> <td style="text-align:left"><center> <span class="midQ [67.5.2]">hypovolaemia</span> </center>
 			<li>gyanú</li><ul>
 				<li>anamnézis</li>
 				<li>sápadtság</li>
 			</ul>
 			<li><span class="midQ [67.5.2]">th</span></li>
 		</td>
+		<!-- 4T --> <td> <abbr title="gyanú: echo(+próbapunkció?); th: pericardiocentezis"><span class="midQ [67.4]">szívtamponád</span></abbr> </td>
 	  </tr><tr>
-		<td style="text-align:left"><center><span class="bgPink"> hypo/hyperK+</span>, <span class="bgPink">metabolikus</span> </center>
+		<!-- 4H --> <td style="text-align:left"><center><span class="bgPink">hypo/hyperK+</span> <br> <span class="fsMini">(hypoCa2+,hypoMg2+) (LQTS), <span class="bgPink">metabolikus</span> (súlyos acidózis)</span> </center>
 			<li>gyanú ➜ <span class="bgPink">ismert, igazolt (labor, vérgáz)</span></li>
 			<li>th ➜ <span class="bgPink">korrekció</span></li>
 		</td>
-		<td> <span class="midQ [13.9]">hypothermia</span> </td>
-	  </tr><tr>
-		<td> thrombosis (<span class="midQ [67.3]">ACS</span>,<span class="midQ [22]">PE</span>) </td>
-		<td> <abbr title="gyanú: echo(+próbapunkció?); th: pericardiocentezis"><span class="midQ [67.4]">szívtamponád</span></abbr> </td>
-	  </tr><tr>
-		<td style="text-align:left"><center> <span class="midQ [13]">toxin</span> </center>
+		<!-- 4T --> <td style="text-align:left"><center> <span class="midQ [13]">toxin</span> </center>
 			<li>gyanú ➜ <span class="midQ [13.1]">anamnézis</span></li>
+			<li><details class="kerdes"><summary>gyógyszer példák</summary>
+				<li><span class="midQ [13.11]">digitalis</span></li>
+				<li>(LQTS) <span class="midQ [48.1]">K-csat. blokkolók</span> pl. <u>amiodaron</u></li>
+				<li>(LQTS) antidepresszáns, antipszochotikum</li>
+				<li>(LQTS) AB ➜ fluorokinolonok, makrolidok</li>
+			</details></li>
 			<li>th ➜ lásd ott..</li>
 		</td>
-		<td><abbr title="gyanú: légzési hang egyik oldalon hiányzik; th: azonnali drenázs(/punkció)"><span class="midQ [25]">tenziós ptx</span></abbr>  </td>
+	  </tr><tr>
+		<!-- 4H --> <td> <span class="midQ [13.9]">hypothermia</span> </td>
+		<!-- 4T --> <td><abbr title="gyanú: légzési hang egyik oldalon hiányzik; th: azonnali drenázs(/punkció)"><span class="midQ [25]">tenziós ptx</span></abbr>  </td>
 	  </tr></table>
+	  <div>(egyéb)</div>
+		<li>strukturális szívbetegség (fiatalabbak) ➜ CM-ek, myocarditis, súlyos SzE</li>
+		<li>supraventricularis arrhythmiak ➜ pl. bradycardia, FBI-tachycardia</li>
 	</details>
 	<details class="[48.8] kerdes"><summary>manuális CPR</summary>
 		<li>szólok vkinek, hogy: "hívja a reanimációs teamet, továbbá hozzon tubust, én megkezdem az újraélesztést"</li><ul>
@@ -13943,7 +14091,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		<td> <span class="bgYellow">mpm alulműködése miatti PTH-hiány</span> </td>
 		<td> <span class="bgYellow">mpm zavar miatti PTH túltermelés (hyperCa²⁺ nem negatív feedback-el)</span> </td>
 		<td> <span class="bgYellow">hypoCa²⁺ következtébeni fokozott PTH termelés a mpm-ben</span> </td>
-	  </tr><tr><th style="writing-mode:sideways-lr;">etiológia</th>
+	  </tr><tr><th class="vertical-text">etiológia</th>
 		<td style="text-align:left">
 			<li><span class="bgYellow">iatrogén ➜ nyaki műtét, irradiatio</span></li>
 			<li>idiopathiás</li>
@@ -13957,12 +14105,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li>mpm hyperplasia (10%)</li>
 			<li><span class="midQ [46] bgYellow kerdes" data-src="bel">MEN</span></li>
 		</td>
-		<td style="text-align:left">
-			<li>bél ➜ <span class="midQ [10]" data-src="bel">malabszorpció</span> (Ca²⁺ / D-vitamin felszívódási zavar)</li>
-			<li><span class="bgYellow">vese</span> (Ca²⁺ reabszorpciós zavar, D-vitamin szintézis zavar)</li>
-			<li>máj (D-vitamin szintézis zavar)</li>
-			<li><span class="bgYellow"><span class="midQ [50.3] kerdes syno" data-syno="rachitis | angolkór">rachitis</span> ➜ D-vitamin hiány</span></li>
-		</td>
+		<td> <span class="midQ [50.4]">hypoCa²⁺</span> okai, kivéve a hypoparathyreosis </td>
 	  </tr><tr><th style="writing-mode:sideways-lr;">patho</th>
 		<td colspan="3"> <span class="midQ [50.2]">lásd Ca/foszfát anyagcsere</span> </td>
 	  </tr><tr><th style="writing-mode:sideways-lr;">tünetek</th>
@@ -14022,8 +14165,8 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		</td>
 	</tr></table></details>
 	<details class="[50.2] kerdes"><summary>Ca²⁺ anyagcsere</summary>
-		<li>bélben kerül felvételre <span style="font-size:80%">(200mg/nap)</span></li>
-		<li>vesén keresztül távozik <span style="font-size:80%">(200mg/nap)</span></li>
+		<li>bélben kerül felvételre <span style="font-size:80%">(0.2g/nap)</span></li>
+		<li>vesén keresztül távozik <span style="font-size:80%">(0.2g/nap)</span></li>
 		<li>csontban raktározódik <span style="font-size:80%">(1kg)</span></li>
 		<img data-src="weseiqdv.webp">
 	  <div style="overflow-x: auto;"><table><tbody><tr><th></th> <th>PTH</th>  <th>kalcitriol</th></tr>
@@ -14120,8 +14263,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 		</td>
 	  </tr><tr>
 		<td colspan="2"> <!-- patho, szövődmény -->
-			<div><span class="bgYellow">a magas kalciumszint csökkenti az ideg-izom ingerelhetőséget</span></div>
-			<div>ha súlyos ➜ <span class="midQ [6] kerdes">endokrin krízis</span>, <span class="midQ [48] kerdes">eszméletvesztés</span></div>
+			<div><span class="bgYellow">a kalciumszint fordítottan arányos az ideg-izom ingerelhetőséget</span></div>
 		</td>
 	  </tr><tr> <!-- tünetek -->
 		<td style="text-align:left">
@@ -14172,28 +14314,28 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			</ul>
 			<li>obstipatio</li>
 			<li>csontok ➜ mozgásszervi fájdalom (derék, hát, végtag), csonttörések</li><ul>
-				<span class="midQ [44]" data-src="bel">osteoporosis</span>!
+				szekunder <span class="midQ [44]" data-src="bel">osteoporosis</span>
 			</ul>
 			<li>vese</li><ul>
 				<li><span class="midQ [16.11.5] kerdes bgYellow">polyuria &amp; polydipsia</span></li>
 				<li><span class="midQ [20.15]">hypercalciuria</span> ➜ <span class="midQ [20.13] bgYellow">vesekő(kalcium-oxalát) kockázata nő</span></li>
 			</ul>
 			<li><span class="midQ [7] kerdes bgBlue">EKG <!-- Ca2+ --></span></li>
+			<div>ha súlyos ➜ <span class="midQ [6] kerdes">endokrin krízis</span>, <span class="midQ [48] kerdes">eszméletvesztés</span></div>
 		</td>
 	  </tr><tr> <!-- etiológia, dg, th -->
-		<td style="text-align:left">
+		<td style="text-align:left"><b>szervek</b>
 		  <b>Se Ca²⁺</b>
-			<li>ha az ionizált normális, csak az összCa²⁺ csökkent ➜ <span class="bgYellow">hypoalbuminaemia (máj,vese)</span></li>
+			<li>ha az ionizált normális, csak az összCa²⁺ csökkent ➜ <span class="bgYellow">hypoalbuminaemia </span> ➜ vese, máj</li>
 			<li>ha az ionizált csökkent</li><ul>
 				<li><span class="bgYellow">ha PTH↓ &amp; <abbr title="foszfátion">Pi</abbr>↑ ➜ <span class="midQ [50.1]">hypoparathyreosis</span></span></li>
 				<li><span class="bgYellow">ha PTH↑ &amp; Pi↓ ➜ <span class="midQ [50.3]">D-vitamin hiány</span></span></li>
-				<li>ha PTH↑ &amp; Pi↑</li><ul>
-					<li>pseudohypoparathyreosis ➜ PTH-rezisztencia</li>
-					<li><span class="bgYellow">vese</span> (Pi nem távozik rendesen ➜ Ca²⁺ megköti lecsökken (ionizált) ➜ PTH nő)</li>
+				<li>ha PTH↑ &amp; Pi↑ ➜ <span class="bgYellow">pseudohypoparathyreosis</span>:</li><ul>
+					<span class="bgYellow">PTH-rezisztencia</span> (vese: Pi nem távozik rendesen ➜ Ca²⁺ megköti lecsökken (ionizált) ➜ PTH nő)
 				</ul>
 				<li><details class="kerdes"><summary>ha Mg²⁺↓ is</summary>
 					<li>Mg²⁺↓ ➜ PTH↓ ➜ Ca²⁺↓</li>
-				</details></li><ul>
+				 </details></li><ul>
 					<li>alkoholizmus</li>
 					<li>malabszorpció</li>
 					<li><span class="midQ [12.6] kerdes">kacsdiuretikumok</span></li>
@@ -14213,16 +14355,17 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li>esetleg D-vit.</li>
 		</td>
 		<td style="text-align:left">
-		  <b>etiológia</b>
+		  <b>etio,dg</b>
 			<li>ha PTH↑ ➜ <span class="midQ [50.1] bgYellow">primer hyperparathyreosis</span></li>
 			<li>ha D-vitamin↑ ➜ <span class="midQ [122]" data-src="bel">sarcoidosis</span> / túladagolás</li>
 			<li>mammográfia ➜ <span class="bgYellow">mamma cc</span></li><ul>
-				<li>ha PTHrP van vérben ➜ <span class="midQ [53] bgYellow kerdes">paraneoplasias sy</span></li>
+				<li>leggyakrabban csontmetasztázis</li>
+				<li>ritkábban <span class="midQ [53] bgYellow kerdes">paraneoplasias sy</span> ➜ PTHrP a vérben</li>
 			</ul>
 			<li>mRTG (tüdőrák: <span class="midQ [53] kerdes">paraneoplasias sy</span>)</li>
 			<li><span class="midQ [38.2] kerdes bgYellow">myeloma multiplex</span></li>
 			<li><span class="midQ [12.6] kerdes">thiazid diuretikumok</span></li>
-			<li>immobilizáció (csontlebontás fokozott)</li>
+			<div>(primer osteoporosis (időskor, nő) nem okoz ➜ vese kompenzálja)</div>
 		  <b>th</b>
 			<li>lásd <span data-src="Aneszt/aneszt.html" class="midQ [22]">aneszt</span></li>
 		</td>
@@ -16372,8 +16515,8 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li>hyperthyreosis</li>
 		</ul>
 	</details>
-	<details class="[67.2] kerdes"><summary>ischaemiás szívbetegség megjelenési formái</summary>
-	  <div><b>klinikai megjelenési formái:</b></div>
+	<details class="[67.2] kerdes"><summary>ISZB klinikai megjelenési formái</summary>
+	  <div class="fsMini">ISZB = ischaemiás szívbetegség</div>
 		<div>1) <span class="bgYellow">tünetmentes(silent) MI</span></div><ul>
 			<li>patho ➜ MI <abbr title="mivel tünetmentes, így klinikailag külön kategória (nincs ANGINA!). patológiailag ugye">(de nem soroljuk az ACS közé!)</abbr></li>
 			<li>lényege ➜ neuropathia miatt nem érzi a szívinfarctust (nincs angina!)</li>
@@ -16385,51 +16528,8 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li><span class="bgYellow">instabil angina</span></li>
 			<li><span class="bgYellow">AMI</span></li>
 		</ul>
-		<div>4) <span class="midQ [97]" data-src="bel">malignus kamrai tachycardia, kamrafibrilláció</span> ➜ <span class="bgYellow">hirtelen szívhalál</span><abbr title="= szív és keringés leállása">'</abbr></div>
-		<div>5) <span class="bgYellow">krónikus <span class="midQ [67.5] kerdes">SzE</span></span> <abbr title="kontraktilitás csökkenés ➜ kóros remodelling ➜ végstádiumú SZE (ennek a neve ischaemias cardiomyopathia: tehát ISZB következtébeni … továbbá ez sys elégtelenség: HFrEF < 40%)">*</abbr></div>
-	  <div><b>jellegzetes tünetük:</b></div>
-		<li>angina típusok esetében (stabil / ACS) ➜ <span class="midQ [3] kerdes bgYellow">angina pectoris</span></li>
-		<li>hirtelen szívhalál ➜ collapsus ~ eszméletvesztés</li>
-		<li>krónikus <span class="midQ [67.5] kerdes">SzE</span> ➜ backward failure</li>
-	  <div><b>dg</b></div>
-		<li>anamnézis, FiVi, labor</li><ul>
-			<li><span class="midQ [61.5] bgYellow kerdes">atherosclerosis</span></li><ul>
-				<li><span class="bgYellow">dohányzás</span></li>
-				<li><span class="midQ [68] bgYellow kerdes">metabolikus-sy</span></li>
-				<li><span class="midQ [39] bgYellow kerdes">dyslipidaemia</span></li>
-				➜ <span class="midQ [51] bgYellow kerdes">BKI</span>
-			</ul>
-			<li><span class="bgYellow">PTP = pre-teszt probabilitás</span> ➜ megbecsülhető a <span class="bgYellow">koronáriabetegség kockázata</span>, az alábbiak alapján</li><ul>
-				<li><span class="bgYellow">életkor</span></li>
-				<li><span class="bgYellow">nem</span></li>
-				<li><span class="bgYellow">angina típusa</span></li>
-			</ul>
-		</ul>
-		<li><span class="midQ [7] bgYellow">EKG</span></li><ul>
-			<li>pozitív ha…</li><ul>
-				<li>vagy ST depresszió</li>
-				<li>vagy ST eleváció</li>
-				<li>vagy T inverzió</li>
-			</ul>
-			<li>nyugalmi ➜ esetek több mint felében normális</li>
-			<li>terheléses</li><ul>
-				<div><span class="plus">ind</span> ➜ provokálható ischaemia</div>
-				<div><span class="minus">KI</span> ➜ AMI kevesebb mint 2 hete, aorta stenosis, tüdőembólia stb.</div>
-				<li>frekvencia:</li><ul>
-					<li>submax = 200-életkor ➜ negativitás kimondása csak ennek elérése után történhet!</li>
-					<li>max = 220-életkor ➜ efölött hyperlactacidaemia lépne föl!</li>
-				</ul>
-			</ul>
-			<li>Holter-monitorozás (0-24h EKG)</li>
-		</ul>
-		<li><span class="midQ [67.7]">echo</span></li><ul>
-			<li><span class="bgYellow">EF</span>(bal kamra funkció), mozgászavar</li>
-			<li>egyéb mellkasi fájdalom okok kizárása, pl. <span class="midQ [89]" data-src="bel">aorta stenosis</span>, <span class="midQ [86]" data-src="bel">HCM</span></li>
-		</ul>
-		<li>ha PTP…</li><ul>
-			<li>alacsony ➜ coronaro-CT-angiográfia</li>
-			<li>magas ➜ invazív coronarográfia</li>
-		</ul>
+		<div>4) <span class="midQ [48.2] bgYellow">VT<abbr title="(lehet bármelyik, vagy kezdeti VT átmegy VF)">,</abbr>VF … hirtelen szívleállás (collapsus ~ eszméletvesztés)</span></div>
+		<div>5) <span class="bgYellow">krónikus <span class="midQ [67.5] kerdes">SzE</span></span> <abbr title="kontraktilitás csökkenés ➜ kóros remodelling ➜ végstádiumú SZE (ennek a neve ischaemias cardiomyopathia: tehát ISZB következtébeni … továbbá ez sys elégtelenség: HFrEF < 40%)">*</abbr> (backward failure)</div>
 	  <!-- FORRÁSOK --> <div>
 		<span class="bgPink">kéne kardio-zsebkönyv</span>
 		<abbr title="tételek ír még róla">#</abbr>
@@ -19749,22 +19849,22 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 </details>
 <details class="[📝27] title"><summary>📝 gombamérgezések</summary>
 	<details class="kerdes"><summary>típusai (6)</summary>
-		<div class="imp [1.1]"></div>
+		<div class="imp [13.4]"></div>
 	</details>
 	<details class="kerdes"><summary>lappangási idő (5)</summary>
-		<div class="imp [1.1]"></div>
+		<div class="imp [13.4]"></div>
 	</details>
 	<details class="kerdes"><summary>gyilkos galóca ➜ tünetek (5)</summary>
-		<div class="imp [1.1]"></div>
+		<div class="imp [13.4]"></div>
 	</details>
 	<details class="kerdes"><summary>papsapkagombák ➜ tünetek (5)</summary>
-		<div class="imp [1.1]"></div>
+		<div class="imp [13.4]"></div>
 	</details>
 	<details class="kerdes"><summary>muszkarin-típusúk ➜ tünetek (5)</summary>
-		<div class="imp [1.1]"></div>
+		<div class="imp [13.4]"></div>
 	</details>
 	<details class="kerdes"><summary>párducgalóca-típusúk ➜ tünetek (5)</summary>
-		<div class="imp [1.1]"></div>
+		<div class="imp [13.4]"></div>
 	</details>
 </details>
 <details class="[📝28] title"><summary>📝 metanol intoxikáció</summary>
@@ -19943,7 +20043,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 	</details>
 </details>
 <details class="[📝38] title"><summary>📝 ISZB</summary>
-	<details class="kerdes"><summary>típusai (5)</summary>
+	<details class="kerdes"><summary>klinikai megjelenései formái (5)</summary>
 		<div class="imp [67.2]"></div>
 	</details>
 	<details class="kerdes"><summary>tünetek (3)</summary>
@@ -21485,7 +21585,6 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 </details>
 <!-- 📝111 – 120 --></details>
 </details>
-
 
 <details><summary class="mainTitle">Anamnézis, gyógyszerek, labor</summary>
 	<details class="kerdes"><summary class="status">anamnézis</summary>
@@ -24035,6 +24134,7 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 	<details class="kerdes"><summary>coagulopathia</summary>
 		<div class="imp [61.5]"></div> <!-- haemostasis betegségei -->
 	</details>
+	<span data-src="aneszt" class="imp [27]"></span> <!-- infúzió -->
 	<span class="imp [a1]"></span> <!-- allergiás betegségek -->
 	<span class="imp [a2]"></span> <!-- vitium -->
 	<span class="imp [a3]"></span> <!-- pleuralis folyadékgyülem -->
@@ -24165,20 +24265,16 @@ egyéb szituációkat is be kéne vésnem, pl.
 	<span class="imp [📝45]"></span> <!-- aorta-ruptúra -->
 </details>
 <details><summary class="phase">Diabetes mellitus tünetei, formái, diagnosztikája</summary>
-  <div><b>DM</b></div>
-	<div class="imp [📝46]"></div> <!-- dm -->
+	<span class="imp [📝46]"></span> <!-- dm -->
 </details>
 <details><summary class="phase">Diabetes mellitus szövődményei, diabeteses veszélyállapotok</summary>
-  <div><b>DM</b></div>
-	<div class="imp [📝46]"></div> <!-- dm -->
+	<span class="imp [📝46]"></span> <!-- dm -->
 </details>
 <details><summary class="phase">Hypo- és hyperglycaemia</summary>
-  <div><b>DM</b></div>
-	<div class="imp [📝46]"></div> <!-- dm -->
+	<span class="imp [📝46]"></span> <!-- dm -->
 </details>
 <details><summary class="phase">Diabetes kezelésében használatos kezelési módszerek, azok mellékhatásai</summary>
-  <div><b>DM</b></div>
-	<div class="imp [📝46]"></div> <!-- dm -->
+	<span class="imp [📝46]"></span> <!-- dm -->
 </details>
 <details><summary class="phase">Hypertriglyceridaemia, hyperviscositas syndroma</summary>
 	<span class="imp [📝47]"></span> <!-- hypertriglyceridaemia -->
@@ -24412,6 +24508,7 @@ egyéb szituációkat is be kéne vésnem, pl.
 	<div>⭕ 1) ➜ szepszis</div><ul>
 		<span class="bgYellow">GRAM- ➜ nozokomiális pneumonia … szepszis … DIC ?!</span>
 	</ul>
+	<div>⭕ ALAPOK ➜ volumenpótlás: fizsó.. (aneszt)</div>
 	
 	<div>⭕ 1) + álmodból felkelve is… ➜ Metabolicus eredetű tudatzavarok (neuro) + project</div>
 	<div>⭕ 1) + álmodból felkelve is… ➜ eszméletlenség</div><ul>
@@ -24439,7 +24536,6 @@ egyéb szituációkat is be kéne vésnem, pl.
 	</ul>
 	<div>⭕ ALAPOK ➜ GERD, IBS (vegetatív IR gyógyszereknél van egy farmak link, majd azt is update)</div>
 	<div>⭕ ALAPOK ➜ radiológia ➜ pl. belgyógy mappa: diagn. zsebkönyv - 165o</div>
-	<div>⭕ ALAPOK ➜ volumenpótlás: fizsó.. (aneszt)</div>
 	<div>⭕ ALAPOK ➜ EKG elemzés - gyakorlás</div>
 	<div>⭕ ALAPOK + gyógyszerek(analgetikumok) ➜ migrén</div>
 	<div>⭕ ALAPOK ➜ legfontosabbak / szakma (amit írtak/mondtak + amit gondolok + chatgpt is kérdezzem) ➜ pl.</div><ul>
