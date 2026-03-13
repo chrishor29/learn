@@ -2832,7 +2832,7 @@ Orvosi dokumentáció helye és módja:
 		<li>β<sub>1</sub>-agonisták ➜ pl. <span class="midQ [12.9]">katekolaminok</span></li><ul>
 			<li><u>dobutamin</u>(<abbr title="agonista">β<sub>1</sub></abbr>) ➜ <span class="bgYellow"><i>,igazi pozitív inotróp'</i></span></li>
 			<li><u>Adr</u>(<abbr title="agonista">α<sub>1</sub>,β<sub>1</sub>,β<sub>2</sub></abbr>)</li>
-			<li><u>nAdr</u>(<abbr title="agonista">α<sub>1</sub>,<span class="fsMini">β<sub>1</sub></span></abbr>) ➜ inkább vazopresszor</li>
+			<li><u>nAdr</u>(<span class="bgYellow"><abbr title="agonista">α<sub>1</sub></span>,<span class="fsMini">β<sub>1</sub></span></abbr>) ➜ <span class="bgYellow">inkább vazopresszor</span></li>
 			igazából csak a <u>dobutamin</u> (és <u>dopamin</u>) a pozitív inotróp, a <u>nAdr</u> inkább vazopresszor
 		</ul>
 		<li>Ca²⁺-érzékenyítők (<u>levosimendan</u>)</li>
@@ -2846,16 +2846,15 @@ Orvosi dokumentáció helye és módja:
 			</ul>
 			<div><span class="minus">KI</span> pl. <span class="midQ [4]">bradycardia, AV-blokk</span></div>
 		</ul>
-		<div><span class="plus">ind</span> <span class="midQ [67.5.7] kerdes bgYellow syno">akut SzE | kardiogén sokk</span></div><ul>
-			<li><span class="bgYellow"><u>dobutamin</u></span> ➜ ha Psys = 90-110Hgmm <span class="fsMini">(nem súlyosan alacsony)</span> <abbr title="valóságban, ha cardiac output alacsony (hiszen ez valódi pozitív inotróp) ➜ jelei: forward failure. Tehát adható nAdr mellett is elvileg. A jegyzetemben a vérnyomás volt csak írva. Valószínűleg azért, mert azt könyebb mérni, biztosabb protokoll, egyszerűbb kezdőként így felfogni.">*</abbr></li>
-			<li><span class="bgYellow"><u>nAdr</u></span></li><ul>
-				<li><span class="bgYellow">vazopresszor</span> (α<sub>1</sub>-agonista) főként</li>
-				<li><span class="bgYellow">ha alacsony vérnyomás ezt</span><abbr title="elvileg: MAP &lt; 65 Hgmm … mean arterial pressure = (Psys + 2xPdia)/3 … de a Psys &lt; 90 Hgmm lehet egyszerűbb, hisz dobutaminnál azt írtam 90-110">'</abbr> (vagy ezt is)</li>
+		<div><span class="plus">ind</span> <span class="midQ [67.5.7] kerdes bgBlue syno">akut SzE | kardiogén sokk</span> & <span class="midQ [69.1] bgBlue">redisztributív sokk</span></div><ul>
+			<li><span class="bgBlue">ha <span class="midQ [a1]">anaphylaxias</span> ➜ <u>Adr</u>(im)</span> - <abbr title="mert bronchokontrikció van, így bronchodilatátor(β<sub>2</sub>) kell!">miért?</abbr></li>
+			<li>ha nem</li><ul>
+				<li><span class="bgBlue">ha 65Hgmm>MAP ➜ <u>nAdr</u></span>(iv) - <abbr title="mert vazodilatáció van így vazopresszor(α<sub>1</sub>) kell">miért?</abbr></li>
+				<li><span class="bgBlue">ha <span class="midQ [67.5.8]">CO</span>↓(<span class="midQ [67.7]">echo</span>) ➜ <u>dobutamin</u></span>(iv)- <abbr title="mert szív pumpafunkció elégtelen így pozitív inotróp kell (β<sub>1</sub>) kell">miért?</abbr></li>
 			</ul>
-			<li><span class="fsMini">ha nem jók a hagyományosak (<u>dobutamin</u>,<u>nAdr</u>) ➜ PDE-gátló / Ca²⁺-érzékenyítők</span></li>
+			<span class="fsMini"><span class="fsMini">ha nem jók a hagyományosak (<u>dobutamin</u>,<u>nAdr</u>) ➜ PDE-gátló / Ca²⁺-érzékenyítők</span></span>
 		</ul>
-		<div><span class="plus">ind</span> <span class="midQ [48.2] kerdes">szívleállás</span>(reanimáció) ➜ <span class="bgYellow"><u>Adr</u></span></div>
-		<div><span class="plus">ind</span> <span class="midQ [a1] bgYellow">anaphylaxias sokk</span> ➜ <span class="bgYellow"><u>Adr</u></span></div>
+		<div><span class="plus">ind</span> <span class="midQ [48.2] bgBlue kerdes">szívleállás</span>(reanimáció) ➜ <span class="bgBlue"><u>Adr</u></span>(iv)</div>
 	  <!-- egyéb --> <div class="fsMini">
 		<span class="midQ [12.9] WHITE">ANS gyógyszerek</span>
 		<span data-src="farmak" class="midQ [217] WHITE">farmak</span>
@@ -7213,17 +7212,17 @@ Orvosi dokumentáció helye és módja:
 		<div>3d) gyógyszerszedés ➜ milyet? mióta? napi adag?</div>
 		<details class="kerdes"><summary>4) jelenlegi státusz ➜ fenntről-lefele</summary>
 		  <b>fej</b>
-			<li>fejfájás?</li>
+			<li><span class="bgPink">fejfájás</span>?</li>
 			<li>szédülés? ➜ ha van: felállás után? <span class="midQ [48]">eszméletvesztés</span> volt?</li>
 		  <b>mellkas</b>
-			<li>torokfájás</li>
-			<li>hányinger / nyelési panasz / reflux</li><ul>
+			<li><span class="bgPink">torokfájás</span></li>
+			<li><span class="bgPink">hányinger</span> / nyelési panasz / reflux</li><ul>
 				<li><span class="midQ [47] kerdes">vérhányás</span></li>
 			</ul>
 			<li>mellkasi tünetek:</li><ul>
 				<li><span class="midQ [66]">nehézlégzés</span></li>
-				<li>köhögés</li>
-				<li>köpet <span class="LASD">7t</span> színe</li><ul>
+				<li><span class="bgPink">köhögés</span></li>
+				<li><span class="bgPink">köpet</span> <span class="LASD">7t</span> színe</li><ul>
 					<li>sárgás(zöldes) ➜ gyulladás / fertőzés</li>
 					<li>véres(piros) ➜ TBC, tüdőtumor</li>
 				</ul>
@@ -7245,7 +7244,8 @@ Orvosi dokumentáció helye és módja:
 				<li>színe? (szalmasárga a normális) ➜ pl. véres oka leggyakrabban felfázás miatti hólyaghurut <span style="font-size:80%">(de lehet daganat, vesekő stb.)</span></li>
 				<li>csíp-e?</li>
 			</ul>
-			<li>széklet normális-e (színe,hasmenés)</li><ul>
+			<li>széklet normális-e</li><ul>
+				<li><span class="bgPink">hasmenés DD</span></li>
 				<li>világos ➜ epekárosodás az oka</li>
 				<li>véres</li><ul>
 					<li>fekete + <abbr title="nem teljesen szilárd, mert a folyadékvisszaszívást gátolta 'az emésztett vér'">szurokszerű</abbr> <span class="midQ [47] kerdes">(melaena)</span></li>
@@ -7287,18 +7287,6 @@ Orvosi dokumentáció helye és módja:
 		<li>kísérő tünet (láz,hidegrázás) ➜ ha lázas, szedett-e rá <span class="syno">gyógyszert | lázcsillapítót</span></li>
 		<li>esetleg gyógyszerek, melyeket szedett ➜ fájdalmat csökkentik / nem hatnak</li>
 		<li><span class="bgPink">DN4-kérdőív ➜ 4 felett neuropátiás, alatta nociceptív</span></li>
-	</details></li>
-	<li><details class="kerdes"><summary><span class="bgPink">fejfájás</span></summary>
-		<li></li>
-	</details></li>
-	<li><details class="kerdes"><summary><span class="bgPink">hasfájás</span></summary>
-		<li></li>
-	</details></li>
-	<li><details class="kerdes"><summary><span class="bgPink">hátfájás</span></summary>
-		<li></li>
-	</details></li>
-	<li><details class="kerdes"><summary><span class="bgPink">lábfájás</span></summary>
-		<li></li>
 	</details></li>
   <hr>
 	<details class="kerdes"><summary>célja</summary>
@@ -8628,7 +8616,7 @@ Orvosi dokumentáció helye és módja:
 		<li>RiFa ➜ DM, immundeff állapot</li>
 		<li>etio ➜ <span class="bgBlue">E.coli</span> (leggyakoribb)</li><ul>
 			<li><span class="bgYellow">közösségben szerzett</span> ➜ pl. szexuális kontaktus ➜ 90% E.coli, egyéb (pl. Enteroccocus faecalis)</li>
-			<li><span class="midQ [79] bgYellow" data-src="bel">nozokomiális</span> ➜ katéter asszociált ➜ 50% E.coli, többi (Klebsiella, Enterobacter, Pseudomonas, Candida)</li>
+			<li><span class="midQ [71] bgYellow">nozokomiális</span> = katéter asszociált ➜ 50% E.coli, többi (Klebsiella, Enterobacter, Pseudomonas, Candida)</li>
 		</ul>
 		<li><abbr title="jellemzően">'</abbr>felszálló(ascendáló) módon történik</li>
 	  <b>tünetek</b><table><tr>
@@ -9181,7 +9169,7 @@ Orvosi dokumentáció helye és módja:
   </div>
 </details>
 <details class="[23] kerdes"><summary>pneumonia</summary>
-	<table><tbody><tr><th>CAP</th>  <th>nozokomiális</th></tr><tr>
+	<table><tbody><tr><th>CAP</th>  <th><span class="midQ [71]">nozokomiális</span> (HAP)</th></tr><tr>
 		<td style="text-align:left">
 			<li><span class="bgYellow">Streptococcus pneumoniae</span> <span class="bgYellow">(20-50%) - leggyakoribb!</span></li>
 			<li><span class="bgYellow">Chlamydia pneumoniae</span> (5-10%)</li>
@@ -9255,7 +9243,7 @@ Orvosi dokumentáció helye és módja:
 		</ul>
 		<li><span class="bgYellow">akvirálás jellege:</span></li><ul>
 			<li><abbr title="közösségben szerzett (commonly aquired pneumonia)">CAP</abbr> ➜ közösségben szerzett</li>
-			<li><abbr title="kórházban szerzett = nozokomiális (hosiptally aquired pneumonia)">HAP</abbr> ➜ felvétel után min 48-72 órával jelennek meg a tünetek<abbr title="(előtte semmi inkubációra utaló jel)">'</abbr> </li>
+			<li><abbr title="kórházban szerzett = nozokomiális (hospitally aquired pneumonia)"><span class="midQ [71]">HAP</span></abbr> ➜ felvétel után min 48-72 órával jelennek meg a tünetek<abbr title="(előtte semmi inkubációra utaló jel)">'</abbr> </li>
 		</ul>
 	</ul>
   <b>tünetek</b>
@@ -10090,10 +10078,10 @@ Orvosi dokumentáció helye és módja:
 	<th>egyéb</th>
   </tr><tr>
 	<!-- nozokomiális --> <td style="text-align:left">
-	  <span class="midQ [79] bgYellow " data-src="bel">nosocomialis infekciók:</span>
+	  <span class="midQ [71] bgYellow">nosocomialis infekciók:</span>
 		<li><span class="bgYellow">katéter ➜ <span class="midQ [20.14] syno">PN | felső UTI</span></span></li>
 		<li>posztoperatív sebfertőzés</li>
-		<li><span class="midQ [70] bgYellow" data-src="bel">nosocomialis pneumoniák</span></li>
+		<li><span class="midQ [23] bgYellow">nosocomialis pneumoniák</span></li>
 		<li><span class="bgYellow">Clostridioides difficile</span></li>
 	</td>
 	<!-- neutropen --> <td style="text-align:left; width:15%">
@@ -12112,6 +12100,7 @@ Orvosi dokumentáció helye és módja:
 		</details></li>
 		<li>polygenetikus hiperkoleszterinémia</li>
 	  <b>szekunder</b>
+		<li><span class="midQ [70]">étrend</span></li>
 		<li><span class="midQ [36.1]">hypothyreosis</span></li>
 		<li><span class="midQ [20.12.1]">nephrosis</span></li>
 		<li><span class="bgYellow">DM</span></li>
@@ -12145,13 +12134,13 @@ Orvosi dokumentáció helye és módja:
   </tr><tr><th>th</th>
 	<td style="text-align:left"><abbr title="A hypertriglyceridaemia kezelését mindig  és kalóriaszegény (ezen belül elsősorban ) diéta előírásával kell kezdeni. Ha néhány hét alatt így nem érhető el eredmény, akkor gyógyszeres kezelés kezdhető. (Fibrátok, nikotinsav és származékai, halolajat tartalmazó kapszulák. Ha mérsékelt hypertriglyceridaemiához magas koleszterinszint is társul, akkor statin is adható.) A testmozgás fokozása is mérsékli a trigliceridszintet. Extrém hypertriglyceridaemia (>10 mmol/l) esetén a diétás megszorításokon kívül gyógyszer (fibrát) adása is szükséges az esetleges akut pancreatitis megelőzése céljából.">'</abbr>
 		<li><span class="bgYellow">alkoholtilalom</span></li>
-		<li>étrend ➜ zsírszegény(telített kerülés), halolaj (omega3/6)</li>
+		<li><span class="midQ [70]">étrend</span> ➜ zsírszegény(telített kerülés), halolaj (omega3/6)</li>
 		<li>testmozgás fokozása</li>
 		<li>nikotinsav és származékai (pl. acipimox)</li>
 		<li><span class="midQ [12.1] bgYellow">fibrátok</span> (>10 mmol/l) ➜ akut pancreatitis megelőzése</li>
 	</td>
 	<td style="text-align:left">
-		<li>étrend ➜ zsírszegény(telített kerülés), mediterrán, rostbevitel↑</li>
+		<li><span class="midQ [70]">étrend</span> ➜ zsírszegény(telített kerülés), mediterrán, rostbevitel↑</li>
 		<li><span class="midQ [12.1] bgBlue">statinok</span> (koleszterinszintézis-gátló)</li>
 		<li><span class="bgYellow">epesavkötő gyanta</span></li>
 		<li><span class="midQ [12.1] bgYellow"><u>ezetimib</u></span> (koleszterinfelszívódás-gátló)</li>
@@ -14051,7 +14040,7 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 			<li><span class="bgYellow">amit felsoroltam etiológiák, azok nem mindig ezt okoznak</span> ➜ pl. hypertenzív krízis lehet <span class="bgYellow">csak hypnoid lesz</span> stb. de úgy fogjam fel egyszerűsítve, hogy<span class="bgYellow">ha akut, akkor vagy ez, vagy hypnoid</span></li>
 	  </details>
 		<li>idős</li>
-		<li>infekció (szepszis, pneumonia)</li>
+		<li>infekció (<span class="midQ [54]">szepszis</span>, pneumonia)</li>
 		<li>metabolikus (elektrolit, pH, hypo/hyperglycaemia)</li>
 		<li>dehidráció, malnutríció</li>
 		<li>toxikológia (pl. depresszánsok)</li>
@@ -14459,7 +14448,7 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 	<td style="text-align:left"> <!-- resp.alkalózis -->
 		<li>lényege ➜ pCO<sub>2</sub>↓ … így pH↑ … így HCO<sub>3</sub><sup>-</sup>↓ hogy kompenzálja</li>
 		<li>fő oka ➜ <span class="bgYellow">hiperventilláció</span> oka pl.</li><ul>
-			<li>láz, <span class="midQ [54] kerdes">szepszis</span></li>
+			<li><span class="midQ [27]">láz</span>, <span class="midQ [54] kerdes">szepszis</span></li>
 			<li><span class="midQ [22] kerdes">tüdőembólia</span></li>
 			<li><span class="midQ [5] kerdes">asthma</span>s roham</li>
 		</ul>
@@ -14595,47 +14584,94 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 	</td>
   </tr></tbody></table></div>
 </details>
-<details class="[54] kerdes" open=""><summary>szepszis</summary>
+<details class="[54] kerdes"><summary>szepszis ... szeptikus sokk</summary>
   <div><b>fogalmak</b></div>
-	<li>bacteraemia ➜ vérben baktérium található (<abbr title="" data-title="valódi bacteraemia / szennyeződés">pozitív hemokultúra</abbr>)</li><ul>
+	<li><span class="bgYellow">bacteraemia ➜ vérben baktérium található (<abbr data-title="valódi bacteraemia / szennyeződés">pozitív hemokultúra</abbr>)</span></li><ul>
 		<li>lehet átmeneti pl. foghúzás után</li>
 		<li>infektív endocarditis <span class="bgPink">(link)</span></li>
 		<li>neutropenias FUO <span class="bgPink">(link)</span></li>
 		➜ tehát nem jelent automatikusan szepszist
 	</ul>
-	<li><abbr title="" data-title="Systemic Inflammatory Response Syndrome (szisztémás gyulladásos válasz sy)">SIRS</abbr> ➜ szisztémás gyulladásos válasz bármilyen okból</li><ul>
+	<li><abbr data-title="Systemic Inflammatory Response Syndrome (szisztémás gyulladásos válasz sy)">SIRS</abbr> ➜ <span class="bgYellow">szisztémás gyulladásos válasz</span> bármilyen okból</li><ul>
 		<details><summary class="fsMini">kritériumok</summary>
 			<li>T >38°C vagy &lt;36°C</li>
 			<li>HR >90/min</li>
 			<li>RR >20/min vagy pCO₂ &lt;32 Hgmm</li>
 			<li>WBC >12 vagy &lt;4 G/L</li>
 		</details>
-		<li>oka lehet pl. fertőzés, trauma, égés ➜ nem fertőzés specifikus</li>
+		<li><span class="bgYellow">oka lehet pl. fertőzés, trauma, égés ➜ nem fertőzés specifikus</span></li>
 	</ul>
-	<li>szepszis = szeptikus sokk ➜ életet veszélyeztető szervdiszfunkció, amelyet dysregulált gazdaszervezet-válasz okoz fertőzésre</li><ul>
-	  kritériumok:
-		<li>fertőzés +</li>
-		<li>SOFA ≥2 pont emelkedés</li>
-	  bacteramia nem feltétele ➜ lásd pl. toxikus shock sy
+	<li><span class="bgYellow">szepszis</span><abbr title="életet veszélyeztető szervdiszfunkció, amelyet dysregulált gazdaszervezet-válasz okoz fertőzésre">'</abbr> ➜ <abbr title="mind kell">kritériumok</abbr>:</li><ul>
+		<li><span class="bgYellow">fertőzés +</span></li>
+		<li><details class="kerdes"><summary><span class="bgYellow">SOFA ≥ 2pont</span></summary>
+			<li>SOFA ➜ 6 szervrendszer közül hány érintett</li><ul>
+				<li>resp (PaO₂/FiO₂)</li>
+				<li>CV (<abbr title="artériás középnyomás = (sys + 2dia) / 3">MAP</abbr>)</li>
+				<li>máj (bilirubin)</li>
+				<li><span class="midQ [20.4] kerdes">akut VE</span> (kreatinin / diuresis)</li>
+				<li>IdR (GCS)</li>
+				<li>koaguláció (thrombocyta)</li>
+			</ul>
+			<li>qSOFA ➜ 3 alap paramétert nézünk csak</li><ul>
+				<li>RR > 22/min</li>
+				<li>GCS &lt; 15</li>
+				<li>Psys &lt; 100Hgmm</li>
+			</ul>
+			<li>ITO-n használják</li>
+		</details></li>
+	  <span class="bgYellow">bacteramia nem feltétele ➜ lásd pl. toxikus shock sy</span>
 	</ul>
-  <b>etio</b>
-	<li><span class="midQ [35.3]">trafo</span></li>
-	<li><span class="midQ [38.3]">neutropenia, agranulocytosis</span></li>
+	<li><span class="midQ [69.1]">szeptikus sokk</span> ➜ <abbr title="mind kell">kritériumok</abbr>:</li><ul>
+		<li>szepszis</li>
+		<li>vasopressor szükséges <abbr title="artériás középnyomás = (sys + 2dia) / 3">MAP</abbr> ≥65 Hgmm fenntartásához</li>
+		<li>laktát > 2 mmol/L <span class="bgPink">volumenpótlás</span> után</li>
+	</ul>
+	<li>továbbiakban szepszis és szeptikus sokk!</li>
+  <b>patho</b>
+	<li>kórokozók ➜ leggyakrabban Staphylococcus aureus, a <span class="midQ [a8.1]">S. pyogenes</span>, a Klebsiella spp., az Escherichia coli és a Pseudomonas aeruginosa</li>
+	<li>szisztémás gyulladás (NO,citokin) ➜ vazodilatáció ... <span class="midQ [69.1]">redisztributív sokk</span></li><ul>
+		<span class="fsMini">symp nő ettől még!</span>
+	</ul>
+  <b>RiFa, etio</b>
+	<li>idős, <span class="midQ [38.3]">immundeficiens</span>, krónikus betegségek (DM)</li>
+	<li><span class="midQ [71]">kórházi fertőzések | nozokomiális infekciók</span>, <span class="midQ [35.3]">trafo</span></li>
+	<li>égési sérülés, trauma</li>
+	<li><span class="midQ [44.1] kerdes">peritonitis</span>(diffúz), <span class="midQ [34] kerdes">akut pancreatitis</span>, <span class="midQ [a8]">toxikus shock sy</span></li>
 	<li><span class="midQ [29.3]">salmonellosis</span></li>
-	<li><span class="midQ [34] kerdes">akut pancreatitis</span></li>
-	<li><span class="midQ [44.1] kerdes">peritonitis</span>(diffúz)</li>
-	<li><span class="midQ [a8]">toxikus shock sy</span></li>
-	<li></li>
-  <b>klinikum</b>
-	<li><span class="midQ [16.1]">leukocytopenia</span> (?)</li>
+  <b>tünetek, gyanú</b>
+	<li>anamnézis ➜ <span class="bgYellow">RiFa</span></li>
+	<li><span class="midQ [27] bgYellow">láz</span>, hidegrázás, gyengeség</li>
+	<li>sokk jelek ➜ <span class="midQ [69.1]">általános</span> + <span class="midQ [67.5.2]">redisztributív</span></li>
+	<li><span class="midQ [49]">tudatzavar</span> ... <span class="midQ [48]">eszméletlen</span></li>
+  <b>dg</b>
+	<li><span class="bgBlue">qSOFA ≥ 2</span></li>
+	<li>labor</li><ul>
+		<li><span class="bgBlue">gyulladásos paraméterek</span></li>
+		<li><span class="bgYellow">SOFA ≥ 2pont</span></li>
+		<li><span class="bgYellow">hemokultúra(+) ➜ bacteraemia</span> (de nem feltétele!)</li>
+		<li>leukocytosis / <span class="midQ [16.1]">leukocytopenia</span></li>
+		<li>laktát > 2 mmol/L (laktacidózis)</li>
+	</ul>
+	<li><span class="bgPink">oliguria</span></li>
+  <b>th</b>
+	<li><span class="bgYellow">&beta;-laktám ➜ ITO-n leggyakrabban használt</span>:</li><ul>
+		<li>széles spektrumú</li>
+		<li>biztonságos profil</li>
+		terápiás gyógyszerszint monitorozás (TDM) ➜ megfelelő konc. (egyénre szabott PK és PD)
+	</ul>
+	<li>ha valakinél nagy a szepszis gyanúja, akkor...</li><ul>
+		<div>1) vegyünk vért: <span class="bgYellow">2db hemokultúra</span> ➜ bacteraemia kimutatása, AB választás</div>
+		<div>2) <span class="bgYellow">adjunk empirikus AB-t</span> (≤1 óra)</div>
+		<li>ha megjött a tenyésztés ➜ célzott AB</li>
+		<li>ha mégse szepszis ➜ AB stop</li>
+	</ul>
+	<li><span class="midQ [67.5.2]">redisztributív sokk tüneti</span></li>
+	<li>egyéb tüneti ➜ SOFA, O2, sav-bázis, hőmérséklet</li>
   <b>szövődmények</b>
 	<li>ha Gram– ➜ <span class="midQ [24.6] kerdes">DIC</span></li>
-	<li><span class="midQ [48] kerdes">eszméletlen beteg</span></li>
-	<li><span class="midQ [20.4] kerdes">akut VE</span></li>
-	<li><span class="midQ [67.5.2] kerdes">redisztributív sokk</span></li>
-  
   <div class="fsMini">
-	<div><span class="bgPink">–</span> szakdoga</div>
+	<div>☑️ szakdoga</div>
+	<div>✅ chatgpt</div>
   </div>
 </details>
 <details class="[55] kerdes"><summary>légúti betegségek</summary><table><tr>
@@ -15436,7 +15472,7 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 		<li><span class="midQ [58.6]">inzulinkezelés</span></li>
 	  <div><b>T2DM kezelési stratégia</b></div>
 		<div>1. testsúly normalizálás</div><ul>
-			<li>étrend (energiaszükséglet, összetétel stb.)</li>
+			<li><span class="midQ [70]">étrend</span> (energiaszükséglet, összetétel stb.)</li>
 			<li>mobilitás</li>
 		</ul>
 		<div>2. <span class="midQ [58.4]"><u>metformin</u></span></div><ul>
@@ -16896,7 +16932,10 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 				<li>hyperdinámiás ➜ PTF↑ & meleg végtagok & SVR↓</li>
 				<li><span class="midQ [16.13] fsMini">CVP↓ & PCWP↓</span></li>
 			</td>
-			<td> <span class="midQ [12.5] kerdes">Adr</span> </td>
+			<td style="text-align:left">
+				<li><span class="bgPink">volumenpótlás</span></li>
+				<li><span class="midQ [12.5] kerdes">pozitív inotrópok</span></li>
+			</td>
 		  </tr><tr><td> <span class="bgYellow">↑</span> </td>
 			<td> <span class="bgYellow">hypertonia</span><abbr title="természetesen a magas afterload azt jelenti hypertonia, de most a hypertonia okait itt nem sorolom fel, mert van elég">*</abbr><abbr title="pl. aortastenosis">'</abbr>  <br>(vazokonstrikció!)</td>
 			<td>  </td>
@@ -17449,8 +17488,12 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 		<li>transthoracalis (kevésbé érzékeny) / transoesophagialis</li>
 		<li>leggyorsabb, leginformatívabb eszköz ágy mellett</li>
 	  <b>indikáció</b>
-		<li><span class="bgBlue"><span class="midQ [67.5.8]">EF</span> meghatározása</span> (pl. <span class="midQ [67.5] kerdes">SzE</span>, <span class="midQ [67.2] kerdes">ISzB</span>)</li>
-		<li><span class="bgBlue"><span class="midQ [67.5.8]">PTF</span> meghatározása</span> (pl. <span class="midQ [67.5] kerdes">SzE</span>)</li>
+		<li><span class="bgBlue"><span class="midQ [67.5.8]">szív teljesítményének</span> - EF, CO - meghatározása</span></li><ul>
+			<li><span class="midQ [69.1]">sokk</span> ➜ kardiogén, redisztributív</li><ul>
+				cél ➜ kell-e <span class="midQ [12.5]">dobutamin</span>?
+			</ul>
+			<li><span class="midQ [67.5] kerdes">SzE</span>, <span class="midQ [67.2] kerdes">ISzB</span></li>
+		</ul>
 		<li><span class="midQ [67.5.8] bgYellow">EDV ~ preload</span></li>
 		<li>kamra/pitvar <abbr title="kisebbedés">↓</abbr>/<abbr title="nagyobbodás">↑</abbr>:</li><ul>
 			<li><span class="midQ [7.6]">hipertrófia</span> mértéke</li>
@@ -17596,9 +17639,8 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 	<li><span class="midQ [69.1]">típusok</span></li>
  </details><div>
 	<details class="[69.1] kerdes"><summary>típusok</summary><table><tr>
-		<th rowspan="2" class="vertical-text">csoportosítás</th>
 		<th colspan="3">hypodinamias</th>
-		<th colspan="3"><span class="syno">redisztributív | disztributív</span> ~ vazodilatációs</th>
+		<th colspan="3"><span class="midQ [67.5.2] syno">redisztributív | disztributív</span> ~ vazodilatációs</th>
 	  </tr><tr>
 		<th>kardiogén</th>
 		<th>hypovolaemias</th>
@@ -17607,7 +17649,7 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 		<th>anafilaxiás</th>
 		<th>szeptikus</th>
 		<th>neurogén</th>
-	  </tr><tr><th class="vertical-text">etiológia</th>
+	  </tr><tr>
 		<td> lásd <span class="midQ [67.5.2]">SzE</span> </td>
 		<td style="text-align:left">
 			<li>vérzés pl.</li><ul>
@@ -17622,24 +17664,192 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 			<li><span class="midQ [67.4]">szívtamponád</span> <span class="fsMini">(jobb pitvar kevés vért kap</span>)</li>
 		</td>
 		
-		<td> lásd <span class="midQ [a1]">anaphylaxia</span>  </td>
-		<td> lásd <span class="bgPink">szepszis</span>  </td> <!-- sepsis -->
+		<td> <span class="midQ [a1]">anaphylaxia</span>  </td>
+		<td> <span class="midQ [54]">szepszis</span>  </td> <!-- sepsis -->
 		<td class="fsMini" style="text-align:left">
 			<li>agytörzsi sérülés</li>
 			<li>spinál – epidurál harántléziók</li>
 		</td>
-	  </tr><tr><th class="vertical-text">kapcsolódik</th>
-		<td colspan="6" class="fsMini">
-			<span class="midQ [69] WHITE">sokk</span>
-			<span class="midQ [67.5.2] WHITE">SzE típusok</span>
+	  </tr><tr>
+		<td colspan="6" style="text-align:left"> <b><center>általános tünetek</center></b>
+			<li>tachycardia</li><ul>
+				<span class="fsMini">kivéve neurogen <abbr title="symp↓">➜</abbr> bradycardia</span>
+			</ul>
+			<li>tachypnoe</li>
+			<li>hypotonia <span class="fsMini">(korai szakban lehet normális)</span></li>
 		</td>
 	</tr></table></details>
 </div>
-<details class="[70] kerdes"><summary></summary>
-	<li></li>
+<details class="[70] kerdes"><summary>táplálkozás</summary>
+	<img data-src="cpgkcygt.webp">
+	<details><summary style="font-size:80%">(bevezetés)</summary><ul class="normal">
+		• A tápanyagok: a táplálék azon összetevői, melyek felszívódva élettani funkciókat töltenek be.
+		• A tápanyagszükséglet az esszenciális tápanyagoknak az a mennyisége, amit az egészség megtartásához naponta el kell fogyasztanunk.
+		• A tápanyag-szükségleti norma az egyes esszenciális tápanyagoknak az a napi átlagos mennyisége, ami az adott csoportban minden egyes egészséges ember szükségletét fedezi
+	</ul></details>
+  <strong>napi energiaszükséglet (E%)</strong>
+	<li><details><summary>(három összetevőből áll)</summary>
+		<li>alapanyagcsere érték (kb. a napi teljes energiaszükséglet 50-80%-a) &#10140; függ: életkor, nem, testmagasság, testsúly (izomtömeg vs zsírtömeg), Táplálkozás, a környezet hőmérséklete</li>
+		<li>a fizikai aktivitáshoz szükséges energiaérték</li>
+		<li>a táplálék feldolgozásához szükséges energiaérték</li>
+	</details></li>
+	<li>táplálékkal naponta felveendő energiamennyiség: <img class="mini" data-src="vrodefxc.webp"></li><ul>
+		<li>ffi: 2400-4000kCal</li>
+		<li>nő: 2000-3100kCal</li>
+		szelleminél kevesebb, fizikainál több
+	</ul>
+	<li><details class="kerdes"><summary>szénhidrát(4,1kCal/g) 45-60E%</summary><table><tr>
+		<th>egyszerű szénhidrátok</th>
+		<th>összetett szénhidrátok</th>
+	  </tr><tr>
+		<td style="text-align:left">
+			<li><abbr title="monoszacharidok">glükóz, fruktóz</abbr>, <abbr title="diszacharidok">szacharóz, laktóz</abbr></li><ul>
+				<li><span class="bgYellow">fruktóz a legrosszabb</span> ➜ máj terhelés</li>
+			</ul>
+		  <b>felosztás</b>
+			<li>természetes ➜ <span class="bgYellow">gyümölcs, tej</span> ➜ lassabb felszívódás, vitamin, rost, Ca2+ ➜ <span class="bgYellow">legjobb</span></li>
+			<li>finomított ➜ cukor, <span class="bgYellow">méz, édességek</span>, üdítők ➜ <span class="bgYellow">metabolikus sy</span></li>
+			<li><span class="bgBlue">glükóz-fruktóz szirup = izoglükóz</span> ➜ <span class="bgYellow">üdítők</span>, péksütemény ➜ <span class="bgBlue">legrosszabb</span>: <span class="bgYellow">máj + metabolikus sy</span></li>
+		</td>
+		<td style="text-align:left">
+		  <b>poliszacharidok:</b> 
+			<li>keményítő ➜ növények</li>
+			<li>glikogén ➜ állatok</li>
+		  <b>rostok pl. cellulóz</b> ➜ <span class="bgYellow">25-30g/nap</span>
+			<li>oldékony</li><ul>
+				<li>pl. alma, narancs, <span class="bgYellow">hüvelyesek (bab, lencse, borsó), zabpehely</span></li>
+				<div><span class="plus">+</span> <span class="bgYellow">lassú glükóz felszívódás</span></div>
+				<div><span class="plus">+</span> <span class="bgYellow">LDL↓</span></div>
+				<div><span class="plus">+</span> prebiotikum</div>
+				<div><span class="minus">–</span> <span class="bgYellow">puffadás</span></div>
+			</ul>
+			<li>oldhatatlan</li><ul>
+				<li>pl. <span class="bgYellow">teljes kiőrlésű kenyér/zsemle</span>, barna rizs, paprika, karfiol, brokkoli, sárgarépa</li>
+				<div><span class="plus">+</span> <span class="bgYellow">bélperisztaltika↑</span> (székrekedés↓)</div>
+				<li><span class="bgYellow">sok folyadékot inni!</span></li>
+			</ul>
+			➜ <span class="bgBlue">zöldség & gyümölcs > 400g/nap</span>
+		</td>
+	</tr></table></details></li>
+	<li><details class="kerdes"><summary>zsír(9,3kCal/g) max. 30E%</summary><table><tr>
+		<th rowspan="2">telített</th>
+		<th colspan="2">telítetlen (egyszeresen / többszörösen) <img class="mini" data-src="ukfxtcqm.webp"></th>
+	  </tr><tr>
+		<th>cisz <img class="mini" data-src="ckbbblcq.webp"></th>
+		<th>transz</th>
+	  </tr><tr>
+		<td style="text-align:left"> <!-- telített -->
+			<div><span class="minus">–</span> LDL↑ ➜ atherosclerosis</div>
+			<li>állati zsírok (zsír, vaj, zsíros húsok, tejtermékek)</li>
+			<li>pálma- és kókuszzsír</li>
+			<li>bevitel: &lt; 10 E%</li>
+		</td>
+		<td style="text-align:left"> <!-- cisz -->
+		  20E%
+			<div><span class="plus">+</span> LDL↓ + HDL↑ ➜ CV</div>
+			<div><span class="plus">+</span> gyulladáscsökkentés</div>
+			<div><span class="plus">+</span> (agy, látás, bőr)</div>
+			<li>egyszeresen ➜ olajsav (olívaolaj, repceolaj, avokádó, diófélék)</li>
+			<li>többszörösen</li>
+		  a <span class="bgYellow">2db esszenciális zsírsav</span> ide tartozik:
+			<li><u>linolsav</u>(<abbr title="omega">ω</abbr>-6) ➜ növényi olajok pl. szója, kukorica</li>
+			<li><u>linolénsav</u>(ω-3) ➜ lenmag, dió, halak (<span class="bgBlue">szardínia</span>,hering,makréla)</li>
+			<li>esszenciális ➜ szervezet nem tud előállítani, ezért táplálékkal kell bevinnünk</li>
+			<li>szükséges ➜ prosztaglandinok szintézise (sejtmembrán)</li>
+			<li>ajánlott ➜ heti 2x90g hal</li>
+			<div>🥇 <span class="bgBlue"><abbr title="környezetvédelmi és ár és egészségügyi szempont alapján ezt">szardínia</abbr></span>(olívaolaj)</div>
+			<div>🥈 hering(natúr)</div>
+			<div>🥉 makréla(paradicsomban)</div>
+		</td>
+		<td style="text-align:left"> <!-- transz -->
+			1E% ➜ <span class="bgBlue">gyakorlatilag kerülendő!</span>
+			<div><span class="minus">–</span> <span class="bgBlue">LDL↑ + HDL↓ ➜ atherosclerosis</span></div>
+		  hidrogénezett növényi olajok pl.
+			<li>ipari élelmiszerek ➜ péksütemény, keksz, ostya, sütemény</li>
+			<li>gyorsételek ➜ hamburger, pizza, sült krumpli</li>
+			<li>készételek / félkész termékek ➜ mirelit pizza, rántott hús</li>
+			<li>snackek ➜ chips, popcorn (mikrohullámú)</li>
+			<li>margarin</li>
+		</td>
+	</tr></table></details></li>
+	<li><details class="kerdes"><summary>fehérje(4,1kCal/g) 10-15%, napi: 1g/testsúly(kg)</summary>
+		<li>állati tartalmazza összes esszenciális aminosavat, növényi nem</li>
+		<div><span class="minus">–</span> vörös hús: colon cc↑</div>
+	</details></li>
+  <strong>egyéb</strong>
+	<li><span class="bgBlue">glikémiás index</span> &#10140; <span class="bgYellow">milyen gyorsan emésztődik és szívódik fel:</span></li><ul>
+		<li>magas: <abbr title="gyorsan nő meg">vércukor↑↑↑</abbr> ➜ pl. burgonya, banán</li>
+		<li><span class="bgBlue">alacsony</span>: vércukor↑ <span class="bgBlue">(jobb!)</span> ➜ pl. <span class="bgPink">bulgur, árp</span>a</li>
+	</ul>
+	<li><span class="bgBlue">só: max. 5g</span></li>
+	<li><span class="bgBlue">víz: 2-2.5l</span></li>
+	<li><span class="bgPink">vitaminok, ásványi anyagok...</span></li>
+  <strong>indikáció, profilaxis</strong>
+	<li>malnutritio</li>
+	<li>metabolikus sy pl. <span class="midQ [58.7]">DM</span>, <span class="midQ [39]">dyslipidaemia</span></li>
+	<li>daganatok</li>
+	
+	<img class="mini" data-src="pxsnfnyv.webp">
+	<img class="mini" data-src="mmplthgf.webp">
+	<img class="mini" data-src="fgmsdsha.webp">
+	<img class="mini" data-src="ivwrdlkj.webp">
+	<img class="mini" data-src="pwmuqiaz.webp">
+	<img class="mini" data-src="mmrdmfvl.webp">
+	<img class="mini" data-src="vjcpundy.webp">
 </details>
-<details class="[71] kerdes"><summary></summary>
-	<li></li>
+<details class="[71] kerdes"><summary>nozokomiális infekciók = kórházi fertőzések</summary>
+	<li>def ➜ beteg az egészségügyi tevékenység során kapja meg</li>
+  <strong>megoszlásuk</strong>
+	<img data-src="llcbzvyk.webp">
+	<li><span class="midQ [20.14] bgYellow">UTI</span> 35%</li><ul>
+		szinte mindig katéter asszociált, ennek oka:
+		<li><span class="bgYellow">fölöslegesen van katéter használva</span> (sem nővéri, sem orvosi, sem a beteg oldaláról nem lehet kényelmi szempont)</li>
+	</ul>
+	<li><span class="bgYellow">posztoperatív sebfertőzés</span> 25% ➜ csökkenő tendenciát mutat a laparoscopia előtérbe helyeződése miatt</li>
+	<li><span class="midQ [23] kerdes bgYellow">pneumonia (HAP)</span> 10% (ITO-n sokkal gyakoribb)</li><ul>
+		<li><span class="bgYellow">20-25% halálozással a leggyakoribb halálhoz vezető nozokomiális fertőzés</span></li>
+		<li>leggyakrabban lélegeztetőgépre kapcsolt betegeknél alakul ki</li>
+		<li>jellemző bacik ➜ lásd <span class="midQ [23]">pneumonia</span></li>
+	</ul>
+	<li><span class="bgYellow">véráramfertőzések</span> 10%</li>
+	<li><span class="bgYellow">egyéb</span> 20%</li><ul>
+		<li>pl. <span class="midQ [29.4]">Clostridioides difficile - hasmenés</span></li>
+	</ul>
+  <strong>RiFa</strong>
+	<li>multirezisztens törzsek, opportunista kórokozók vannak</li>
+	<li>szervezet védekezőképessége csökken:</li><ul>
+		<li>exogén tényezők ➜ invazív beavatkozás (kanülök, katéterek, stb. is) vagy terápiás műveletek (gyógyszerelés, transzfúzió, stb.)</li>
+		<li>endogén tényezők ➜ életkor, tápláltsági és immunállapot, alapbetegség, lokális elváltozások, mobilitás hiány</li>
+	</ul>
+  <strong>véráramfertőzések</strong>
+	<li>oka ➜ <abbr title="nem biztos h igaz, de így elég nekem most">leggyakrabban</abbr> kanülinfekció</li>
+	<li>kórokozók:</li><ul>
+		<li><span class="bgYellow">2/3 Staphylococcus</span> (40-50%-ban koaguláznegatív Staphylococcusok, 10-20%-ban S.aureus)</li>
+		<li>5-10% Enterococcus</li>
+		<li>gombák</li>
+		<li>Gram-negatívok</li>
+	</ul>
+	<li>klinikum</li><ul>
+		<li>ha perifériás kanül ➜ thrombophlebitis, esetleg láz, hidegrázás</li>
+		<li>ha <abbr title="centrál vénás">CV</abbr> kanül ➜ egyéb okkal nem magyarázható láz, hidegrázás, <span class="midQ [54]">szepszis</span></li>
+	</ul>
+	<li><span class="bgYellow">dg ➜ hemokultúra</span></li>
+	<li>th</li><ul>
+		<img data-src="blawtyqb.webp">
+		<li><span class="bgYellow">perifériás kanül ➜ 2-3 nap alatt nem alakul ki fertőzés, ennyi időt követően pedig általában cserélendők</span>.</li>
+		<li><abbr title="centrál vénás">CV</abbr> kanül:</li><ul>
+			<li><span class="bgYellow">bemeneti nyílás fertőzése: lokálisan (antisepticus oldatok: pl. <u>betadin</u>)</span></li>
+			<li>katéter-<span class="midQ [54] bgYellow">sepsis</span>:</li><ul>
+				<li>a katéter eltávolítandó endocarditis, vitium, granulocytopenia vagy kezelésre 48 órán belül nem javuló <span class="midQ [54]">sepsis</span> esetén</li>
+				<li><span class="bgYellow">AB ➜ empirikusan</span> <u>vancomycin</u>nel (esetleg <u>teicoplanin</u>nal) indítunk, Gram-negatív gyanú esetén aminoglikozid is adandó</li>
+			</ul>
+		</ul>
+		<li>profilaxis ➜ bőrfertőtlenítés (klórhexidin/jód), bevezetést követően megfelelő rögzítés, steril gézzel való fedés, bemeneti nyílás sterilen tartása (pl. AB-zár: következő használatig AB-os oldattal feltöltendő a katéter)</li>
+	</ul>
+  <!-- FORRÁSOK --> <div>
+	<abbr title="https://docs.kmcongress.com/rehab2012/o02_feher.pdf">#</abbr>
+	<abbr title="Tetelek">§</abbr>
+  </div>
 </details>
 <details class="[72] kerdes"><summary></summary>
 	<li></li>
@@ -20044,12 +20254,6 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 </details>
 <details class="[📝38] title"><summary>📝 ISZB</summary>
 	<details class="kerdes"><summary>klinikai megjelenései formái (5)</summary>
-		<div class="imp [67.2]"></div>
-	</details>
-	<details class="kerdes"><summary>tünetek (3)</summary>
-		<div class="imp [67.2]"></div>
-	</details>
-	<details class="kerdes"><summary>dg (10)</summary>
 		<div class="imp [67.2]"></div>
 	</details>
 </details>
@@ -22961,8 +23165,8 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 		<div class="imp [12.13]"></div>
 	</details>
 </details>
-<details class="open"><summary class="status"><span style="background-color: coral;">Sepsis</span>, ismeretlen eredetű láz</summary>
-	<details class="kerdes" open=""><summary><b>Sepsis</b>, ismeretlen eredetű láz</summary> 
+<details class="open"><summary class="status">Sepsis, ismeretlen eredetű láz</summary>
+	<details class="kerdes"><summary><b>Sepsis</b>, ismeretlen eredetű láz</summary> 
 		<div class="imp [54]"></div>
 	</details>
 	<details class="kerdes"><summary>Sepsis, <b>ismeretlen eredetű láz</b></summary>
@@ -24509,6 +24713,9 @@ egyéb szituációkat is be kéne vésnem, pl.
 		<span class="bgYellow">GRAM- ➜ nozokomiális pneumonia … szepszis … DIC ?!</span>
 	</ul>
 	<div>⭕ ALAPOK ➜ volumenpótlás: fizsó.. (aneszt)</div>
+	<div>⭕ anamnézis + ALAPOK ➜ DD: hányás, hasmenés</div>
+	<div>⭕ anamnézis + ALAPOK ➜ fejfájás (migrén, stb.)</div>
+	<div>⭕ FiVi ➜ alap protokoll (alap protokoll: legfontosabbak, mert nyílván mindent mindig nem fogok, főleg elején)</div>
 	
 	<div>⭕ 1) + álmodból felkelve is… ➜ Metabolicus eredetű tudatzavarok (neuro) + project</div>
 	<div>⭕ 1) + álmodból felkelve is… ➜ eszméletlenség</div><ul>
@@ -24527,7 +24734,6 @@ egyéb szituációkat is be kéne vésnem, pl.
 	
 	<div>⭕ teszt ➜ gyógyszerek ➜ status epilepticus</li>
 	<div>⭕ nephro ➜ hepatorenalis-sy</div>
-	<div>⭕ FiVi ➜ alap protokoll (alap protokoll: legfontosabbak, mert nyílván mindent mindig nem fogok, főleg elején)</div>
 	<div>⭕ FiVi ➜ tüdőhallg</div>
 	<div>⭕ FiVi ➜ ismerd fel (kép,gif), pl. diabeteses láb, fekély, gangrenosus, hematoma, mvt, pa-obv</div>
 	<div>⭕ anamnézis + 1) ➜ (1.) sürgősségi ➜ felismerés + ellátás</div><ul>
@@ -24545,11 +24751,8 @@ egyéb szituációkat is be kéne vésnem, pl.
 		<li>trafo ➜ vércsoport stb</li>
 		<li>neuro fivi: gócjelek, ICP fokozódás, látens parézis…</li>
 	</ul>
-	<div>⭕ anamnézis + ALAPOK ➜ DD: hányás, hasmenés</div>
-	<div>⭕ anamnézis + ALAPOK ➜ fejfájás (migrén, stb.)</div>
 	<div>⭕ Gyakorlati vizsga ➜ …</div>
 	<div>⭕ Gyakorlati részvétel ➜ …</div>
-	<div>⭕ gyógyszerek ➜ lokál anesztetikumok</div>
 	<div>⭕ 1) ➜ gyógyszer-intoxikáció</div>
 	<div>⭕ 1) akut VE - aneszt</div>
 	<div>⭕ 1) copd + asthma ➜ aneszt akut exacerbáció képek</div>
