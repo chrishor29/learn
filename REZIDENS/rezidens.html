@@ -7253,11 +7253,11 @@ Orvosi dokumentáció helye és módja:
 	</details></li>
 	<li><span class="imp [19.3]"></span></li> <!-- fejfájás -->
 	<li><span class="bgPink">torokfájás</span></li>
-	<li><span class="imp [19.4]"></span></li> <!-- hányinger,-ás -->
 	<li><span class="bgPink">nyelési panasz / reflux</span></li>
+	<li><span class="imp [19.4]"></span></li> <!-- hányinger,-ás -->
+	<li><span class="imp [19.5]"></span></li> <!-- hasmenés -->
 	<li><span class="bgPink">gyomorégés</span></li>
 	<li><span class="bgPink">vizelet</span></li>
-	<li><span class="bgPink">hasmenés</span></li>
 	<li><span class="imp [19.2]"></span></li> <!-- köhögés -->
 	<li><details class="kerdes"><summary>OPQRST(+2)</summary>
 		<li>lényege ➜ panasz leírására irányuló 8 kérdés (főként ha fájdalom, de többinél is jó alapnak)</li>
@@ -7543,33 +7543,74 @@ Orvosi dokumentáció helye és módja:
 		<div>🚨 <span class="midQ [47]">hematemesis</span></div>
 		<div>🚨 <span class="midQ [3]">mellkasi fájdalom</span> <span class="fsMini">(➜ oesophagus ruptúra)</span></div>
 		<div>🚨 sugárhányás (➜ <span data-src="neuro" class="midQ [27]">ICP↑</span>)</div>
-		<div>🚨 <span class="midQ [43]">hasi fájdalom</span> ➜ (<span data-src="seb" class="midQ [29]">ileus</span>, <span class="midQ [34]">akut pancreatitis</span>, <span data-src="seb" class="midQ [8]">appendicitis</span>, <span class="midQ [18.11]">epekő</span>, <span class="midQ [44.1]">peritonitis</span>)</div>
-		<div>🚨 láz (➜ infekció: gastroenteritis, szepszis, meningitis) <span class="bgPink">#</span></div>
-		<div>🚨 <span class="bgPink">fejfájás, fokális tünet (➜ intracranialis: meningitis, vérzés, tumor)</span></div>
-		<div>🚨 tudatzavar (➜ uraemia, DKA, intoxikáció, intracranialis)</div>
+		<div>🚨 <span class="midQ [43]">hasi fájdalom</span> ➜ (<span data-src="seb" class="midQ [29]">ileus</span>, <span class="midQ [34]">akut pancreatitis</span>, <span data-src="seb" class="midQ [8]">appendicitis</span>, <span class="midQ [18.11]">epekő</span>, perforáció(<span class="midQ [44.1]">peritonitis</span>))</div>
+		<div>🚨 <span class="midQ [27]">láz</span> (➜ infekció: gastroenteritis, <span class="midQ [54]">szepszis</span>, <span data-src="neuro" class="midQ [121]">meningitis</span>)</div>
+		<div>🚨 <span class="midQ [19.3]">fejfájás</span>, <span data-src="neuro" class="midQ [2] bgYellow">fokális tünetek</span> (➜ intracranialis: <span data-src="neuro" class="midQ [121]">meningitis</span>, vérzés, tumor)</div>
+		<div>🚨 <span class="midQ [49]">tudatzavar</span> (➜ uraemia, <span class="midQ [58.3]">DKA</span>, <span class="midQ [13]">intoxikáció</span>, intracranialis)</div>
 		<div>🚨 hypotonia, tachycardia (➜ dehydratio)</div>
 		<div>🚨 alkohol <span class="bgPink">#</span></div>
+	  <div><b>többi</b> pl.</div>
 	  <table><tr>
 		<th>akut (&lt;3nap)</th>
-		<th>subacut (napok-hetek)</th>
-		<th>krónikus (hónapok)</th>
+		<th>subacut (3nap-3hét)</th>
+		<th>krónikus (>3hét)</th>
 	  </tr><tr>
 		<td style="text-align:left">
-			<li></li>
+		  leggyakoribb:
+			<li>infekció (<span class="midQ [29]">gastroenteritis</span>)</li>
+			<li>ételmérgezés <span class="bgPink">#</span></li>
+			<li><span class="midQ [12]">gyógyszer</span>/<span class="midQ [13]">toxin</span></li>
+			<li>alkohol <span class="bgPink">#</span></li>
+		  egyéb:
+			<li><span data-src="seb" class="midQ [8]">appendicitis</span> (kezdete)</li>
+			<li><span class="midQ [34]">pancreatitis</span> (kezdete)</li>
 		</td>
 		<td style="text-align:left">
-			<li></li>
+			<li><span class="midQ [29]">gyulladásos GI betegségek</span></li>
+			<li>fekély</li>
+			<li>epebetegség</li>
+			<li><span class="midQ [12]">gyógyszer</span></li>
 		</td>
 		<td style="text-align:left">
-			<li></li>
+			<li>motilitási zavar (gastroparesis)</li>
+			<li>metabolikus ok</li>
+			<li>daganat</li>
+			<li>pszichogén (bulimia)</li>
 		</td>
 	  </tr></table>
+	</details>
+	<details class="[19.5] kerdes"><summary>hasmenés</summary>
+	  <div><b><span class="syno">alarm | red flag</span> – sürgős</b></div>
+		<div>🚨 <span class="bgPink">dehidráció jelei</span> (➜ súlyos <span class="midQ [29.4]">infekció</span>)</div><ul>
+			<li>száraz nyh, csökkent bőrturgor, tudatzavar</li>
+			➜ hypovolaemias shock  ... oliguria / anuria ... akut VE
+		</ul>
+		<div>🚨 <span class="midQ [47]">hematokézia</span> ➜ <span class="midQ [29.4]">infekció</span> / <span class="midQ [29.1] bgYellow">IBD-k</span> / <span class="bgPink">ischaemias colitis</span></div>
+		<div>🚨 magas láz (➜ invazív: bakteriális enteritis, szepszis)</div>
+		<div>🚨 súlyos <span class="midQ [43]">hasi fájdalom</span> ➜ (<span data-src="seb" class="midQ [29]">ileus</span>, <span data-src="seb" class="midQ [8]">appendicitis</span>, perforáció(<span class="midQ [44.1]">peritonitis</span>), <span class="bgPink">ischaemiás colitis</span>)</div>
+		<div>🚨 tartós hasmenés (>3–5 nap, romló állapot) ➜ (<span class="midQ [29.4]">Giardia lamblia</span>, C. difficile, <span class="midQ [29.1] bgYellow">IBD</span>, malabsorptio)</div>
+		<div>🚨 AB anamnézis (➜ C. difficile)</div>
+	  <div><b>banális valószinűsíthető</b> – vírusos gastroenteritis</div>
+		<li>vizes hasmenés</li>
+		<li>nincs láz, nincs vér</li>
+		<li>rövid ideje tart</li>
+	  <div><b>egyéb okok</b></div>
+		<li><span class="bgPink">IBS</span></li>
+		<li><span class="midQ [10] bgYellow" data-src="bel">malabszorpció / maldigestio</span></li>
+		<li><span class="bgPink">lásd belgyógyAV</span></li>
+		<li><span class="bgPink">(kéne valami diffdiag ➜ chatgpt)</span></li>
+	  <div><b>szövődmény</b></div>
+		<li>metabolikus acidózis</li>
+		<li>dehidráció</li>
+		<li> <span class="bgPink">...</span> </li>
 		
-		
+	  <div class="fsMini">
+		<span class="midQ [29.4] WHITE">akut hasmenés (fertőzéses)</span>
+	  </div>
 		<li></li>
 		<li></li>
 	</details>
-	<details class="[19.5] kerdes"><summary></summary>
+	<details class="[19.6] kerdes"><summary></summary>
 		<li></li>
 	</details>
 </div>
