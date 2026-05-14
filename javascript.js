@@ -1034,100 +1034,131 @@ function F_setVideoSource(videoElem,srcTxt){
 }
 
 function F_unloadVideos(detElem) {
-	var allVideo = detElem.getElementsByTagName("video")
-	for ( var i=0; i<allVideo.length; i++ ) {
-		var videoElem = allVideo[i]
-		if ( !videoElem.src ) { continue } // csak azt, ami már be lett töltve
-		videoElem.removeAttribute("src")
-		videoElem.removeAttribute("style")
-		
-		// remove: divParent (+divBrother) (+spanBrother)
-		console.log("old: "+videoElem.parentElement.outerHTML)
-		console.log("new: "+videoElem.outerHTML)
-		videoElem.parentElement.outerHTML = videoElem.outerHTML
-	}
-	
-	var allVideoCent = detElem.getElementsByClassName("video")
-	for ( var i=0; i<allVideoCent.length; i++ ) {
-		var videoElem = allVideoCent[i]
-		if ( allVideoCent[i].dataset.loaded == undefined ) { continue } 
-		
-		videoElem.removeAttribute("data-loaded")
+	//console.log("F_unloadVideos")
+	let allVideo = detElem.querySelectorAll('.video');
+	for ( let i=0; i<allVideo.length; i++ ) {
+		let spanVideo = allVideo[i]
+	  // ha még nem lett töltve, akkor skip
+		if ( spanVideo.innerHTML == "" ) { continue } 
+		spanVideo.innerHTML = ""
 	}
 }
 function F_loadVideos(detElem){
-	var allVideo = detElem.getElementsByTagName("video")
-	for ( var i=0; i<allVideo.length; i++ ) {
-		var videoElem = allVideo[i]
-		if ( isElementVisible(videoElem) == false ) { continue }
-		if ( videoElem.src ) { continue } 
-		
-		F_setVideoSource(videoElem,videoElem.dataset.src)
-		
-		if ( videoElem.dataset.type == "sound" ) { videoElem.style.opacity = "0" }
-		
-		videoElem.style.borderColor = "black"
-		videoElem.style.cursor = "pointer"
-		videoElem.style.maxWidth = "100%"
-		//videoElem.style.maxWidth = "calc(100% - 10px)" // bordert kivonja belőle
-		
-		videoElem.onloadeddata = function() { // meg kell várja, különben seekBar mérete nem jó
-			var videoElem = this
-			function F_createSeekBar(){ 
-				var parentDiv = document.createElement("div") // border, ebbe van a video + szürke + sárga
-				var parent = videoElem.parentNode
-				parent.insertBefore(parentDiv,videoElem)
-				parentDiv.appendChild(videoElem)
-				if ( videoElem.dataset.width ) {
-					//console.log("width: "+videoElem.dataset.width)
-					parentDiv.style.maxWidth = videoElem.dataset.width
-				} else {
-					parentDiv.style.maxWidth = "60%"
-				}
-				parentDiv.style.float = "right"
-				parentDiv.style.backgroundColor = "black"
-				parentDiv.style.padding = "6px"; 
-				parentDiv.style.border = "6px solid black"
-				
-				var seekBarDiv = document.createElement("div") // szürke háttér
-				seekBarDiv.className = "seekBar"
-				parentDiv.appendChild(seekBarDiv)
-				seekBarDiv.style.width = videoElem.offsetWidth
-				seekBarDiv.style.opacity = "1"; 
-				seekBarDiv.style.backgroundColor = "grey"; 
-				seekBarDiv.style.height = "21px"; 
-				seekBarDiv.onclick = function(e){ F_clickSeekBar(this,e) }
-				
-				var seekBarSpan = document.createElement("span") // sárga, hogy hol tart
-				seekBarSpan.className = "seekBar"
-				seekBarDiv.appendChild(seekBarSpan)
-				seekBarSpan.style.backgroundColor = "gold"; 
-				seekBarSpan.style.height = "21px"; 
-				seekBarSpan.style.position = "absolute"; 
-			}
-			F_createSeekBar()
-		}
-		videoElem.onclick = function(){
-			var videoElem = this
-			if ( videoElem.paused == false ) {
-				F_stopVideo(videoElem)
-			} else {
-				F_playVideo(videoElem)
-			}
-		}
-	}
+	//console.log("F_loadVideos")
+	let allVideo = detElem.querySelectorAll('.video');
+	for ( let i=0; i<allVideo.length; i++ ) {
+		let spanVideo = allVideo[i]
+	  // ha zárt details van fölötte, akkor skip
+		if ( isElementVisible(spanVideo) == false ) { continue }
+	  // ha már be lett töltve, akkor skip
+		if ( spanVideo.innerHTML != "" ) { continue } 
 
-	var allVideoCent = detElem.getElementsByClassName("video")
-	for ( var i=0; i<allVideoCent.length; i++ ) {
-		if ( allVideoCent[i].dataset.loaded == "true" ) { continue } 
-		
-		allVideoCent[i].onclick = function() {
-			document.getElementById("div_centVideoBg").style.visibility = 'visible'
-			var centVideo = document.getElementById("video_cent")
-			F_setVideoSource(centVideo,this.dataset.src)
-			F_playVideo(centVideo)
+		if ( spanVideo.classList.contains("mini") == true ) { // miniVideo (btn)
+			//console.log("minivideoload")
+			let btn = document.createElement("button")
+			spanVideo.appendChild(btn)
+			btn.dataset.src = spanVideo.dataset.src
+			btn.innerHTML = spanVideo.dataset.txt
+			btn.onclick = function() {
+				//console.log("miniVideoClick")
+				document.getElementById("div_centVideoBg").style.visibility = 'visible'
+				let centVideo = document.getElementById("video_cent")
+				F_setVideoSource(centVideo,this.dataset.src)
+				F_playVideo(centVideo)
+			}
+		} else { // fullVideo (at right side of the page)
+			let videoElem = document.createElement("video")
+			spanVideo.appendChild(videoElem)
+			videoElem.dataset.src = spanVideo.dataset.src
+			
+			F_setVideoSource(videoElem,videoElem.dataset.src)
+			
+			if ( videoElem.dataset.type == "sound" ) { videoElem.style.opacity = "0" }
+			
+			videoElem.style.borderColor = "black"
+			videoElem.style.cursor = "pointer"
+			videoElem.style.maxWidth = "100%"
+			//videoElem.style.maxWidth = "calc(100% - 10px)" // bordert kivonja belőle
+			
+			videoElem.onloadeddata = function() { // meg kell várja, különben seekBar mérete nem jó
+				var videoElem = this
+				function F_createSeekBar(){ 
+					var parentDiv = document.createElement("div") // border, ebbe van a video + szürke + sárga
+					var parent = videoElem.parentNode
+					parent.insertBefore(parentDiv,videoElem)
+					parentDiv.appendChild(videoElem)
+					if ( videoElem.dataset.width ) {
+						//console.log("width: "+videoElem.dataset.width)
+						parentDiv.style.maxWidth = videoElem.dataset.width
+					} else {
+						parentDiv.style.maxWidth = "60%"
+					}
+					parentDiv.style.float = "right"
+					parentDiv.style.backgroundColor = "black"
+					parentDiv.style.padding = "6px"; 
+					parentDiv.style.border = "6px solid black"
+					
+					var seekBarDiv = document.createElement("div") // szürke háttér
+					seekBarDiv.className = "seekBar"
+					parentDiv.appendChild(seekBarDiv)
+					seekBarDiv.style.width = videoElem.offsetWidth
+					seekBarDiv.style.opacity = "1"; 
+					seekBarDiv.style.backgroundColor = "grey"; 
+					seekBarDiv.style.height = "21px"; 
+					seekBarDiv.onclick = function(e){ F_clickSeekBar(this,e) }
+					
+					var seekBarSpan = document.createElement("span") // sárga, hogy hol tart
+					seekBarSpan.className = "seekBar"
+					seekBarDiv.appendChild(seekBarSpan)
+					seekBarSpan.style.backgroundColor = "gold"; 
+					seekBarSpan.style.height = "21px"; 
+					seekBarSpan.style.position = "absolute"; 
+				}
+				F_createSeekBar()
+			}
+			
+			let holdTimer = null;
+			let isHolding = false;
+
+			videoElem.onclick = function(){
+				 // ha hold történt, ne fusson le a click
+				 if (isHolding) return;
+
+				 var videoElem = this;
+				 if (videoElem.paused == false) {
+					  F_stopVideo(videoElem);
+				 } else {
+					  F_playVideo(videoElem);
+				 }
+			};
+
+			videoElem.addEventListener("mousedown", function(e){
+				 const video = this;
+
+				 isHolding = false;
+
+				 holdTimer = setTimeout(() => {
+					  isHolding = true;
+					  video.playbackRate = 2.0;
+				 }, 250); // ennyi idő után számít "hold"-nak
+			});
+
+			videoElem.addEventListener("mouseup", function(){
+				 clearTimeout(holdTimer);
+
+				 if (isHolding) {
+					  this.playbackRate = 1.0;
+				 }
+			});
+
+			videoElem.addEventListener("mouseleave", function(){
+				 clearTimeout(holdTimer);
+
+				 if (isHolding) {
+					  this.playbackRate = 1.0;
+				 }
+			});		
 		}
-		allVideoCent[i].dataset.loaded = "true"
 	}
 }
 function F_loadCentVideo(){
@@ -4729,84 +4760,89 @@ function F_imgChangeSrc(img) { // IF (rightClick/longPress) ➜ change src
 	img.src = newUrl
 }
 function F_unloadIMGs(detElem) {
-	var imgs = detElem.getElementsByTagName("IMG")
-	for ( var i=0; i<imgs.length; i++ ) { 
-		if ( !imgs[i].src ) { continue } // csak azt, ami már be lett töltve
-		imgs[i].removeAttribute("src")
-		imgs[i].removeAttribute("style")
+	//console.log("F_unLoadIMGs")
+	let spanImgs = detElem.querySelectorAll('.img');
+	for ( let i=0; i<spanImgs.length; i++ ) { 
+		/* ha van zárt details fölötte, akkor skip
+		if ( isElementVisible(imgs[i]) == false ) { continue }
+		ha nincs zárt details fölötte
+		*/
+		if ( spanImgs[i].innerHTML != "" ) { spanImgs[i].innerHTML = "" }
 	}
 }
 function F_loadIMGs(detElem) {
-	var imgs = detElem.getElementsByTagName("IMG")
-	for ( var i=0; i<imgs.length; i++ ) { 
-		if ( isElementVisible(imgs[i]) == false ) { continue }
-		if ( imgs[i].src ) { continue } //  nem kell újra betöltenie
+	//console.log("F_loadIMGs")
+	let spanImgs = detElem.querySelectorAll('.img');
+	for ( let i=0; i<spanImgs.length; i++ ) { 
+		let spanImg = spanImgs[i]
+	  // ha zárt details van fölötte, akkor skip
+		if ( isElementVisible(spanImg) == false ) { continue }
+	  // ha már be lett töltve, akkor skip
+		if ( spanImg.querySelector("img") ) { continue }
 		
-		/*imgs[i].onerror = function(){
-			var textVar = this.src.slice(this.src.lastIndexOf("/")+1)
-			missImgs = missImgs + textVar + "\n"
-		}*/
-		
-		imgs[i].src = "images/" + imgs[i].dataset.src
-		
-		imgs[i].style.border = "3px solid black"
-		if ( imgs[i].dataset.maxWidth ) { 
-			imgs[i].style.maxWidth = imgs[i].dataset.maxWidth
-		} else {
-			imgs[i].style.maxWidth = "40%"
-		}
-		if ( !imgs[i].dataset.float ) { 
-			imgs[i].style.float = "right"
-		} else {
-			imgs[i].style.float = imgs[i].dataset.float
-		}
-	
-		//imgs[i].onclick = function() { F_imgClick(this) }
-		if ( imgs[i].classList.contains("mini") == true ) {
-			imgs[i].style.border = "2px solid DeepSkyBlue"
-			imgs[i].style.maxHeight = "16px"
-			//imgs[i].style.maxHeight = imgMiniHeight
-			imgs[i].style.marginBottom = "-2px"
-			imgs[i].style.float = "none"
-			if ( isAndroid == false ) {
-				imgs[i].onmouseover = function() { 
-					var minImg = document.getElementById("img_mini")
-					minImg.style.display = "inline-block" //block esetén új sor lenne; inline esetén nem lehetne width állítani
-					minImg.src = this.src
-					
-					minImg.width = this.width*8
-					//minImg.style.transform = "scale(8,8)"
+		let img = document.createElement("img")
+		spanImg.appendChild(img)
+		img.src = "images/" + spanImg.dataset.src
 
-					var posX = F_offsetXY(this,"2").left -minImg.width/2 +this.width/2
-					var posXright = posX + minImg.width
-					if ( posX < 0 ) {
-						minImg.style.left = "0px"
-					} else if ( document.body.clientWidth < posXright ) {
-						posX = document.body.clientWidth - minImg.width -10/*border*/
-						minImg.style.left = posX +"px"
-					} else {
-						minImg.style.left = posX +"px"
-					}
-					var posY = F_offsetXY(this,"2").top -minImg.height/2 +this.height/2
-					minImg.style.top = posY +"px"
+	  // mini img
+		if ( spanImg.classList.contains("mini") == true ) {
+			img.style.border = "2px solid DeepSkyBlue"
+			img.style.maxHeight = "16px"
+			//imgs[i].style.maxHeight = imgMiniHeight
+			img.style.marginBottom = "-4px"
+			
+		  // ha android, akkor skip
+			if ( isAndroid ) { continue } 
+			img.onmouseover = function() { 
+				var minImg = document.getElementById("img_mini")
+				minImg.style.display = "inline-block" //block esetén új sor lenne; inline esetén nem lehetne width állítani
+				minImg.src = this.src
+				
+				minImg.width = this.width*8
+				//minImg.style.transform = "scale(8,8)"
+
+				var posX = F_offsetXY(this,"2").left -minImg.width/2 +this.width/2
+				var posXright = posX + minImg.width
+				if ( posX < 0 ) {
+					minImg.style.left = "0px"
+				} else if ( document.body.clientWidth < posXright ) {
+					posX = document.body.clientWidth - minImg.width -10/*border*/
+					minImg.style.left = posX +"px"
+				} else {
+					minImg.style.left = posX +"px"
 				}
+				var posY = F_offsetXY(this,"2").top -minImg.height/2 +this.height/2
+				minImg.style.top = posY +"px"
+			}
+		} else {
+			img.style.border = "3px solid black"
+			img.style.maxWidth = "40%"
+			if ( spanImg.dataset.maxWidth ) { 
+				img.style.maxWidth = spanImg.dataset.maxWidth
+			} else {
+				img.style.maxWidth = "40%"
+			}
+			if ( spanImg.style.float == "" ) { 
+				img.style.float = "right"
+			 } else {
+				img.style.float = spanImg.style.float
 			}
 		}
-	
-		if ( imgs[i].classList.contains("if") == true ) {
-			imgs[i].style.borderColor = "red"
+	  // click
+		if ( spanImg.classList.contains("if") == true ) {
+			img.style.borderColor = "red"
 			
 			let pressTimer = null;
 			const longPressThreshold = 600; // ms hosszú nyomásnak
-			imgs[i].addEventListener('mousedown', startPress);
-			imgs[i].addEventListener('touchstart', startPress);
-			imgs[i].addEventListener('mouseup', endPress);
-			imgs[i].addEventListener('touchend', endPress);
-			imgs[i].addEventListener('touchcancel', endPress);
+			img.addEventListener('mousedown', startPress);
+			img.addEventListener('touchstart', startPress);
+			img.addEventListener('mouseup', endPress);
+			img.addEventListener('touchend', endPress);
+			img.addEventListener('touchcancel', endPress);
 			function startPress(e) {
 				// prevent context menu on long press desktop
 				if(e.type === "mousedown" && e.button !== 0) return; // csak bal gomb
-				const img = e.currentTarget; // erre kattintottak
+				let img = e.currentTarget; // erre kattintottak
 				pressTimer = setTimeout(() => {
 					// hosszú nyomás után: kép csere
 					F_imgChangeSrc(img);
@@ -4814,7 +4850,7 @@ function F_loadIMGs(detElem) {
 				}, longPressThreshold);
 			}
 			function endPress(e) {
-				const img = e.currentTarget; // erre kattintottak
+				let img = e.currentTarget; // erre kattintottak
 				if (pressTimer) {
 					// rövid nyomás - kinagyítás toggle
 					clearTimeout(pressTimer);
@@ -4823,9 +4859,8 @@ function F_loadIMGs(detElem) {
 				}
 			}
 		} else {
-			imgs[i].onclick = function() { F_imgZoom(this) }
+			img.onclick = function() { F_imgZoom(this) }
 		}
-	
 	}
 }
 function F_loadCentImg() {
