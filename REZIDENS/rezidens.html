@@ -2817,9 +2817,14 @@ Orvosi dokumentáció helye és módja:
 		</ul>
 	</ul>
 	<li><span class="midQ [12.13] kerdes">véralvadást befolyásoló gyógyszerek</span></li>
-	<li><span class="midQ [12.16] kerdes">köptetők vs köhögéscsillapítók</span></li>
-	<li><span class="midQ [12.17] syno kerdes">hörgőtágítók | bronchodilatátorok</span></li>
-	<li><span class="midQ [12.18] kerdes">savszekréció gátlók</span></li>
+	<li>'légút'</li><ul>
+		<li><span class="midQ [12.16] kerdes">köptetők vs köhögéscsillapítók</span></li>
+		<li><span class="midQ [12.17] syno kerdes">hörgőtágítók | bronchodilatátorok</span></li>
+	</ul>
+	<li>'GI'</li><ul>
+		<li><span class="midQ [12.18] kerdes">savszekréció gátlók</span></li>
+		<li><span class="midQ [12.25]">hányáscsillapító</span></li>
+	</ul>
 	<li><span class="midQ [12.20] kerdes">fájdalom</span></li><ul>
 		<li><span class="midQ [12.21]">NSAID-ok</span></li>
 		<li><span class="midQ [12.23]">opiodok</span></li>
@@ -4252,6 +4257,34 @@ Orvosi dokumentáció helye és módja:
 		<span data-src="farmak" class="midQ [73] WHITE">farmak</span>
 	  </div>
 	</details>
+	<details class="[12.25] kerdes"><summary>antihisztaminok</summary><table><tr>
+		<th colspan="2"><div class="fsMini">antihisztaminok = H1-antagonisták = H1-blokkolók</div></th>
+	  </tr><tr>
+		<th>1. generációs</th>
+		<th>2. generációs</th>
+	  </tr><tr>
+		<td><u>diphenhydramin</u>, <u>dimenhydrinate</u> [Daedalon]</td>
+		<td><u>lor<abbr title="'aladin'">at<strong>adin</strong></abbr></u> <u>cetirizin</u> <u>fexofen<strong>adin</strong></u><abbr title="megj.tipp: LoCeF(r)e">'</abbr></td>
+	  </tr><tr>
+		<td style="text-align:left" colspan="2">
+		  <center><span class="midQ [9]">inverz, kompetitív (reverzibilis)</span> <span class="midQ [152]">H1R</span>-<abbr title="gátolják a hisztamin kötődését a H1-receptorhoz">antagonisták</abbr></center>
+			<li>inverz ➜ konstitutív aktivitást mutató H1-receptorok alapaktivitását (már az agonista nélkül is végbemenőt) csökkentik</li>
+			<li>azonban fiziológiásan és betegség esetén sincs konstitutív aktivitása H1R-nek, így ez nem számít (olyan mintha neutralisat adnánk)</li>
+			<div><span class="plus">ind</span> <span class="bgYellow">allergia</span> <span class="fsMini">(<span class="syno">allergiás rhinitis | szénanátha</span>, urticaria, anaphylaxiás sokk)</span></div>
+		</td>
+	  </tr><tr>
+		<td style="text-align:left">
+			<li><span class="midQ [33]">muszkarinerg receptor</span> angatonista ➜ antikolinerg hatás (bronchodilatátor, tachycardia, hyperthermia, tág pupillák, szájszárazság, vizeletretenció, székrekedés)</li>
+			<div><span class="plus">ind</span> hányáscsillapító <span class="fsMini">(H1R(KIR) + MuszR következtében)</span></div>
+			<div><span class="ORANGE">mh</span> antikolinerg hatások</div>
+			<li>vér-agy gáton könnyen átjut (<span class="midQ [70]">lipidoldékony</span>) ➜ <abbr title="kötődve H1-receptorhoz">'</abbr>KIR hatásuk (<span class="midQ [144]">szedáció</span>) is van</li>
+			<div><span class="plus">ind</span> <span class="midQ [151]">perioperatív medikáció</span> (szedatívum)</div>
+			<div><span class="ORANGE">mh</span> szedáció</div><ul>
+				<span class="fsMini"><span class="midQ [13.12]">toxikológia</span> (vény nélkül kapható) ➜ th: <span class="midQ [12.9] bgYellow"><u>physostigmin</u></span> (antikolinerg hatások ellen)</span>
+			</ul>
+		</td>
+		<td> vér-agy gáton rosszul jut át <span class="fsMini">(szelektív perifériásak, minimális szedáció)</span> </td>
+	</tr></table></details>
 </div>
 <details class="[13] kerdes"><summary>TOXIKOLÓGIA</summary>
 	<span class="imp [13.1]"></span> <!-- általános -->
@@ -5242,13 +5275,7 @@ Orvosi dokumentáció helye és módja:
 				<li>lényegében enyhe BDZ</li>
 				<li>antidotum: <u>flumazenil</u>)</li>
 			</ul>
-			<li><span class="syno">antihisztaminok | H1-antagonisták</span></li><ul>
-				<li>gyakori (recept nélkül kapható)</li>
-				<li><span class="bgYellow">antikolinerg hatásuk is van</span> ➜ tachycardia, hyperthermia, tág pupillák</li>
-				<li>th</li><ul>
-					<li><span class="midQ [12.9] bgYellow"><u>physostigmin</u></span><abbr title="antikolinerg hatás ellen ➜ kolinészteráz gátló (indirekt kolinomimetikum)">*</abbr></li>
-				</ul>
-			</ul>
+			<li><span class="midQ [12.25] syno">antihisztaminok | H1-antagonisták</span> (1.generációs)</li>
 			<li><span class="midQ [12.22]">általános anesztetikumok</span></li>
 		</td>
 	  </tr><tr>
@@ -5281,7 +5308,7 @@ Orvosi dokumentáció helye és módja:
 			<li>tüneti (hypotonia kezelése, légzéstámogatás</li>
 		</td>
 	  <!-- other --> </tr><tr>  
-		<td class="fsMini" style="text-align:left" colspan="2">
+		<td class="fsMini" style="text-align:left" colspan="3">
 			<span class="midQ [📝3] WHITE">📝</span>
 		</td>
 	</tr></table></details>
@@ -14228,12 +14255,10 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 			<li>akut tünet kezdet után ≤1 órával halál</li>
 			<li>onnantól mondjuk csak ezt, ha a szívleállást nem sikerült visszafordítani és már elhunyt</li>
 		</ul>
-		<li><details class="kerdes"><summary>etio ➜ hirtelen szívleállás, VT, VF</summary>
-		</details></li>
 	  <table><tr>
 		<th>szívleállás típusa</th>
 		<th>defibrilláció</th>
-		<th>Adr</th>
+		<th><span class="midQ [12.5]">Adr</span></th>
 	  </tr><tr> <!-- kamrafibrilláció -->
 		<td style="text-align:left"><details class="kerdes"><summary><div style="background-color:silver; text-align:center">VF = <abbr title="kamrafibrillációt mutat a defibrillátor EKG">kamrafibrilláció</abbr> <span class="img mini" data-src="cdlwasrq.webp"></span> <span class="img mini" data-src="suyzhldu.webp"></span></div></summary>
 		  <div><b>th</b></div>
@@ -14300,7 +14325,7 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 		</th>
 		<td>❌ nem defibrillálható</td>
 		<td>✅ azonnal</td>
-	  </tr><tr><th>ASY = 'EKG egy egyenes, már vége'
+	  </tr><tr><th><abbr title="aszisztolé">ASY</abbr> = 'EKG egy egyenes, már vége'
 			<span class="img mini" data-src="eksfcwvq.webp"></span>
 		</th>
 		<td>❌ nem defibrillálható</td>

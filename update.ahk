@@ -1,8 +1,8 @@
 ﻿Run szemeszter.bat,,Min, szemPID
 
-Gui, Add, CheckBox, vTeloMix, Telo - Mix
 Gui, Add, CheckBox, vWebPage, Web - LEARN
 Gui, Add, CheckBox, vGyogyszer, Web - Gyogyszer
+Gui, Add, CheckBox, vMovieseries, Web - Movieseries
 Gui, Add, CheckBox, vZene, Telo - Zene
 Gui, Add, Button, Default w80 gGuiClose, OK
 Gui, Show
@@ -25,6 +25,11 @@ if ( Gyogyszer == 1 ) {
 	Run D:\GYOGYSZER\update.bat,,, gyogyszerPID
 }
 
+if ( Movieseries == 1 ) {
+	; MsgBox WebMovieseries update
+	Run D:\webpage\GITHUB\update.bat,,, movieseriesPID
+}
+
 if ( Zene == 1 ) {
 	; MsgBox Zene update
 	Run ZeneBatch.ffs_batch,,, zenePID ; %destination%\ZeneBatch.ffs_batch
@@ -33,6 +38,7 @@ if ( Zene == 1 ) {
 
 Process,WaitClose, %learnPID%
 Process,WaitClose, %gyogyszerPID%
+Process,WaitClose, %movieseriesPID%
 Process,WaitClose, %zeneoldPID%
 
 if ( TeloMix == 1 ) {
