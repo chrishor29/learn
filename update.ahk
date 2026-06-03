@@ -41,10 +41,6 @@ Process,WaitClose, %gyogyszerPID%
 Process,WaitClose, %movieseriesPID%
 Process,WaitClose, %zeneoldPID%
 
-if ( TeloMix == 1 ) {
-	Run BatchTeloMix.ffs_batch,,, TeloMixPID 
-}
-Process,WaitClose,%TeloMixPID%
 
 MsgBox done
 ExitApp
