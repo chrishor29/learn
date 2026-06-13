@@ -4732,6 +4732,59 @@ function F_loadAbbrQ(detElem) {
 	}
 }
 
+function load_progressBars(detElem) { 
+	function loadBar(bar) { 
+	  // ha zárt details van fölötte, akkor skip
+		if ( isElementVisible(bar) == false ) { return }
+	  // ha már be lett töltve, akkor skip
+		if (bar.querySelector(".progressBar-fill")) { return }
+		
+		let status = bar.dataset.status; // pl. "4/10"
+		let color = bar.dataset.color || "green";
+
+		let [current, max] = status.split("/").map(Number);
+
+		let percent = Math.max(
+			0,
+			Math.min(100, (current / max) * 100)
+		);
+
+		let fill = document.createElement("div");
+		bar.appendChild(fill);
+		fill.className = "progressBar-fill";
+		fill.style.width = percent + "%";
+		fill.style.backgroundColor = color;
+		fill.style.height = "100%";
+		fill.style.transition = "width 0.3s ease";
+
+		bar.style.width = "45%";
+		bar.style.height = "20px";
+		bar.style.border = "2px solid black";
+		bar.style.backgroundColor = "#ccc";
+		bar.style.marginBottom = "4px";
+		bar.style.marginTop = "4px";
+		bar.style.position = "relative";
+		bar.style.boxSizing = "border-box";
+
+		label = document.createElement("div");
+		bar.appendChild(label);
+		label.textContent = bar.dataset.text
+		label.style.position = "absolute";
+		label.style.top = "50%";
+		label.style.left = "50%";
+		label.style.transform = "translate(-50%, -50%)";
+		
+		label.style.fontSize = "12px";
+		label.style.fontWeight = "bold";
+		//label.style.color = "white";
+		label.style.pointerEvents = "none";
+		label.style.whiteSpace = "nowrap";
+		//label.style.textShadow = "1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black;";
+	}
+	
+	document.querySelectorAll(".progressBar").forEach(bar => { loadBar(bar) });
+}
+
 // –––––––––––––––  img BEGIN  –––––––––––––––
 function F_imgZoom(img) { // kinagyítás
 	var centImg = document.getElementById("img_cent")
@@ -5026,6 +5079,7 @@ function F_loadElem(detElem) { // detailsok megnyitásánál is ezt a funkciót 
 	F_loadAbbrQ(detElem)
 	F_loadImpQsTitle(detElem)
 	F_loadTableExpand(detElem)
+	load_progressBars(detElem)
 	//console.log("F_loadElem - end")
 	
 	var allDetails = detElem.getElementsByTagName("details")
