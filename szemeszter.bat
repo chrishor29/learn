@@ -16,13 +16,13 @@ xcopy /y %source%\stylePC.css %destination%\ /d
 xcopy /y %source%\styleAndroid.css %destination%\ /d
 xcopy /y %source%\favicon.png %destination%\ /d
 
-
-REM 6.év
+REM rezidens
+xcopy /y %source%\REZIDENS\trafo.html %destination%\REZIDENS\ /d
 xcopy /y %source%\REZIDENS\rezidens.html %destination%\REZIDENS\ /d
 xcopy /y %source%\REZIDENS\labor.html %destination%\REZIDENS\ /d
-
 xcopy /y %source%\English\english.html %destination%\English\ /d
 
+REM 6.év
 xcopy /y %source%\Allamvizsga\teszt.html %destination%\Allamvizsga\ /d
 xcopy /y %source%\Allamvizsga\zarov.html %destination%\Allamvizsga\ /d
 xcopy /y %source%\Belgyogy\belgyogyAV.html %destination%\Belgyogy\ /d
