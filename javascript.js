@@ -1043,6 +1043,48 @@ function F_unloadVideos(detElem) {
 		spanVideo.innerHTML = ""
 	}
 }
+function videoClick(detElem) { // set click script
+	let holdTimer = null;
+	let isHolding = false;
+
+	detElem.onclick = function(){
+		 // ha hold történt, ne fusson le a click
+		 if (isHolding) return;
+
+		 let videoElem = this;
+		 if (videoElem.paused == false) {
+			  F_stopVideo(videoElem);
+		 } else {
+			  F_playVideo(videoElem);
+		 }
+	};
+
+	detElem.addEventListener("mousedown", function(e){
+		const video = this;
+		isHolding = false;
+		holdTimer = setTimeout(() => {
+			isHolding = true;
+			video.playbackRate = 2.0;
+			video.parentElement.style.borderColor = "blue"
+		}, 250); // ennyi idő után számít "hold"-nak
+	});
+
+	detElem.addEventListener("mouseup", function(){
+		clearTimeout(holdTimer);
+		if (isHolding) {
+			this.playbackRate = 1.0
+			this.parentElement.style.borderColor = "springgreen"
+		}
+	});
+
+	detElem.addEventListener("mouseleave", function(){
+		clearTimeout(holdTimer);
+		if (isHolding) {
+			this.playbackRate = 1.0
+			this.parentElement.style.borderColor = "springgreen"
+		}
+	});
+}
 function F_loadVideos(detElem){
 	//console.log("F_loadVideos")
 	let allVideo = detElem.querySelectorAll('.video');
@@ -1117,62 +1159,16 @@ function F_loadVideos(detElem){
 				F_createSeekBar()
 			}
 			
-			let holdTimer = null;
-			let isHolding = false;
-
-			videoElem.onclick = function(){
-				 // ha hold történt, ne fusson le a click
-				 if (isHolding) return;
-
-				 var videoElem = this;
-				 if (videoElem.paused == false) {
-					  F_stopVideo(videoElem);
-				 } else {
-					  F_playVideo(videoElem);
-				 }
-			};
-
-			videoElem.addEventListener("mousedown", function(e){
-				 const video = this;
-
-				 isHolding = false;
-
-				 holdTimer = setTimeout(() => {
-					  isHolding = true;
-					  video.playbackRate = 2.0;
-				 }, 250); // ennyi idő után számít "hold"-nak
-			});
-
-			videoElem.addEventListener("mouseup", function(){
-				 clearTimeout(holdTimer);
-
-				 if (isHolding) {
-					  this.playbackRate = 1.0;
-				 }
-			});
-
-			videoElem.addEventListener("mouseleave", function(){
-				 clearTimeout(holdTimer);
-
-				 if (isHolding) {
-					  this.playbackRate = 1.0;
-				 }
-			});		
+			// set click script
+			videoClick(videoElem)
 		}
 	}
 }
 function F_loadCentVideo(){
-	var keepVideo
 	var centVideo = document.getElementById("video_cent")
-	centVideo.onclick = function(){
-		var thisVideo = this
-		if ( thisVideo.paused == false ) {
-			F_stopVideo(thisVideo)
-		} else {
-			F_playVideo(thisVideo)
-		}
-		keepVideo = true
-	}
+	
+	// set click script
+	videoClick(centVideo)
 
 	var centVideoSeek = document.getElementById("div_centVideoSeek")
 	centVideoSeek.onclick = function(e){
@@ -1187,17 +1183,13 @@ function F_loadCentVideo(){
 		currTime = Math.floor(currTime);
 		centVideo.currentTime = currTime
 		F_stopVideo(centVideo)
-		
-		keepVideo = true
 	}
 	
 	var centVideoBG = document.getElementById("div_centVideoBg")
-	centVideoBG.onclick = function(){
-		if ( keepVideo != true ) { 
-			this.style.visibility = 'hidden'
-			F_stopVideo(centVideo)
-		}
-		keepVideo = false
+	centVideoBG.onclick = function(e){
+		if (e.target !== this) return;
+		this.style.visibility = 'hidden'
+		F_stopVideo(centVideo)
 	}
 }
 F_loadCentVideo()
