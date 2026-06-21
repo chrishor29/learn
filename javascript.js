@@ -1165,21 +1165,21 @@ function F_loadVideos(detElem){
 	}
 }
 function F_loadCentVideo(){
-	var centVideo = document.getElementById("video_cent")
-	
+	let centVideo = document.getElementById("video_cent")
 	// set click script
 	videoClick(centVideo)
 
-	var centVideoSeek = document.getElementById("div_centVideoSeek")
+	let centVideoSeek = document.getElementById("div_centVideoSeek")
 	centVideoSeek.onclick = function(e){
-		var rect = e.target.getBoundingClientRect()
+		let rect = e.target.getBoundingClientRect()
 		//var testX = e.clientX - centVideoSeek.left
 		//var testX = rect.left
-		var x = e.pageX - rect.left
-		var percent = x / this.offsetWidth
+		let x = e.pageX - rect.left
+		let percent = x / this.offsetWidth
 		//alert(e.pageX+" - "+rect.left+" = "+x)
 		//alert(x+" "+this.offsetWidth+" "+percent)
-		var currTime = percent * centVideo.duration
+		let centVideo = document.getElementById("video_cent")
+		let currTime = percent * centVideo.duration
 		currTime = Math.floor(currTime);
 		centVideo.currentTime = currTime
 		F_stopVideo(centVideo)
