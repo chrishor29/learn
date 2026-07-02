@@ -984,17 +984,21 @@ function F_loadTitles(detElem){
 	max-width: alapból 60%; <video data-width="30%" data-src
 	sound: <video data-type="sound" data-src
 */
-function F_clickSeekBar(seekBarDiv,e){
-	var parentDiv = seekBarDiv.parentElement
-	var videoElems = parentDiv.getElementsByTagName("video")
-	var thisVideo = videoElems[0]
-	x = e.pageX - thisVideo.offsetLeft
-	clickedValue = x * thisVideo.max / thisVideo.offsetWidth
-	var percent = x / thisVideo.offsetWidth
-	var currTime = percent * thisVideo.duration
-	currTime = Math.floor(currTime)
-	thisVideo.currentTime = currTime
-	F_stopVideo(thisVideo)
+function clickSeekBar(seekBarBg,e){
+	let rect = seekBarBg.getBoundingClientRect()
+	let x = e.pageX - rect.left
+	let percent = x / seekBarBg.offsetWidth
+	//console.log(e.pageX+" - "+rect.left+" = "+x)
+	//console.log(x+" "+seekBarBg.offsetWidth+" "+percent)
+	
+	let border = seekBarBg.parentElement
+	let videoElems = border.getElementsByTagName("video")
+	let video = videoElems[0]
+	
+	let currTime = percent * video.duration
+	currTime = Math.floor(currTime);
+	video.currentTime = currTime
+	F_stopVideo(video)
 }
 function F_setSeekBarWidth(thisVideo){
 	var parentDiv = thisVideo.parentElement
@@ -1025,12 +1029,34 @@ function F_playVideo(thisVideo){
 	}, 1000)
 }
 function F_setVideoSource(videoElem,srcTxt){
-	srcTxt = srcTxt.slice(srcTxt.lastIndexOf("/")+1) // a régi jegyzetekben még benne van, hogy 'videos/', ezért kell
 	videoElem.setAttribute('src', "videos/"+srcTxt)
 	videoElem.onerror = function(){
 		console.log("'"+srcTxt+"' video is missing!") 
 		alert("'"+srcTxt+"' video is missing! --> console.log: line number") 
 	}
+}
+function drawChapters(videoElem, seekBarDiv, chapters) {
+	if (!chapters.length) return
+	let duration = videoElem.duration
+
+	chapters.forEach((chapter, i) => {
+
+		let seg = document.createElement("div")
+
+		seg.style.position = "absolute"
+		seg.style.left = (chapter.start_time / duration * 100) + "%"
+		seg.style.width =
+			((chapter.end_time - chapter.start_time) / duration * 100) + "%"
+
+		seg.style.height = "100%"
+		//seg.style.backgroundColor = i % 2 ? "#666" : "#888"
+		seg.style.borderLeft = "2px solid black"
+		seg.style.borderRight = "2px solid black"
+
+		seg.title = chapter.title
+
+		seekBarDiv.appendChild(seg)
+	})
 }
 
 function F_unloadVideos(detElem) {
@@ -1085,6 +1111,32 @@ function videoClick(detElem) { // set click script
 		}
 	});
 }
+function createSeekBar(border) { 
+	let seekBarBg = document.createElement("div") // szürke háttér
+	border.appendChild(seekBarBg)
+	seekBarBg.style.backgroundColor = "grey"; 
+	seekBarBg.style.height = "21px"; 
+	seekBarBg.style.position = "relative"
+	seekBarBg.onclick = function(e){ clickSeekBar(this,e) }
+	//seekBarBg.style.width = videoElem.offsetWidth
+	//seekBarBg.style.opacity = "1"; 
+	//seekBarBg.style.overflow = "hidden"
+	
+	let seekBar = document.createElement("span")
+	seekBarBg.appendChild(seekBar)
+	seekBar.style.height = "21px"
+	seekBar.style.position = "absolute"
+	seekBar.style.background = "gold"
+	
+	return seekBarBg
+}
+function loadChapters(videoSrc, callback) { // seekbar részekre osztása (ha van)
+	let script = document.createElement("script")
+	let src = videoSrc.slice(0,videoSrc.lastIndexOf("."))
+	script.src = src + ".js"
+	script.onload = () => { callback() }
+	document.head.appendChild(script)
+}
 function F_loadVideos(detElem){
 	//console.log("F_loadVideos")
 	let allVideo = detElem.querySelectorAll('.video');
@@ -1105,94 +1157,111 @@ function F_loadVideos(detElem){
 				//console.log("miniVideoClick")
 				document.getElementById("div_centVideoBg").style.visibility = 'visible'
 				let centVideo = document.getElementById("video_cent")
+				centVideo.dataset.src = this.dataset.src
 				F_setVideoSource(centVideo,this.dataset.src)
 				F_playVideo(centVideo)
 			}
 		} else { // fullVideo (at right side of the page)
-			let videoElem = document.createElement("video")
-			spanVideo.appendChild(videoElem)
-			videoElem.dataset.src = spanVideo.dataset.src
+			let video = document.createElement("video")
+			spanVideo.appendChild(video)
 			
-			F_setVideoSource(videoElem,videoElem.dataset.src)
+			video.dataset.src = spanVideo.dataset.src
+			F_setVideoSource(video,video.dataset.src)
 			
-			if ( videoElem.dataset.type == "sound" ) { videoElem.style.opacity = "0" }
+			if ( video.dataset.type == "sound" ) { video.style.opacity = "0" }
 			
-			videoElem.style.borderColor = "black"
-			videoElem.style.cursor = "pointer"
-			videoElem.style.maxWidth = "100%"
-			//videoElem.style.maxWidth = "calc(100% - 10px)" // bordert kivonja belőle
-			
-			videoElem.onloadeddata = function() { // meg kell várja, különben seekBar mérete nem jó
-				var videoElem = this
-				function F_createSeekBar(){ 
-					var parentDiv = document.createElement("div") // border, ebbe van a video + szürke + sárga
-					var parent = videoElem.parentNode
-					parent.insertBefore(parentDiv,videoElem)
-					parentDiv.appendChild(videoElem)
-					if ( videoElem.dataset.width ) {
-						//console.log("width: "+videoElem.dataset.width)
-						parentDiv.style.maxWidth = videoElem.dataset.width
-					} else {
-						parentDiv.style.maxWidth = "60%"
-					}
-					parentDiv.style.float = "right"
-					parentDiv.style.backgroundColor = "black"
-					parentDiv.style.padding = "6px"; 
-					parentDiv.style.border = "6px solid black"
-					
-					var seekBarDiv = document.createElement("div") // szürke háttér
-					seekBarDiv.className = "seekBar"
-					parentDiv.appendChild(seekBarDiv)
-					seekBarDiv.style.width = videoElem.offsetWidth
-					seekBarDiv.style.opacity = "1"; 
-					seekBarDiv.style.backgroundColor = "grey"; 
-					seekBarDiv.style.height = "21px"; 
-					seekBarDiv.onclick = function(e){ F_clickSeekBar(this,e) }
-					
-					var seekBarSpan = document.createElement("span") // sárga, hogy hol tart
-					seekBarSpan.className = "seekBar"
-					seekBarDiv.appendChild(seekBarSpan)
-					seekBarSpan.style.backgroundColor = "gold"; 
-					seekBarSpan.style.height = "21px"; 
-					seekBarSpan.style.position = "absolute"; 
+			video.style.borderColor = "black"
+			video.style.cursor = "pointer"
+			video.style.maxWidth = "100%"
+			//video.style.maxWidth = "calc(100% - 10px)" // bordert kivonja belőle
+
+			function createBorder(video) { 
+				// black border, ebbe van a video + seekbar
+				let border = document.createElement("div") 
+				let spanVideo = video.parentNode
+				spanVideo.insertBefore(border,video)
+				border.appendChild(video)
+				if ( video.dataset.width ) {
+					border.style.maxWidth = video.dataset.width
+				} else {
+					border.style.maxWidth = "60%"
 				}
-				F_createSeekBar()
+				border.style.float = "right"
+				border.style.backgroundColor = "black"
+				border.style.padding = "6px"; 
+				border.style.border = "6px solid black"
+				return border
 			}
+			let border = createBorder(video)
 			
+			let seekBarBg = createSeekBar(border)
+
+			video.onloadeddata = function() {
+				let video = this
+				loadChapters(video.src, function () {
+					let chapters = window.videoChapters?.[video.dataset.src] || []
+					drawChapters(video, seekBarBg, chapters)
+				})
+			}
+
 			// set click script
-			videoClick(videoElem)
+			videoClick(video)
 		}
 	}
 }
-function F_loadCentVideo(){
-	let centVideo = document.getElementById("video_cent")
-	// set click script
-	videoClick(centVideo)
-
-	let centVideoSeek = document.getElementById("div_centVideoSeek")
-	centVideoSeek.onclick = function(e){
-		let rect = e.target.getBoundingClientRect()
-		//var testX = e.clientX - centVideoSeek.left
-		//var testX = rect.left
-		let x = e.pageX - rect.left
-		let percent = x / this.offsetWidth
-		//alert(e.pageX+" - "+rect.left+" = "+x)
-		//alert(x+" "+this.offsetWidth+" "+percent)
-		let centVideo = document.getElementById("video_cent")
-		let currTime = percent * centVideo.duration
-		currTime = Math.floor(currTime);
-		centVideo.currentTime = currTime
-		F_stopVideo(centVideo)
-	}
-	
-	var centVideoBG = document.getElementById("div_centVideoBg")
-	centVideoBG.onclick = function(e){
+function createCentVideo() {
+	// ez tölti ki az egész képernyőt kb. - átlátszó fekete, amire klikkelve eltűnik
+	let bg = document.getElementById("div_centVideoBg")
+	bg.style.position = "fixed"
+	bg.style.top = "5px"
+	bg.style.bottom = "5px"
+	bg.style.left = "5px"
+	bg.style.right = "5px"
+	bg.style.visibility = "hidden"
+	bg.style.zIndex = "5"
+	bg.style.backgroundColor = "rgba(0,0,0,0.7)"
+	bg.onclick = function(e){
 		if (e.target !== this) return;
 		this.style.visibility = 'hidden'
-		F_stopVideo(centVideo)
+		let video = document.getElementById("video_cent")
+		F_stopVideo(video)
 	}
+	
+	// video border: black
+	let border = document.createElement("div")
+	bg.appendChild(border)
+	border.style.border = "6px solid black"
+	border.style.padding = "6px"
+	border.style.backgroundColor = "black"
+	border.style.position = "fixed"
+	border.style.top = "50%"
+	border.style.left = "50%"
+	border.style.transform = "translate(-50%,-50%)"
+	border.style.maxWidth = "90vw"
+	border.style.maxHeight = "85vh"
+	
+	let video = document.createElement("video")
+	border.appendChild(video)
+	video.id = "video_cent"
+	video.style.cursor = "pointer"
+	video.style.maxWidth = "100vw"
+	video.style.maxHeight = "75vh"
+	video.style.zIndex = "6"
+
+	let seekBarBg = createSeekBar(border)
+	
+	// seekbar felosztás
+	video.onloadeddata = function() {
+		loadChapters(video.src, function () {
+			let chapters = window.videoChapters?.[video.dataset.src] || []
+			drawChapters(video, seekBarBg, chapters)
+		})
+	}
+
+	// set click script
+	videoClick(video)
 }
-F_loadCentVideo()
+createCentVideo()
 // –––––––––––––––  videos END  –––––––––––––––
 
 // –––––––––––––––  search BEGIN  –––––––––––––––

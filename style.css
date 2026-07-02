@@ -179,6 +179,19 @@ th { background: Silver }
 .bgYellow { background-color: yellow }
 .night .bgYellow { background-color: saddlebrown }
 
+.sup {
+    display: inline-block;
+    font-size: 65%;
+    transform: translateY(-0.50em);
+    transform-origin: left bottom;
+}
+.sub {
+    display: inline-block;
+    font-size: 65%;
+    transform: translateY(0.10em);
+    transform-origin: left top;
+}
+
 .WHITE { 
 	border: Black 1px solid; 
 	padding-left: 1px; 
