@@ -1307,7 +1307,7 @@
 		<!-- VOkV --> <td> <span class="bgYellow">hirtelen, erős</span> </td>
 		<!-- mvt --> <td style="text-align:left">
 			<li>feszül</li>
-			<li><details class="kerdes"><summary>Homans-tünet</summary>
+			<li><details><summary style="color:blue">(Homans-tünet)</summary>
 				<li>behajlított térdel, a lábfej dorsalflexiója során a thrombosis helyén a beteg fájdalmat jelez</li>
 			</details></li>
 		</td>
@@ -3055,7 +3055,8 @@ Orvosi dokumentáció helye és módja:
 	</ul>
 	<li><span class="midQ [12.5] kerdes">pozitív inotrópok</span></li>
 	<li><span class="midQ [12.6] kerdes">diuretikumok</span></li>
-	<li><span class="midQ [12.8] syno kerdes">vazodilatátorok | vérnyomáscsökkentők</span></li>
+	<li><span class="midQ [12.8] kerdes">vazodilatátorok</span></li>
+	<li><span class="midQ [12.26] syno kerdes">vérnyomáscsökkentők</span></li>
 	<li><span class="midQ [12.3]">izomra hatók</span></li><ul>
 		<li>simaizom ➜ <span class="syno">görcsoldók | spasmolyticum</span></li>
 		<li>hcs.izom ➜ centrális, perifériás</li><ul>
@@ -3379,7 +3380,7 @@ Orvosi dokumentáció helye és módja:
 		</td>
 		<td style="text-align:left"> <!-- thiazid diuretikumok -->
 			<li><span class="bgYellow"><u>hidroklorotiazid</u></span> [Hypothiazid] […]</li>
-			<li><span class="bgYellow"><u>indapamid</u></span> [Tertensif] [Rawel] […]</li>
+			<li><span class="bgYellow"><u>indapamid</u></span> [Natrilix] [Tertensif] [Rawel] […]</li>
 			<div><span class="plus">ind</span> <span class="midQ [8] bgBlue">hypertonia</span></div>
 			<div><span class="plus">ind</span> krónikus <span class="midQ [oedema] bgYellow">oedema</span>s állapotok (pl. SzE enyhébb formák) <abbr title="chatgpt">§</abbr></div>
 			<div><span class="plus">ind</span> <span class="midQ [20.13] bgYellow kerdes">nephrolithiasis</span> (<abbr title="mivel ↓Ca²⁺-ürítés">kalcium-oxalát</abbr>)</div>
@@ -3397,13 +3398,13 @@ Orvosi dokumentáció helye és módja:
 	  <b><span data-src="bel" class="midQ [44]">osteoporosis</span></b>
 		<div data-src="bel" class="imp [44.1]"></div>
 	</details>
-	<details class="[12.8] kerdes"><summary>vazodilatátorok = vérnyomáscsökkentők</summary>
+	<details class="[12.8] kerdes"><summary>vazodilatátorok</summary>
 	  <table><tr><th colspan="2">arteriola</th>  <th colspan="2">véna</th></tr><tr>
 		<th rowspan="2" class="vertical-text"> <span class="midQ [67.5.2]">afterload</span>-ot csökkentik </th>
 		<td style="text-align:left">
 		  <b><span class="bgBlue">Ca²⁺-csatornablokkolók</span><abbr title="Ca²⁺-antagonisták">'</abbr></b>
-			<li><span class="bgYellow"><u>amlo<b>dipin</b></u>, <u>nimo<b>dipin</b></u>, <u>nife<b>dipin</b></u></span>, stb.</li>
-			<li><span class="bgYellow"><u>verapamil</u>, <u>diltiazem</u></span></li>
+			<li>[Norvasc] <u>amlodipin</u>, [Lercadip] <u>lerkanidipin</u>, [Adalat] <u>nifedipin</u>, <u>nimodipin</u> stb.</li>
+			<li><u>verapamil</u>, <u>diltiazem</u></li>
 			<div><span class="plus">ind</span> <span class="midQ [8] bgYellow">hypertonia</span></div>
 			<div><span class="plus">ind</span> <span class="midQ [9] bgYellow">hipertenzív krízis</span></div>
 			<div><span class="plus">ind</span> <span data-src="szul" class="midQ [86] fsMini">terhességi hypertonia</span>, <span data-src="szul" class="midQ [99] fsMini">tocolysis</span></div>
@@ -3420,16 +3421,18 @@ Orvosi dokumentáció helye és módja:
 			<li>adható iv. / sublingualis</li>
 			<div><span class="plus">ind</span> <span class="bgYellow"><span class="midQ [67.5.7]">akut bal SzE</span> (<span class="midQ [oedema]">tüdőoedema</span>) - FelMO<b>N</b>D</span></div>
 			<div class="fsMini"><span class="minus">KI</span> jobb SZE</div>
-		  <b><span class="midQ [12.6] bgYellow"><u>furosemid</u></span></b> <abbr class="fsMini" title="sztem ez nem direkt venodilatátor, de valamiért itt volt a farmakban… chatgpt is azt mondta maradhat itt, ugyanis van elvileg gyors vénás tágító hatása">'</abbr>
+		  <b><span class="midQ [12.6] bgYellow"><u>furosemid</u></span></b> (ha iv!)
 		</td>
 		<th rowspan="2" class="vertical-text"> <span class="midQ [67.5.2]">preload</span>-ot csökkentik </th>
 	  </tr><tr>
 		<td colspan="2" style="text-align:left">
 		  <b><span class="bgBlue"><span class="midQ [2] kerdes">RAAS</span>-gátlók</b></span> (kivéve <span class="midQ [12.6] kerdes">aldoszteron antagonisták</span>)
-			<li><span class="bgBlue">ACE-gátlók</span><abbr title="nevében benne: angiotenzin(I➜II)-konvertáló enzim gátló">*</abbr> ➜ <span class="bgYellow"><u>capto<b>pril</b></u>, <u>lisino<b>pril</b></u>, <u>rami<b>pril</b></u></span>, stb.</li><ul>
+			<li><span class="bgBlue"><abbr title="nevében benne: angiotenzin(I➜II)-konvertáló enzim gátló">ACE-gátlók</abbr></span></li><ul>
+				<li><span class="bgBlue">[Coverex AS]</span> [Prenessa] <span class="bgYellow"><u>perindopril</u></span>, [Tritace] <u>ramipril</u>, [Renitec] <u>enalapril</u> stb. (pl. <u>captopril</u>, <u>lisinopril</u>)</li>
 				<div><span class="ORANGE">mh</span> <span class="bgYellow">száraz köhögés</span></div>
 			</ul>
 			<li><span class="bgBlue">ARB</span><abbr title="nevében benne: angiotenzin II receptor blokkoló">*</abbr> ➜ <span class="bgYellow"><u>lo<b>sartan</b></u>, <u>val<b>sartan</b></u>, <u>irbe<b>sartan</b></u></span>, stb.</li><ul>
+				<li>[Cozaar] <u>losartan</u>, [Diovan] valsartan, [Micardis] <u>telmisartan</u>, [Atacand] <u>candesartan</u></li>
 				<li>ACE-gátlók helyett adhatók</li>
 			</ul>
 			<li><span class="bgYellow">ARNI</span> ➜ kombinált: <u>valsartan</u>(ARB) + <u>sacubritil</u>(neprilysin blokkoló)</li><ul>
@@ -3532,7 +3535,7 @@ Orvosi dokumentáció helye és módja:
 		  <div><b>α<sub>1</sub>-antagonisták</b></div>
 			<li><u>urapidil</u> ➜ 5-HT1A receptor agonista is</li>
 			<div><span class="plus">ind</span> <span class="midQ [9] bgYellow">hipertenzív krízis</span> (<span data-src="neuro" class="midQ [89] fsMini">hipertenzív encephalopathia</span>, <span data-src="szul" class="midQ [86] fsMini">terhességi hypertonia - kiugró</span>)</div>
-			<li><u>doxazosin</u> [cardura]</li>
+			<li><u>doxazosin</u> [Cardura]</li>
 			<div><span class="plus">ind</span> hypertonia, <abbr title="benignus prosztata hyperplasia">BPH</abbr></div>
 		  <div><b>α<sub>2</sub>-agonisták</b></div>
 			<li><span class="fsMini"><abbr title="preszinaptikus membránon van és gátolja a neurotranszmitter felszabadulását">(preszinaptikus gátlás)</abbr></span></li>
@@ -4539,6 +4542,10 @@ Orvosi dokumentáció helye és módja:
 		</td>
 		<td> vér-agy gáton rosszul jut át <span class="fsMini">(szelektív perifériásak, minimális szedáció)</span> </td>
 	</tr></table></details>
+	<details class="[12.26] kerdes"><summary>vérnyomáscsökkentők = antihipertenzív szerek</summary>
+		<li><span class="midQ [12.8]">vazodilatátorok</span></li>
+		<li><span class="midQ [12.6]">thiazid diuretikumok</span></li>
+	</details>
 </div>
 <details class="[13] kerdes"><summary>TOXIKOLÓGIA</summary>
 	<span class="imp [13.1]"></span> <!-- általános -->
@@ -19645,8 +19652,8 @@ szélső vénája)
 <details class="[🩺8] kerdes"><summary>🩺 oxigénterápia</summary>
 	<div class="imp [46]"></div>
 </details>
-<details class="[🩺9] kerdes"><summary>🩺 vérgáz vizsgálat = vérgázanalízis</summary>
-  <div class="fsMini">vérgáz vizsgálat = vérgázanalízis = artériás vérvétel</div>
+<details class="[🩺9] kerdes"><summary>🩺 astrup</summary>
+  <div class="fsMini">vérgáz vizsgálat = vérgázanalízis = artériás vérvétel = astrup</div>
 	<details class="[🩺9.1] kerdes"><summary>🩺 elvégzése</summary>
 		<span class="video" data-width="40%" data-src="ARTÉRIÁS VÉR MINTAVÉTELE, LÉGÚTI LESZÍVÁS [j_-pY-3R46I].mp4"></span>
 		<li>punctio leggyakoribb helye ➜ a.radialis/brachialis/ulnaris</li>
@@ -21698,6 +21705,12 @@ tetanusz elfelejtése
 		<div class="imp [12.6]"></div>
 	</details>
   <!-- vérnyomáscsökkentők -->
+	<details class="kerdes"><summary>asd</summary>
+		<div class="imp [12.26]"></div>
+	</details>
+	<details class="kerdes"><summary>asd</summary>
+		<div class="imp [12.26]"></div>
+	</details>
   <!-- alvadásgátlók -->
 	<details class="kerdes"><summary><span class="bgPink">majd gyűjtsem még, pl. vérnyomáscsökkentők</span></summary>
 		<li></li>
@@ -24034,7 +24047,7 @@ tetanusz elfelejtése
 		<div class="imp [16]"></div>
 	</details>
 </details>
-<details open><summary class="mainTitle">FiVi</summary>
+<details><summary class="mainTitle">FiVi</summary>
 	<details class="kerdes"><summary class="bgPink">negatív státusz</summary>
 		<span class="img" data-src="xdvxwiyi.webp"></span>
 		<li>Kp. fejlett beteg</li>
@@ -24048,7 +24061,7 @@ tetanusz elfelejtése
 		<li>...</li>
 		<span class="img" data-src="zojmlvih.webp"></span>
 	</details>
-	<details open class="open"><summary class="status">belgyogy</summary> <div class="imp [FiVi]"></div> </details>
+	<details class="open"><summary class="status"><span class="bgPink">bel</span>gyogy</summary> <div class="imp [FiVi]"></div> </details>
 	<details class="open"><summary class="status">EKG</summary> <div class="imp [7]"></div> </details>
 	<details class="open"><summary class="phase">IF - tüdő</summary>
 		<details class="kerdes open"><summary>🔊 tüdőhallgatózás <!-- sípoló/búgó v1 --></summary>
@@ -25159,6 +25172,44 @@ tetanusz elfelejtése
 	</details>
 </details>
 
+<details><summary class="status">gastro</summary>
+	<details class="kerdes"><summary>immobilizáció szövődményei</summary>
+	  <div class="fsMini">pl. osztályon ágyon fekvés!</div>
+		<li>1) pneumonia (pangásos)</li>
+		<li>2) <span class="midQ [61.1]">thrombosis (vénás)</span></li>
+		<li>3) decubitus</li>
+	</details>
+</details>
+
+<div class="imp [📝4]"></div> <!-- gyógyszernevek -->
+
+
+<span class="minus">
+thiazid/thiazidszerű diuretikumok
+- Hygroton, 
+- Esidrex
+Béta-blokkolók
+- Concor,
+- Nebilet,
+- Betaloc ZOK
+
+LMWH 
+- Clexane, 
+- Fraxiparine
+- Fragmin
+UFH (nem frakcionált heparin)
+- Heparin Braun, Heparin Leo
+Kumarinok (K-vitamin-antagonisták)
+- Syncumar, Marfarin
+NOAC/DOAC – Xa-gátlók
+- Xarelto, Eliquis, Lixiana
+NOAC/DOAC – direkt trombin-gátló
+- Pradaxa
+Thrombocytaaggregáció-gátlók (TAG)
+- Aspirin Protect, Plavix, Brilique
+
+</span>
+
 <!----><details><summary class="mainTitle">1. részvizsga</summary>
 <details class="open"><summary class="status">Toxikológiai alapismeretek, általános tennivalók, a detoxikálás lehetőségei, módszerei</summary>
 	<details class="kerdes"><summary><b>Toxikológiai alapismeretek</b>, általános tennivalók, a detoxikálás lehetőségei, módszerei</summary>
@@ -26239,7 +26290,7 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 	<li><span data-src="neuro" class="midQ [84]">myopathiak - kép!</span></li>
 <!----></details>
 
-<!----><details open><summary class="mainTitle">álmodból felkelve is…</summary>
+<!----><details><summary class="mainTitle">álmodból felkelve is…</summary>
 	<li><span class="imp [46]"></span></li> <!-- légútbiztosítások, lélegeztetések -->
 	<li><span class="imp [60]"></span></li> <!-- légzési elégtelenség -->
 	<li><span class="imp [a14]"></span></li> <!-- epilepszia … epilepsziás roham … status epilepticus -->
