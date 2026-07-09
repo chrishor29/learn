@@ -3055,8 +3055,9 @@ Orvosi dokumentáció helye és módja:
 	</ul>
 	<li><span class="midQ [12.5] kerdes">pozitív inotrópok</span></li>
 	<li><span class="midQ [12.6] kerdes">diuretikumok</span></li>
-	<li><span class="midQ [12.8] kerdes">vazodilatátorok</span></li>
-	<li><span class="midQ [12.26] syno kerdes">vérnyomáscsökkentők</span></li>
+	<li><span class="midQ [12.26] syno kerdes">vérnyomáscsökkentők</span></li><ul>
+		<li><span class="midQ [12.8] kerdes">vazodilatátorok</span></li>
+	</ul>
 	<li><span class="midQ [12.3]">izomra hatók</span></li><ul>
 		<li>simaizom ➜ <span class="syno">görcsoldók | spasmolyticum</span></li>
 		<li>hcs.izom ➜ centrális, perifériás</li><ul>
@@ -3411,8 +3412,11 @@ Orvosi dokumentáció helye és módja:
 		  <b><u>hydralazin</u></b>
 			<div><span class="plus">ind</span> <span data-src="szul" class="midQ [86] fsMini">terhességi hypertonia - kiugró</span></div>
 		  <b><span class="midQ [12.9]">szimpatolítikumok</span></b>
-			<li>α₁-antagonista</li>
-			<li>α₂-agonista</li>
+			<li>α<span class="sub">1</span>-antagonista</li>
+			<li>centralisan hatók</li><ul>
+				<li>α<span class="sub">2</span>-agonista</li>
+				<li>I<span class="sub">1</sub>-agonista</li>
+			</ul>
 			<li><span class="fsMini">β-blokkolók ➜ <u>carvedilol</u>, <u>nebivolol</u> (<abbr title="alapból ugye betablokkolók mindkettőre hatnak, de ezek artériákra még külön is">artériás</abbr> direktbe is)</span></li>
 		</td>
 		<td style="text-align:left">
@@ -3431,8 +3435,8 @@ Orvosi dokumentáció helye és módja:
 				<li><span class="bgBlue">[Coverex AS]</span> [Prenessa] <span class="bgYellow"><u>perindopril</u></span>, [Tritace] <u>ramipril</u>, [Renitec] <u>enalapril</u> stb. (pl. <u>captopril</u>, <u>lisinopril</u>)</li>
 				<div><span class="ORANGE">mh</span> <span class="bgYellow">száraz köhögés</span></div>
 			</ul>
-			<li><span class="bgBlue">ARB</span><abbr title="nevében benne: angiotenzin II receptor blokkoló">*</abbr> ➜ <span class="bgYellow"><u>lo<b>sartan</b></u>, <u>val<b>sartan</b></u>, <u>irbe<b>sartan</b></u></span>, stb.</li><ul>
-				<li>[Cozaar] <u>losartan</u>, [Diovan] valsartan, [Micardis] <u>telmisartan</u>, [Atacand] <u>candesartan</u></li>
+			<li><abbr title="angiotenzin II receptor blokkoló"><span class="bgBlue">ARB</span></abbr></li><ul>
+				<li>[Cozaar] <u>losartan</u>, [Diovan] <u>valsartan</u>, [Micardis] <u>telmisartan</u>, [Atacand] <u>candesartan</u>, <u>irbesartan</u> stb.</li>
 				<li>ACE-gátlók helyett adhatók</li>
 			</ul>
 			<li><span class="bgYellow">ARNI</span> ➜ kombinált: <u>valsartan</u>(ARB) + <u>sacubritil</u>(neprilysin blokkoló)</li><ul>
@@ -3536,12 +3540,17 @@ Orvosi dokumentáció helye és módja:
 			<li><u>urapidil</u> ➜ 5-HT1A receptor agonista is</li>
 			<div><span class="plus">ind</span> <span class="midQ [9] bgYellow">hipertenzív krízis</span> (<span data-src="neuro" class="midQ [89] fsMini">hipertenzív encephalopathia</span>, <span data-src="szul" class="midQ [86] fsMini">terhességi hypertonia - kiugró</span>)</div>
 			<li><u>doxazosin</u> [Cardura]</li>
-			<div><span class="plus">ind</span> hypertonia, <abbr title="benignus prosztata hyperplasia">BPH</abbr></div>
+			<div><span class="plus">ind</span> <abbr title="benignus prosztata hyperplasia">BPH</abbr></div>
+			<div><span class="plus">ind</span> <span class="midQ [8]">hypertonia</span>, ha alapra rezisztens / kiegészítő kell</div>
 		  <div><b>α<sub>2</sub>-agonisták</b></div>
 			<li><span class="fsMini"><abbr title="preszinaptikus membránon van és gátolja a neurotranszmitter felszabadulását">(preszinaptikus gátlás)</abbr></span></li>
-			<li><u>methyldopa</u></li>
+			<li><u>clonidin</u></li>
 			<div><span class="plus">ind</span> <span class="midQ [9] bgYellow">hipertenzív krízis</span></div>
+			<li><u>methyldopa</u></li>
 			<div><span class="plus">ind</span> <span data-src="szul" class="midQ [86] fsMini">terhességi hypertonia</span></div>
+		  <div><b><abbr title="imidazolin">I</abbr>1R-agonisták</b></div>
+			<li><span class="bgYellow">[Moxonidin-ratiopharm] <u>moxonidin</u></span></li>
+			<div><span class="plus">ind</span> <span class="midQ [8]">hypertonia</span>, ha alapra rezisztens / kiegészítő kell</div>
 		</td>
 	  </tr><tr>
 		<th>paraszimpatomimetikum-ok</th>
@@ -21601,19 +21610,19 @@ tetanusz elfelejtése
 </details>
 <details class="[📝4] title"><summary>📝 GYÓGYSZERNEVEK (alapok)</summary>
   <!-- BDZ -->
-	<details class="kerdes"><summary>xanax</summary>
+	<details class="kerdes"><summary>Xanax</summary>
 		<div class="imp [13.12]"></div> <!-- altatók -->
 	</details>
-	<details class="kerdes"><summary>frontin</summary>
+	<details class="kerdes"><summary>Frontin</summary>
 		<div class="imp [13.12]"></div> <!-- altatók -->
 	</details>
-	<details class="kerdes"><summary>rivotril</summary>
+	<details class="kerdes"><summary>Rivotril</summary>
 		<div class="imp [13.12]"></div> <!-- altatók -->
 	</details>
-	<details class="kerdes"><summary>seduxen</summary>
+	<details class="kerdes"><summary>Seduxen</summary>
 		<div class="imp [13.12]"></div> <!-- altatók -->
 	</details>
-	<details class="kerdes"><summary>válium</summary>
+	<details class="kerdes"><summary>Valium</summary>
 		<div class="imp [13.12]"></div> <!-- altatók -->
 	</details>
   <!-- NSAID -->
@@ -21644,7 +21653,7 @@ tetanusz elfelejtése
 		<div class="imp [12.16]"></div>
 	</details>
   <!-- mix -->
-	<details class="kerdes"><summary>cavinton</summary>
+	<details class="kerdes"><summary>Cavinton</summary>
 		<li><span class="bgYellow">agyi keringésfokozó</span> (agyban: vazodilatáció + O2- és flükózfelvétel stb.)</li>
 		<div><span class="plus">ind</span> [neuro] krónikus cerebovascularis betegség <span class="bgPink">[link]</span></div>
 		<div><span class="plus">ind</span> [neuro] ischaemias stroke utáni állapot <span class="bgPink">[link]</span></div>
@@ -21704,12 +21713,42 @@ tetanusz elfelejtése
 	<details class="kerdes"><summary>Rawel</summary>
 		<div class="imp [12.6]"></div>
 	</details>
-  <!-- vérnyomáscsökkentők -->
-	<details class="kerdes"><summary>asd</summary>
-		<div class="imp [12.26]"></div>
+  <!-- vazodilatátorok -->
+	<details class="kerdes"><summary>Norvasc</summary>
+		<div class="imp [12.8]"></div>
 	</details>
-	<details class="kerdes"><summary>asd</summary>
-		<div class="imp [12.26]"></div>
+	<details class="kerdes"><summary>Lercadip</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Adalat</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Coverex AS</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Tritace</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Renitec</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Cozaar</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Diovan</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Micardis</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Atacand</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Cardura</summary>
+		<div class="imp [12.8]"></div>
+	</details>
+	<details class="kerdes"><summary>Moxonidin</summary>
+		<div class="imp [12.8]"></div>
 	</details>
   <!-- alvadásgátlók -->
 	<details class="kerdes"><summary><span class="bgPink">majd gyűjtsem még, pl. vérnyomáscsökkentők</span></summary>
