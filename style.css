@@ -95,22 +95,24 @@ summary.status {
 
 }
 
-li { 
-	margin-left: 0px;
-	padding-left: 12px;
-}
-ul, ol { 
-	list-style: none;
-	margin-left: -25px; /* annyira nem kell beljebb a következőt */
-	margin-top: 0; /* fölötte ne legyen hej */
-	margin-bottom: 0; /* alatta ne legyen hej */
-}
-li::before {
-	content: "•";
-	margin-right: 4px;
-	margin-left: -12px;
+li {
+    margin-left: 0;
+    padding-left: 12px;
+    position: relative;
 }
 
+ul, ol {
+    list-style: none;
+    margin-left: -25px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
 
 video{
 	border-bottom: 5px solid black;
