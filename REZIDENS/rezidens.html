@@ -3088,6 +3088,7 @@ Orvosi dokumentáció helye és módja:
 	</ul>
 	<li><span class="midQ [12.14] kerdes">status epilepticus kezelése</span></li>
 	<li><span class="midQ [13.12] kerdes">barbiturát-ok, BDZ-k</span></li>
+	<li><span class="midQ [58.4] kerdes">orális antidiabetikumok</span></li>
 	<li><span class="midQ [48.1] kerdes">antiarrhythmias szerek</span></li>
 	<li><details class="kerdes"><summary class="bgPink"><b>pszichiátria</b></summary>
 		<span data-src="psy" class="imp [15.1]"></span> <!-- antipszichotikumok -->
@@ -3099,11 +3100,12 @@ Orvosi dokumentáció helye és módja:
  </details><div>
 	<details class="[12.1] kerdes"><summary>dyslipidaemia</summary>
 		<li><span class="bgBlue">statin-ok</span> ➜ <span class="bgYellow">koleszterin szintézist gátolja</span></li><ul>
+			<div>💊 [Sortis] [Torvacard] <u>atorvastatin</u>, [Crestor] <u>rosuvastatin</u></div>
 			<div><span class="plus">ind</span> <span class="midQ [8] kerdes">hypertonia</span> esetében is rutinszerű</div>
 			<div><span class="ORANGE">mh</span> <span class="midQ [45.1] kerdes">rhabdomyolysis</span></div>
 		</ul>
-		<li><span class="bgYellow"><u>ezetimib</u></span> ➜ <span class="bgYellow">koleszterin felvételt gátolja a bélben</span></li>
-		<li><span class="bgYellow">fibrát-ok</span> ➜ hypertrigliceridaemia: TG>10mM, akut pancreatitis megelőzése </li>
+		<li><span class="bgYellow"><u>ezetimib</u></span> [Ezetrol] ➜ <span class="bgYellow">koleszterin felvételt gátolja a bélben</span></li>
+		<li><span class="bgYellow">fibrát-ok</span> ➜ hypertrigliceridaemia: TG>10mM, akut pancreatitis megelőzése</li>
 	  <!-- other --> <div class="fsMini">
 		<span class="midQ [39] WHITE"><b>dyslipidaemia</b></span>
 	  </div>
@@ -3380,7 +3382,7 @@ Orvosi dokumentáció helye és módja:
 			<div><span class="ORANGE">mh</span> <span class="midQ [50.4] kerdes fsMini">hypoCa²⁺</span> (enyhe)</div>
 		</td>
 		<td style="text-align:left"> <!-- thiazid diuretikumok -->
-			<li><span class="bgYellow"><u>hidroklorotiazid</u></span> [Hypothiazid] […]</li>
+			<li><span class="bgYellow"><u>hidroklorotiazid</u></span> [Hypothiazid] [Esidrex] […]</li>
 			<li><span class="bgYellow"><u>indapamid</u></span> [Natrilix] [Tertensif] [Rawel] […]</li>
 			<div><span class="plus">ind</span> <span class="midQ [8] bgBlue">hypertonia</span></div>
 			<div><span class="plus">ind</span> krónikus <span class="midQ [oedema] bgYellow">oedema</span>s állapotok (pl. SzE enyhébb formák) <abbr title="chatgpt">§</abbr></div>
@@ -3636,12 +3638,14 @@ Orvosi dokumentáció helye és módja:
 		<th><span class="bgBlue">ARTÉRIÁS</span> (fehér thrombus)<abbr title="OLDALON HATNAK">'</abbr></th>
 	  </tr><tr>
 		<!-- alvadásgátlók -->
-		<td class="fsMini" style="text-align:left"> <center><b>inaktiváló típusúak</b></center>
+		<td class="fsMini" style="text-align:left"> <center>inaktiváló típusúak</center>
 			<li>heparin származékok</li><ul>
-				<li><span class="bgBlue"><u><span class="syno">heparin | UFH</span></u></span> ➜ csak iv., gyorsabb hatás (monitorozás kell: aPTT & thr)</li>
-				<li><span class="bgBlue"><u>LMWH</u></span> ➜ iv./sc.</li>
+				<li><span class="bgBlue"><abbr title="unfrakcionált heparin"><u>UFH</u></abbr> [heparin]</span> ➜ <span class="bgYellow"><abbr title="intravénásan adható">IV</abbr></span>, gyorsabb hatás (monitorozás kell: aPTT & thr)</li>
+				<li><span class="bgBlue">LMWH</span> ➜ <span class="bgYellow">IV/SC</span></li><ul>
+					<li><span class="bgYellow"><u>enoxaparin</u> [Clexane]</span> <u>nadroparin</u> [Fraxiparine] <u>dalteparin</u> [Fragmin]</li>
+				</ul>
 			</ul>
-			<li>pentaszacharidok ➜ pl. <u>fondaparinux</u></li>
+			<li>pentaszacharidok ➜ pl. <u>fondaparinux</u> [Arixtra]</li>
 			<li><span class="midQ [61.2] syno bgYellow">antithrombin | AT-III</span> aktivitását fokozzák, ami <span class="bgYellow">inaktiválja</span> a <span class="bgYellow">trombin(II)</span>-t és <span class="bgYellow">X faktort</span></li><ul>
 				<span class="fsMini">thrombin inaktiválás ➜ UFH erősen, LMWH alig, pentaszacharid nem</span>
 			</ul>
@@ -3681,19 +3685,16 @@ Orvosi dokumentáció helye és módja:
 			  <span class="fsMini bgPink">arra nem tértem ki melyiknél melyiket</span>
 			</details>
 		</td>
-		<td class="fsMini" style="text-align:left"> <center><b>KVA = K-vitamin antagonisták </b></center>
-			<li><span class="bgBlue"><u>kumarin</u></span><abbr title="hatóanyag">*</abbr></li><ul>
-				<li><span class="bgYellow">syncumar</span><abbr title="gyógyszernév">*</abbr> (<u>acenokumarol</u>)</li>
-				<li><span class="bgYellow">warfarin</span><abbr title="gyógyszernév">*</abbr> (<u>4-hidroxikumarin</u>)</li>
-			</ul>
-			<li>K-vitamin függő alvadási faktorok - <abbr title="megj.tipp ➜ 3,7,9,10 = psy agyidegmagok">II,VII,IX,X</abbr> - szintézisét gátolják</li>
-			<li>orálisan adhatók</li>
+		<td class="fsMini" style="text-align:left"> <center>KVA = K-vitamin antagonisták</center>
+			<div>💊 <span class="bgBlue"><abbr title="(4-hidroxikumarin)">kumarin</abbr>-származékok</span> ➜ <span class="bgYellow">[Syncumar]</span> (<u>acenokumarol</u>, <span class="bgYellow">[Marfarin]</span> (<u>warfarin</u>)</div>
+			<li><span class="bgYellow">K-vitamin függő alvadási faktorok - <abbr title="megj.tipp ➜ 3,7,9,10 = psy agyidegmagok">II,VII,IX,X</abbr> - szintézisét gátolják</span></li>
+			<li><span class="bgYellow"><abbr title="per os">PO</abbr></span></li>
 			<li>cél ➜ <span class="bgYellow"><span class="midQ [16.3]">INR</span>: 2-3 között legyen</span> ➜ függ sok mindentől<span class="bgYellow">(pl. albumin!)</span>, így időközönként <span class="bgYellow">vissza kell járni ellenőrzésre</span></li>
 			<div><span class="plus">ind</span> mechanikus műbillentyű</div>
 		</td>
 		<td class="fsMini" style="text-align:left"> <center><b><abbr title="új típusú orális antikoagulánsok">NOAC</abbr> = <abbr title="direkt orális antikoagulánsok">DOAC</abbr></b></center>
-			<li><span class="bgBlue"><u>dabigatran</u></span> ➜ direkt trombin gátló</li>
-			<li><span class="bgBlue"><u>apixaban</u>, <u>rivaroxaban</u></span>, <span class="bgYellow"><u>edoxaban</u></span> ➜ direkt Xa-t gátlók</li>
+			<div>💊 direkt Xa gátlók ➜ <span class="bgYellow">[Eliquis] <u>apixaban</u></span>, [Xarelto] <span class="bgYellow"><u>rivaroxaban</u></span>, [Lixiana] <u>edoxaban</u></div>
+			<div>💊 direkt trombin gátló ➜ <span class="bgYellow">[Pradaxa] <u>dabigatran</u></span></div>
 			<div><span class="plus">ind</span> <span class="midQ [56] bgBlue">pitvarfibrilláció</span>: <span data-src="neuro" class="midQ [371.4] kerdes">stroke</span> prevenció</div>
 			<div><span class="plus">ind</span> <span class="midQ [26] kerdes bgYellow">MVT</span> (ha nem terhes)</div>
 			<div><span class="minus">KI</span> mechanikus műbillentyű, terhesség, <span class="midQ [57]">hosszútávú keringéstámogatók</span></div>
@@ -3709,8 +3710,8 @@ Orvosi dokumentáció helye és módja:
 		<!-- TAG -->
 		<td rowspan="3" class="fsMini" style="text-align:left">
 			<span class="img" data-float="none" data-max-width="99%" data-src="pmscytsw.webp"></span>
-			<li><span class="bgBlue"><u>clopidogrel</u>, <u>prasugrel</u>, <u>ticagrelor</u></span> <abbr title="(P2Y-receptor gátlók (➜ ADP nem tud kötődni))">*</abbr></li>
-			<li><span class="bgBlue"><span class="midQ [12.21]"><u>ASA</u></span>(Aszpirin) /dózis:80mg/</span> <abbr title="(COX-gátlók (➜ TXA<sub>2</sub> csökken))">*</abbr></li>
+			<div>💊 <abbr title="(P2Y-receptor gátlók (➜ ADP nem tud kötődni))">*</abbr> <span class="bgBlue">[Plavix] <u>clopidogrel</u>, <u>prasugrel</u>, [Brilique] <u>ticagrelor</u></span></div>
+			<div>💊 <abbr title="(COX-gátlók (➜ TXA<sub>2</sub> csökken))">*</abbr> <span class="bgBlue"><span class="midQ [12.21]"><u>ASA</u></span> [Aspirin Protect] /dózis:80mg/</span></div>
 			<li>(GpIIb/IIIa-gátlók)</li>
 		  <b>indikáció</b> ➜ arteriás thromboembóliás események profilaxisa
 			<div><span class="plus">ind</span> coronariabetegség(<span class="midQ [67.2]">ISZB</span>)</div><ul>
@@ -13283,29 +13284,29 @@ Orvosi dokumentáció helye és módja:
 <details class="[41] kerdes"><summary>obliteráció<abbr title="nem mindig okklúzív">'</abbr> ellen<abbr title="néha profilaktikus (pl. gyógyszer - TAG)">'</abbr> (mvt,tüdőembolia,végtagischaemia,stroke)</summary>
 	<div>alábbiak kezelése hasonló ➜ <span class="midQ [26]">MVT</span>, <span class="midQ [22]">tüdőembólia</span>, <span data-src="neuro" class="midQ [371.4]">stroke</span>, <span class="midQ [26]">végtagischaemiak</span> ➜ egybe szedtem</div>
   <b>gyógyszeres</b>
-	<li><span class="bgBlue">tartós</span> ➜ összes, kivéve stroke:</li><ul>
-		<li>antikoaguláns</li><ul>
-			<li><span class="bgBlue"><span class="midQ [12.13] kerdes">heparin</span> (LMWH / UFH) ➜ tüdőembólia, akut kritikus VI(infarktus)</span></li><ul>
-				<span class="fsMini">LMWH ➜ MVT ha terhes</span>
-			</ul>
-			<li><span class="bgBlue"><span class="midQ [12.13] kerdes">NOAC</span> ➜ MVT</span></li>
-		</ul>
-		<li><span class="bgBlue"><span class="midQ [12.13]">TAG</span> ➜ krónikus VI</span></li><ul>
-			<span class="fsMini">itt a thrombosis kialakulásában a thrombocytak a jelentősek (nem a koagulánsok)</span>
-		</ul>
+  <li><span class="bgBlue">akut</span> (néhány nap):</li>
+	<div><span class="plus">ind</span> <span class="bgYellow">ha akut kritikus VI ➜ <span class="midQ [12.13]">UFH</span></span></div>
+	<div><span class="plus">ind</span> <span class="bgYellow">ha MVT, tüdőembólia ➜ UFH / LMWH</span></div>
+  <li><span class="bgBlue">fenntartó</span></li>
+	<div><span class="plus">ind</span> <span class="bgYellow">ha MVT ➜ NOAC</span></div><ul>
+		<li><span class="bgYellow">helyette LMWH ➜ pl. terhes, alacsony GFR</span></li>
 	</ul>
-	<li><span class="bgBlue"><span class="midQ [61.2]"><span class="syno">thrombo | fibrino</span>lysis</span><abbr title="ez is gyógyszeres">'</abbr> ➜ összes, kivéve krónikus VI</span></li><ul>
-		<li><span class="bgYellow">vérzés kockázattal jár</span> ➜ pl. stroke / GI-vérzés</li><ul>
-			<span class="fsMini">pl. <abbr title="tehát MVT esetében a stroke-ra az esély ➜ fibrinolysis - 2% / antikoaguláns(NOAC) - 0.6%">MVT esetében</abbr> a stroke esélye 2%, míg antikoaguláns esetben 0,6%</span>
-		</ul>
-		<div><span class="minus">KI</span> ➜ alvadászavar, hipertónia, stb.</div>
+	<div><span class="plus">ind</span> <span class="bgYellow">ha krónikus VI ➜ TAG</span></div><ul>
+		<span class="fsMini">itt a thrombosis kialakulásában a thrombocytak a jelentősek (nem a koagulánsok)</span>
 	</ul>
+	<li><span class="midQ [61.2] bgBlue"><span class="syno">thrombo | fibrino</span>lysis</span> (<u>altepláz</u>)</li>
+	<div><span class="plus">ind</span> <span class="bgYellow">ha tüdőembólia (instabil)</span></div>
+	<div><span class="plus">ind</span> <span class="bgYellow">stroke</span> (ischaemias és időablakon belül)</div>
+	<div><span class="ORANGE">mh</span> ➜ <span class="bgYellow">vérzés kockázattal jár</span> ➜ pl. stroke / GI-vérzés</div><ul>
+		<span class="fsMini">pl. <abbr title="tehát MVT esetében a stroke-ra az esély ➜ fibrinolysis - 2% / antikoaguláns(NOAC) - 0.6%">MVT esetében</abbr> a stroke esélye 2%, míg antikoaguláns esetben 0,6%</span>
+	</ul>
+	<div><span class="minus">KI</span> ➜ alvadászavar, hypertonia, stb.</div>
   <b>sebészi</b>
-	<li><span class="bgBlue"><span class="syno">thromb | embol</span>ectomia</span> (nyitott műtét / <span class="syno">endovascularis | katéteres</span> <span class="img mini" data-src="jokgpmor.webp"></span>) ➜ <span class="bgBlue">összes, kivéve krónikus VI</span></li>
-	<li><span class="bgBlue">bypass</span> (nyitott műtét) ➜ <span class="bgBlue">VI</span> (főleg krónikus)</li>
-  <b>protokoll kb.</b>
-	<li><span class="bgBlue">ha enyhe +/ profilaxis ➜ tartós gyógyszeres</span></li>
-	<li><span class="bgBlue">ha nem elég ➜ thrombolysis / bypass / -ectomia</span></li>
+  <li><span class="bgBlue"><span class="syno">thromb | embol</span>ectomia</span> (nyitott műtét / <span class="syno">endovascularis | katéteres</span> <span class="img mini" data-src="jokgpmor.webp"></span>)</li>
+	<div><span class="plus">ind</span> <span class="bgYellow">akut kritikus VI</span></div>
+	<div><span class="plus">ind</span> <span class="fsMini">(ritkán, ha súlyos) stroke, MVT, tüdőembolia</span></div>
+  <li><span class="bgBlue">bypass</span> (nyitott műtét)</li>
+	<div><span class="plus">ind</span> <span class="bgYellow">krónikus VI</span></div>
 </details>
 <details class="[42] kerdes"><summary>koponya trauma</summary>
   <b>koponyacsont törések</b>
@@ -16389,21 +16390,33 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 	</details>
 	<details class="[58.4] kerdes"><summary>orális antidiabetikumok</summary>
 	  <div><b>inzulinrezisztenciát csökkentők</b> pl.</div>
-		<li>biguanidok pl. <u>metformin</u> ➜ <span class="ORANGE">mh</span> <span class="midQ [52] bgYellow">laktacidózis</span> (<span class="midQ [58.3]">akut</span>) ➜ ritka, de nagyon fontos!</li>
-		<li>thiazolidindion-ok ➜ <span class="minus">KI</span> <span class="midQ [67.5]">SzE</span></li>
-	  <div><b>inzulinszekréciót fokozók</b> pl.</div>
-		<li>sulfonylurea-k ➜ <span class="ORANGE">mh</span> <span class="midQ [58.3]">hypoglycaemia</span></li>
-		<li>glinid-ek ➜ <span class="ORANGE">mh</span> <span class="midQ [58.3]">hypoglycaemia</span></li>
-	  <div><b>egyéb</b> pl.</div>
-		<li><abbr title="Na-glükóz kotranszporter">SGLT2</abbr>-gátlók ➜ vese <span class="midQ [20.7.1] kerdes">proximalis tubulus</span>aiban gátlódik a visszaszívás</li><ul>
-			<div><span class="ORANGE">mh</span> UTI</div>
-			<div><span class="ORANGE">mh</span> diuretikus (preload↓) <span class="fsMini">(de nem sorolandó <span class="midQ [12.6]">diuretikumok</span> közé)</span></div><ul>
-				<div><span class="plus">ind</span> <span class="midQ [67.5.7]">krónikus SzE</span></div>
-			</ul>
+		<div>💊 <abbr title="biguanidok pl. metformin">'</abbr><span class="bgBlue"><u>metformin</u></span> [Merckformin]</div><ul>
+			<div><span class="ORANGE">mh</span> <span class="bgYellow">hasmenés</span></div>
+			<div><span class="ORANGE">mh</span> <span class="midQ [52] bgYellow">laktacidózis</span> (<span class="midQ [58.3]">akut</span>) ➜ ritka, de nagyon fontos!</div>
 		</ul>
-		<li>DPP-4 gátlók ➜ gliptin-ek (pl. <u>sita<span class="bgYellow">gliptin</span></u> [xelevia], <u>saxa<span class="bgYellow">gliptin</span></u>, <u>linagliptin</u>, <u>vildagliptin</u>, <u>alogliptin</u>)</li><ul>
+		<div>💊 thiazolidindion-ok</div><ul>
+			<div><span class="minus">KI</span> <span class="midQ [67.5]">SzE</span></div>
+		</ul>
+	  <div><b>inzulinszekréciót fokozók</b></div>
+		<div>💊 <span class="bgYellow">sulfonylurea</span>-k ➜ pl. <u>gliclazid</u> [Diaprel]</div><ul>
+			<div><span class="ORANGE">mh</span> <span class="midQ [58.3]">hypoglycaemia</span></div>
+		</ul>
+		<div>💊 glinid-ek</div><ul>
+			<div><span class="ORANGE">mh</span> <span class="midQ [58.3]">hypoglycaemia</span></div>
+		</ul>
+		<div>💊 inkretin analógok = GLP-1<span class="sub">R</sub>-agonisták (glutidok) ➜ <u>semaglutid</u> [Ozempic]</div><ul>
+			<li>PO / SC <abbr title="ugyanis a többi mind orális AD, ez viszont alapvetően SC, csak az egyik adható PO is">(ez kivétel)</abbr></li>
 			<li>inkretinek <span class="fsMini">(pl. GLP-1, GIP)</span> ➜ bélbe kerülő táplálék (főleg a szénhidrát és zsír) hatására szekretálódnak. A pancreasban gátolják a glukagon- és fokozzák az inzulinelválasztást, lassítják a gyomorürülést és fokozzák a jóllakottság-érzést</li>
-			<li>DDP-4 ➜ inkretint lebontó enzim</li>
+		</ul>
+		<div>💊 <span class="bgYellow">gliptin-ek</span> pl. <u>sitagliptin</u> [Xelevia] [Januvia], <u>saxagliptin</u>, <u>linagliptin</u>, <u>vildagliptin</u></div><ul>
+			<li>DPP-4 gátlók ➜ DDP-4:inkretint lebontó enzim</li>
+		</ul>
+	  <div><b>egyéb</b></div>
+		<div>💊 gliflozinok ➜ pl. <u>empagliflozin</u> [Jardiance]</div><ul>
+			<li><abbr title="Na-glükóz kotranszporter">SGLT2</abbr>-gátlók ➜ vese <span class="midQ [20.7.1] kerdes">proximalis tubulus</span>aiban gátlódik a visszaszívás</li>
+			<div><span class="ORANGE">mh</span> UTI</div>
+			<div><span class="ORANGE">mh</span> diuretikus (preload↓) <span class="fsMini">(de nem sorolandó <span class="midQ [12.6]">diuretikumok</span> közé)</span></div>
+			<div><span class="plus">ind</span> <span class="midQ [67.5.7]">krónikus SzE</span></div>
 		</ul>
 	  <!-- FORRÁSOK --> <hr><div>
 		<abbr title="tételek">§</abbr>
@@ -21751,13 +21764,36 @@ tetanusz elfelejtése
 		<div class="imp [12.8]"></div>
 	</details>
   <!-- vérhigítók -->
-	<details class="kerdes"><summary>asd</summary>
-		<div class="imp [12.13]"></div>
-	</details>
-  <!-- dyslipidaemia, antidiabetikum -->
-	<details class="kerdes"><summary><span class="bgPink">majd gyűjtsem még, pl. vérhigítók</span></summary>
-		<li></li>
-	</details>
+	<details class="kerdes"><summary>Arixtra</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Clexane</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Fraxiparine</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Fragmin</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Syncumar</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Marfarin</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Xarelto</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Eliquis</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Lixiana</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Pradaxa</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Aspirin Protect</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Plavix</summary> <div class="imp [12.13]"></div> </details>
+	<details class="kerdes"><summary>Brilique</summary> <div class="imp [12.13]"></div> </details>
+  <!-- dyslipidaemia -->
+	<details class="kerdes"><summary>Sortis</summary> <div class="imp [12.1]"></div> </details>
+	<details class="kerdes"><summary>Torvacard</summary> <div class="imp [12.1]"></div> </details>
+	<details class="kerdes"><summary>Crestor</summary> <div class="imp [12.1]"></div> </details>
+	<details class="kerdes"><summary>Ezetrol</summary> <div class="imp [12.1]"></div> </details>
+  <!-- antidiabetikum -->
+	<details class="kerdes"><summary>Merckformin</summary> <div class="imp [58.4]"></div> </details>
+	<details class="kerdes"><summary>Diaprel</summary> <div class="imp [58.4]"></div> </details>
+	<details class="kerdes"><summary>Xelevia</summary> <div class="imp [58.4]"></div> </details>
+	<details class="kerdes"><summary>Januvia</summary> <div class="imp [58.4]"></div> </details>
+	<details class="kerdes"><summary>Jardiance</summary> <div class="imp [58.4]"></div> </details>
+	<details class="kerdes"><summary>Ozempic</summary> <div class="imp [58.4]"></div> </details>
+  
+  <!-- Béta-blokkolók -->
+- Concor,
+- Nebilet,
+- Betaloc ZOK
 </details>
 <details class="[📝5] title"><summary>📝 diuretikumok</summary>
 	<details class="kerdes"><summary>csoportosítása</summary>
@@ -25226,7 +25262,10 @@ tetanusz elfelejtése
 		<li>best supportive care ➜ tüneti terápia csupán (pl. onkológia, hospice)</li>
 	</details>
 </details>
-	<details class="kerdes"><summary>vérvétel</summary>
+<details><summary class="phase">gyógyszernevek</summary>
+	<div class="imp [📝4]"></div>
+</details>
+	<details class="kerdes"><summary>perif. vénás vérvétel</summary>
 		<span class="img" data-src="arpbrhvq.webp"></span>
 		<li>kiválasztom milyen cső kell (papíron rajta, papírt félbe hajtom)</li><ul>
 			<li>piros ➜ natív (gyulladás, ionok, vese, máj)</li>
@@ -25251,9 +25290,9 @@ tetanusz elfelejtése
 			<li>(ha páciens nem kooperál - tudatzavara van, akkor ragtapaszt bekészítem)</li>
 			<li>(melyik kezéből szoktak?)</li>
 			<li>szorítsa ökölbe a kezét, és tegye a térdére ... felteszem strangulátort</li>
-			<li>várok, majd kicsit a tenyeremmel (ujjak részével) rácsapok enyhén párat: könyökhajlat / alkar</li>
-			<li>elkezdem kitapogatni a vénákat nézhetem is, de jobb ha csak érzésre figyelek először ➜ nyomjam be közepesen nyugodtan, hogy érezzem mennyire rugalmas (nem-e kemény rögös már)</li><ul>
-				<li>az irányát tapogassam ki, hogy úgy szúrjak</li>
+			<li>elkezdem kitapogatni a vénákat</li><ul>
+				<li>nézhetem is, de ha találtam akkor az érzésre figyeljek ➜ az irányát tapogassam ki, hogy úgy szúrjak</li>
+				<li>nyomjam be mélyen nyugodtan, hogy érezzem mennyire rugalmas (nem-e kemény rögös már)</li>
 			</ul>
 			<li>ha megvan, akkor fertőtlenítem a területet alaposan, várok 1p</li><ul>
 				<li>ha közben elvesztettem a vénát akkor kitapogatom megint és fertőtlenítés</li>
@@ -25282,36 +25321,26 @@ tetanusz elfelejtése
 			</ul>
 			<li>ha nincs veszélyes hulladék, akkor visszamegyek oda, és beledobom a tűt elsőként</li>
 		</ul>
+	  megj
+		<li>(ha profin megy már, akkor a strangulátort felengedem a szúrás után)</li>
+		<li>(ha profin megy már, akkor kesztyű)</li>
+	</details>
+	<details class="kerdes"><summary><span class="bgPink">1. anamnézis</span></summary>
+		<li><span class="bgPink">ha SBO-ról jött..</span></li>
+		<li><span class="bgPink">ha van időm..</span></li>
+	</details>
+	<details class="kerdes"><summary><span class="bgPink">2. jelen panasz</span></summary>
+		<li>elején 1-2 mondatban leírom, hogy került ide</li>
+		<li>panasznál a jelenlegik érdekeljenek (ne az előző helyen mi volt)</li>
+	</details>
+	<details class="kerdes"><summary><span class="bgPink">3. status</span></summary>
+		<li></li>
+	</details>
+	<details class="kerdes"><summary>4. nyomtatás</summary>
+		<li>nyomtatványok (OSZALAP) ➜ BNO-ig legyen kipipálva ➜ nyomtatás feltűzöm a kórlap első lapjának belsejére (felső oldalsó sarok)</li>
 	</details>
 
-<span class="imp [📝4]"></span> <!-- gyógyszernevek -->
 
-
-<span class="minus">
-thiazid/thiazidszerű diuretikumok
-- Hygroton, 
-- Esidrex
-Béta-blokkolók
-- Concor,
-- Nebilet,
-- Betaloc ZOK
-
-LMWH 
-- Clexane, 
-- Fraxiparine
-- Fragmin
-UFH (nem frakcionált heparin)
-- Heparin Braun, Heparin Leo
-Kumarinok (K-vitamin-antagonisták)
-- Syncumar, Marfarin
-NOAC/DOAC – Xa-gátlók
-- Xarelto, Eliquis, Lixiana
-NOAC/DOAC – direkt trombin-gátló
-- Pradaxa
-Thrombocytaaggregáció-gátlók (TAG)
-- Aspirin Protect, Plavix, Brilique
-
-</span>
 
 <!----><details><summary class="mainTitle">1. részvizsga</summary>
 <details class="open"><summary class="status">Toxikológiai alapismeretek, általános tennivalók, a detoxikálás lehetőségei, módszerei</summary>
