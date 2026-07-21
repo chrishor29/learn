@@ -1,6 +1,7 @@
 ﻿Run szemeszter.bat,,Min, szemPID
 
-Gui, Add, CheckBox, vWebPage, Web - LEARN
+Gui, Add, CheckBox, vLearn, Web - LEARN
+Gui, Add, CheckBox, vWebPage, Web - Webpage
 Gui, Add, CheckBox, vGyogyszer, Web - Gyogyszer
 Gui, Add, CheckBox, vMovieseries, Web - Movieseries
 Gui, Add, CheckBox, vZene, Telo - Zene
@@ -15,9 +16,15 @@ Gui, Submit ; elmenti a beállított értékeket
 
 Process,WaitClose,%szemPID% ;MsgBox szemeszter.bat closed.
 
-if ( WebPage == 1 ) {
+if ( Learn == 1 ) {
 	; MsgBox WebPage update
 	Run update.bat,,, learnPID
+}
+
+if ( WebPage == 1 ) {
+	; MsgBox WebPage update
+	Run D:\webpage\GITHUB - webpage\update.bat,,, webpagePID
+	Process,WaitClose,%webpagePID%
 }
 
 if ( Gyogyszer == 1 ) {
