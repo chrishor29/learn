@@ -23,25 +23,25 @@ xcopy /y %source%\REZIDENS\labor.html %destination%\REZIDENS\ /d
 xcopy /y %source%\English\english.html %destination%\English\ /d
 
 REM 6.év
-xcopy /y %source%\Allamvizsga\teszt.html %destination%\Allamvizsga\ /d
-xcopy /y %source%\Allamvizsga\zarov.html %destination%\Allamvizsga\ /d
-xcopy /y %source%\Belgyogy\belgyogyAV.html %destination%\Belgyogy\ /d
-xcopy /y %source%\Belgyogy\belgyogy.html %destination%\Belgyogy\ /d
-xcopy /y %source%\Neurologia\neuroAV.html %destination%\Neurologia\ /d
-xcopy /y %source%\Neurologia\neurologia.html %destination%\Neurologia\ /d
-xcopy /y %source%\Gyerekgyogy\gyermekAV.html %destination%\Gyerekgyogy\ /d
-xcopy /y %source%\Gyerekgyogy\gyermek.html %destination%\Gyerekgyogy\ /d
-xcopy /y %source%\Pszichiatria\pszichiAV.html %destination%\Pszichiatria\ /d
-xcopy /y %source%\Pszichiatria\pszichi.html %destination%\Pszichiatria\ /d
-xcopy /y %source%\Szuleszet\szuleszetAV.html %destination%\Szuleszet\ /d
-xcopy /y %source%\Szuleszet\szuleszet.html %destination%\Szuleszet\ /d
-xcopy /y %source%\Sebeszet\sebeszetAV.html %destination%\Sebeszet\ /d
-xcopy /y %source%\Sebeszet\sebeszet.html %destination%\Sebeszet\ /d
+xcopy /y %source%\VI\Allamvizsga\teszt.html %destination%\Allamvizsga\ /d
+xcopy /y %source%\VI\Allamvizsga\zarov.html %destination%\Allamvizsga\ /d
+xcopy /y %source%\VI\Belgyogy\belgyogyAV.html %destination%\Belgyogy\ /d
+xcopy /y %source%\VI\Belgyogy\belgyogy.html %destination%\Belgyogy\ /d
+xcopy /y %source%\VI\Neurologia\neuroAV.html %destination%\Neurologia\ /d
+xcopy /y %source%\VI\Neurologia\neurologia.html %destination%\Neurologia\ /d
+xcopy /y %source%\VI\Gyerekgyogy\gyermekAV.html %destination%\Gyerekgyogy\ /d
+xcopy /y %source%\VI\Gyerekgyogy\gyermek.html %destination%\Gyerekgyogy\ /d
+xcopy /y %source%\VI\Pszichiatria\pszichiAV.html %destination%\Pszichiatria\ /d
+xcopy /y %source%\VI\Pszichiatria\pszichi.html %destination%\Pszichiatria\ /d
+xcopy /y %source%\VI\Szuleszet\szuleszetAV.html %destination%\Szuleszet\ /d
+xcopy /y %source%\VI\Szuleszet\szuleszet.html %destination%\Szuleszet\ /d
+xcopy /y %source%\VI\Sebeszet\sebeszetAV.html %destination%\Sebeszet\ /d
+xcopy /y %source%\VI\Sebeszet\sebeszet.html %destination%\Sebeszet\ /d
 
 REM 5.év
-xcopy /y %source%\Belgyogy\hiirlm.html %destination%\Belgyogy\ /d
-xcopy /y %source%\Neurologia\neuroteszt.html %destination%\Neurologia\ /d
-xcopy /y %source%\Szuleszet\nogyogy.html %destination%\Szuleszet\ /d
+xcopy /y %source%\VI\Belgyogy\hiirlm.html %destination%\Belgyogy\ /d
+xcopy /y %source%\VI\Neurologia\neuroteszt.html %destination%\Neurologia\ /d
+xcopy /y %source%\VI\Szuleszet\nogyogy.html %destination%\Szuleszet\ /d
 xcopy /y %source%\done\Aneszt\aneszt.html %destination%\done\Aneszt\ /d
 xcopy /y %source%\done\Bioetika\bioetika.html %destination%\done\Bioetika\ /d
 xcopy /y %source%\done\IgOr\igor.html %destination%\done\IgOr\ /d
@@ -53,9 +53,7 @@ xcopy /y %source%\done\Transzfuziologia\trafo.html %destination%\done\Transzfuzi
 xcopy /y %source%\done\Urologia\urologia.html %destination%\done\Urologia\ /d
 
 REM 4.év
-xcopy /y %source%\Sebeszet\2011_0001_524_Sebeszet.pdf %learnStuff%\Sebeszet\ /d
-robocopy %source%\Belgyogy\könyvek %destination%\Belgyogy\könyvek /mir /max:50000000
-xcopy /y %source%\Belgyogy\nephro.html %destination%\Belgyogy\ /d
+xcopy /y %source%\VI\Belgyogy\nephro.html %destination%\Belgyogy\ /d
 xcopy /y %source%\done\Borgyogy\borgyogy.html %destination%\done\Borgyogy\ /d
 xcopy /y %source%\done\Onkologia\onko.html %destination%\done\Onkologia\ /d
 xcopy /y %source%\done\Ortopedia\ortop.html %destination%\done\Ortopedia\ /d
@@ -63,7 +61,6 @@ xcopy /y %source%\done\Pulmo\pulmo.html %destination%\done\Pulmo\ /d
 xcopy /y %source%\done\Radiologia\radio.html %destination%\done\Radiologia\ /d
 xcopy /y %source%\done\Farmak\farmak.html %destination%\done\Farmak\ /d
 xcopy /y %source%\done\Farmak\farmak1.html %destination%\done\Farmak\ /d
-xcopy /y %source%\done\Farmak\2011_0001_524_Farmakologia.pdf %learnStuff%\done\Farmak\ /d
 xcopy /y %source%\done\Trauma\trauma.html %destination%\done\Trauma\ /d
 xcopy /y %source%\done\Szajseb\szajseb.html %destination%\done\Szajseb\ /d
 xcopy /y %source%\done\FOG\FOG.html %destination%\done\FOG\ /d
@@ -72,27 +69,20 @@ xcopy /y %source%\done\Kardio\favicon.bmp %destination%\done\Kardio\ /d
 xcopy /y %source%\done\Kardio\kardio.html %destination%\done\Kardio\ /d
 
 REM 3.év
-xcopy /y %source%\Belgyogy\endokrin.html %destination%\Belgyogy\ /d
-xcopy /y %source%\Belgyogy\proped.html %destination%\Belgyogy\ /d
+xcopy /y %source%\VI\Belgyogy\endokrin.html %destination%\Belgyogy\ /d
+xcopy /y %source%\VI\Belgyogy\proped.html %destination%\Belgyogy\ /d
 xcopy /y %source%\done\Genetika\favicon.bmp %destination%\done\Genetika\ /d
 xcopy /y %source%\done\Genetika\genetika.html %destination%\done\Genetika\ /d
-xcopy /y %source%\done\Genetika\Genetika_genomika_2018.pdf %learnStuff%\done\Genetika\ /d
 xcopy /y %source%\done\Immunologia\favicon.bmp %destination%\done\Immunologia\ /d
 xcopy /y %source%\done\Immunologia\immun.html %destination%\done\Immunologia\
-xcopy /y %source%\done\Immunologia\Az Immunologia Alapjai.pdf %learnStuff%\done\Immunologia\ /d
 xcopy /y %source%\done\Kortan\favicon.bmp %destination%\done\Kortan\ /d
 xcopy /y %source%\done\Kortan\kortan.html %destination%\done\Kortan\ /d
-xcopy /y %source%\done\Kortan\referencia_ertekek.pdf %learnStuff%\done\Kortan\ /d
 xcopy /y %source%\done\LabMed\labmed.html %destination%\done\LabMed\ /d
 xcopy /y %source%\done\LabMed\FullTeszt.pdf %learnStuff%\done\LabMed\ /d
 xcopy /y %source%\done\Mikrobi\favicon.bmp %destination%\done\Mikrobi\ /d
 xcopy /y %source%\done\Mikrobi\mikrobi.html %destination%\done\Mikrobi\ /d
 xcopy /y %source%\done\Mikrobi\mikrobi1.html %destination%\done\Mikrobi\ /d
-xcopy /y %source%\done\Mikrobi\Pál, Tibor - Orvosi Mikrobiológia (2013).pdf %learnStuff%\done\Mikrobi\ /d
-xcopy /y %source%\done\Mikrobi\Orvosi Mikrobiológia Gyakorlatok.pdf %learnStuff%\done\Mikrobi\ /d
-xcopy /y %source%\done\Mikrobi\Mikrobiológia Ádám Éva.pdf %learnStuff%\done\Mikrobi\ /d
 xcopy /y %source%\done\Mutettan\mutettan.html %destination%\done\Mutettan\ /d
-xcopy /y %source%\done\Mutettan\Wéber Gy., Ferencz A., Sándor J. - Műtéttan (2015).pdf %learnStuff%\done\Mutettan\ /d
 xcopy /y %source%\done\Patosz\patosz.html %destination%\done\Patosz\ /d
 xcopy /y %source%\done\Patosz\favicon.bmp %destination%\done\Patosz\ /d
 xcopy /y %source%\done\Pszicho\pszicho.html %destination%\done\Pszicho\ /d
