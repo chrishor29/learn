@@ -1164,6 +1164,8 @@ function F_loadVideos(detElem){
 		} else { // fullVideo (at right side of the page)
 			let video = document.createElement("video")
 			spanVideo.appendChild(video)
+			spanVideo.style.position = "relative"
+			spanVideo.style.zIndex = "100"
 			
 			video.dataset.src = spanVideo.dataset.src
 			F_setVideoSource(video,video.dataset.src)
@@ -1190,6 +1192,7 @@ function F_loadVideos(detElem){
 				border.style.backgroundColor = "black"
 				border.style.padding = "6px"; 
 				border.style.border = "6px solid black"
+				border.pointerEvents = "none"
 				return border
 			}
 			let border = createBorder(video)
