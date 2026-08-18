@@ -1164,8 +1164,14 @@ function F_loadVideos(detElem){
 		} else { // fullVideo (at right side of the page)
 			let video = document.createElement("video")
 			spanVideo.appendChild(video)
-			spanVideo.style.position = "relative"
 			spanVideo.style.zIndex = "100"
+			spanVideo.style.position = "relative"
+			spanVideo.style.display = "block"
+			spanVideo.style.width = "fit-content"
+			spanVideo.style.marginLeft = "auto"
+				
+			let maxWidth = spanVideo.style.maxWidth || "50%"
+			spanVideo.style.maxWidth = maxWidth
 			
 			video.dataset.src = spanVideo.dataset.src
 			F_setVideoSource(video,video.dataset.src)
@@ -1183,11 +1189,7 @@ function F_loadVideos(detElem){
 				let spanVideo = video.parentNode
 				spanVideo.insertBefore(border,video)
 				border.appendChild(video)
-				if ( video.dataset.width ) {
-					border.style.maxWidth = video.dataset.width
-				} else {
-					border.style.maxWidth = "60%"
-				}
+				
 				border.style.float = "right"
 				border.style.backgroundColor = "black"
 				border.style.padding = "6px"; 
