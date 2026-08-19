@@ -4936,6 +4936,9 @@ function F_loadIMGs(detElem) {
 		} else {
 			img.style.border = "3px solid black"
 			img.style.maxWidth = "40%"
+			img.style.cursor = "pointer";
+			img.style.position = "relative"
+			img.style.zIndex = "5"
 			if ( spanImg.dataset.maxWidth ) { 
 				img.style.maxWidth = spanImg.dataset.maxWidth
 			} else {
