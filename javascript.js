@@ -4938,7 +4938,7 @@ function F_loadIMGs(detElem) {
 			img.style.maxWidth = "40%"
 			img.style.cursor = "pointer";
 			img.style.position = "relative"
-			img.style.zIndex = "5"
+			img.style.zIndex = "1"
 			if ( spanImg.dataset.maxWidth ) { 
 				img.style.maxWidth = spanImg.dataset.maxWidth
 			} else {
