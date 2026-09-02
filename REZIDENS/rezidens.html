@@ -70,11 +70,19 @@
 		<div class="imp [FiVi.tüdő]"></div>
 	  <b>has</b>
 		<div class="imp [FiVi.has]"></div>
-		<span class="imp [FiVi.vese]"></span>
-		<span class="imp [FiVi.lép]"></span>
+		<li><details class="kerdes"><summary>vese</summary>
+			<div class="imp [FiVi.vese]"></div>
+		</details></li>
+		<li><details class="kerdes"><summary>lép</summary>
+			<div class="imp [FiVi.lép]"></div>
+		</details></li>
 	  <b>láb</b>
-		<span class="imp [FiVi.láb] bgPink"></span> <!-- láb -->
-		<span class="imp [FiVi.gait] bgPink"></span> <!-- járászavarok -->
+		<li><details class="kerdes"><summary>láb</summary>
+			<div class="imp [FiVi.láb]"></div>
+		</details></li>
+		<li><details class="kerdes"><summary>járászavarok</summary>
+			<div class="imp [FiVi.gait]"></div>
+		</details></li>
 	</details>
 	<details class="[FiVi.szem] kerdes"><summary>szem</summary>
 		<li><details class="kerdes"><summary>#szemrés tágasság ➜ „A szemrések normális, szimmetrikus  tágasságúak.”</summary>
@@ -182,7 +190,7 @@
 			  <span class="fsMini">ha nincs leírva az oedema típusa, akkor perifériásra gondolunk elsőnek</span>
 			</td>
 		</tr></table></details></li>
-		<li><details class="kerdes"><summary><span class="bgPink">#</span>szín „Normálisan pigmentált, ...”</summary>
+		<li><details class="kerdes"><summary>#szín „Normálisan pigmentált, ...”</summary>
 		  <div><b>az alábbiakat állapítsam meg</b></div>
 			<li><span class="bgYellow"><span data-src="done/Borgyogy/borgyogy.html" class="midQ [91]">macula</span>(folt) ➜ <abbr title="bőr szintjéből nem előemelkedő">lapos</abbr> (nem tapintható!), csak színében eltérő</span> elváltozás</li><ul>
 				<li>oka ➜ pigmenthiány vagy többlet</li>
@@ -314,12 +322,12 @@
 			</td>
 		  </tr></table>
 		</details></li>
-		<li><details class="kerdes"><summary><span class="bgPink">#</span>szín „... icterus, ...”</summary>
+		<li><details class="kerdes"><summary>#szín „... icterus, ...”</summary>
 			<div><span class="plus">–</span> </div>
 			<div><span class="minus">+</span> </div>
 			<div class="imp [18.1]"></div>
 		</details></li>
-		<li><details class="kerdes"><summary><span class="bgPink">#</span>szín „... cyanosis nem található.”</summary>
+		<li><details class="kerdes"><summary>#szín „... cyanosis nem található.”</summary>
 			<div><span class="plus">–</span> </div>
 			<div><span class="minus">+</span> </div>
 			
@@ -435,7 +443,7 @@
 	<li>Enanthema: kanyaró (Koplik-folt), skarlát (málna nyelv), varicella (szájban vezikula is lehet)</li>
 </details>
 		</details></li>
-		<li><span class="bgPink">#</span><span class="midQ [61.5] kerdes">petechia, purpura, haematoma</span> ➜ „... petechia-purpura-hematoma ... ”</li>
+		<li>#<span class="midQ [61.5] kerdes">petechia, purpura, haematoma</span> ➜ „... petechia-purpura-hematoma ... ”</li>
 		<li><details class="kerdes"><summary>(#tiszta ➜ „A bőr tiszta, ...”)</summary>
 			<div><span class="plus">–</span> </div>
 			<div><span class="minus">+</span> szennyeződés</div>
@@ -595,7 +603,7 @@
 				<li>de azt mondja, 'fáj a torkom' ➜ lehet laryngopharynx is</li>
 			</ul>
 			<li><details class="kerdes"><summary>Waldeyer lymphatikus garatgyűrű</summary>
-				<div data-src="learn/done/FOG/FOG.html" class="imp [35]"></div>
+				<div data-src="done/FOG/FOG.html" class="imp [35]"></div>
 			</details></li>
 			<span class="img" data-src="garatidegek.webp"></span>
 		</details>
@@ -1394,30 +1402,27 @@
 		<!-- thrombophlebitis --> <td> duzzanat a véna felett <abbr title="maga a végtag nem dagadt, mert a vér elfolyik a mély vénákon át">*</abbr> </td>
 	</tr></table></details>
 	<details class="[FiVi.gait] kerdes"><summary>járászavarok</summary>
-	  <div><b>bevezetés</b></div>
-		<li>járászavarok csoportosítása</li><ul>
-			<li>izom érintettségű</li><ul>
-				<li>plegias (izom bénulás) ➜ pl. stroke</li>
-				<li>egyéb ➜ pl. Parkinson</li>
-			</ul>
-			<li>ataxiás ➜ izom rendben, koordinációval van baj</li><ul>
-				<li>vestibulocerebellaris ➜ gyakran szédülés (pl. alkohol)</li>
-				<li>sensoros ➜ propriocepció zavara (nem érzi a tartását a talp, térd ízületben)</li>
-			</ul>
+	  <div><b>járászavarok csoportosítása</b></div>
+		<li>izom érintettségű ➜ plegias (izom bénulás), pl. stroke</li>
+		<li>ataxiás ➜ izom rendben, koordinációval van baj</li><ul>
+			<li>vestibulocerebellaris ➜ gyakran szédülés (pl. alkohol)</li>
+			<li>sensoros ➜ propriocepció zavara (nem érzi a tartását a talp, térd ízületben)</li>
 		</ul>
-		<li>ez leegyszerűsített felfogás, részletesebben lásd később</li>
+		<li>egyéb ➜ pl. fájdalom eredetű</li>
+		<div class="fsMini">megj ➜ táblázatban csak néhány típus említve</div>
 	  <div>🩺 <b>FiVi</b></div>
 		<li>5-6 lépést jöjjön felém, forduljon meg és vissza</li>
 		<li>először nyitott szemmel, majd csukott szemmel</li>
 	  <table><tr>
 		<th>izom érintettségű</th>
 		<th>koordinációs</th>
+		<th>egyéb</th>
 	  </tr><tr>
 		<td style="text-align:left">
 			<details class="kerdes"><summary>hemi<span class="midQ [53]">plegias</span> spasztikus járás</summary>
 				<span class="video" data-src="hemiplegia.mp4"></span>
 				<li>epid ➜ gyakori</li>
-				<li>etio ➜ pl. stroke</li>
+				<li>etio ➜ egyoldali felső MN laesio, pl. <span class="bgYellow">stroke</span></li>
 				<li>lényege ➜ a laesio-val ellentétes oldalon <span data-src="neuro" class="midQ [67]">spaszticitás</span> van</li>
 				<li>járás ➜ <span class="bgBlue">Wernicke-Mann tartás</span> <span class="img mini" data-src="xiuzypru.webp"></span></li><ul>
 					<li>a bénult lábat félkörívben húzza maga után (láb: extensio)</li>
@@ -1428,8 +1433,7 @@
 			</details>
 			<details class="kerdes"><summary>diplegias spasztikus járás</summary>
 				<span class="video" data-src="diplegias jaras.mp4"></span>
-				<li>etio ➜ bilateralis periventricularis laesio, aminek oka pl. <abbr title="Az infantilis cerebrális parézis (ICP) a gyermekkori (általában csecsemőkori) agyi eredetű bénulás nevű kórképet jelenti. A fejlődő idegrendszert mind az anyaméhben, mind a külvilágban számos különböző olyan behatás érheti, melyek hatására az idegsejtek, az idegrendszeri struktúrák szerkezetükben, működésükben zavart szenvedhetnek.">cerebral palsy(Little-kór)</abbr></li>
-				<li>epid ➜ gyerekkor óta</li>
+				<li>etio ➜ mindkét oldali felső MN laesio, pl. <abbr title="Az infantilis cerebrális parézis (ICP) a gyermekkori (általában csecsemőkori) agyi eredetű bénulás nevű kórképet jelenti. A fejlődő idegrendszert mind az anyaméhben, mind a külvilágban számos különböző olyan behatás érheti, melyek hatására az idegsejtek, az idegrendszeri struktúrák szerkezetükben, működésükben zavart szenvedhetnek.">cerebral palsy(Little-kór)</abbr></li>
 				<li>lényege ➜ <span class="midQ [67]">spaszticitás</span> mindkét oldalon:</li><ul>
 					<span class="fsMini">kar kevésbé érintett, mint hemiplegiasnal</span>
 				</ul>
@@ -1439,13 +1443,6 @@
 					</ul>
 					<li>a karok behajlítva lehetnek</li>
 				</ul>
-			</details>
-			<details class="kerdes"><summary>Parkinsonos járás</summary>
-				<span class="video" data-src="Parkinsonjaras.mp4"></span>
-				<li>etio ➜ <span data-src="neuro" class="midQ [110]">Parkinson-kór</span></li>
-				<li>apró léptű járás, csoszogás</li>
-				<li>görnyedt tartás</li>
-				<li>instabilitás, elesések</li>
 			</details>
 			<details class="kerdes"><summary>stepper járás <span style="font-size:80%">(neuropathias járás)</span></summary>
 				<span class="video" data-src="stepper.mp4"></span>
@@ -1476,19 +1473,8 @@
 				<li>járás ➜ <span class="bgYellow">„részeg tengerész”</span> ➜ <span class="bgYellow">széles terpeszben, imbolyog</span></li><ul>
 					<span class="fsMini">(ha egyirányú a laesio, akkor abba az irányába tér el)</span>
 				</ul>
-				<details><summary style="color:blue; font-size:80%">zárójel</summary>
-					<div><span class="minus">+</span> ha spinocerebellaris laesio:</div><ul>
-						<li>ha vermis laesio ➜ irány megtartott, de botladozik & apró léptek (részeges)</li>
-						<li>ha intermedier laesio ➜ laesio irányába tér el</li>
-					</ul>
-					<div><span class="minus">+</span> ha vestibulocerebellaris laesio ➜ széles alapú, bizonytalan laesio irányába tér el</div>
-					<div><span class="minus">+</span> ha vestibularis ➜ vakjárásnál a laesio felé fordul</div>
-				</details>
 			</details>
-			<details class="kerdes"><summary>vestibularis ataxiás járás</summary>
-				<li>patho ➜ <abbr title="perif(n.VIII,3 félkörös ívjárat), centr (agytörzsi magvak)">vestibularis rendszer</abbr> működészavar</li>
-			</details>
-			<details class="kerdes"><summary class="bgBlue">szenzoros ataxiás járászavar</summary>
+			<details class="kerdes"><summary>szenzoros ataxiás járászavar</summary>
 				<span class="video" data-src="sensorgait.mp4"></span>
 			  <div><span style="font-size:80%"><span class="midQ [8.2]">szenzoros ataxiás járászavar</span></span></div>
 				<li>etiológia ➜ <span class="midQ [154]">funiculus posterior laesio</span></li>
@@ -1499,11 +1485,43 @@
 				</ul>
 				<li>járás ➜ mintha sötét lenne a szobában, a lábát erősen teszi le a földre, hogy kialakuljon szenzoros érzet a talajról</li>
 			</details>
+			<details><summary class="fsMini">megj</summary>
+				<li>kéne egy vestibularis kategória külön</li>
+				<li>ugyanis a cerebellarisba a spinocereb, vertibulocereb stb. tartozik</li>
+				<li>a vestibularisba ➜ centr (vestibulocerebellum, agytörzsi magvak), perif (n.VIII, 3 félkörös)</li>
+				<li>tehát csak a vestibulocerebellum a közös pont, a többi vestibularis nem sorolható jelenlegi terminológiában sehova</li>
+				<li>márpedig azoknál is van szédülés és következtében járászavar, márpedig ataxiás (hiszen koordinációs)</li>
+			</details>
 		</td>
-	  </tr>
-	  </table>
-		<li></li>
-		
+		<td style="text-align:left">
+			<details class="kerdes"><summary>Parkinsonos járás</summary>
+				<span class="video" data-src="Parkinsonjaras.mp4"></span>
+				<li>etio ➜ <span data-src="neuro" class="midQ [110]">Parkinson-kór</span> (extrapyramidalis zavar)</li>
+				<li>apró léptű járás, csoszogás</li>
+				<li>görnyedt tartás</li>
+				<li>instabilitás, elesések</li>
+			</details>
+			<details class="kerdes"><summary>sántítások</summary>
+				<li>lényegük ➜ a beteg óvatosan, csupán lábujjhegyére lép</li>
+				<li>etio:</li><ul>
+					<li><span class="bgBlue">porckorongsérv ~ <span data-src="neuro" class="midQ [124]">ischias</span> ~ lumbago</span></li>
+					<li><span class="bgBlue">lábizomzat fájdalma</span></li>
+					<li>köszvény</li>
+					<li><abbr title="vénatágulat">varix</abbr></li>
+					<li>neuritis</li>
+					<span style="font-size:80%">a claudicatio intermittens nem tartozik ide!</span>
+				</ul>
+			</details>
+			<details class="kerdes"><summary>choreiform járás</summary>
+				<span class="video" data-src="choreiform.mp4"></span>
+				<li>etio ➜ Huntington-kór</li>
+				<li>járás ➜ lényegében összevissza kézmozgások is</li>
+				<li><span class="midQ [109]">hiperkinetikus mozgászavar</span> ➜ ez nem is kifejezetten járászavar, hiszen ülés/állás közben is megfigyelhető</li>
+			</details>
+		</td>
+	  </tr></table>
+		<span class="img mini" data-src="712207696_27471594669110930_4815585058021458916_n.webp"></span>
+		<span class="img mini" data-src="557407262_4217483318574766_8317960466632058344_n.webp"></span>
 	</details>
 	<details class="[FiVi.lép] kerdes"><summary>lép határok, kopogtatása(percussio)</summary>
 		<li>jobbra fordul</li>
@@ -3219,6 +3237,7 @@ Orvosi dokumentáció helye és módja:
   </div>
 </details>
 <details class="[12] kerdes"><summary>GYÓGYSZEREK</summary>
+  <div><span class="midQ [12.0]">gyógyszernevek</span></div>
 	<li><span class="syno">vegetatív | autonóm</span> IR-re hatók</li><ul>
 		<li><span class="midQ [12.9] kerdes">paraszimpatomimetikumok</span></li>
 		<li><span class="midQ [12.9] kerdes">paraszimpatolítikumok</span></li>
@@ -3262,7 +3281,10 @@ Orvosi dokumentáció helye és módja:
 	<li><span class="midQ [12.14] kerdes">status epilepticus kezelése</span></li>
 	<li><span class="midQ [13.12] kerdes">barbiturát-ok, BDZ-k</span></li>
 	<li><span class="midQ [58.4] kerdes">orális antidiabetikumok</span></li>
-	<li><span class="midQ [48.1] kerdes">antiarrhythmias szerek</span></li>
+	<li><span class="bgPink">antiarrhythmia</span></li><ul>
+		<li><span class="midQ [48.1] kerdes">th</span></li>
+		<li><span class="midQ [12.27] kerdes">antiarrhythmias szerek</span></li>
+	</ul>
 	<li><details class="kerdes"><summary class="bgPink"><b>pszichiátria</b></summary>
 		<span data-src="psy" class="imp [15.1]"></span> <!-- antipszichotikumok -->
 	</details></li>
@@ -3271,6 +3293,193 @@ Orvosi dokumentáció helye és módja:
 	<li><span class="bgPink">AB-ok!</span></li>
 	<li><span class="midQ [12.15] kerdes">(méhtevékenységet befolyásoló gyógyszerek)</span></li>
  </details><div>
+	<details class="[12.0] title"><summary>GYÓGYSZERNEVEK</summary>
+	  <!-- AB (Ceftriaxon[Rocefin], vancomycin, metronidazol[Klion] ...) -->
+		<details class="kerdes"><summary>Adalat</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Algopyrin</summary>
+			<div class="imp [12.21]"></div>
+		</details>
+		<details class="kerdes"><summary>Arixtra</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Aspirin Protect</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Aszpirin</summary>
+			<div class="imp [12.21]"></div>
+		</details>
+		<details class="kerdes"><summary>Atacand</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Betaloc</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Brilique</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Britomar</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Canesten</summary>
+			<div class="imp [12.4]"></div>
+		</details>
+		<details class="kerdes"><summary>Cardura</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Cataflam</summary>
+			<div class="imp [12.21]"></div>
+		</details>
+		<details class="kerdes"><summary>Cavinton</summary>
+			<li><span class="bgYellow">agyi keringésfokozó</span> (agyban: vazodilatáció + O2- és flükózfelvétel stb.)</li>
+			<div><span class="plus">ind</span> [neuro] krónikus cerebovascularis betegség <span class="bgPink">[link]</span></div>
+			<div><span class="plus">ind</span> [neuro] ischaemias stroke utáni állapot <span class="bgPink">[link]</span></div>
+			<div><span class="plus">ind</span> [neuro] vascularis dementia <span class="bgPink">[link]</span></div>
+			<div><span class="plus">ind</span> [FOG] tinnitus <span class="bgPink">[link]</span></div>
+			<div><span class="plus">ind</span> [FOG] sensorineuralis halláscsökkenés <span class="bgPink">[link]</span></div>
+		</details>
+		<details class="kerdes"><summary>Clexane</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Coldrex</summary>
+			<li><span class="midQ [12.21]"><u>paracetamol</u></span></li>
+			<li><span class="midQ [12.9]"><u>fenilefrin</u></span></li>
+		</details>
+		<details class="kerdes"><summary>Concor</summary>
+			<div class="imp [12.9]"></div>
+		</details>
+		<details class="kerdes"><summary>Contramal</summary> <div class="imp [12.23]"></div> </details>
+		<details class="kerdes"><summary>Cordarone</summary> <div class="imp [12.27]"></div> </details>
+		<details class="kerdes"><summary>Cozaar</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Coverex AS</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Crestor</summary> <div class="imp [12.1]"></div> </details>
+		<details class="kerdes"><summary>Diaprel</summary> <div class="imp [58.4]"></div> </details>
+		<details class="kerdes"><summary>Diovan</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Dulcolax</summary>
+			<div class="imp [12.10]"></div>
+		</details>
+		<details class="kerdes"><summary>Dulcosoft</summary>
+			<div class="imp [12.10]"></div>
+		</details>
+		<details class="kerdes"><summary>Eliquis</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Ezetrol</summary> <div class="imp [12.1]"></div> </details>
+		<details class="kerdes"><summary>Fluimucil</summary>
+			<div class="imp [12.16]"></div>
+		</details>
+		<details class="kerdes"><summary>Fragmin</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Fraxiparine</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Frontin</summary>
+			<div class="imp [13.12]"></div>
+		</details>
+		<details class="kerdes"><summary>Furon</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Hypothiazid</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Januvia</summary> <div class="imp [58.4]"></div> </details>
+		<details class="kerdes"><summary>Jardiance</summary> <div class="imp [58.4]"></div> </details>
+		<details class="kerdes"><summary>Lasix</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Lercadip</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Lixiana</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Marfarin</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Merckformin</summary> <div class="imp [58.4]"></div> </details>
+		<details class="kerdes"><summary>Micardis</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Milurit</summary> <div class="imp [12.2]"></div> </details>
+		<details class="kerdes"><summary>Moxonidin</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Nebibeta</summary>
+			<div class="imp [12.9]"></div>
+		</details>
+		<details class="kerdes"><summary>Nebilet</summary>
+			<div class="imp [12.9]"></div>
+		</details>
+		<details class="kerdes"><summary>Neocitran</summary>
+			<div class="imp [12.21]"></div>
+		</details>
+		<details class="kerdes"><summary>No-Spa</summary>
+			<div class="imp [12.3]"></div>
+		</details>
+		<details class="kerdes"><summary>Norvasc</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Ozempic</summary> <div class="imp [58.4]"></div> </details>
+		<details class="kerdes"><summary>Plavix</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Pradaxa</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Rawel</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Renitec</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Reparon</summary>
+			<div class="imp [12.4]"></div>
+		</details>
+		<details class="kerdes"><summary>Rivotril</summary>
+			<div class="imp [13.12]"></div>
+		</details>
+		<details class="kerdes"><summary>Robitussin</summary>
+			<div class="imp [12.16]"></div>
+		</details>
+		<details class="kerdes"><summary>Salsol</summary> <div class="imp [a15]"></div> </details>
+		<details class="kerdes"><summary>Saridon</summary>
+			<div class="imp [12.21]"></div>
+		</details>
+		<details class="kerdes"><summary>Seduxen</summary>
+			<div class="imp [13.12]"></div>
+		</details>
+		<details class="kerdes"><summary>Sortis</summary> <div class="imp [12.1]"></div> </details>
+		<details class="kerdes"><summary>Sotalex</summary> <div class="imp [12.27]"></div> </details>
+		<details class="kerdes"><summary>Stadalax</summary>
+			<div class="imp [12.10]"></div>
+		</details>
+		<details class="kerdes"><summary>Strepsils</summary>
+			<li>hatóanyag ➜ <span class="bgYellow">helyi antiszeptikumok, baktériumok és egyes vírusok ellen hatnak a száj- és garatnyálkahártyán</span></li>
+			<ul>
+				<li>amilmetakrezol</li>
+				<li>2,4-diklór-benzil-alkohol</li>
+				nem tartalmaz antibiotikumot!
+			</ul>
+			<div><span class="plus">ind</span> torokfertőtlenítő</div>
+		</details>
+		<details class="kerdes"><summary>Syncumar</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Talliton</summary>
+			<div class="imp [12.9]"></div>
+		</details>
+		<details class="kerdes"><summary>Tensiomin</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Tertensif</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Torem</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Torasemid Sandoz</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Torvacard</summary> <div class="imp [12.1]"></div> </details>
+		<details class="kerdes"><summary>Tritace</summary>
+			<div class="imp [12.8]"></div>
+		</details>
+		<details class="kerdes"><summary>Valium</summary>
+			<div class="imp [13.12]"></div>
+		</details>
+		<details class="kerdes"><summary>Verospiron</summary>
+			<div class="imp [12.6]"></div>
+		</details>
+		<details class="kerdes"><summary>Xanax</summary>
+			<div class="imp [13.12]"></div>
+		</details>
+		<details class="kerdes"><summary>Xarelto</summary> <div class="imp [12.13]"></div> </details>
+		<details class="kerdes"><summary>Xelevia</summary> <div class="imp [58.4]"></div> </details>
+	</details>
 	<details class="[12.1] kerdes"><summary>dyslipidaemia</summary>
 		<div>💊 <span class="bgBlue">statin-ok</span> ➜ [Sortis] [Torvacard] <u>atorvastatin</u>, [Crestor] <u>rosuvastatin</u></div><ul>
 			<li><span class="bgYellow">koleszterin szintézist gátolja</span></li>
@@ -3458,8 +3667,8 @@ Orvosi dokumentáció helye és módja:
 			<div><span class="ORANGE">mh</span> <span class="midQ [1.3]">hypoNa⁺</span></div>
 		</details></li>
 		<li><u>Mg-szulfát</u> ➜ eclampsia(<span data-src="neuro" class="midQ [61.4]">status epilepticus</span>), tocolyticum</li>
-		<li><u>alfa-liponsav</u> [thiogamma] ➜ <span class="midQ [58.3]">DM: polyneuropathia</span></li>
-		<li><span class="midQ [15.2]"><u>kondroitin-szulfát</u>, <u>hialuronsav</u>, <u>glükózamin</u></span></li>
+		<li><span class="bgYellow"><u>alfa-liponsav</u> [thiogamma]</span> ➜ <span class="midQ [58.3] bgYellow">DM: polyneuropathia</span></li>
+		<li><span class="bgPink">?</span> <span class="midQ [15] bgYellow"><u>kondroitin-szulfát</u></span>, <span class="bgYellow"><u>hialuronsav</u></span>, <span class="midQ [15] bgYellow"><u>glükózamin</u></span></li>
 		<li>[reparon]</li><ul>
 			<li>hatóanyag ➜ elölt E.coli (szuszpenzió)</li>
 			<div><span class="plus">ind</span> <span data-src="seb" class="midQ [53] bgYellow">aranyér</span></div>
@@ -3525,7 +3734,7 @@ Orvosi dokumentáció helye és módja:
 			<li>típusai:</li><ul>
 				<li><span class="midQ [20.7.5] kerdes">ENaC-gátló</span> ➜ <span class="bgYellow"><u>amilorid</u></span></li>
 				<li><span class="bgYellow">aldoszteron antagonisták</span> (<span class="midQ [2] kerdes">RAAS</span>-gátlók)</li><ul>
-					<li><span class="bgYellow"><u>spironolacton</u></span></li>
+					<li><span class="bgYellow"><u>spironolacton</u> [Verospiron]</span></li>
 					<li><span class="bgYellow"><u>eplerenon</u></span></li>
 				</ul>
 			</ul>
@@ -3585,7 +3794,7 @@ Orvosi dokumentáció helye és módja:
 		<th rowspan="2" class="vertical-text"> <span class="midQ [67.5.2]">afterload</span>-ot csökkentik </th>
 		<td style="text-align:left">
 		  <b><span class="bgBlue">Ca²⁺-csatornablokkolók</span><abbr title="Ca²⁺-antagonisták">'</abbr></b>
-			<li>[Norvasc] <u>amlodipin</u>, [Lercadip] <u>lerkanidipin</u>, [Adalat] <u>nifedipin</u>, <u>nimodipin</u> stb.</li>
+			<li><span class="bgYellow"><u>amlodipin</u></span> [Norvasc] [Normodipin] [Cardilopin], <u>nimodipin</u>, <u>nifedipin</u> [Adalat], <u>lerkanidipin</u> [Lercadip] stb.</li>
 			<li><u>verapamil</u>, <u>diltiazem</u></li>
 			<div><span class="plus">ind</span> <span class="midQ [8] bgYellow">hypertonia</span></div>
 			<div><span class="plus">ind</span> <span class="midQ [9] bgYellow">hipertenzív krízis</span></div>
@@ -3694,36 +3903,9 @@ Orvosi dokumentáció helye és módja:
 		</td>
 		<td style="text-align:left"> <!-- szimpatolítikum -->
 		  <div><b>β-blokkolók</b></div>
-			<details class="kerdes"><summary>gyógyszerek</summary>
-				<li>nem szelektív (β1 + β2) ➜ <u>propranolol</u>, <u>pindolol</u>, <u>timolol</u></li><ul>
-					<li><u>sotalol</u> ➜ K⁺-<span class="syno">csatornablokkoló | antagonista</span> is</li>
-					<li><u>carvedilol</u> ➜ α1-blokkoló is</li>
-				</ul>
-				<li>kardioszelektív (β1) ➜ <u>bisoprolol</u>, <u>metoprolol</u>, <u>esmolol</u></li><ul>
-					<li><u>nebivolol</u> [nebibeta] ➜ NO-mediált vasodilatációt is okoz</li>
-				</ul>
-			</details>
-			<details class="kerdes"><summary>hatásaik</summary>
-			  <div><b>β₁</b></div>
-				<li><span class="bgYellow">negatív inotróp, kronotróp</span></li>
-				<li><span class="bgYellow"><span class="midQ [2]">renin</span> felszabadulást gátolja</span> ('funkcionálisan RAAS-gátló')</li>
-				➜ fennti kettő következtében <span class="midQ [12.8] kerdes">vérnyomáscsökkentő</span>
-			  <div><b>β₂</b></div>
-				<li><span class="bgYellow">bronchokonstrikció</span></li>
-				<li>(váz- & szívizom:) vazokonstrikció ➜ vérnyomásnövelő</li>
-				<li>hypoglicaemia</li>
-				<div><span class="ORANGE">mh</span> (lipolízis gátlás ➜) LDL↑ HDL↓</div>
-			</details>
-			<div><span class="plus">ind</span> <span class="midQ [67.5.7] bgYellow">krónikus SzE</span> (EF↓)</div>
-			<div><span class="plus">ind</span> <span data-src="psy" class="midQ [48] fsMini">delírium tremens</span></div>
-			<div><span class="plus">ind</span> <span class="bgYellow"><span class="midQ [48.1] kerdes">arrhythmia</span> ➜ <span class="midQ [4]">SVT</span>: AV-függő</span></div>
-			<div><span class="plus">ind</span> <span class="fsMini"><span class="midQ [48.1]">arrhythmia</span> ➜ <span class="midQ [4]">kamrai tachycardia prevenció</span> <abbr title="post-MI, CPVT, long QT (chatgpt)">*</abbr></span></div>
-			<div><span class="plus">ind</span> <span class="midQ [8] fsMini">(hypertonia)</span> <span data-src="szul" class="midQ [86] fsMini">(terhességi hypertonia - <u>metoprolol</u>)</span></div>
-			<div><span class="minus">KI</span> <span class="midQ [39] kerdes bgYellow">hyperlipidaemia</span></div>
-			<div><span class="minus">KI</span> <span class="bgYellow">DM</span></div>
-			<div><span class="minus">TILOS</span> <span class="midQ [48.1] kerdes">arrhythmia</span> ➜ <span class="midQ [4]">SVT</span>: WPW-sy + pitvarfibrilláció</div>
+			<li><span class="midQ [12.27]">lásd antiarrhytmias szerek</span></li>
 		  <div><b>α<sub>1</sub>-antagonisták</b></div>
-			<li><u>urapidil</u> ➜ 5-HT1A receptor agonista is</li>
+			<li><u>urapidil</u> <span class="fsMini">(5-HT1A receptor agonista is)</span></li>
 			<div><span class="plus">ind</span> <span class="midQ [9] bgYellow">hipertenzív krízis</span> (<span data-src="neuro" class="midQ [89] fsMini">hipertenzív encephalopathia</span>, <span data-src="szul" class="midQ [86] fsMini">terhességi hypertonia - kiugró</span>)</div>
 			<li><u>doxazosin</u> [Cardura]</li>
 			<div><span class="plus">ind</span> <abbr title="benignus prosztata hyperplasia">BPH</abbr></div>
@@ -3800,13 +3982,13 @@ Orvosi dokumentáció helye és módja:
 	</tr></table></details>
 	<details class="[12.10] kerdes"><summary>hashajtók, antidiarrhoeás szerek</summary><table><tr>
 		<th>hashajtók</th>
-		<th>antidiarrhoeás szerek</th>
+		<th>antidiarrhoeás („dijaré”) szerek</th>
 	  </tr><tr>
 		<td style="text-align:left">
 			<li>térfogatnövelők ➜ növényi rostok</li><ul>
 				<div><span class="ORANGE">mh</span> meteorizmus</div>
 			</ul>
-			<li>bélmotilitás fokozó ➜ <u>bisacodyl</u> [dulcolax] [stadalax]</li><ul>
+			<li>bélmotilitás fokozó ➜ <span class="bgYellow"><u>bisacodyl</u> [dulcolax] [stadalax]</span></li><ul>
 				<li>tabletta ➜ 6-12 órán belül hat</li>
 				<li>kúp ➜ 15-60 percen belül hat</li>
 			</ul>
@@ -3827,8 +4009,8 @@ Orvosi dokumentáció helye és módja:
 			<div><span class="plus">ind</span> obstipáció</div>
 		</td>
 		<td style="text-align:left">
-			<li>legfontosabb! ➜ <abbr title="orális rehidrációs oldat">ORS</abbr></li><ul>
-				<li>lényege ➜ folyadék és elektrolitpótlás</li>
+			<li><span class="bgYellow">legfontosabb! ➜ <abbr title="orális rehidrációs oldat">ORS</abbr></span></li><ul>
+				<li>lényege ➜ <span class="bgYellow">folyadék és elektrolitpótlás</span></li>
 				<li>(Na⁺ + glükóz ➜ bélben a Na⁺/glükóz kotranszport révén fokozza a víz felszívódását)</li>
 			</ul>
 			<li>adszorbens ➜ <u>diosmectit</u> [Smecta]</li>
@@ -3839,7 +4021,7 @@ Orvosi dokumentáció helye és módja:
 		</td>
 	  </tr><tr>
 		<td colspan="2">
-			psyllium = útifűmaghéj ➜ <abbr title="ha obsipáció ➜ vizet vesz fel (bélhámsejtektől) .. gélszerűvé duzzad ..  széklet térfogata↑ .. bélperisztaltika↑">térfogatnövelő</abbr> + <abbr title="ha hasmenés ➜ megköti a vizet .. sűríti a híg székletet">székletformáló</abbr>
+			<span class="bgYellow">psyllium</span> = útifűmaghéj ➜ <abbr title="ha obsipáció ➜ vizet vesz fel (bélhámsejtektől) .. gélszerűvé duzzad ..  széklet térfogata↑ .. bélperisztaltika↑">térfogatnövelő</abbr> + <abbr title="ha hasmenés ➜ megköti a vizet .. sűríti a híg székletet">székletformáló</abbr>
 		</td>
 	</tr></table></details>
 	<details class="[12.11] kerdes"><summary>β<sub>2</sub>-agonisták</summary>
@@ -4030,7 +4212,7 @@ Orvosi dokumentáció helye és módja:
 		<div data-src="szul" class="imp [99]"></div>
 	</details>
 	<details class="[12.16] kerdes"><summary>köptetők vs köhögéscsillapítók</summary>
-		<li><span class="bgYellow">ha <span class="midQ [19.2]">produktív köhögés</span></span> ➜ <span class="bgYellow">köptető</span> ➜ pl. <span class="bgYellow"><u>acetilcisztein</u> [Fluimucil]</span></li><ul>
+		<li><span class="bgYellow">ha <span class="midQ [19.2]">produktív köhögés</span></span> ➜ <span class="bgYellow">köptető ~ nyákoldó</span> ➜ pl. <span class="bgYellow"><u>acetilcisztein</u> = ACC [Fluimucil]</span></li><ul> <!-- acetil-cisztein, acetylcystein -->
 			<span class="fsMini">Ilyen esetben a köhögést nem csillapítani kell, hanem köptetőkkel segíteni a váladék kiürülését, mivel a visszamaradt slejm rontja a légzésfunkciót, és másodlagos fertőzésekhez is vezethet. </span>
 		</ul>
 		<li><span class="bgYellow">ha <span class="midQ [19.2]">száraz köhögés</span></span> ➜ <span class="bgYellow">köhögéscsillapítók</span> (KIR hatásúak: reflexet csökkentik)</li><ul>
@@ -4049,8 +4231,8 @@ Orvosi dokumentáció helye és módja:
 	</details>
 	<details class="[12.18] kerdes"><summary>savszekréció gátlók</summary>
 	  <b>gyomorsav-szekréció gátlók</b>
-		<li>H2R-antagonisták ➜ pl. <u>famotidin</u> [quamatel]</li>
-		<li>PPI-k ➜ <u>ome<b>prazol</b></u>, <u>esome<b>prazol</b></u>, <u>panto<b>prazol</b></u></li>
+		<li>H2R-antagonisták ➜ pl. <span class="bgYellow"><u>famotidin</u> [quamatel]</span></li>
+		<li>PPI-k ➜ <u>ome<b>prazol</b></u>, <u>esome<b>prazol</b></u>, <u>panto<b>prazol</b></u></li> <!-- esomeprazol, pantoprazol -->
 		<span class="bgYellow">soha nem írjuk fel endoszkópia nélkül, <span class="midQ [32]">ugyanis!!</span></span>
 		<div><span class="plus">ind</span> <span class="midQ [a13] bgBlue">GERD</span> (gyomorégés) <span class="bgPink">link</span></div>
 		<div><span class="plus">ind</span> <span class="midQ [29.5] bgYellow">gastroduodenalis fekély</span></div><ul>
@@ -4743,36 +4925,103 @@ Orvosi dokumentáció helye és módja:
 	  </div>
 	</details>
 	<details class="[12.25] kerdes"><summary>antihisztaminok</summary><table><tr>
-		<th colspan="2"><div class="fsMini">antihisztaminok = H1-antagonisták = H1-blokkolók</div></th>
+		<th colspan="2"><div class="fsMini">antihisztaminok = <span class="bgYellow">H1-antagonisták</span> = H1-blokkolók</div></th>
 	  </tr><tr>
-		<th>1. generációs</th>
-		<th>2. generációs</th>
+		<th><span class="bgYellow">1. generációs</span></th>
+		<th><span class="bgYellow">2. generációs</span></th>
 	  </tr><tr>
-		<td><u>diphenhydramin</u>, <u>dimenhydrinate</u> [Daedalon]</td>
-		<td><u>lor<abbr title="'aladin'">at<strong>adin</strong></abbr></u> <u>cetirizin</u> <u>fexofen<strong>adin</strong></u><abbr title="megj.tipp: LoCeF(r)e">'</abbr></td>
+		<td><u>diphenhydramin</u>, <span class="bgYellow"><u>dimenhydrinate</u></span> <span class="bgYellow">[Daedalon]</span></td>
+		<td><u>lor<abbr title="'aladin'">at<strong>adin</strong></abbr></u> <span class="bgYellow"><u>cetirizin</u></span> <u>fexofen<strong>adin</strong></u><abbr title="megj.tipp: LoCeF(r)e">'</abbr></td>
 	  </tr><tr>
 		<td style="text-align:left" colspan="2">
-		  <center><span class="midQ [9]">inverz, kompetitív (reverzibilis)</span> <span class="midQ [152]">H1R</span>-<abbr title="gátolják a hisztamin kötődését a H1-receptorhoz">antagonisták</abbr></center>
-			<li>inverz ➜ konstitutív aktivitást mutató H1-receptorok alapaktivitását (már az agonista nélkül is végbemenőt) csökkentik</li>
-			<li>azonban fiziológiásan és betegség esetén sincs konstitutív aktivitása H1R-nek, így ez nem számít (olyan mintha neutralisat adnánk)</li>
-			<div><span class="plus">ind</span> <span class="bgYellow">allergia</span> <span class="fsMini">(<span class="syno">allergiás rhinitis | szénanátha</span>, urticaria, anaphylaxiás sokk)</span></div>
+		  <center><span data-src="farmak" class="midQ [9]">inverz, kompetitív (reverzibilis)</span> <span data-src="farmak" class="midQ [152]">H1R</span>-<abbr title="gátolják a hisztamin kötődését a H1-receptorhoz">antagonisták</abbr></center>
+			<div><span class="plus">ind</span> <span class="bgYellow"><span class="midQ [a1]">allergia</span></span> <span class="fsMini">(<span class="syno">allergiás rhinitis | szénanátha</span>, urticaria, anaphylaxiás sokk)</span></div>
 		</td>
 	  </tr><tr>
 		<td style="text-align:left">
-			<li><span class="midQ [33]">muszkarinerg receptor</span> angatonista ➜ antikolinerg hatás (bronchodilatátor, tachycardia, hyperthermia, tág pupillák, szájszárazság, vizeletretenció, székrekedés)</li>
-			<div><span class="plus">ind</span> hányáscsillapító <span class="fsMini">(H1R(KIR) + MuszR következtében)</span></div>
-			<div><span class="ORANGE">mh</span> antikolinerg hatások</div>
-			<li>vér-agy gáton könnyen átjut (<span class="midQ [70]">lipidoldékony</span>) ➜ <abbr title="kötődve H1-receptorhoz">'</abbr>KIR hatásuk (<span class="midQ [144]">szedáció</span>) is van</li>
-			<div><span class="plus">ind</span> <span class="midQ [151]">perioperatív medikáció</span> (szedatívum)</div>
-			<div><span class="ORANGE">mh</span> szedáció</div><ul>
+		  <li><span class="midQ [12.9]">muszkarinerg receptor</span> angatonista</li>
+			<div><span class="plus">ind</span> <span class="bgYellow">hányáscsillapító</span> <span class="fsMini">(H1R(KIR) + MuszR következtében)</span></div>
+			<div><span class="ORANGE">mh</span> <abbr title="bronchodilatátor, tachycardia, hyperthermia, tág pupillák, szájszárazság, vizeletretenció, székrekedés">antikolinerg hatások</abbr></div>
+		  <li>vér-agy gáton könnyen átjut (<span data-src="farmak" class="midQ [70]">lipidoldékony</span>)</li>
+			<div><span class="plus">ind</span> <span data-src="farmak" class="midQ [151]">perioperatív medikáció</span> (szedatívum)</div>
+			<div><span class="ORANGE">mh</span> <span class="bgYellow">szedáció</span></div><ul>
 				<span class="fsMini"><span class="midQ [13.12]">toxikológia</span> (vény nélkül kapható) ➜ th: <span class="midQ [12.9] bgYellow"><u>physostigmin</u></span> (antikolinerg hatások ellen)</span>
 			</ul>
 		</td>
-		<td> vér-agy gáton rosszul jut át <span class="fsMini">(szelektív perifériásak, minimális szedáció)</span> </td>
+		<td style="text-align:left">
+			<li>muszkarinerg receptor antagonista hatásuk elenyésző</li>
+			<li>vér-agy gáton rosszul jut át <span class="fsMini">(szelektív perifériásak, minimális szedáció)</span></li>
+		</td>
 	</tr></table></details>
 	<details class="[12.26] kerdes"><summary>vérnyomáscsökkentők = antihipertenzív szerek</summary>
 		<li><span class="midQ [12.8]">vazodilatátorok</span></li>
 		<li><span class="midQ [12.6]">thiazid diuretikumok</span></li>
+	</details>
+	<details class="[12.27] kerdes"><summary>antiarrhythmias gyógyszerek</summary>
+	  <li>4 csoportba sorolhatók</li>
+		<div>I. <span class="bgPink">Na⁺-csat. blokkolók</span></div>
+		<details class="kerdes"><summary>II. β-blokkolók</summary><table><tr>
+			<th rowspan="2"></th>
+			<th>nem szelektív (β<span class="sub">1</span> + β<span class="sub">2</span>)</th>
+			<th>kardioszelektív (β<span class="sub">1</span>)</th>
+		  </tr><tr>
+			<td colspan="2"> <span class="midQ [12.9]">szimpatolítikum</span>ok </td>
+		  </tr><tr><th class="vertical-text">gyógyszer</th>
+			<td style="text-align:left">
+				<li><u>propranolol</u>, <u>pindolol</u>, <u>timolol</u></li>
+				<li><u>carvedilol</u> [Talliton] <span class="fsMini">(α<span class="sub">1</span>-blokkoló is)</span></li>
+				<li><u>sotalol</u> ➜ <span class="bgYellow">lásd K⁺-csat blokkolók!</span></li>
+			</td>
+			<td style="text-align:left">
+				<li><u>bisoprolol</u> [Concor], <u>metoprolol</u> [Betaloc], <u>esmolol</u></li>
+				<li><u>nebivolol</u> [Nebibeta] [Nebilet] ➜ NO-mediált vasodilatációt is okoz</li>
+			</td>
+		  </tr><tr><th rowspan="2" class="vertical-text">hatás</th>
+			<td colspan="2" style="text-align:left">
+			  <div><b>β₁</b></div>
+				<li><span class="bgYellow">negatív inotróp, kronotróp</span></li>
+				<li><span class="bgYellow"><span class="midQ [2]">renin</span> felszabadulást gátolja</span> ('funkcionálisan RAAS-gátló')</li>
+				➜ fennti kettő következtében <span class="midQ [12.8] kerdes">vérnyomáscsökkentő</span>
+			</td>
+		  </tr><tr>
+			<td style="text-align:left">
+			  <div><b>β₂</b></div>
+				<li><span class="bgYellow">bronchokonstrikció</span></li>
+				<li>(váz- & szívizom:) vazokonstrikció ➜ vérnyomásnövelő</li>
+				<li>hypoglicaemia <span class="bgPink">?</span></li>
+				<div><span class="ORANGE">mh</span> (lipolízis gátlás ➜) LDL↑ HDL↓</div>
+			</td>
+			<td style="border-top-style: hidden;"></td>
+		  </tr><tr><th class="vertical-text">ind</th>
+			<td colspan="2" style="text-align:left">
+				<div><span class="plus">ind</span> <span class="midQ bgYellow [48.1] kerdes">arrhythmia</span></div><ul>
+					<li><span class="midQ [4]">SVT</span>: AV-függő</li><ul>
+						<div><span class="minus">KI</span> ha WPW-sy + pitvarfibrilláció</div>
+					</ul>
+					<li>VT (pulzussal / <abbr title="post-MI, CPVT, long QT (chatgpt)">prevenció</abbr>) ➜ <u>sotalol</u></li><ul>
+						<div><span class="minus">KI</span> ha TdP</div>
+					</ul>
+				</ul>
+				<div><span class="plus">ind</span> <span class="midQ [67.5.7] bgYellow">krónikus SzE</span> (HFrEF) ➜ <u>bisoprolol</u>, <u>metoprolol</u>, <u>carvedilol</u></div>
+				<div><span class="plus">ind</span> <span class="midQ [8] fsMini">(hypertonia)</span> <span data-src="szul" class="midQ [86] fsMini">(terhességi hypertonia - <u>metoprolol</u>)</span></div>
+				<div><span class="plus">ind</span> <span class="fsMini"><span data-src="psy" class="midQ [48]">delírium tremens</span> tüneti ➜ <u>propranolol</u></span></div>
+			</td>
+		</tr></table></details>
+		<details class="kerdes"><summary>III. K⁺-csat. blokkolók</summary>
+			<div><span class="plus">ind</span> <span class="midQ [48.1]">arryhthmia</span> ➜ <span class="midQ [4]">VT pulzussal</span></div>
+			<div><span class="minus">KI</span> ha TdP<abbr title="főként sotalol a kontraindikált (ugyanis az okozhat is), de amiodaron is kerülendő">'</abbr></div>
+		  <div><u>amiodaron</u> [Cordarone] <span class="fsMini">(Na-blokk, Ca-blokk, α-blokk, β-blokk hatású is)</span></div>
+			<div><span class="ORANGE">mh</span> <span class="bgYellow">tüdőfibrózis</span>, <span class="midQ [18.4]">cirrhosis</span>, <span class="midQ [36.1]">hyperthyreosis</span></div>
+		  <div><u>sotalol</u> <abbr class="sup" title="szotalol">🔊</abbr> [Sotalex] ➜ β-blokkoló is</div>
+			<div><span class="ORANGE">mh</span> TdP</div>
+		</details>
+		<div>IV. <span class="bgPink">Ca<span class="sup">2+</span>-csat blokkolók</span></div>
+	</details>
+	<details class="[12.28] kerdes"><summary></summary>
+		<li></li>
+	</details>
+	<details class="[12.29] kerdes"><summary></summary>
+		<li></li>
 	</details>
 </div>
 <details class="[13] kerdes"><summary>TOXIKOLÓGIA</summary>
@@ -5854,8 +6103,8 @@ Orvosi dokumentáció helye és módja:
 			</details>
 		</ul>
 		<li>vestibulocerebellaris működészavar</li><ul>
-			<li>cerebellum<abbr title="spino">'</abbr> ➜ ataxia: <span class="midQ [FiVi.gait] bgYellow">járás</span> és törzs</li>
-			<li>vestibularis rendszer ➜ <span class="midQ [19.12] bgYellow">vertigo</span></li>
+			<li>cerebellum<abbr title="spino">'</abbr> ➜ <span class="midQ [19.13]">ataxia</span>: <span class="midQ [FiVi.gait] bgYellow">járás</span> és törzs</li>
+			<li>centralis vestibularis rendszer ➜ <span class="midQ [19.12] bgYellow">vertigo</span></li>
 		</ul>
 		<li><span class="midQ [34] kerdes bgBlue">akut pancreatitis</span></li>
 		<li>akut gastritis</li>
@@ -5948,10 +6197,7 @@ Orvosi dokumentáció helye és módja:
 					<li>szteroid</li>
 					<li>(hialuronsav)</li>
 				</ul>
-				<li>per os</li><ul>
-					<li>kondroitin-szulfát</li>
-					<li>glükózamin</li>
-				</ul>
+				<li>per os ➜ <span class="midQ [12.4]">kondroitin-szulfát</span>, <span class="midQ [12.4]">glükózamin</span></li>
 			</ul>
 			<li>végső megoldás ➜ protézis</li>
 		</details></li>
@@ -7383,7 +7629,7 @@ Orvosi dokumentáció helye és módja:
 				<li><span class="midQ [18.10.2]">haemochromatosis</span></li>
 				<li><span class="midQ [18.10.3]">Wilson-kór</span></li>
 			</ul>
-			<li>gyógyszer ➜ pl. MTX, <u>amiodaron</u></li>
+			<li>gyógyszer ➜ pl. MTX, <span class="midQ [12.27]"><u>amiodaron</u></span></li>
 			<li>toxin ➜ pl. <span class="midQ [63]" data-src="bel">aflatoxin (Aspergillus)</span></li>
 			<li>vénás pangás ➜ jobb SzE, <span class="midQ [18.12]">Budd-Chiari sy</span></li>
 		</ul>
@@ -8668,79 +8914,72 @@ Orvosi dokumentáció helye és módja:
 		<li>korábban egészséges volt? másoknál is megjelent? (hirtelen) ➜ infekció, <span class="midQ [13.1]">toxikológia</span></li>
 	</details>
 	<details class="[19.12] kerdes"><summary>szédülés = vertigo</summary>
-		<li>mikor</li><ul>
-			<li>reggel? ágyban? (BPPV)</li>
-			<li>felálláskor? (hypotonia)</li>
-			<li>csukott szemmel fokozódik?</li>
+		<li>mikor?</li><ul>
+			<li>reggel, ágyban (BPPV)</li>
+			<li>felálláskor ((orthostaticus) hypotonia)</li>
+			<li>csukott szemmel fokozódik (➜ <span class="syno">sensoros | spinalis</span>(proprioceptív))</li>
 		</ul>
 		<li>szédülés iránya?</li><ul>
 			<li>forgó</li>
-			<li>ha nincs ➜ feltételezhetően anyagcserezavar / vérnyomás áll a háttérben</li>
+			<li>ha nincs ➜ egyéb pl.</li><ul>
+				<li>metabolikus (Wernicke-Korsakoff)</li>
+				<li>(orthostaticus) hypotonia</li>
+			</ul>
 		</ul>
+		<li>hányinger?</li>
+		<li>hallásromlás?</li>
+	  <b>etio ➜ patho</b>
+		<li><span data-src="neuro" class="midQ [11]">vestibularis rendszer zavara ➜ centr / perif</span></li>
 	  <b>FiVi</b>
-		<li><span data-src="neuro" class="midQ [44]">Romberg-teszt</span></li>
+		<li>nystagmus<span data-src="neuro" class="midQ [11] sup">»</span></li><ul>
+			<li>inspekció</li>
+			<li>vezetett szemmozgás</li>
+		</ul>
 		<li><span data-src="neuro" class="midQ [44]">bárány-próba</span></li>
-		<li><span data-src="neuro" class="midQ [44]">járás vizsgálat</span></li>
-
-
-		
-		
-		
-		<div data-src="neuro" class="imp [11]"></div>
-
-	  <strong>Benign paroxysmal positional vertigo (BPPV)</strong>
-		<span class="video" data-src="Semmelweis oktatóvideók： Epley-manőver [GIyc2PPahvA].mp4"></span>
-		<li>patho ➜ otolith kristályok leszakadnak a 3 félkörös ívjárat valamelyikében<abbr title="canalithiasis / cupolithiasis ➜ a maculáról leszakadt otolith-kristályok a félkörös ívjáratban endolympha áramlást okoznak, ami nystagmust provokál">*</abbr></li><ul>
-			<span class="fsMini"><abbr title="Epley-manőver csak arra jó">3 típusa van, 90%-ban posterior, a továbbiakban azzal folytatva</abbr></span>
+		<li><span class="midQ [19.13]">ataxia</span><span data-src="neuro" class="midQ [44] sup">»</span>:</li><ul>
+			<li><span data-src="neuro" class="midQ [44]">Romberg-teszt</span> (törzs)</li>
+			<li><span data-src="neuro" class="midQ [44]">járás vizsgálat</span> (járási)</li>
 		</ul>
-		<li>tünet</li><ul>
-			<li>fő ➜ <span class="bgYellow">rövid ideig tartó</span> <span class="bgYellow">forgó jellegű</span> szédülés, amit <span class="bgYellow">fejhelyzet-változtatás vált ki</span>:</li><ul>
-				<li>ágyban megfordulás</li>
-				<li>lefekvés/felülés</li>
-				<li>fej hátraszegése (pl. polcra nézés)</li>
-				<li>lehajlás</li>
-			  reggel nem tud felülni ágyban, mert szédül
-			</ul>
-			<li>egyéb ➜ <span class="bgYellow">hányinger-hányás</span> (verejtékezés, sápadtság)</li>
-			<li>nincs</li><ul>
-				<li>folyamatos egész napos forgó szédülés</li>
-				<li>hallásromlás, fülzúgás</li>
-				<li>neurológiai tünetek (gyengeség, beszédzavar, kettőslátás stb.)</li>
-			</ul>
+	</details>
+	<details class="[19.13] kerdes"><summary>ataxia</summary>
+		<li><span class="bgYellow">szindróma</span> ➜ <span class="bgYellow">koordináció zavar</span>ából eredő akaratlagos izommozgás zavar (pl. részegen botladozik)</li><ul>
+			<span class="fsMini">izomgyengeség tehát nem</span>
 		</ul>
-		<li>dg & th ➜ Epley-manőver</li><ul>
-			<li><span class="bgYellow">beteggel végignézzük a videót, megcisnáljuk, átküldöm a linket</span></li>
-			<li><details class="kerdes"><summary>hivatalos</summary>
-			  <b>Dix-Hallpike teszt</b>
-				<li>ül az ágyon</li><ul>
-					<li>lábak az ágyon</li>
-					<li>ha majd lefekszik akkor a feje lógjon le az ágy szélén</li>
-				</ul>
-				<li>fejét 45°-ban elfordítom jobb oldali irányba</li>
-				<li>hátradől, döntöm az ágyon, feje kb. 20-30 fokban hátra(<abbr title="lehet tarkó lenne, de nincs jelentősége">föld</abbr> irányába) is dől</li>
-				<li>30-60s így tartom ➜ ha kényelmetlen, szóljon</li><ul>
-					<li>nézem van-e nystagmus</li>
-					<li>rosszul érzi magát?</li>
-				</ul>
-				<li>utána visszaül és másik irányba ugyanez</li><ul>
-					<li><span class="bgYellow">melyik irányban volt rosszab? ➜ azon az oldalon a probléma, onnan kell kiindulni!</span></li>
-				</ul>
-			  <b>Epley-manőver</b>
-				<li>Dix-Hallpike pozícióból kiindulás ➜ 30s-60s ig úgy, közben elvileg csökken a rossz érzés</li>
-				<li>fejét átfordítja másik oldalra (<abbr title="ha az elején balról indult">jobbra</abbr>) (45°) és úgy hagyja 30-60secig</li>
-				<li>beteg a testével (és fejével) tovább fordul (<abbr title="ha az elején balról indult">jobbra</abbr>) 90°-kal oldalra</li>
-			</details></li>
-			<li><details class="kerdes"><summary>egyszerűbb</summary>
-				<li>két irányba lehet elvégezni, ebből az egyik a jó ➜ az, hogy melyik a jó úgy lehet eldönteni, hogy megcsinálja mindkettőt és érezni fogja</li>
-				<li>először lefekszik háttal az ágyra úgy, hogy 45°-ban jobbra a feje<abbr title="le is lóghat 20°-ban hátra is (de van akinek úgy rosszabb érzés volt és kihagyja, így nem aranyszabály)">*</abbr>... vár így 30s-1min</li>
-				<li>átfordítja fejét <abbr title="tehát határozottan, ennyi">'viszonylag hirtelen'</abbr> 90°-kal balra (tehát 45°-ban balra néz) ➜ ha javult, akkor így kell ezután csinálni mindig, ha rosszabb lett, akkor ez a rossz irány ➜ itt is vár 30s-1m</li>
-				<li>végül testtel (és fejjel) elfordul 90°-ban balra</li>
-			  megj: rokon tapasztalata alapján
-			</details></li>
+		<li><details class="kerdes"><summary>patho ➜ cerebellaris / perif.vestibularis / sensoros = spinalis</summary><table><tr>
+			<th></th>
+			<th><abbr title="n.VIII +/ 3 félkörös ívjárat">vestibularis(perif)</abbr></th>
+			<th>cerebellaris</th>
+			<th>spinalis = sensoros</th>
+		  </tr><tr><th> probléma </th>
+			<td colspan="2"> <span class="bgYellow">egyensúly koordináció feldolgozás</span> </td>
+			<td> <span class="bgYellow">proprioceptív pálya (gv)</span> </td>
+		  </tr><tr><th> törzsataxia </th>
+			<td colspan="2"> <span class="bgYellow">alapból</span> </td>
+			<td> <span class="bgYellow">ha szembecsukás</span> ➜ <span class="minus">+</span> Romberg <abbr title="ugyanis spinalis esetén a propriocepció nem megy, tehát nem érzem a talajt ➜ de! a szem ezt korrigálja még">!!!!</abbr> </td>
+		  </tr><tr><th> <span class="midQ [FiVi.gait]">járási ataxia</span> </th>
+			<td colspan="2"> <abbr title="vestibularisnál egy oldal fele deviál jellemzően, mivel féloldali a laesio. ha vestibulorcerebellum érintett, akkor természetesen cerebellaris típusú">*</abbr>cerebellaris ataxia </td>
+			<td> sensoros ataxia </td>
+		  </tr><tr><th> nystagmus </th>
+			<td colspan="2"> <span class="bgYellow">gyakori</span> </td>
+			<td> <span class="bgYellow">nincs</span> </td>
+		  </tr><tr><th> végtagataxia </th>
+			<td> negatív </td>
+			<td> pozitív </td>
+			<td> negatív </td>
+		  </tr><tr><th> vertigo </th>
+			<td> pozitív </td>
+			<td> lehet </td>
+			<td> negatív </td>
+		  </tr><tr><th> Bárány próba </th>
+			<td> pozitív </td>
+			<td> lehet </td>
+			<td> negatív </td>
+		</tr></table></details></li>
+		<li>tünetek ➜ FiVi</li><ul>
+			<li>törzsataxia ➜ állóhelyzetben egyensúlyzavar ➜ <span data-src="neuro" class="midQ [44]">Romberg-teszt</span></li>
+			<li>járási ataxia ➜ <span class="midQ [FiVi.gait]">lásd járászavarok (cerebellaris, sensoros)</span></li>
+			<li>végtag ataxia ➜ ügyetlen kéz/lábmozdulatok ➜ <span data-src="neuro" class="midQ [44]">célkísérletek</span></li>
 		</ul>
-		<li>ha szédül, ezt kell csinálnia majd otthon is!</li>
-		<span class="video mini" data-txt="►" data-src="Dix-Hallpike Test & Epley Manoeuvre - OSCE Guide ｜ UKMLA ｜ CPSA ｜ PLAB 2 [D6qEdlFVxig].mp4"></span>
-		<span class="video mini" data-txt="►" data-src="Epley Maneuver.mp4"></span>
 	</details>
 </div>
 <details class="[20] kerdes"><summary>VESE</summary>
@@ -12741,7 +12980,7 @@ Orvosi dokumentáció helye és módja:
 			<li><span class="bgYellow">Graves–Basedow-kór</span></li>
 			<li><span class="bgYellow">toxikus adenoma</span></li>
 		  ritkán:
-			<li>iatrogén ➜ <u>levothyroxin</u>, <u>amiodaron</u></li>
+			<li>iatrogén ➜ <u>levothyroxin</u>, <span class="midQ [12.27]"><u>amiodaron</u></span></li>
 			<li>pajzsmirigy tumor</li>
 			<li>centralis (szekunder,tertier) ➜ TSH-túltermelés (hypophysis adenoma, <span class="midQ [53] kerdes">paraneoplasias sy</span>)</li>
 		</td>
@@ -14884,9 +15123,8 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<div>✅ <u>prokainamid</u>, <u>ibutilid</u> <span class="fsMini">(csak AKUT adhatók)</span></div>
 		</td>
 		<td style="text-align:left">
-		  <span class="plus">ind</span> <b><span class="midQ [4]">VT pulzussal</span> ➜ ha nem TdP:</b>
-			<div>✅ <u>amiodaron</u> (K-csat. blokkoló)</div>
-			<div>✅ <u>sotalol</u></div>
+		  <span class="plus">ind</span> <b><span class="midQ [4]">VT pulzussal</span></b>
+			<div>✅ <span class="midQ [12.27]"><u>amiodaron</u></span>, <u>sotalol</u></div>
 			<div>✅ <span class="midQ [12.24]"><u>lidokain</u></span> <span class="fsMini">(csak AKUT adható)</span></div>
 			<div><span class="minus">KI</span> <span class="bgYellow">K-csat. blokkoló (pl. amiodaron), ha TdP</span></div>
 		</td>
@@ -14915,7 +15153,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			csak ha fiatal! + protokollt megnézni, komplikált!!
 		</ul>
 		<div><span class="plus">ind</span> SVT - hemodinamikailag stabil</div>
-	  <b>eddigiek tachycardia és tachyarrhythmiak ➜ ez bradycardia és bradyarrhyhtmia</b>
+	  <b>eddigiek tachycardia és tachyarrhythmiak ➜ ez bradycardia és bradyarrhythmia</b>
 		<li><span data-src="done/Kardio/kardio.html" class="midQ [42] kerdes">pacemaker</span> ➜ Mobitz II-től</li>
 	</details>
 	<details class="[48.2] kerdes"><summary>klinikai halál, keringésleállás, szívleállás, defibrilláció</summary>
@@ -18801,7 +19039,7 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 					<li>invazív</li>
 				</ul>
 			</td>
-			<td colspan="2" style="text-align:left"><b>gyógyszeres (HFrEF)</b>
+			<td colspan="2" style="text-align:left"><b>gyógyszeres (<span class="midQ [67.5.8]">HFrEF</span>)</b>
 				<li><span class="bgBlue">első vonalbeli kezelés(bázisth), kötelező!</span></li><ul>
 					<li><span class="bgYellow"><span class="midQ [12.8] kerdes">ACE-gátló</span> / <span class="midQ [12.8]">ARB</span></span> (<span class="midQ [2] kerdes">RAAS</span>-gátlók)</li>
 					<li><span class="midQ [12.9] kerdes bgYellow">β-blokkolók</span> (symp↓)</li>
@@ -20761,7 +20999,7 @@ European Directorate for the Quality of Medicines – Guide to the preparation, 
 	<li>allergén-specifikus IgE kimutatása vérből</li>
   <b>Th</b>
 	<li>profilaxis ➜ allergén kerülése (takarítás(poratka), gyógyszer/étel)</li>
-	<li>ha enyhe és/vagy krónikus ➜ anti-H1-hisztamin (po)</li><ul>
+	<li>ha enyhe és/vagy krónikus ➜ <span class="midQ [12.25]">antihisztamin</span> (po)</li><ul>
 		<span class="fsMini">bizonyos esetekben szteroid</span>
 	</ul>
 	<li><details class="kerdes"><summary><span class="midQ [12.5] kerdes">Adr</span> (<span class="midQ [🩺4]">im</span>) azonnal, ha...</summary>
@@ -22753,188 +22991,7 @@ női nem, menstruációs ciklushoz való kapcsolat
 		<div class="imp [13.12]"></div> <!-- altatók (toxikológia) -->
 	</details>
 </details>
-<details class="[📝4] title"><summary>📝 GYÓGYSZERNEVEK (alapok)</summary>
-  <!-- BDZ -->
-	<details class="kerdes"><summary>Xanax</summary>
-		<div class="imp [13.12]"></div> <!-- altatók -->
-	</details>
-	<details class="kerdes"><summary>Frontin</summary>
-		<div class="imp [13.12]"></div> <!-- altatók -->
-	</details>
-	<details class="kerdes"><summary>Rivotril</summary>
-		<div class="imp [13.12]"></div> <!-- altatók -->
-	</details>
-	<details class="kerdes"><summary>Seduxen</summary>
-		<div class="imp [13.12]"></div> <!-- altatók -->
-	</details>
-	<details class="kerdes"><summary>Valium</summary>
-		<div class="imp [13.12]"></div> <!-- altatók -->
-	</details>
-  <!-- NSAID -->
-	<details class="kerdes"><summary>Cataflam</summary>
-		<div class="imp [12.21]"></div> <!-- minor analgetikumok -->
-	</details>
-	<details class="kerdes"><summary>Aszpirin</summary>
-		<div class="imp [12.21]"></div> <!-- minor analgetikumok -->
-	</details>
-	<details class="kerdes"><summary>Algopyrin</summary>
-		<div class="imp [12.21]"></div> <!-- minor analgetikumok -->
-	</details>
-	<details class="kerdes"><summary>Coldrex</summary>
-		<li><span class="midQ [12.21]"><u>paracetamol</u></span></li>
-		<li><span class="midQ [12.9]"><u>fenilefrin</u></span></li>
-	</details>
-	<details class="kerdes"><summary>Neocitran</summary>
-		<div class="imp [12.21]"></div> <!-- minor analgetikumok -->
-	</details>
-	<details class="kerdes"><summary>Saridon</summary>
-		<div class="imp [12.21]"></div> <!-- minor analgetikumok -->
-	</details>
-  <!-- köhögés -->
-	<details class="kerdes"><summary>Fluimucil</summary>
-		<div class="imp [12.16]"></div>
-	</details>
-	<details class="kerdes"><summary>Robitussin</summary>
-		<div class="imp [12.16]"></div>
-	</details>
-  <!-- mix -->
-	<details class="kerdes"><summary>Cavinton</summary>
-		<li><span class="bgYellow">agyi keringésfokozó</span> (agyban: vazodilatáció + O2- és flükózfelvétel stb.)</li>
-		<div><span class="plus">ind</span> [neuro] krónikus cerebovascularis betegség <span class="bgPink">[link]</span></div>
-		<div><span class="plus">ind</span> [neuro] ischaemias stroke utáni állapot <span class="bgPink">[link]</span></div>
-		<div><span class="plus">ind</span> [neuro] vascularis dementia <span class="bgPink">[link]</span></div>
-		<div><span class="plus">ind</span> [FOG] tinnitus <span class="bgPink">[link]</span></div>
-		<div><span class="plus">ind</span> [FOG] sensorineuralis halláscsökkenés <span class="bgPink">[link]</span></div>
-	</details>
-	<details class="kerdes"><summary>Strepsils</summary>
-		<li>hatóanyag ➜ <span class="bgYellow">helyi antiszeptikumok, baktériumok és egyes vírusok ellen hatnak a száj- és garatnyálkahártyán</span></li><ul>
-			<li>amilmetakrezol</li>
-			<li>2,4-diklór-benzil-alkohol</li>
-			nem tartalmaz antibiotikumot!
-		</ul>
-		<div><span class="plus">ind</span> torokfertőtlenítő</div>
-	</details>
-	<details class="kerdes"><summary>No-Spa</summary>
-		<div class="imp [12.3]"></div>
-	</details>
-	<details class="kerdes"><summary>Reparon</summary>
-		<div class="imp [12.4]"></div>
-	</details>
-	<details class="kerdes"><summary>Canesten</summary>
-		<div class="imp [12.4]"></div>
-	</details>
-	<details class="kerdes"><summary>Milurit</summary> <div class="imp [12.2]"></div> </details>
-  <!-- hashajtó -->
-	<details class="kerdes"><summary>Dulcolax</summary>
-		<div class="imp [12.10]"></div>
-	</details>
-	<details class="kerdes"><summary>Stadalax</summary>
-		<div class="imp [12.10]"></div>
-	</details>
-  <!-- diuretikumok -->
-	<details class="kerdes"><summary>Furon</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-	<details class="kerdes"><summary>Lasix</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-	<details class="kerdes"><summary>Hypothiazid</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-	<details class="kerdes"><summary>Torem</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-	<details class="kerdes"><summary>Torasemid Sandoz</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-	<details class="kerdes"><summary>Britomar</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-	<details class="kerdes"><summary>Hypothiazid</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-	<details class="kerdes"><summary>Tertensif</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-	<details class="kerdes"><summary>Rawel</summary>
-		<div class="imp [12.6]"></div>
-	</details>
-  <!-- vazodilatátorok -->
-	<details class="kerdes"><summary>Norvasc</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Lercadip</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Adalat</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Coverex AS</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Tritace</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Renitec</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Cozaar</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Diovan</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Micardis</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Atacand</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Cardura</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Moxonidin</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-	<details class="kerdes"><summary>Tensiomin</summary>
-		<div class="imp [12.8]"></div>
-	</details>
-  <!-- major analgetikumok -->
-	<details class="kerdes"><summary>Contramal</summary> <div class="imp [12.23]"></div> </details>
-  <!-- infúziók -->
-	<details class="kerdes"><summary>Salsol</summary> <div class="imp [a15]"></div> </details>
-  <!-- vérhigítók -->
-	<details class="kerdes"><summary>Arixtra</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Clexane</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Fraxiparine</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Fragmin</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Syncumar</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Marfarin</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Xarelto</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Eliquis</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Lixiana</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Pradaxa</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Aspirin Protect</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Plavix</summary> <div class="imp [12.13]"></div> </details>
-	<details class="kerdes"><summary>Brilique</summary> <div class="imp [12.13]"></div> </details>
-  <!-- dyslipidaemia -->
-	<details class="kerdes"><summary>Sortis</summary> <div class="imp [12.1]"></div> </details>
-	<details class="kerdes"><summary>Torvacard</summary> <div class="imp [12.1]"></div> </details>
-	<details class="kerdes"><summary>Crestor</summary> <div class="imp [12.1]"></div> </details>
-	<details class="kerdes"><summary>Ezetrol</summary> <div class="imp [12.1]"></div> </details>
-  <!-- antidiabetikum -->
-	<details class="kerdes"><summary>Merckformin</summary> <div class="imp [58.4]"></div> </details>
-	<details class="kerdes"><summary>Diaprel</summary> <div class="imp [58.4]"></div> </details>
-	<details class="kerdes"><summary>Xelevia</summary> <div class="imp [58.4]"></div> </details>
-	<details class="kerdes"><summary>Januvia</summary> <div class="imp [58.4]"></div> </details>
-	<details class="kerdes"><summary>Jardiance</summary> <div class="imp [58.4]"></div> </details>
-	<details class="kerdes"><summary>Ozempic</summary> <div class="imp [58.4]"></div> </details>
-  
-  <!-- Béta-blokkolók -->
-- Concor,
-- Nebilet,
-- Betaloc ZOK
-  <!-- AB (Ceftriaxon[Rocefin], vancomycin, metronidazol[Klion] ...) -->
+<details class="[📝4] title"><summary>📝 </summary>
 </details>
 <details class="[📝5] title"><summary>📝 diuretikumok</summary>
 	<details class="kerdes"><summary>csoportosítása</summary>
@@ -25126,24 +25183,36 @@ női nem, menstruációs ciklushoz való kapcsolat
 		<div class="imp [64]"></div>
 	</details>
 </details>
-<details class="[📝107] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝107] title"><summary>📝 antihisztaminok</summary>
+	<details class="kerdes"><summary>hatóanyag(2)</summary>
+		<div class="imp [12.25]"></div> <!-- antihisztaminok -->
+	</details>
+	<details class="kerdes"><summary>ind(2)</summary>
+		<div class="imp [12.25]"></div> <!-- antihisztaminok -->
+	</details>
+	<details class="kerdes"><summary>mh(1)</summary>
+		<div class="imp [12.25]"></div> <!-- antihisztaminok -->
 	</details>
 </details>
-<details class="[📝108] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝108] title"><summary>📝 köptetők vs köhögéscsillapítók</summary>
+	<details class="kerdes"><summary>hatóanyag(3)</summary>
+		<div class="imp [12.16]"></div> <!-- köptetők -->
+	</details>
+	<details class="kerdes"><summary>ind(2)</summary>
+		<div class="imp [12.16]"></div> <!-- köptetők -->
 	</details>
 </details>
-<details class="[📝109] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝109] title"><summary>📝 hashajtó</summary>
+	<details class="kerdes"><summary>hatóanyag (2), gyógyszer (2)</summary> <!-- hashajtó -->
+		<div class="imp [12.10]"></div>
+	</details>
+	<details class="kerdes"><summary>hatásmech (2)</summary> <!-- hashajtó -->
+		<div class="imp [12.10]"></div>
 	</details>
 </details>
-<details class="[📝110] title"><summary>📝 </summary>
-	<details class="kerdes"><summary> ()</summary>
-		<div class="imp [1.1]"></div>
+<details class="[📝110] title"><summary>📝 antidiarrhoeás szerek</summary>
+	<details class="kerdes"><summary>hatóanyag (1)</summary> <!-- antidiarrhoeás -->
+		<div class="imp [12.10]"></div>
 	</details>
 </details>
 <!-- 📝101 – 110 --></details>
@@ -25282,7 +25351,7 @@ női nem, menstruációs ciklushoz való kapcsolat
 		<span class="img" data-src="zojmlvih.webp"></span>
 		<span class="img" data-src="fivinegstat.webp"></span>
 	</details>
-	<details class="open"><summary class="status"><span class="bgPink">bel</span>gyogy</summary> <div class="imp [FiVi]"></div> </details>
+	<details class="open"><summary class="status">belgyogy</summary> <div class="imp [FiVi]"></div> </details>
 	<details class="open"><summary class="status">EKG</summary> <div class="imp [7]"></div> </details>
 	<details class="open"><summary class="phase">IF - tüdő</summary>
 		<details class="kerdes open"><summary>🔊 tüdőhallgatózás <!-- sípoló/búgó v1 --></summary>
@@ -25463,7 +25532,7 @@ női nem, menstruációs ciklushoz való kapcsolat
 			<span class="img" data-max-width="98%" data-src="qvxglrej.webp"></span>
 		</details>
 	</details>
-	<details class="open"><summary class="phase">IF - bőr<span class="bgPink">*</span></summary>
+	<details class="open"><summary class="phase">IF - bőr</summary>
 		<details class="if kerdes open"><summary>🖼 macula – pigmentáció &amp; tetoválás</summary>
 			<span class="midQ [FiVi.bőr] fsMini WHITE">FiVi - bőr</span>
 			<details><summary>megoldas</summary>
@@ -25941,7 +26010,7 @@ női nem, menstruációs ciklushoz való kapcsolat
 			<span class="img" data-src="xuyxruct.webp"></span>
 		</details>
 	</details>
-	<details class="open"><summary class="phase">IF - EKG<span class="bgPink">*</span></summary>
+	<details class="open"><summary class="phase">IF - EKG</summary>
 		<details class="kerdes"><summary><span class="bgPink">KIDOLGOZÁS</span></summary>
 			<li>EKG (kórtan 'könyv') ➜ ebből kéne a fontosakat, lényeget</li>
 			<li>jelenleg a régi kórtanjegyzetemet dobtam át ide ➜ van benne fölös, MI kevés, stb.</li>
@@ -26391,10 +26460,6 @@ női nem, menstruációs ciklushoz való kapcsolat
 			<span class="img" data-max-width="98%" data-src="vivueazm.webp"></span>
 		</details>
 	</details>
-</details>
-
-<details><summary class="phase">gyógyszernevek</summary>
-	<div class="imp [📝4]"></div>
 </details>
 
 <!----><details><summary class="mainTitle">1. részvizsga</summary>
@@ -26942,7 +27007,7 @@ női nem, menstruációs ciklushoz való kapcsolat
 	<details><summary class="phase">háziorvostan</summary>
 		<span class="imp [a18]"></span> <!-- klinikai szavak, röviditések -->
 		<span class="imp [55]"></span> <!-- légúti betegségek -->
-		<details class="kerdes"><summary><span class="bgPink">é</span>letkorhoz kötött, daganatos betegségek megelőzését célzó program összeállítása és végrehajtása különböző korcsoportokban</summary>
+		<details class="kerdes"><summary>életkorhoz kötött, daganatos betegségek megelőzését célzó program összeállítása és végrehajtása különböző korcsoportokban</summary>
 		  <div><b>primer</b></div>
 			<div>🚭 <span class="midQ [a20]">dohányzás csökkentés, STOP</span></div>
 			<div>🍷 alkohol csökkentés, STOP <span class="bgPink">link</span></div>
@@ -26989,6 +27054,7 @@ női nem, menstruációs ciklushoz való kapcsolat
 				</details></li>
 			</ul>
 			<li>melanoma: fotók róla időközönként ➜ AI +/ bőrgyógyász kontroll</li>
+		  <div><span class="bgPink">nincs ezekre egyenlőre kidolgozás protokollom (táblázat vezetés ki volt, hogyan javasold, alkohol leszoktatás protokoll, mint dohányzás), de kéne ➜ ez csak egy összefoglaló ugye</span></div>
 		</details>
 		<span class="imp [a20]"></span> <!-- dohányzás -->
 	</details>
@@ -27866,6 +27932,7 @@ egyéb szituációkat is be kéne vésnem, pl.
 </details>
 <div><b>mix</b></div>
 <details><summary class="phase">gyógyszerek</summary>
+	<span class="imp [12.0]"></span> <!-- gyógyszernevek -->
 	<span class="imp [📝1]"></span> <!-- ált.anesztetikumok -->
 	<span class="imp [📝16]"></span> <!-- lokál anesztetikumok -->
 	<span class="imp [📝3]"></span> <!-- altatók -->
@@ -27881,32 +27948,23 @@ egyéb szituációkat is be kéne vésnem, pl.
 	<span class="imp [📝13]"></span> <!-- dyslipidaemia -->
 	<span class="imp [📝14]"></span> <!-- osteoporosis -->
 	<span class="imp [📝15]"></span> <!-- antiarrhythmias szerek -->
-	<span class="imp [📝4]"></span> <!-- gyógyszernevek -->
+	<span class="imp [📝107]"></span> <!-- antihisztaminok -->
+	<span class="imp [📝108]"></span> <!-- köptetők vs köhögéscsillapítók -->
+	<span class="imp [📝109]"></span> <!-- hashajto -->
+	<span class="imp [📝110]"></span> <!-- anti diarrhoea -->
 	
 	<details class="kerdes"><summary>kondroitin-szulfát</summary>
-		<div class="imp [15.2]"></div>
+		<div class="imp [12.4]"></div>
 	</details>
 	<details class="kerdes"><summary>hialuronsav</summary>
-		<div class="imp [15.2]"></div>
+		<div class="imp [12.4]"></div>
 	</details>
 	<details class="kerdes"><summary>glükózamin</summary>
-		<div class="imp [15.2]"></div>
+		<div class="imp [12.4]"></div>
 	</details>
 	<details class="kerdes"><summary>thiogamma</summary>
 		<div class="imp [12.4]"></div>
 	</details>
-	
-	<details class="kerdes"><summary>hashajtó ➜ hatóanyag?(1) gyógyszernév?(2)</summary>
-		<div class="imp [12.10]"></div>
-	</details>
-	<details class="kerdes"><summary>köptetők ➜ lényeg? hatóanyag?(1)</summary>
-		<div class="imp [12.16]"></div>
-	</details>
-	<details class="kerdes"><summary>köhögéscsillapítók ➜ lényeg? hatóanyag?(2)</summary>
-		<div class="imp [12.16]"></div>
-	</details>
-	
-	
 	
 	<details class="kerdes"><summary></summary>
 		<li></li>
@@ -27965,6 +28023,8 @@ egyéb szituációkat is be kéne vésnem, pl.
 <!----></details>
 
 <details class="fsMini"><summary>progress</summary>
+	<div>⭕ teszt ➜ gyógyszerek ➜ status epilepticus</li>
+	
 	<div>⭕ anamnézis</div><ul>
 		<li>protokoll (vázlat) ➜ amit tudok használni klinikán (Android + toll)</li><ul>
 			fájdalom(opqrst), egyéb panasz(mikor,mióta,gyakoriság,másnál)
@@ -27992,7 +28052,6 @@ egyéb szituációkat is be kéne vésnem, pl.
 	<div>⭕ 1) + álmodból felkelve is… ➜ ÁramTrauma: + mit tegyek, hogy ismerem fel - képek -> gyakorlat (Szimuláció)</div>
 	
 	<div>⭕ ALAPOK ➜ GERD, IBS (vegetatív IR gyógyszereknél van egy farmak link, majd azt is update)</div>
-	<div>⭕ teszt ➜ gyógyszerek ➜ status epilepticus</li>
 	<div>⭕ nephro ➜ hepatorenalis-sy</div>
 	<div>⭕ FiVi ➜ tüdőhallg</div>
 	<div>⭕ FiVi ➜ ismerd fel (kép,gif), pl. diabeteses láb, fekély, gangrenosus, hematoma, mvt, pa-obv</div>

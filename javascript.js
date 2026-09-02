@@ -582,12 +582,12 @@ function F_loadImpQs(detElem,full) {
 */
 	var repeat = true
 	var missingPath // a hiányzó(IDB) tárgy path
-	//var startTime = F_getTime()
-	//console.log("F_loadImpQs START")
+	//console.time("loadImpQs")
 	function F_loadNextImpQ(detElem) {
 		var error = ""
 		var repeat = false
-		var impQs = detElem.getElementsByClassName("imp")
+		let impQs = detElem.getElementsByClassName("imp")
+		
 		//console.log("full: "+full)
 		//console.clear()
 		for ( var i=0; i<impQs.length; i++ ) { 
@@ -596,6 +596,7 @@ function F_loadImpQs(detElem,full) {
 		 // feltételek
 			var isVisible = isElementVisible(impQs[i])
 			//console.log(F_getImpID(impQs[i])+" - "+isVisible)
+			
 			if ( isVisible == false && full != "full" ) { continue }
 			if ( impQs[i].className.indexOf("[") == -1 ) { continue }
 			if ( impQs[i].dataset.loaded == "true" ) { continue }
@@ -678,8 +679,7 @@ function F_loadImpQs(detElem,full) {
 		}
 	}
 	while (repeat === true) { repeat = F_loadNextImpQ(detElem) }
-	//var currTime = F_getTime() - startTime
-	//console.log("F_loadImpQs END - "+ currTime)
+	//console.timeEnd("loadImpQs")
 }
 // –––––––––––––––  impQs END   –––––––––––––––
 
@@ -4851,6 +4851,35 @@ function load_progressBars(detElem) {
 	document.querySelectorAll(".progressBar").forEach(bar => { loadBar(bar) });
 }
 
+function load_BgPinks(detElem) { // summarybe beleírja hány bgPink van benne
+	//console.log(detElem.tagName)
+	
+	if ( document.getElementById("btn_bgPinkShow").checked == false ) { return }
+	
+	let pageDiv = document.getElementById("div_pageQTargy")
+	F_loadImpQs(pageDiv,"full")
+	
+	let allDetailsChild = pageDiv.getElementsByTagName("details")
+	for ( var i=0; i<allDetailsChild.length; i++ ) { 
+		let detailsChild = allDetailsChild[i]
+		if ( isElementVisible(detailsChild) == false ) { continue }
+		
+		let summaryElem = detailsChild.firstChild
+		if ( summaryElem.tagName != "SUMMARY" ) { continue }
+		if ( summaryElem.dataset.loaded == "true" ) { continue }
+		
+		let count = detailsChild.querySelectorAll('.bgPink').length;
+		if ( count != 0 ) {
+			summaryElem.innerHTML = summaryElem.innerHTML + '<span class="sup bgPink">{'+count+'}</span>'
+		}
+		summaryElem.dataset.loaded = "true"
+	}
+	
+	
+	//console.log(detElem.firstChild.tagName)
+	//console.log(detElem.firstChild.innerHTML)
+}
+
 // –––––––––––––––  img BEGIN  –––––––––––––––
 function F_imgZoom(img) { // kinagyítás
 	var centImg = document.getElementById("img_cent")
@@ -5143,12 +5172,13 @@ function F_loadElem(detElem) { // detailsok megnyitásánál is ezt a funkciót 
 	F_loadVideos(detElem)
 	F_loadTableScroll(detElem)
 	F_loadSynos(detElem)
-	F_loadTitles(detElem)
+	F_loadTitles(detElem) // abbr notes
 	F_loadAnswerQ(detElem)
 	F_loadAbbrQ(detElem)
 	F_loadImpQsTitle(detElem)
 	F_loadTableExpand(detElem)
 	load_progressBars(detElem)
+	load_BgPinks(detElem)
 	//console.log("F_loadElem - end")
 	
 	var allDetails = detElem.getElementsByTagName("details")
