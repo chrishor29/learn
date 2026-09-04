@@ -551,135 +551,212 @@ function F_getQText(path,impID) {
 	var qText = pageImpQs[path][impID]
 	return qText
 }
-function F_unloadImpQs(detElem) {
-	var impQs = detElem.getElementsByClassName("imp")
-	for ( var i=0; i<impQs.length; i++ ) { 
-	 // feltételek
-		if ( impQs[i].className.indexOf("[") == -1 ) { continue }
-		if ( impQs[i].dataset.loaded != "true" ) { continue }
-	 // feltételeknek megfelelt, így visszatölti!
-		impQs[i].innerHTML = ""
-		impQs[i].removeAttribute("data-loaded")
-	}
-}
-function F_loadImpQs(detElem,full) {
-/* Hogyan?
-  'gyakori hibák:' 
-		adott tárgy impQ-it nézzem meg, nincsenek-e véletlen az alján üres 1,2,3 impQ-k, mert akkor azok felülírják a fenntieket!
-		impQs-nál még {}-van, pedig már [] kell!!
-	✔ megnézi a detElem összes imp child-ját ➜ feltételek: 
-		visible 
-			nem mindig! -> pl. Qing esetén, az első kiválasztásnál betölti összeset
-		van benne []
-		még nem volt betöltve
-		parentek között(detElem-ig) nem volt még --> végtelen loop elkerülése
-	✔ ha talált köztük egyet, ami a feltételnek megfelel, akkor újra visszaugrik az elejére és végigmegy rajtuk, de ezt nem fogja már még1x (return) -> azért kell, hogy mindegyiket betöltse, tehát pl. ha van a betöltöttben is egy, azt is (biztos van ennél jobb módszer is, de én ezt választottam)
-	✔ path beállítása: ha nincs 'data-source', akkor az aktuális megnyitott tárgy lesz
-	✔ más Page-ről származás
-		tárgyválasztásnál a tárgy teljes linkjét kell másolnom "data-src"-ba
-		ha azon belül is van impQ, akkor azt is abból a tárgyból fogja értelemszerűen (kivéve, ha meg van adva más)
-*/
-	var repeat = true
-	var missingPath // a hiányzó(IDB) tárgy path
-	//console.time("loadImpQs")
-	function F_loadNextImpQ(detElem) {
-		var error = ""
-		var repeat = false
-		let impQs = detElem.getElementsByClassName("imp")
+function loadImpQs(detElem, full) {
+	console.time("loadImpQs")
+	
+	let error = ""
+	let missingPath // a hiányzó(IDB) tárgy path
+
+	/*
+		A queue tartalmazza a még feldolgozandó imp elemeket.
+
+		Az Array.from azért kell, mert a querySelectorAll eredménye
+		nem normál tömb.
+	*/
+	const queue = Array.from(detElem.querySelectorAll(".imp"))
+
+	/*
+		Ebben tartjuk nyilván, mely elemek kerültek már be a queue-ba.
+
+		Erre azért van szükség, hogy ugyanaz az elem ne kerüljön be
+		többször.
+	*/
+	const queuedElements = new Set(queue)
+
+	/*
+		Nem queue.shift()-et használunk, mert az minden kivételnél
+		átmozgatja a tömb további elemeit.
+
+		A queueIndex egyszerűen mutatja, hol tartunk.
+	*/
+	let queueIndex = 0
+
+	while (queueIndex < queue.length) {
+		const impElem = queue[queueIndex]
+		queueIndex++
+
+		/*
+			Előfordulhat, hogy egy korábbi parent innerHTML-cseréje
+			eltávolította ezt az elemet a DOM-ból.
+		*/
+		if (!impElem.isConnected) { continue }
+
+		if (impElem.dataset.loaded == "true") { continue }
+		if (impElem.className.indexOf("[") == -1) { continue }
 		
-		//console.log("full: "+full)
-		//console.clear()
-		for ( var i=0; i<impQs.length; i++ ) { 
-			//console.log(i)
-			
-		 // feltételek
-			var isVisible = isElementVisible(impQs[i])
-			//console.log(F_getImpID(impQs[i])+" - "+isVisible)
-			
-			if ( isVisible == false && full != "full" ) { continue }
-			if ( impQs[i].className.indexOf("[") == -1 ) { continue }
-			if ( impQs[i].dataset.loaded == "true" ) { continue }
-			
-			// parentek között volt-e már (loop elkerülése)
-			var impID = F_getImpID(impQs[i])
-			var path = F_getQPath(impQs[i],impID)
-			//console.log(currPath)
-			//console.log(impID+" – "+path)
-			var contains = false
-			function F_checkParents() {
-				var parent = impQs[i]
-				/*do {
-					console.log("parentCheck")
-					parent = parent.parentElement
-					// checkolja, hogy az [impID]-jük megyegyezik-e --> ha nem, akkor nézi a kövi parentet
-					if ( parent.className.indexOf("["+impID+"]") == -1 ) { continue } 
-					// checkolja hogy a path-jük megegyezik-e --> ha nem, akkor nézi a kövi parentet
-					if ( parent.dataset.src == undefined && path == currPath ) { contains = true }
-					
-					//if ( path.indexOf(parent.dataset.src) != -1 ) { contains = true }
-					if ( path == F_getQPath(parent,F_getImpID(parent)) ) { contains = true }
-					// ha átakarom írni, változtatás után teszteljem: ..
-					//	span/div/midQ + datasrc(akár ugyanez az oldalé) + full load(tehát kiveszem feltételből, hogy csak akkor ha visible)
-				} while ( parent != detElem && contains == false ) */
-				for (parent = parent.parentElement; parent !== detElem && contains === false; parent = parent.parentElement) {
-					//console.log("parentCheck");
+		const isVisible = isElementVisible(impElem)
+		if (isVisible == false && full != "full") { continue }
 
-					 // Ellenőrzi, hogy az impID megfelelő-e, ha nem, folytatja a következő parenttel
-					if (parent.className.indexOf("[" + impID + "]") === -1) { continue }
+		const impID = F_getImpID(impElem)
+		const path = F_getQPath(impElem, impID)
 
-					 // Ellenőrzi, hogy a path megegyezik-e
-					if (parent.dataset.src === undefined && path === currPath) { contains = true }
+		/*
+			Ellenőrizzük, hogy ugyanez az imp már szerepel-e
+			valamelyik szülő elemben.
 
-					if (path === F_getQPath(parent,F_getImpID(parent))) { contains = true }
-					/* ha átakarom írni, változtatás után teszteljem: ..
-						span/div/midQ + datasrc(akár ugyanez az oldalé) + full load(tehát kiveszem feltételből, hogy csak akkor ha visible)
-					*/
-				}
-			}
-			F_checkParents()
-			if ( contains == true ) { continue }
-			
-		 // feltételeknek megfelelt, így betölti!
-			repeat = true
-			
-			var qText = F_getQText(path,impID)
-			if ( qText == undefined ) { // ha hiányozna az [impQ]
-				//var string = i+" ["+impID+"] - "+path +" - "+detElem.innerHTML.slice(0,100) +"\n"
-				var string = i+" ["+impID+"] - "+path +"\n"
-				missingPath = path
-				if ( error.indexOf(string) == -1 ) { error = error + string }
-				//impQs[i].dataset.loaded = "true"
+			Ez akadályozza meg a végtelen egymásba töltést.
+		*/
+		let contains = false
+		let parent = impElem.parentElement
+
+		while (
+			parent != null &&
+			parent !== detElem &&
+			contains === false
+		) {
+			/*
+				Ellenőrizzük, hogy a parent ugyanazt az impID-t
+				tartalmazza-e.
+			*/
+			if (
+				typeof parent.className != "string" ||
+				parent.className.indexOf("[" + impID + "]") == -1
+			) {
+				parent = parent.parentElement
 				continue
 			}
-			if ( impQs[i].tagName == "div" || impQs[i].tagName == "DIV" ) {
-				qText = qText.slice(qText.indexOf('</summary>')+10)
-				qText = qText.slice(0,qText.lastIndexOf('</details>'))
+
+			/*
+				Ha nincs külön data-src, és mindkettő az aktuális
+				oldalhoz tartozik, akkor ugyanaz az imp.
+			*/
+			if (
+				parent.dataset.src === undefined &&
+				path == currPath
+			) {
+				contains = true
+				break
 			}
-			//console.log(qText)
-			impQs[i].innerHTML = qText
-			impQs[i].dataset.loaded = "true"
+
+			/*
+				Ha a parent feloldott path-ja megegyezik,
+				akkor szintén ugyanaz az imp.
+			*/
+			const parentImpID = F_getImpID(parent)
+			const parentPath = F_getQPath(parent, parentImpID)
+
+			if (path == parentPath) {
+				contains = true
+				break
+			}
+
+			parent = parent.parentElement
 		}
-		// ha hiányzott valamelyik [impQ]
-		if ( error != "" ) { 
-			if ( currPath != missingPath ) { 
-				document.getElementById("div_searchingBg").style.display = "block"
-				document.getElementById("span_msgSavingIDB").style.display = "block"
-				document.getElementById("span_msgSavingIDB").innerHTML = "..loading.."
-				F_openHTML(missingPath,"loadImpQ",detElem)
-			} else {
-				alert("hiányzik impQ (lásd console.log)")
+
+		if (contains == true) {
+			continue
+		}
+
+		/*
+			Az impQ szövegének lekérése.
+		*/
+		let qText = F_getQText(path, impID)
+
+		if (qText == undefined) {
+			const string =
+				queueIndex - 1 +
+				" [" + impID + "] - " +
+				path +
+				"\n"
+
+			missingPath = path
+
+			if (error.indexOf(string) == -1) {
+				error = error + string
 			}
-			console.log(error)
-			repeat = false
-			return repeat
-			//alert("hiányzik impQ (lásd console.log) -> töltsd be összes tárgyat (search btn click!)")
-		} else {
-			return repeat
+
+			continue
+		}
+
+		/*
+			Ha maga az imp egy div, levágjuk a details és summary
+			külső részeit.
+
+			A tagName HTML-elemek esetében nagybetűs.
+		*/
+		if (impElem.tagName == "DIV") {
+			qText = qText.slice(
+				qText.indexOf("</summary>") + 10
+			)
+
+			qText = qText.slice(
+				0,
+				qText.lastIndexOf("</details>")
+			)
+		}
+
+		/*
+			Az imp tartalmának betöltése.
+		*/
+		impElem.innerHTML = qText
+		impElem.dataset.loaded = "true"
+
+		/*
+			Az innerHTML betöltése új imp elemeket hozhatott létre.
+
+			Csak az adott impElem belsejében keresünk, nem az egész
+			detElem területén.
+		*/
+		const newImpQs = impElem.querySelectorAll(".imp")
+
+		for (const newImp of newImpQs) {
+			/*
+				Csak akkor adjuk hozzá, ha még nem szerepelt
+				a feldolgozási sorban.
+			*/
+			if (!queuedElements.has(newImp)) {
+				queuedElements.add(newImp)
+				queue.push(newImp)
+			}
 		}
 	}
-	while (repeat === true) { repeat = F_loadNextImpQ(detElem) }
-	//console.timeEnd("loadImpQs")
+
+	/*
+		Hiányzó impQ-k kezelése.
+
+		Ez lényegében ugyanaz, mint az eredeti kódod végén.
+	*/
+	if (error != "") {
+		console.log(error)
+
+		if (currPath != missingPath) {
+			document.getElementById(
+				"div_searchingBg"
+			).style.display = "block"
+
+			document.getElementById(
+				"span_msgSavingIDB"
+			).style.display = "block"
+
+			document.getElementById(
+				"span_msgSavingIDB"
+			).innerHTML = "..loading.."
+
+			F_openHTML(
+				missingPath,
+				"loadImpQ",
+				detElem
+			)
+		} else {
+			alert("hiányzik impQ (lásd console.log)")
+		}
+	}
+
+	console.timeEnd("loadImpQs")
 }
+
+
+
 // –––––––––––––––  impQs END   –––––––––––––––
 
 
@@ -886,33 +963,23 @@ function F_setMidQ(qText,path) { // középen megjeleníti a div-et, benne a sz�
 		document.getElementById("btn_MidQback").style.visibility = "hidden"
 	}
 }
-function F_unloadMidQs(detElem) {
-	var midQs = detElem.getElementsByClassName("midQ")
-	for ( var i=0; i<midQs.length; i++ ) {
-		var midQ = midQs[i]
-		if ( midQ.dataset.loaded != "true" ) { continue }
-	 // feltételeknek megfelelt, így visszatölti!
-		midQ.removeAttribute("style")
-		midQ.removeAttribute("data-loaded")
-	}
-}
-function F_loadMidQs(detElem) { // midQ[i] elemeket beállítja: kék fontColor, rájuk click-elve mi történjen
-	var midQs = detElem.getElementsByClassName("midQ")
-	for ( var i=0; i<midQs.length; i++ ) {
-		var midQ = midQs[i]
+function loadMidQs(detElem) { // midQ beállítás: fontColor és click
+//	console.time("loadMidQs")
+	let midQs = detElem.getElementsByClassName("midQ")
+	for ( let i=0; i<midQs.length; i++ ) {
+		let midQ = midQs[i]
 		if ( midQ.dataset.loaded == "true" ) { continue }
 		
 		if ( !midQ.dataset.src ) { 
-			var impID = F_getImpID(midQ)
-			var path = F_getQPath(midQ,impID)
+			let impID = F_getImpID(midQ)
+			let path = F_getQPath(midQ,impID)
 		}
 		//console.log(midQ.innerHTML)
 		if ( midQ.dataset.src != currPath ) { midQ.classList.add("fontPlumPurple") }
-		midQ.style.textShadow = "0 0 1px yellow, 0 0 1px black"
-		midQ.style.cursor = "pointer"
 		midQ.onclick = function() { F_clickWord(this) }
 		midQ.dataset.loaded = "true"
 	}
+//	console.timeEnd("loadMidQs")
 }
 // –––––––––––––––  midQs END   –––––––––––––––
 
@@ -1637,14 +1704,6 @@ F_createSearchElems()
 //const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
 }
 
 // –––––––––––––––  Qing BEGIN  –––––––––––––––
@@ -2603,26 +2662,25 @@ function F_arrQs(){
 	}
 }
 function F_toggleQing() {
-	console.log("F_toggleQing START")
+	//console.time("F_toggleQing")
 	if ( document.getElementById("div_pageQTargy").style.display == 'none' ) {
+	//	console.log("toggleOFF")
 		localStorage.removeItem("hk.ToggleAll")
 		document.getElementById("table_weboldalak").parentElement.parentElement.style.display = 'block';
 		document.getElementById("div_pageQTargy").style.display = 'block';
 		document.getElementById("div_QingMain").style.display = 'none';
 		document.getElementById("div_QingBg").style.display = "none"
-		
-		var diffTime = F_getTime() - lastClickTime
-		console.log("toggleOFF - "+ diffTime)
 	} else {
+	//	console.log("toggleON")
 		localStorage.setItem("hk.ToggleAll",currPath)
 		document.getElementById("table_weboldalak").parentElement.parentElement.style.display = 'none';
 		document.getElementById("div_pageQTargy").style.display = 'none';
 		document.getElementById("div_QingMain").style.display = 'block';
 		
 		document.getElementById("div_QingTargyText").innerHTML = pageTexts[currPath]
-		//var allQs = document.getElementById("div_QingTargyText").getElementsByClassName("kerdes")
+		//let allQs = document.getElementById("div_QingTargyText").getElementsByClassName("kerdes")
 		//console.log(allQs.length)
-		F_loadImpQs(document.getElementById("div_QingTargyText"),"full")
+		loadImpQs(document.getElementById("div_QingTargyText"),"full")
 		//console.log(allQs.length)
 		//console.log(document.getElementById("div_QingTargyText").innerHTML)
 		
@@ -2631,11 +2689,8 @@ function F_toggleQing() {
 		F_loadLS()
 		F_calcOldQs()
 		document.getElementById("div_QingBg").style.display = "none"
-		
-		var diffTime = F_getTime() - lastClickTime
-		console.log("toggleON - "+ diffTime)
 	}
-	F_loadEditMode()
+	//console.timeEnd("F_toggleQing")
 }
 function F_calcOldQs(){
 	var currTime = F_getTime()
@@ -3449,21 +3504,8 @@ function F_loadSynos(detElem) {
 	}
 }
 
-function F_unloadImpQsTitle(detElem) {
-	var parent = document.getElementById("impQs")
-	var impQs = detElem.querySelectorAll('details[class*="["]')
-	  // details elemek, melyek class-ában szerepel [    (szögletes zárójel nyitása)
-	for (var i = 0; i < impQs.length; i++) {
-		var impQ = impQs[i]
-	  // feltétel -> már átírtam
-		var title = impQ.firstChild.innerHTML
-		if ( title.slice(0,1) != "[" ) { continue }
-	  // visszaírom
-		impQ.firstChild.innerHTML = title.slice(title.indexOf("]")+2)
-	}
-}
-function F_loadImpQsTitle(detElem) {
-	var parent = document.getElementById("impQs")
+function loadImpQsTitle(detElem) {
+	let parent = document.getElementById("impQs")
 	if ( !parent ) { return } // nincsenek impQ-k
 	if ( detElem != parent && !parent.contains(detElem) ) { return }
 		// betöltött impQ-k esetében (span imp) is ott a details-es impQ, amiknél nem kell átírnia!
@@ -3557,18 +3599,20 @@ function F_loadAnswerQ(detElem) {
 }
 
 function F_loadAbbrQ(detElem) { 
-	//console.log("F_loadAbbrQ")
+	//console.time("loadAbbrQ")
 	let allQAbbr = detElem.getElementsByClassName("abbr")
 	for ( var i=0; i<allQAbbr.length; i++ ) { 
 		let qAbbr = allQAbbr[i]
-		//if ( isElementVisible(qAbbr) == false ) { continue }
+		if ( isElementVisible(qAbbr) == false ) { continue }
 		//console.log(i+" - "+qAbbr.innerHTML)
 		if (qAbbr.dataset.done == undefined) {
 			
-			let answerText = qAbbr.parentElement.innerHTML
-			answerText = answerText.replace(qAbbr.innerHTML,"")
-			answerText = answerText.slice(answerText.indexOf("</"))
-			answerText = answerText.slice(answerText.indexOf(">")+1)
+			let answerText = ""
+			let node = qAbbr.nextSibling
+			while (node) {
+				answerText += node.textContent
+				node = node.nextSibling
+			}
 			
 			let answerSpan = document.createElement("span")
 			answerSpan.className = "abbrAnswer"
@@ -3595,6 +3639,7 @@ function F_loadAbbrQ(detElem) {
 			}
 		}
 	}
+	//console.timeEnd("loadAbbrQ")
 }
 
 function load_progressBars(detElem) { 
@@ -3656,7 +3701,7 @@ function load_BgPinks(detElem) { // summarybe beleírja hány bgPink van benne
 	if ( document.getElementById("btn_bgPinkShow").checked == false ) { return }
 	
 	let pageDiv = document.getElementById("div_pageQTargy")
-	F_loadImpQs(pageDiv,"full")
+	loadImpQs(pageDiv,"full")
 	
 	let allDetailsChild = pageDiv.getElementsByTagName("details")
 	for ( var i=0; i<allDetailsChild.length; i++ ) { 
@@ -3926,59 +3971,26 @@ function F_loadMiniImg() {
 F_loadMiniImg()
 // –––––––––––––––  img END  –––––––––––––––
 
-function F_unloadElems(detElem) {
-/* method
-! igazából image, video és impQ a lényeg, hisz többi nem lassítja ... ha mégis, akkor majd visszaírom 1x őket, de úgyse lassítják
-
-Új:
-× a betöltendő elem tulajdonságát (src,maxWidth stb.) dataset-ben adom meg -> tehát betöltéskor ebből lesz valódi tulajdonság (de megmaradnak ezek is, amik épp aktuálisak). unload esetén pedig a valódikat remove. így ha változtatni akarok, akkor megtehetem bármikor hisz a dataset-et átírom és az megmarad!
-
-Régi
-✔ amikor valamilyen load van, akkor az elem outerHTML-jét lementi (innerHTML nélkül)
-✔ saveIDB esetén visszatölti azt (+új innerhtml).
-✔ valahogy meg is lesznek jelölve(array/object felvéve) ezek az elemek, így nem kell az egészet újra unload-olnia, csak amíg be lettek töltve
-✔ imp (div,span) külön array/table, vavy legalábbis azoknál nem az új innerhtml lesz, hanem semmilyen innerhtml
-✔ impQk fennt summaryben elején impID, ha megynitom (ez is load, tehát unload esetén állítsa vissza)
-× ha létrehozok elementet, akkor azokat is vegye fel!! (ctrl-c probléma ugye)
-× Unload tablebe lehet ott az elem, pedig már töröltem -> nézze meg van-e még elem, ha nincs olyankor skip és kiveszi table
-× details open… :S
-- egyébként jobb módszer lenne valszeg, ha szimplán az ellenkezőjét lefuttatnám, mint ami(ke)t loadnál csinál, de mostmár nem írom át..
-
-(FAIL v1 --> oldal kiírása lentre: minden elementen végigmegy és elmenti az elementhez kapcsolt változóba az outerHTML-jét.)
- ((oké, hogy innerHTML nem veszi bele, de…) ha létrehozok közben új elementet, annak nem lesz elmentve, és mégis be lesz loadolva közbe!)
-*/
-	//console.log("F_unloadElems")
-	F_unloadImpQs(detElem)
-	F_unloadImpQsTitle(detElem)
-	F_unloadIMGs(detElem)
-	F_unloadVideos(detElem)
-	F_unloadMidQs(detElem) // kell, hiszen script beállítás újon csak akkor történik meg
-	
-/* ezek fölösek, hiszen semmivel nem tart tovább az oldal betöltés ezek miatt, tehát elmentheti így idb-be már
-	F_loadAnswerQ()
-	F_loadSynos()
-	F_loadTitles()
-	F_loadAbbrQ()
-*/
-}
 
 function F_loadElem(detElem) { // detailsok megnyitásánál is ezt a funkciót használjam!
 	//console.log(detElem.innerHTML)
-	//console.log("F_loadElem - start")
-	F_loadImpQs(detElem)
-	F_loadMidQs(detElem)
+	//console.time("F_loadElem")
+	loadImpQs(detElem)
+	loadMidQs(detElem)
 	F_loadIMGs(detElem)
 	F_loadVideos(detElem)
 	F_loadTableScroll(detElem)
 	F_loadSynos(detElem)
 	F_loadTitles(detElem) // abbr notes
 	F_loadAnswerQ(detElem)
+	//console.time("test")
+	//console.timeEnd("test")
 	F_loadAbbrQ(detElem)
-	F_loadImpQsTitle(detElem)
+	loadImpQsTitle(detElem)
 	F_loadTableExpand(detElem)
 	load_progressBars(detElem)
 	load_BgPinks(detElem)
-	//console.log("F_loadElem - end")
+	//console.timeEnd("F_loadElem")
 	
 	var allDetails = detElem.getElementsByTagName("details")
 	for ( var i=0; i<allDetails.length; i++ ) { allDetails[i].ontoggle = function() { F_loadElem(this) } }

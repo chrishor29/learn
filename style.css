@@ -242,6 +242,8 @@ th { background: Silver }
 } 
 
 /*midQ*/
+.midQ { text-shadow: 0 0 1px yellow, 0 0 1px black }
+.midQ { cursor: pointer }
 .midQ { color: blue }
 .midQ.fontPlumPurple { color: purple } /* másik tárgy */
 .midQ:hover { color: green }
