@@ -755,8 +755,6 @@ function loadImpQs(detElem, full) {
 	console.timeEnd("loadImpQs")
 }
 
-
-
 // –––––––––––––––  impQs END   –––––––––––––––
 
 
@@ -1344,7 +1342,6 @@ function F_toggleSearch() {
 		document.getElementById("table_weboldalak").parentElement.parentElement.style.display = "none"
 		document.getElementById("btn_toggleQing").style.display = "none"
 		document.getElementById("btn_toggleSearch").style.display = 'none'
-		document.getElementById("span_tTipParents").style.display = 'none'
 		// első kettő azért kell, hogy a fölös scrollbar eltűnjön bal oldalt (pl. megvan nyitva farmakológia, majd ráklikkelnék nagyítóra...)
 		document.getElementById("div_searchBg").style.display = "block"
 		document.getElementById("btn_toggleSearch").style.color = ""
@@ -2568,29 +2565,31 @@ function F_getQnev(detElem){
 	return qNev
 }
 function F_arrQs(){
+	console.time("F_arrQs")
 	var allQs = document.getElementById("div_QingTargyText").getElementsByClassName("kerdes")
-	var arrQnevMulti = [] // csak, amelyik ismétlődik
-	for ( var i=0; i<allQs.length; i++ ) { 
-		var qNev = F_getQnev(allQs[i])
-		//console.log(qNev)
-		// if ( typeof arrQnev[qNev] === 'undefined' ) { // does not exist
-		if ( arrQnev.includes(qNev) == false ) { // does not exist
-			arrQnev.push(qNev)
-		} else if ( arrQnevMulti.includes(qNev) == false && qNev.indexOf("[") == -1 ) {  // does not exist
-			arrQnevMulti.push(qNev)
-			//var impID = F_getImpID(allQs[i])
-			//console.log("# "+i+": "+allQs[i].className+": "+qNev)
-		}
+	
+	let qNevCache = []
+	let qNevSeen = {}
+	let arrQnevMulti = {}
+	for ( let i=0; i<allQs.length; i++ ) {
+		 let qNev = F_getQnev(allQs[i])
+		 qNevCache[i] = qNev
+		 if ( qNevSeen[qNev] === undefined ) {
+				qNevSeen[qNev] = true
+		 }
+		 else if ( arrQnevMulti[qNev] === undefined && qNev.indexOf("[") == -1 ) {
+			  arrQnevMulti[qNev] = true
+		 }
 	}
 	arrQnev = []
 	for ( var i=0; i<allQs.length; i++ ) { 
-		var qNev = F_getQnev(allQs[i])
+		var qNev = qNevCache[i]
 		var qText = allQs[i].innerHTML
 		//console.log(i+": "+qNev)
 		
 		// ha többször van a qNev, akkor hozzáadja note-ba a shortent: (text length / ha rövid a text, akkor azt)
 		var noteText = ""
-		if ( arrQnevMulti.includes(qNev) == true ) {
+		if ( arrQnevMulti[qNev] == true ) {
 			if ( qText.length > 100 ) {
 				noteText = "<!-- "+qText.length+" -->"
 			} else {
@@ -2660,9 +2659,10 @@ function F_arrQs(){
 			}
 		}*/
 	}
+	console.timeEnd("F_arrQs")
 }
 function F_toggleQing() {
-	//console.time("F_toggleQing")
+	console.time("F_toggleQing")
 	if ( document.getElementById("div_pageQTargy").style.display == 'none' ) {
 	//	console.log("toggleOFF")
 		localStorage.removeItem("hk.ToggleAll")
@@ -2680,7 +2680,9 @@ function F_toggleQing() {
 		document.getElementById("div_QingTargyText").innerHTML = pageTexts[currPath]
 		//let allQs = document.getElementById("div_QingTargyText").getElementsByClassName("kerdes")
 		//console.log(allQs.length)
+	console.log("1")
 		loadImpQs(document.getElementById("div_QingTargyText"),"full")
+	console.log("2")
 		//console.log(allQs.length)
 		//console.log(document.getElementById("div_QingTargyText").innerHTML)
 		
@@ -2690,7 +2692,7 @@ function F_toggleQing() {
 		F_calcOldQs()
 		document.getElementById("div_QingBg").style.display = "none"
 	}
-	//console.timeEnd("F_toggleQing")
+	console.timeEnd("F_toggleQing")
 }
 function F_calcOldQs(){
 	var currTime = F_getTime()
