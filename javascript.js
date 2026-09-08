@@ -1358,122 +1358,125 @@ function F_searchStart() { // search-re klikkelésnél vagy enter lenyomásnál 
 	}
 	setTimeout(function() { F_searchResult() }, 100)
 }
-function F_searchResult() { // találati eredmények betöltése...
-	/* method
-		+ adott oldal szövegét stringbe teszi -> targyText
-		+ ebbe megnézi, hol van először a keresett szó -> utána megkeresi az előtte lévő details-t, ami parentje + a végét -> azt elmenti egy array/object-be
-		+ utána következőt találatnál ugyanez
-		+ de! ha annál is ugyanaz a details lenne a parent, akkor azt nem menti el fölösen még1x
-	*/
+function F_searchResult() {
+
 	var paths = Object.keys(pageTexts)
-	var searchText = document.getElementById("input_SearchW").value
-	searchText = searchText.toLowerCase() // kis és nagybetű ellen gondolom
+	var searchText = document.getElementById("input_SearchW").value.toLowerCase()
+
 	document.getElementById("div_searchResults").innerHTML = ""
-	var fullText = ""
-	var hianyzik = ""
-	
-	var spanStatus = document.getElementById("span_searchStatus")
-	spanStatus.parentElement.style.display = "block" 
-	//spanStatus.parentElement.style.top = "60px"
-	
-	var x = 0
+
+	var parser = new DOMParser()
 	var summaryID = 0
+	var x = 0
 	var progress = false
-	var int_Click = window.setInterval(function(){
-		if (progress == true) { return } 
+
+	var spanStatus = document.getElementById("span_searchStatus")
+
+	spanStatus.parentElement.style.display = "block"
+
+	var int_Click = window.setInterval(function() {
+
+		if (progress == true) return
 		progress = true
-		var statusWidth = spanStatus.parentElement.offsetWidth * x / paths.length
-		spanStatus.style.width = statusWidth+"px"
-		//console.log(spanStatus.parentElement.offsetWidth)
-		//console.log(x / paths.length)
-		//console.log(spanStatus.parentElement.offsetWidth * x / paths.length)
-		
+
+		// progress bar
+		spanStatus.style.width =
+			spanStatus.parentElement.offsetWidth * x / paths.length + "px"
+
 		var path = paths[x]
-		x = x +1
-		if ( Number(x) == Number(paths.length) || breakSearch == true ) { // ha a végére ért / megszakítom
+		x++
+
+		// Ha vége vagy megszakítottuk
+		if (x == paths.length || breakSearch == true) {
+
 			clearInterval(int_Click)
 			breakSearch = false
-			spanStatus.parentElement.style.display = "none" 
+
+			spanStatus.parentElement.style.display = "none"
 			spanStatus.style.width = 0
+
 			document.getElementById("btn_searchBreak").style.display = "none"
 			document.getElementById("div_searchingBg").style.display = "none"
-			if ( document.getElementById("btn_SearchW") ) {
+
+			if (document.getElementById("btn_SearchW")) {
 				document.getElementById("btn_SearchW").style.color = ""
 				document.getElementById("btn_SearchW").style.backgroundColor = ""
 			}
-		}
-		var targyText = pageTexts[path]
-		if ( targyText == null ) { 
-			hianyzik = hianyzik +path.slice(path.lastIndexOf("/"))+" "
-			progress = false
-			return
-		}
-		if ( targyText.toLowerCase().indexOf(searchText) == -1 ) {
-			progress = false
-			return
-		}
-		fullText = fullText+ "<strong>"+path+"</strong>"
 
-		var locST = 0 // keresett szó heje a targytext-ben; végén mindig növelem +1el, hogy a következőre keressen utána
-		var detaLocs = "" // amikor ráklikkelek a kidobott találatra akkor betölt egy detailst; ebben a string-ben azoknak a location-je van felsorolva a targytext-ben; azért kell, hogy 2x ugyanazt ne tegye ki (hiába van 1detan belül 2x a keresett szó) -> ezzel tudom ellenőrizni, hogy volt-e már
-		do {
-			locST = targyText.toLowerCase().indexOf(searchText,locST+1)
-			var prevText, postText, positive, index
-			function F_searchPrevText(){
-				positive = false
-				prevText = targyText.slice(0 , locST)
-				var string
-				do {
-					// megkeresi a parent details-ét (lehet közben 'testvér' is, amit kiszűr!)
-					index = prevText.lastIndexOf("<details")
-					string = prevText.slice(prevText.lastIndexOf("<details"))
-					prevText = prevText.slice(0 , prevText.lastIndexOf("<details"))
-					if ( string.indexOf("</details") == -1 ) { positive = true }
-				} while ( prevText.indexOf("<details") != -1 && positive != true )
-				// előbbi feltétel csak azért kell, különben végtelen loop lenne
-				if ( positive == true ) { prevText = targyText.slice(index , locST) }
+			progress = false
+			return
+		}
+
+		var targyText = pageTexts[path]
+
+		if (targyText == null) {
+			progress = false
+			return
+		}
+
+		// HTML string -> DOM
+		var doc = parser.parseFromString(targyText, "text/html")
+
+		var walker = document.createTreeWalker(
+			doc.body,
+			NodeFilter.SHOW_TEXT
+		)
+
+		var node
+		var foundDetails = new Set()
+		var pathText = ""
+
+		while (node = walker.nextNode()) {
+
+			if (node.nodeValue.toLowerCase().indexOf(searchText) == -1) {
+				continue
 			}
-			F_searchPrevText()
-			if ( detaLocs.indexOf(index+", ") != -1 ) { continue } // ha már volt az a details, akkor ne dobja ki még1x (hiába van 2x benne a keresett szó)
-			detaLocs = detaLocs + index + ", "
-			function F_searchPostText(){
-				positive = false
-				postText = targyText.slice(locST)
-				var string
-				index = 0
-				do {
-					index = index + postText.indexOf("</details") +10
-					string = postText.slice(0 , postText.indexOf("</details"))
-					postText = postText.slice(postText.indexOf("</details")+10)
-					if ( string.indexOf("<details") == -1 ) { positive = true }
-				} while ( postText.indexOf("</details") != -1 && positive != true )
-				if ( positive = true ) { postText = targyText.slice(locST , locST +index) }
-			}
-			if ( positive == true ) { F_searchPostText() }
-			
-			if ( positive == false ) { continue }
-			var resultText = prevText + postText
-			/*console.clear()
-			console.log(detaLocs)
-			console.log(prevText)
-			console.log(postText)
-			alert(searchText)*/
-			
-			var summaryText = resultText.slice(resultText.indexOf("summary")+2)
-			summaryText = summaryText.slice(summaryText.indexOf(">")+1)
-			summaryText = summaryText.slice(0,summaryText.indexOf("</summary"))
-			summaryID = summaryID +1
-			objSearchTexts[summaryID] = resultText
-			
-			fullText = fullText+ "<li><summary data-id='"+summaryID+"' data-path='"+path+"' style='cursor:pointer' onclick='F_clickSearchResult(this)'>"+summaryText+"</summary></li>"
-			//targyText = targyText.slice(targyText.indexOf(resultText)+resultText.length)
-		} while ( targyText.toLowerCase().indexOf(searchText,locST+1) != -1 )
-		document.getElementById("div_searchResults").innerHTML = fullText
-		
-		//console.log(x+" "+progress+" "+path)
+
+			// A találat első <details> parentje
+			var detail = node.parentElement.closest("details")
+
+			if (!detail) continue
+
+			// Ugyanazt a details-t ne adjuk hozzá többször
+			if (foundDetails.has(detail)) continue
+
+			foundDetails.add(detail)
+
+			var summary = detail.querySelector(":scope > summary")
+
+			if (!summary) continue
+
+			summaryID++
+
+			objSearchTexts[summaryID] = detail.outerHTML
+
+			pathText +=
+				"<li>" +
+					"<summary " +
+						"data-id='" + summaryID + "' " +
+						"data-path='" + path + "' " +
+						"style='cursor:pointer' " +
+						"onclick='F_clickSearchResult(this)'>" +
+						summary.textContent +
+					"</summary>" +
+				"</li>"
+		}
+
+		// Path + találatok
+		if (pathText != "") {
+
+			document.getElementById("div_searchResults").insertAdjacentHTML(
+				"beforeend",
+				"<strong>" + path + "</strong>" +
+				"<ul>" +
+					pathText +
+				"</ul>"
+			)
+		}
+
 		progress = false
-	}, 10);
-	if ( hianyzik != "" ) { console.log("HIÁNYZIK:"+hianyzik) }
+
+	}, 10)
 }
 function F_clickSearchResult(detElem) { // egy találati eredményre klikk
 	detElem.style.backgroundColor  = "yellow"
