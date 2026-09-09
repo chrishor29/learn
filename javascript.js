@@ -1467,10 +1467,7 @@ function F_searchResult() {
 
 			document.getElementById("div_searchResults").insertAdjacentHTML(
 				"beforeend",
-				"<strong>" + path + "</strong>" +
-				"<ul>" +
-					pathText +
-				"</ul>"
+				"<strong>" + path + "</strong>" + pathText
 			)
 		}
 
