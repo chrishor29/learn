@@ -3488,11 +3488,13 @@ function F_loadSynos(detElem) {
 		
 		//synonyms[x].style.fontStyle = "italic"
 		//synonyms[x].style.textDecoration = "underline"
-		synonyms[x].style.fontFamily = "monospace"
-		synonyms[x].style.fontSize = "1.3em"
+		
+		//synonyms[x].style.fontFamily = "monospace"
+		synonyms[x].style.fontFamily = "Courier New"
+		synonyms[x].style.fontSize = "110%"
 		synonyms[x].style.position = "relative";
-		synonyms[x].style.top = "-1px";
-		//synonyms[x].style.fontFamily = "Courier New"
+		synonyms[x].style.top = "-2px";
+		
 		//synonyms[x].style.backgroundColor = "#FFFFB0"
 		synonyms[x].style.cursor = "pointer"
 
