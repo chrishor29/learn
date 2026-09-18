@@ -55,6 +55,10 @@ checkNightMode()
 
 document.body.style.margin = "2px" // ez valahol nagyobbra van állítva, visszakéne
 
+// eldönti, hogy github vagy local
+var isLocal = window.location.protocol === "file:"
+var isWeb = !isLocal
+
 var ua = navigator.userAgent.toLowerCase()
 var isAndroid = ua.indexOf("android") > -1 
 
@@ -165,6 +169,13 @@ click page -> betölti az oldalt lenntre:
 
 var pageTexts = [] // path to txt --> tárgyak textjét lementi ide is
 var pageLinks = document.getElementsByClassName("page")
+if (isWeb) {
+	for (var i = pageLinks.length - 1; i >= 0; i--) {
+		if (pageLinks[i].classList.contains("hide")) {
+			pageLinks[i].remove();
+		}
+	}
+}
 var currPath = null // betöltött tárgyé (ami látható is)
 var prevDivShown = "" // midQ betöltése előtt mi volt (alap,search,Qing)
 var prevScrollTop = 0 // midQ betöltése előtt, hogy állt a scrollbar

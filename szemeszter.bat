@@ -5,7 +5,6 @@ set learnStuff=C:\Users\Kristof\Desktop\MIX\learnStuff
 
 robocopy %source%\images %destination%\images /mir /max:50000000
 robocopy %source%\videos %destination%\videos /mir /max:50000000
-xcopy /y %source%\Sajat\sajat.html %destination%\Sajat /d
 xcopy /y %source%\expqs.html %destination%\ /d
 xcopy /y %source%\index.html %destination%\ /d
 xcopy /y %source%\targyvalasztas.html %destination%\ /d
@@ -20,7 +19,6 @@ REM rezidens
 xcopy /y %source%\REZIDENS\trafo.html %destination%\REZIDENS\ /d
 xcopy /y %source%\REZIDENS\rezidens.html %destination%\REZIDENS\ /d
 xcopy /y %source%\REZIDENS\labor.html %destination%\REZIDENS\ /d
-xcopy /y %source%\English\english.html %destination%\English\ /d
 
 REM 6.év
 xcopy /y %source%\VI\Allamvizsga\teszt.html %destination%\VI\Allamvizsga\ /d
