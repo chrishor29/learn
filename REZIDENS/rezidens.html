@@ -193,6 +193,7 @@
 					<li>FiVi ➜ <span class="midQ [🩺tüdő] bgBlue">szörtyzörej</span></li>
 					<li>dyspnoe, orthopnoe, habos köpet</li>
 				</ul>
+				<li>dg ➜ <span class="midQ [a22] bgYellow">mRTG</span></li>
 			</details></li>
 			<li><span data-src="neuro" class="midQ [100]">agyoedema</span></li>
 			<li><span class="midQ [a1.1]">Quincke-oedema</span></li>
@@ -1726,9 +1727,7 @@ Orvosi dokumentáció helye és módja:
 		<li><span class="midQ [💊23] kerdes">orális antidiabetikumok</span></li>
 		<li><span class="bgPink">inzulin</span></li>
 	</ul>
-	<li><details class="kerdes"><summary class="bgPink"><b>pszichiátria</b></summary>
-		<span data-src="psy" class="imp [15.1]"></span> <!-- antipszichotikumok -->
-	</details></li>
+	<li><span class="imp [15] bgPink"><b>pszichiátria</b></span></li>
 	<li><span class="bgPink">szteroidok</span></li><ul>
 		<span class="bgPink">lokális pl. Mometazon; inhalációs; szisztémás?... medrol, Solu-medrol</span>
 	</ul>
@@ -4682,7 +4681,7 @@ Orvosi dokumentáció helye és módja:
 	<li>idegi(másodpercek) <abbr title="hypothalamus (pl. paraventrikuláris mag) aktiválja az RVLM-et (rostralis ventrolateralis medulla) → preganglionáris neuronok → szimpatikus ganglion">➜</abbr> <span class="midQ [a4] bgYellow">symp↑</span>: <span class="bgYellow">Adr↑ & nAdr↑</span> </li>
 	<li>hormonális(percek,órák) ➜ CRH↑… ACTH↑… <span class="bgYellow">kortizol↑</span> <span class="fsMini">(stresszhormon!)</span></li>
 </details>
-<details class="[a13] kerdes"><summary>GERD</summary>
+<details class="[a13] kerdes"><summary>GERD</summary> <!-- reflux -->
 	<div class="imp [2]" data-src="bel"></div>
 </details>
 <details class="[a14] kerdes"><summary>epilepszia … epilepsziás roham … status epilepticus</summary><table><tr>
@@ -5212,13 +5211,17 @@ női nem, menstruációs ciklushoz való kapcsolat
 		<li>felületes lágyrészek</li>
 	</td>
 	<td style="text-align:left">
-		<li>tüdő - pneumonia, ptx, szűrés (tbc, nagy tumor)</li>
+		<li>mellkas</li>
 		<li>csont (törés)</li>
 		<li>mammografia</li>
 	</td>
 	<td style="text-align:left">
 		<li><span class="bgYellow">trauma</span> pl. <span class="bgYellow">koponya</span>, <span class="bgYellow">vérzés</span></li>
-		<li>CT-angio</li>
+		<li><details class="kerdes"><summary>CT-angio</summary>
+		  plakk két fő típusa
+			<li>meszes (Ca2+) ➜ ruptúra kockázat alacsony</li>
+			<li>soft = lágy<abbr title="lipid-, ktsz-sejtek">*</abbr> ➜ ruptúra kockázat magas ➜ embolia (AMI, stroke)</li>
+		</details></li>
 		<li>mellkas - tüdő</li>
 		<li>hasi - pl. ileus, szabad hasi levegő</li>
 		<li><span class="bgYellow">tumorok</span> (staging)</li>
@@ -5230,7 +5233,31 @@ női nem, menstruációs ciklushoz való kapcsolat
 		<li><span class="bgYellow">tumor</span></li>
 		<li>kismedence</li>
 	</td>
-</tr></table></details>
+  </tr></table>
+	<details class="kerdes"><summary>mellkas rtg</summary>
+	  <div><b>mikre jó</b></div>
+		<div>✅ bordatörés</div>
+		<div>☑️ <span class="midQ [25] bgYellow">PTX</span> ➜ ha instabil, nincs idő</div><ul class="fsMini">
+			'hiányzik a hálózat, tüdőrajzolat = full sötét az egész'
+			<span class="img mini" data-src="cknidqwe.webp"></span>
+			<span class="img mini" data-src="xrgoxdgk.webp"></span>
+		</ul>
+		<div>☑️ <span class="midQ [23] bgYellow">pneumonia</span> ➜ erős gyanú és romló állapot esetén, hiába negatív, AB</div><ul class="fsMini">
+			<abbr title="ne foglalkozzak a rtg-képekkel, csak megőriztem">infiltrátum jellege</abbr> megállapítható<abbr title="morfológiai kép alapján az eredet nem dönthető el, szövődmények: empyema, tüdőtályog, ptx - bakteriális eredet mellett szól">'</abbr>
+			<span class="img mini" data-src="jbzryrmi.webp"></span>
+		</ul>
+		<div>☑️ <span class="[🩺oedema] bgYellow">tüdőoedema</span></div>
+		<div>☑️ <span class="[30] bgYellow">pleuralis folyadékgyülem</span></div>
+		<div>☑️ <span class="midQ [47]">GI perforáció</span><abbr title="szabad levegő a rekesz alatt">*</abbr></div>
+		<div>☑️ tumor<span class="bgPink">*</span></div>
+		<div>☑️ TBC</div>
+		<div>🟡 COPD, emphysema</div>
+		<div>🟡 interstitialis tüdőbetegség</div>
+		<div>✖ tüdőembólia</div>
+	  <b>lelet értelmezés</b> (negatív és eltérések)
+		<li><span class="bgPink">egyenlőre kihagytam ➜ chatgpt elég jól leírta, de checkolnom kéne, egyenlőre meg van fontosabb dolgom</span></li>
+	</details>
+</details>
 <details class="[a23] kerdes"><summary><span class="bgPink">ORTHOPEDIA</span></summary>
 	<li>TEP-műtét ➜ csípő- / térdprotézis (sebészet) <span class="bgPink">...</span></li>
 </details>
@@ -5448,8 +5475,11 @@ színűsége fokozódik.">tályog</abbr></li>
 	  <b>váll</b> (m.deltoideus)
 		<div><span class="plus">ind</span> felnőttkori oltások ➜ pl. influenza, COVID-19, DTPa, hepatitis A/B, HPV</div>
 		<li>kezét tartsa lazán ➜ ül, karja a combján, válla lazuljon el</li>
-		<li>kb. két harántujjal az acromion alatti területet fertőtlenítem ➜ alkoholos fertőtlenítővel lefújom ➜ várok 30s-1m</li>
+		<li>kb. két harántujjal az acromion alatti területet fertőtlenítem ➜ alkoholos fertőtlenítővel lefújom, 1x letörlöm, újra lefújom ➜ várok 30s-1m</li>
 		<li>a fecskendőt „darts-szerűen” fogva beszúrjuk a tűt 72-90º-os szögben</li>
+		<li>milyen mélyen?</li><ul>
+			<span class="bgBlue">teljes mélységben ➜ bármennyire is gondolom azt, hogy elérem a csontot és aggódok: nem fogom</span> (kivéve ha anorexia nervosás) ➜ de ha mégis elérném érezni fogom úgyis és nem lesz halálos probléma belőle (bár háziorvosom elmondása szerint még sose volt nála olyan)
+		</ul>
 		<details><summary><span class="bgPink">részletesebb</span></summary>
 		  <b>lényege</b>
 			<li></li>
@@ -10585,10 +10615,11 @@ tetanusz elfelejtése
 	</details></li>
  </details><ul>
 	<li><details class="[16.11.2] kerdes"><summary>VIZELET</summary>
-		<li><details class="kerdes"><summary>mintavétel módja !!</summary>
+		<li><details class="[🧪11.2.1] kerdes"><summary>mintavétel</summary>
 			<li>higiéniás fertőtlenítés (hüvely is baktériumtelep)</li>
 			<li>középsugár</li>
-			<span class="bgPink">chatgpt-t kéredezzem módjáról</span>
+			<li>friss (max. 1 óra régi) ➜ ha nem azonnal vizsgáljuk, 4–8°C-on tároljuk</li>
+			<span class="bgPink fsMini">chatgpt-t kérdezzem gyakorlati módjáról</span>
 		</details></li>
 		<li><details class="[16.11.6] kerdes"><summary>vizeletüledék</summary><table><tbody><tr>
 			<!-- vizelet üledék -->
@@ -10645,7 +10676,8 @@ tetanusz elfelejtése
 			<li><span class="syno">aszkorbinsav | C-vitamin</span> ➜ álnegatív vér/nitrit</li>
 			<li>Ca²⁺</li>
 		  <b>menete</b>
-			<li>vizeletvétel ➜ friss (max. 1 óra régi) ➜ ha nem azonnal vizsgáljuk, 4–8°C-on tároljuk</li>
+			<li>STIX - kapható gyógyszertárakban</li>
+			<li><span class="midQ [🧪11.2.1]">vizeletvétel</span></li>
 			<li>kesztyű felvétele, higiénés kézfertőtlenítés</li>
 			<li>tesztcsík kivétele a tubusból (ne érjünk a tesztmezőkhöz)</li>
 			<li>mártás ➜ rövid időre (kb. 1-2 mp) merítsük bele a vizeletbe úgy, hogy minden reagens mezőt elérjen a folyadék</li>
@@ -10662,6 +10694,19 @@ tetanusz elfelejtése
 	<li>purinbázisok lebontásának végterméke</li>
   <b>növekedés</b>
 	<li>etio:</li><ul>
+		<li><details class="kerdes"><summary>puringazdag termékek fogyasztása</summary>
+			<div>❌ alkohol</div>
+			<div>❌ fruktóz (ízesített üdítők)</div>
+		  <div><b>fehérjék közül</b></div>
+			<div>❌❌❌ belsőségek ➜ szív, máj, pacal, vese, velő</div>
+			<div>❌❌❌ halak, tengeri állatok</div>
+			<div>❌❌ vörös hús</div>
+			<div>❌ fehér hús</div>
+		  <div><b>helyettük</b></div>
+			<div>✅️ tejtermékek</div>
+			<div>✅️ tojás</div>
+			<div>✅️ hüvelyesek</div>
+		</details></li>
 		<li><span class="midQ [45.2] kerdes">tumor lysis sy</span></li>
 		<li><span class="midQ [38.2] kerdes">hematoonkológiai kórképek</span></li>
 		<li><span class="midQ [50]" data-src="bel">köszvény</span></li>
@@ -10669,7 +10714,7 @@ tetanusz elfelejtése
 		<li><span class="midQ [58] kerdes">metabolikus sy</span></li>
 	  <span class="midQ [45] kerdes WHITE fsMini">sejtkárosodások</span>
 	</ul>
-	<li>hyperuricaemia: Se urát > 420µmol/l</li>
+	<li><span class="bgYellow">hyperuricaemia ➜ Se urát magasabb mint normál tartomány</span></li>
 	<li>szövődmény ➜ <span class="midQ [20.15] bgYellow">kristály mediált vesekárosodás</span></li>
   <b>csökkenés</b>
 	<li>hypouricaemia</li>
@@ -16934,7 +16979,7 @@ tetanusz elfelejtése
   <b>dg</b>
 	<div><span class="midQ [🩺tüdő] WHITE fsMini">🩺</span> kopogtatás ➜ tompulat</div>
 	<div><span class="midQ [🩺tüdő] WHITE fsMini">🩺</span> <span class="bgBlue">hallgatózás ➜ krepitáció +/ nedves szörtyzörej +/ bronchiális légzés</span></li>
-	<li><span class="bgYellow">kétirányú mRTG</span> ➜ <abbr title="ne foglalkozzak a rtg-képekkel, csak megőriztem">infiltrátum jellege</abbr> megállapítható<abbr title="morfológiai kép alapján az eredet nem dönthető el, szövődmények: empyema, tüdőtályog, ptx - bakteriális eredet mellett szól">'</abbr> <span class="img mini" data-src="jbzryrmi.webp"></span></li>
+	<li><span class="midQ [22] bgYellow">mRTG</span></li>
 	<li>labor</li><ul>
 		<li><span class="midQ [16] bgYellow" data-src="bel">gyulladásos paraméterek</span>↑</li>
 		<li><span class="bgYellow">hemokultúra - min 2-3x</span> (ha bakteriális, akkor 10-20%-ban pozitív<abbr title="egyébként nem">'</abbr>)</li>
@@ -17450,7 +17495,7 @@ tetanusz elfelejtése
 		<li><span class="midQ [🩺bőr] kerdes bgBlue">cyanosis</span><abbr title="habár bal SZE jele, de itt elsősorban a tüdőfunkció romlása miatt">'</abbr></li>
 	</ul>
   <b>dg</b>
-	<li><span class="bgYellow">mRTG ➜ 'hiányzik a hálózat, tüdőrajzolat = full sötét az egész'</span> <span class="img mini" data-src="cknidqwe.webp"></span> <span class="img mini" data-src="xrgoxdgk.webp"></span></li>
+	<li><span class="midQ [a22] bgYellow">mRTG</span></li>
 	<li><span class="midQ [67.7]">echo</span> ➜ D-jel</li>
   <b>th</b>
 	<li>ha kisméretű ➜ konzervatív elég: lefektetés + O<sub>2</sub>-th</li>
@@ -17893,8 +17938,7 @@ tetanusz elfelejtése
 <details class="[29] kerdes"><summary>GI ➜ infekciók, colitisek, diverticulitis</summary>
   <div><b>GI infekciók</b></div>
 	<li><span class="midQ [29.5] kerdes">gastritis … peptikus fekély</span></li>
-	<li><span class="midQ [29.4] kerdes">enteritis</span></li>
-	<li><span class="midQ [29.4] kerdes">colitis</span></li>
+	<li><span class="midQ [29.4] kerdes">fertőzéses gastroenteritis</span></li>
 	<li><span class="bgPink">appendicitis</span> <span class="fsMini">(<abbr title="nem emberről emberre terjed, hanem elzáródik az appendix, majd a bélflóra okozza a kórképet. azonban ezt is nyílván kell tudni, szóval ide tettem">nem klasszikus</abbr> infekció)</span></li>
   <div><b>nem-fertőzéses colitisek</b></div>
 	<li><span class="midQ [29.1] kerdes bgGreen">IBD-k</span></li>
@@ -18112,10 +18156,8 @@ tetanusz elfelejtése
 	</details>
 	<details class="[29.3] kerdes"><summary>salmonellosis</summary>
 		<div class="fsMini">enterocolitis = salmonellosis gastroenteritica</div>
-		<li>2. leggyakoribb <span class="midQ [13.13] bgYellow">ételfertőzés</span> megbetegedés (incidencia: 65/100.000/év) ➜ másik a Campylobacter jejuni okozta</li>
-		<li><span class="midQ [29]">colitis</span></li>
-	  <div><b>kórokozók</b></div>
-		<li><span class="bgYellow">S.enteritidis, S.typhimurium</span></li>
+		<li>2. leggyakoribb <span class="midQ [293] bgYellow">fertőzéses gastroenteritis</span></li>
+		<li>kórokozók ➜ S.enteritidis, S.typhimurium</li>
 		<li>infekció:</li><ul>
 			<li>elsősorban <span class="bgYellow">baromfiban</span> élnek, de sertés, szarvasmarha, kutya és teknős is fertőzhet</li>
 			<li>a fertőzés forrása <span class="bgYellow">nem kellően hőkezelt tojás, pasztőrözetlen tej</span>, a belőlük készült ételek, <span class="bgYellow">baromfihúsok</span>, mosatlan nyers zöldség is lehet</li>
@@ -18132,23 +18174,10 @@ tetanusz elfelejtése
 			<li><span class="midQ [27]">láz</span></li>
 			<li>fejfájás</li>
 		</details></li>
+	  <div><b>dg & th</b> ➜ lásd <span class="midQ [293]">fertőzéses gastroenteritis</span></div>
 	  <b>szövődmény</b>
 		<li><span class="bgYellow">exiccosis</span></li>
 		<li><span class="bgYellow">szepszis (immundef)</span></li>
-	  <b>dg</b>
-		<li>kórokozó kimutatása:</li><ul>
-			<li><span class="bgYellow">ételmaradékból</span></li>
-			<li><span class="bgYellow">székletből</span></li>
-			<li><span class="bgYellow">ha láz ➜ haemokultúra</span></li>
-		</ul>
-	  <b>th</b>
-		<li><span class="bgYellow"><span class="midQ [52]">só-víz háztartás</span>t kell egyensúlyban tartani</span> (per os, súlyos esetben parenteralisan)</li>
-		<li><span class="bgYellow">AB<abbr title="ciprofloxacin">'</abbr> ritkán</span>:</li><ul>
-			<li>ha súlyos</li>
-			<li>ha kisgyermekek, idősek</li>
-			<li>ha immundeficiencia</li>
-		</ul>
-		<li>profilaxis ➜ megfelelő élelmiszer- és személyi higiéne</li>
 	  <b>hastífusz = enterális láz</b>
 		<li>fejlődő országokban. utazók behurcolhatják</li>
 		<li>(<abbr title="valójában ezt se ártana, de úgyis sok lesz, inkább a többit tudjam">ennyi elég róla</abbr>, tételekben sincs több, és a tételcím alapján nem kell)</li>
@@ -18164,15 +18193,26 @@ tetanusz elfelejtése
 	  </div>
 	</details>
 	<details class="[29.4] kerdes"><summary>akut fertőzéses hasmenések</summary>
-		<li>terjedés, orális úton (kézmosás, biztonságos ivóvíz)</li>
+		<li><details class="kerdes"><summary><span class="bgYellow">ételfertőzés ~ ételmérgezések ~ akut fertőzéses hasmenések ~ fertőzéses gastroenteritisek</span></summary>
+			<li><span class="bgYellow">nagy az átfedés köztük szóval ha egybeveszem, nem gond</span>, de...</li>
+			<li>...ami fontos ➜ <span class="midQ [13.13]">ételmérgezés</span> valójában külön áll a másik háromtól...</li><ul>
+				<li>... <span class="bgYellow">így ezek másutt vannak kidolgozva!</span></li>
+				<li>... de hétköznapiként egybeveszik</li>
+			</ul>
+		  <b>egyébként</b>
+			<li>fertőzéses gastroenteritisek ➜ nincs mindig hasmenés, pl. lehet csak hányás</li>
+			<li>akut fertőzéses hasmenések ➜ nincs mindig gyulladás</li>
+			<li>fennti kettő esetében a fertőzés jellemzően étellel jut be (de lehet néhány kivétel: pl. szennyezett víz)</li>
+			<li>ételmérgezés ➜ nem fertőzés, hanem toxin jut be</li>
+		</details></li>
 	  <table><tr><th></th> <th>dysenteria(vérhas=véres hasmenés)</th> <th>diarrhea(vizes hasmenés)</th></tr>
 		<tr><th>lokalizáció</th>
-			<td><span class="bgYellow">vastagbél (colitis!)</span> fertőzéses megbetegedése</td>
-			<td><span class="bgYellow">vékonybél (enteritis!)</span> fertőzéses megbetegedése</td>
+			<td class="fsMini">inkább vastagbél (colitis)</td>
+			<td class="fsMini">inkább vékonybél (enteritis)</td>
 		</tr>
 		<tr><th>patho</th>
 			<td>gyulladásos (invázió)</td>
-			<td>nem gyulladásos: toxinhatás</td>
+			<td><abbr title="fokozódik a folyadék-, elektrolit szekréció">szekretoros</abbr></td>
 		</tr>
 		<tr><th>fvs a székletben</th>
 			<td>van</td>
@@ -18216,27 +18256,27 @@ tetanusz elfelejtése
 			</td>
 		</tr>
 	  </table>
+	  <b>etio</b>
+		<li><span class="bgBlue">élelmiszer útján</span> (lásd táblázat)</li>
+		<li><span class="bgYellow">Clostr. diff. ➜ szappanos kézfertőtlenítés hiánya, AB kezelés</span></li>
 	  <b>jellemzésük</b>
 		<span class="img" style="max-width:45%" data-src="gyjpqidi.webp"></span>
 		<li><span class="bgYellow">Shigella ➜ leggyakoribb dysenteria esetén</span></li>
 		<li><span class="bgYellow">Campylobacter jejuni ➜ leggyakoribb <span class="midQ [13.13]">ételfertőzés</span></span>(hús,tejtermék)</li>
 		<li><span class="bgYellow"><span class="midQ [29.3]">salmonellosis</span> ➜ 2. leggyakoribb ételfertőzés</span>(csirkehús,tojás)</li>
 		<li><span class="midQ [a19]">Clostridioides difficile</span></li>
-	  <b>dg</b> ➜ <span class="bgBlue">a <u>széklet mikrobiológiai vizsgálata</u> nem minden hasmenés esetén indokolt (súlyosság &amp; költség) ➜ alábbiak esetén kell:</span>
-		<li><span class="midQ [27] bgYellow">láz</span> (38,5° feletti) ➜ <span class="bgYellow">haemokultúra is! (szepszis)</span></li>
-		<li><span class="midQ [19.5]">hasmenés</span>..</li><ul>
-			<li><span class="bgYellow">elhúzódó</span></li>
-			<li><span class="bgYellow">dysenteria</span></li>
-		</ul>
+	  <div><b>klinikum</b> ➜ <span class="bgBlue">széklettenyésztés az alábbiak esetén:</span><abbr title="nem minden hasmenés esetén indokolt (súlyosság &amp; költség)">*</abbr></div>
+		<li><span class="midQ [27] bgYellow">láz</span> (38,5°C feletti) – haemokultúra is!</li>
+		<li><span class="midQ [19.5]">hasmenés</span> ➜ <span class="bgYellow">elhúzódó</span> +/ <span class="bgYellow">dysenteria</span></li>
 		<li><span class="midQ [52]">metab.acidózis</span></li>
 		<li><span class="bgPink">stb.</span> (6ot még felsorol TK)</li>
 	  <div><b>th</b></div>
-		<li><span class="bgYellow">folyadékpótlás</span></li>
+		<li><span class="bgBlue">ORS</span> <span class="fsMini">(ha súlyos: parenteralis)</span></li>
 		<li>diéta ➜ nehezen emészthető kaják kerülése (zsíros)</li>
 		<li>probiotikum <span class="bgPink">#</span></li>
 		<li>ha szükséges</li><ul>
 			<li><span class="bgYellow">motilitásgátlók pl. <span class="midQ [💊20]"><u>loperamid</u></span></span> ➜ csak enyhe <span class="bgYellow">vizes hasmenésre</span> <abbr title="szekretoros">'</abbr></li>
-			<li>AB ➜ csak súlyos esetben (életkor, tünettan), ha bakteriális eredetű</li>
+			<li>AB<abbr title="ciprofloxacin">'</abbr> ritkán ➜ kisgyermekek, idősek, immundef, súlyos (tünet)</li>
 		</ul>
 	  <div class="fsMini">
 		<span class="midQ [19.5] WHITE">hasmenés</span>
@@ -18477,7 +18517,7 @@ tetanusz elfelejtése
 			<li>légzési zörej ➜ tüdő alsó részein</li>
 		  <span class="midQ [🩺bőr]">cyanosis</span>
 		</details></li>
-		<li><span class="bgYellow">mRTG / mCT / mUH</span></li>
+		<li><span class="bgYellow"><span class="midQ [a22]">mRTG</span> / mCT / mUH</span></li>
 		<li><span class="bgYellow">pleurális punkció</span> (thoracocentesis)</li>
 	  <div><b>th</b> <abbr title="okit lásd etiológia">(tüneti)</abbr></div>
 		<li>diuretikum (pl. <u>furosemid</u>) <span class="bgPink">*</span></li>
@@ -19297,9 +19337,12 @@ tetanusz elfelejtése
 		</td>
 		<td style="text-align:left">
 			<li><span class="bgBlue"><span class="midQ [3]">mellkasi fájdalom</span> ➜ hirtelen kialakuló, nagyon erős (hasító/szakító jellegű)</span></li>
-			<li><span class="bgYellow">vérnyomásmérés ➜ alsó vs felső végtag, illetve a két oldalt között</span> van-e különbség</li>
-			<li>labor ➜ <span class="midQ [16.15]">D-dimer</span> nőtt-e?</li>
-			<li>ha alapos a gyanú, akkor <span class="bgBlue">CT-angio</span>graphia ➜ <span class="bgYellow">ez ami biztossá teszi a diagnózist</span></li>
+			<li><span class="bgBlue">vérnyomásmérés</span><span class="bgPink">*</span> ➜ <span class="bgBlue">alsó vs felső végtag</span>, illetve a <span class="bgBlue">két oldalt között</span> van-e különbség</li>
+		  ha a gyanú:
+			<li>alacsony ➜ <span class="midQ [16.15]">D-dimer</span> nőtt-e? ➜ ha negatív: kizárva</li>
+			<li>magas ➜ <span class="bgBlue">CT-angio</span>graphia (sürgős!)</li><ul>
+				<span class="bgYellow">ez ami biztossá teszi a diagnózist</span>
+			</ul>
 		</td>
 	  </tr><tr><th style="writing-mode:sideways-lr;"></th>
 		<td><span class="bgYellow">műtét</span> <abbr title="hasi (ffi > 5,5cm, nő > 4,5cm), mellkasi (ascendensen 5,5cm felett, descendensen 6cm felett, nagy kockázat esetén 5cm felett)">'</abbr></td>
@@ -21043,10 +21086,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			</ul>
 			<li>súlyosság</li><ul>
 				<li>okkult vérzés ➜ ha &gt; 10-15ml/nap</li>
-				<li>masszív vérzés ➜ ha <span data-src="done/Aneszt/aneszt.html" class="midQ [6.3]">hypovolaemias shock</span> tünetek:</li><ul>
-					<li><span class="bgYellow">hipotónia, pulzus nő, hideg végtagok</span> stb.</li>
-					<li>szédülés, gyengeség, ájulás</li>
-				</ul>
+				<li>masszív vérzés ➜ ha <span class="midQ [67.5.2]">hypovolaemias shock</span> tünetek</li>
 			</ul>
 			<li>vérnyomás ismételt ellenőrzése</li>
 			<li><span class="bgYellow">RDV</span></li><ul>
@@ -21056,6 +21096,7 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li><span class="bgYellow">endoszkópia</span> (kolonoszkópia / gasztroszkópia)</li>
 			<li><span class="bgYellow">ha rectalis vérzés ➜ rosszindulatú daganatos eredetűnek kell tartani mindaddig, amíg be nem bizonyítjuk, hogy nem az</span></li>
 			<li>labor ➜ anaemia (Htk,Hgb) ➜ ismételt ellenőrzése, így vérzés ütemének meghatározása</li>
+			<li><span class="midQ [a22]">mRTG</span></li>
 			<li>angiográfia</li>
 		</td>
 	</tr>
@@ -21094,12 +21135,11 @@ Ha szeretnéd, írok hozzá egy könnyen megjegyezhető mnemonikot vagy egy táb
 			<li>ha <span class="midQ [7] kerdes" data-src="bel">ulcus…</span><abbr title="lásd Th">*</abbr></li>
 		</td>
 		<td style="text-align:left">
-			<li>ha <span class="midQ [67.5.2]">hypovolaemias sokk</span>...</li>
-			<li>vérzés elállítása</li><ul>
-				<li>ha diverticulosis ➜ spontán megáll általában, ha ismétlődik, akkor resectio</li>
-				<li>ha tumor, <span class="midQ [29.1]">IBD</span> ➜ műtét</li>
-				<li>ha nodi haemorrhoidales, fissura, fistula ➜ műtét</li>
-			</ul>
+			<li>tüneti ➜ ha <span class="midQ [67.5.2]">hypovolaemias sokk</span> ...</li>
+		  <b>oki</b> (vérzés elállítása)
+			<li>ha diverticulosis ➜ spontán megáll általában, ha ismétlődik, akkor resectio</li>
+			<li>ha tumor, <span class="midQ [29.1]">IBD</span> ➜ műtét</li>
+			<li>ha nodi haemorrhoidales, fissura, fistula ➜ műtét</li>
 			<li>ha schistosomiasis ➜ praziquantel</li>
 		</td>
 	</tr>
@@ -25709,7 +25749,7 @@ Bradycardia → asystolia: általában 3–5 perc">percek</abbr> és leáll a ke
 	</ul>
 	<li>th ➜ tüneti</li>
 </details>
-<details class="[e2] kerdes"><summary> </summary>
+<details class="[e2] kerdes"><summary></summary>
 	<li></li>
 </details>
 <details class="[e3] kerdes"><summary> </summary>
@@ -28025,6 +28065,9 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 	<details class="kerdes"><summary class="phase">Légúti betegségek</summary>
 		<div class="imp [55]"></div>
 	</details>
+	<details class="kerdes"><summary class="phase">RADIOLÓGIA</summary>
+		<div class="imp [a22]"></div>
+	</details>
 	<li><span class="midQ [35] kerdes">trafo</span> ➜ alapokat onnan (… előadásokra lenne időm átrágni)</li>
 	<details class="kerdes"><summary>primer hemosztázis zavara</summary>
 		<div class="imp [61.2]"></div> <!-- haemostasis betegségei -->
@@ -28032,7 +28075,6 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 	<details class="kerdes"><summary>coagulopathia</summary>
 		<div class="imp [61.5]"></div> <!-- haemostasis betegségei -->
 	</details>
-	<span class="imp [a22]"></span> <!-- RADIOLÓGIA -->
 	<span class="imp [a13]"></span> <!-- GERD -->
 	<span class="imp [a9]"></span> <!-- infúzió -->
 	<span class="imp [a1]"></span> <!-- allergiás betegségek -->
@@ -28062,8 +28104,8 @@ Veseelégtelen betegek antidiabetikus kezelésében elsősorban a szulfanilureá
 		<li>2) <span class="midQ [61.1]">thrombosis (vénás)</span></li>
 		<li>3) decubitus</li>
 	</details>
+	<li><span class="bgPink">alvási apnoe</span> (pulmoban van róla, lehet másutt is)</li>
 	<li><span class="bgPink">fogamzásgátlók</span></li>
-	<li><span class="bgPink">KÉPALKOTÓ ALAPOK</span></li>
 	<li><span class="bgPink">ORTHOPEDIA/RHEUMATO ALAPOK - arthrosis, spondylosis stb.</span> (képalkotók közül melyik mit mutat pl. térd rtg vs uh)</li>
   <span class="bgPink"><b><center>neuro</center></b></span>
 	<li><span class="imp [a14]"></span></li> <!-- epilepszia … epilepsziás roham … status epilepticus -->
